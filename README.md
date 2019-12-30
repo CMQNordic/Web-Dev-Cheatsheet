@@ -16,7 +16,7 @@ Guide, notes and VSCode project template to get started quickly and look up info
 - [webpack](#node)
 
 
-## Introduction
+## Introduction             [back to top](#contents)
 ##### Powerfull lightweight code edito. It comes with built-in support for JavaScript, TypeScript and Node.js, Emmet, IntelliSense and has lots of extensions for other languages (such as C++, C#, Python, PHP, Go) and runtimes (such as .NET and Unity). Built insupport for EMMET snippets increases speed and workflow with HTML and CSS. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS, and Less out of the box. Vit supports word based completions for any programming language but can also be configured to have richer IntelliSense by installing a language extension from MarketPlace.  VSCode has built in support for Git. 
 
 ---
