@@ -4,7 +4,7 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 >
 >- [__Introduction__ _(how to use this document)_](#introduction)
 >- [__Markdown__ _(create formatted text as .md files)_](#markdown)
->- [__VSCode, EMMET & Extensions__ _(How to configure your code editor, EMMET commands and some usefull extensions)_](#Visual&nbsp;Studio&nbsp;Code)
+>- [__VSCode, EMMET & Extensions__ _(How to configure your code editor, EMMET commands and some usefull extensions)_](#Visual-Studio-Code)
 >- [___Node.js, Npm & cmd___ _(How download packages and automate the workflow)_](#node.js)
 >    - [_package.json_](#package_json)
 >   - [npm i normalize.css](#normalize)
@@ -93,9 +93,9 @@ TODO
 |Name|emmet|b|c|
 |---|---|---|---|
 |New html doc| ! |   |   |
-|Link to css| script:css |   |   |
+|Link to css| link:css |   |   |
 |Include js script| script:src |   |   |
-|Paragraph| p{paragraph text} |p.myClass{paragraph text}   |   |
+|Paragraph| p{text} |p.myClass{paragraph text}   |   |
 |Div| div | .btnClass.__btnClass#ElemId |   |
 |List| ul>li*3 | Ul.navigation>li#item$.*3{item$}  |  |
 |Form|  | div>p+form:post>input:text+input:email+input:submit  |  |
