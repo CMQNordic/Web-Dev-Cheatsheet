@@ -4,18 +4,20 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 >
 >- [__Introduction__ _(how to use this document)_](#introduction)
 >- [__Markdown__ _(create formatted text as .md files)_](#markdown)
->- [__VSCode, EMMET & Extensions__ _(How to configure your code editor, EMMET commands and some usefull extensions)_](#VSCode)
->- [___Node.js, Npm & cmd___ _(How download packages and automate the workflow)_](#node)
+>- [__VSCode, EMMET & Extensions__ _(How to configure your code editor, EMMET commands and some usefull extensions)_](#Visual&nbsp;Studio&nbsp;Code)
+>- [___Node.js, Npm & cmd___ _(How download packages and automate the workflow)_](#node.js)
 >    - [_package.json_](#package_json)
 >   - [npm i normalize.css](#normalize)
 >    - [npm i -D webpack.css](#normalize)
 >    - [other packages...](#normalize)
->- [__Webpack__ _(Bundle your files and create build/automation scripts)_](#node)
+>- [__Webpack__ _(Bundle your files and create build/automation scripts)_](#webpack)
+    >    - [_webpack.config.js_](#package_json)
+>   - [npm i normalize.css]
 
 
 
 ## __Introduction__             
-##### Powerfull lightweight code edito. It comes with built-in support for JavaScript, TypeScript and Node.js, Emmet, IntelliSense and has lots of extensions for other languages (such as C++, C#, Python, PHP, Go) and runtimes (such as .NET and Unity). Built insupport for EMMET snippets increases speed and workflow with HTML and CSS. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS, and Less out of the box. Vit supports word based completions for any programming language but can also be configured to have richer IntelliSense by installing a language extension from MarketPlace.  VSCode has built in support for Git. 
+##### Some introduction text here **TODO**
 
 [>Back to top](#contents)
 
@@ -24,9 +26,9 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 
 
 ## __Markdown__
-##### Markdown is a way to style text on the web. You control the display of the document. Files are saved as .md files. On github README.md in root is shown as main file and best practice is to use markdown to style it a bit.
+##### Markdown is a way to style text on the web. You control the display of the document. Files are saved as .md files and only special readers ca view it (or Chrome with plug-in). On github README.md in root is shown as main file. As best practice use markdown to style README.md file at github. A command to preview .md file in VScode is CTRL-SHIFT-V. 
 
-###### Extensions:<br> Auto-Open Markdown Preview : opens a preview window for each opened .md file
+###### Extensions:<br> Auto-Open Markdown Preview : Automatically opens a preview window for each opened .md file
 
 
 
@@ -78,10 +80,24 @@ __\_\_bold text\_\___ &nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 
 
-## VSCode
-##### Powerfull lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, node.js and has lots of good extensions avaiable. The built-in support for EMMET snippets and IntelliSense increases development speed. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS, and Less out of the box and gives . VSCode supports word based completions for any programming language but can also be configured to have richer IntelliSense by installing a language extension from MarketPlace.  VSCode has built in support for Git.  Introduction Videos: HERE
+## Visual Studio Code
+##### VSCode is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and has lots of good extensions available. Out-of-the-box support for EMMET snippets and Intellisense increases development speed and gets you started right away. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and Less. VSCode supports word based completions for any programming language. VSCode has built in support for Git. Introduction Videos: [HERE](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)
 
-###### Extensions:<br> Auto-Open Markdown Preview: Opens a preview window for each opened .md file
+```
+Extensions:
+Auto-Open Markdown Preview :Opens a preview window for each opened .md file
+TODO
+...
+```
+
+|Name|emmet|b|c|
+|---|---|---|---|
+|New html doc| ! |   |   |
+|Link to css| script:css |   |   |
+|Include js script| script:src |   |   |
+|Paragraph| p{paragraph text}script:src |p.myClass{paragraph text}   |   |
+
+
 
 <br/>
 
@@ -91,6 +107,28 @@ __\_\_bold text\_\___ &nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 
 
+## NODE.JS
+
+##### Powerfull lightweight code editor that comes with built-in support for JavaScript,
+
+<br/>
+
+[>Back to top](#contents)
+
+---
+<br>
+
+
+## Webpack
+
+##### Powerfull lightweight code editor that comes with built-in support for JavaScript,
+
+<br/>
+
+[>Back to top](#contents)
+
+---
+<br>
 
 
 
