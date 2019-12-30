@@ -1,16 +1,16 @@
-_Guide, notes and project templates to quickly get started and look up information for commonly used tasks. Some cheatsheet for common commands._
+_Guide, notes, cheatsheets and project templates to quickly get started and look up information for commonly used tasks. Some cheatsheet for common commands._
 
 # Contents
 >
 >- [__Introduction__ _(how to use this document)_](#introduction)
->- [__Markdown__ _(create formatted text in .md files)_](#markdown)
->- [__VSCode & Plugins__ _(How to configure your code editor)_](#vscode)
->- [___Cmd, Node.js and Npm___ ](#node)
+>- [__Markdown__ _(create formatted text as .md files)_](#markdown)
+>- [__VSCode, EMMET & Extensions__ _(How to configure your code editor, EMMET commands and some usefull extensions)_](#VSCode)
+>- [___Node.js, Npm & cmd___ _(How download packages and automate the workflow)_](#node)
 >    - [_package.json_](#package_json)
 >   - [npm i normalize.css](#normalize)
 >    - [npm i -D webpack.css](#normalize)
 >    - [other packages...](#normalize)
->- [webpack](#node)
+>- [__Webpack__ _(Bundle your files and create build/automation scripts)_](#node)
 
 
 
@@ -24,26 +24,28 @@ _Guide, notes and project templates to quickly get started and look up informati
 
 
 ## __Markdown__
-#### Markdown is a way to style text on the web. You control the display of the document; formating words as bold or italic, adding images, and creating lists and more.
+##### Markdown is a way to style text on the web. You control the display of the document. Files are saved as .md files. On github README.md in root is shown as main file and best practice is to use markdown to style it a bit.
+
+###### Extensions:<br> Auto-Open Markdown Preview : opens a preview window for each opened .md file
+
 
 
 _\_italic text\__ &nbsp;&nbsp;&nbsp;&nbsp;
 __\_\_bold text\_\___ &nbsp;&nbsp;&nbsp;&nbsp;
 ~~striken text~~ &nbsp;&nbsp; ~\~striken text\~\~ 
 
->\>quoted text _`<br>`_ <br>
->\>Defined on two lines directly under each other
-
 [Link text](http://www.di.se) &nbsp;&nbsp;&nbsp;&nbsp; \[Link text\] \(url\)
-
-- \- ul item (use __1.__ for ol)
-- \- ul item
-    - \- ul subitem a (tabbed)
 
  ![Image](http://icons.iconarchive.com/icons/saviourmachine/chat/32/online-icon.png)  &nbsp;&nbsp;&nbsp;&nbsp;  `![Alt Text](url)`
 
-`` `<p>inline code</p>` ``
+>\>quoted text _`<br>`_ <br>
+>\>Defined on two lines directly under each other
 
+- \- ul item &nbsp; _(use 1. for ol)_
+- \- ul item
+    - \- ul subitem a (tabbed)
+
+`` `<p>inline code</p>` ``
 
 ```HTML
    ```HTML 
@@ -76,12 +78,17 @@ __\_\_bold text\_\___ &nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 
 
-## VSCode & Plugins
-#### Visual Studio Code
+## VSCode
+##### Powerfull lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, node.js and has lots of good extensions avaiable. The built-in support for EMMET snippets and IntelliSense increases development speed. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS, and Less out of the box and gives . VSCode supports word based completions for any programming language but can also be configured to have richer IntelliSense by installing a language extension from MarketPlace.  VSCode has built in support for Git.  Introduction Videos: HERE
+
+###### Extensions:<br> Auto-Open Markdown Preview: Opens a preview window for each opened .md file
+
+<br/>
 
 [>Back to top](#contents)
 
 ---
+<br>
 
 
 
