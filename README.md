@@ -98,6 +98,12 @@ TODO
 |Paragraph| p{paragraph text} |p.myClass{paragraph text}   |   |
 |Div| div | .btnClass.__btnClass#ElemId |   |
 |List| ul>li*3 | Ul.navigation>li#item$.*3{item$}  |  |
+|Form|  | div>p+form:post>input:text+input:email+input:submit  |  |
+|Section Article|  | section>(article.containter>h1+p+button)*3 |  |
+|Other|  | nav>.container>ul.navigation#mainMenu>li*3#item${list item $}  | .columns>(.column>.box>h2{I am a box})+(.column>.box>h3{I am another box}) |
+  
+
+
 
 <br/>
 
