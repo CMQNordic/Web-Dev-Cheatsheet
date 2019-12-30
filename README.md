@@ -24,23 +24,23 @@ _Guide, notes and project templates to quickly get started and look up informati
 
 
 ## __Markdown__
-#### Markdown examples and cheatsheet:
+#### Markdown is a way to style text on the web. You control the display of the document; formating words as bold or italic, adding images, and creating lists and more.
 
 
-_\_italic text\__
+_\_italic text\__ &nbsp;&nbsp;&nbsp;&nbsp;
+__\_\_bold text\_\___ &nbsp;&nbsp;&nbsp;&nbsp;
+~~striken text~~ &nbsp;&nbsp; ~\~striken text\~\~ 
 
-__\_\_bold text\_\___
+>\>quoted text _`<br>`_ <br>
+>\>Defined on two lines directly under each other
 
-~\~striken text\~\~ ~~striken text~~
-
->\>quoted text
-
-[\[Link text\]\(link address\)](http://www.di.se)
+[Link text](http://www.di.se) &nbsp;&nbsp;&nbsp;&nbsp; \[Link text\] \(url\)
 
 - \- ul item (use __1.__ for ol)
 - \- ul item
     - \- ul subitem a (tabbed)
 
+ ![Image](http://icons.iconarchive.com/icons/saviourmachine/chat/32/online-icon.png)  &nbsp;&nbsp;&nbsp;&nbsp;  `![Alt Text](url)`
 
 `` `<p>inline code</p>` ``
 
@@ -53,21 +53,27 @@ __\_\_bold text\_\___
    ```    .
 ```
 
-|Name|Email|
-|---|---|
-|Martin Czerwinski|martin@devoote.se|
-|Peter|peter@cmq.se|
 
+
+
+
+|Name|Email|
+|---|---|
+|Peter|peter@devoote.se|
+|Martin Czerwinski|martin@cmq.se|
 ```
 |Name|Email|
 |---|---|
-|Martin Czerwinski|martin@devoote.se|
-|Peter|peter@cmq.se|
+|Peter|peter@devoote.se|
+|Martin Czerwinski|martin@cmq.se|
 ```
+
+<br/>
 
 [>Back to top](#contents)
 
 ---
+<br>
 
 
 ## VSCode & Plugins
