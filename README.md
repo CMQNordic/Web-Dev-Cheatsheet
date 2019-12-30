@@ -95,9 +95,9 @@ TODO
 |New html doc| ! |   |   |
 |Link to css| script:css |   |   |
 |Include js script| script:src |   |   |
-|Paragraph| p{paragraph text}script:src |p.myClass{paragraph text}   |   |
-
-
+|Paragraph| p{paragraph text} |p.myClass{paragraph text}   |   |
+|Div| div | .btnClass.__btnClass#ElemId |   |
+|List| ul>li*3 | Ul.navigation>li#item$.*3{item$}  |  |
 
 <br/>
 
