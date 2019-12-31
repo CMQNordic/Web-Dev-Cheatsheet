@@ -154,10 +154,10 @@ Many packages are just used during development to enhance and speed up developme
 
  `npm install`
 
-#### _package.json_
+### _package.json_
 A very important file in the repo root. Specially important if you aim to publish your code as a package. There is for example set the name and version will be required when publishing. Description/keywords helps people discover your package, as it’s listed in npm search. You should also specify a license for your package. The main field is a module ID that is the primary entry point to your program, if your package is named foo, and a user installs it, and then does require("foo"), then your main module’s exports object will be returned. The “scripts” property is a dictionary containing script commands that are run at various times in the life cycle of your development. An example of default file this file might look for a standard web
 
-### _package.json_
+#### _package.json_
 ```
 file here TODO
 ```
@@ -204,8 +204,7 @@ Fite here TODO
 <br>
 
 
-
-## __Markdown__
+### __Markdown__
 ##### Markdown is a way to style text on the web. You control the display of the document. Files are saved as .md files and only special readers ca view it (or Chrome with plug-in). On github README.md in root is shown as main file. As best practice use markdown to style README.md file at github. A command to preview .md file in VSCode is CTRL-SHIFT-V. 
 
 Note! Each heading ie `## My heading` creates a class based on name; here class="my-heading". In order to navigate to it use `[Text to show](#my-heading)`. Used in content menus on top.
@@ -215,25 +214,25 @@ Recommended VSCode Extensions:
 
 Auto-Open Markdown Preview      - Opens a preview window on the side for preview of selected .mp file.
 ```
-## Markdown Syntax
+#### Markdown Syntax
 
 _\_italic text\__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 __\_\_bold text\_\___ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ~~striken text~~ &nbsp; -->&nbsp;~\~striken text\~\~ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Link text](http://www.di.se) &nbsp; -->&nbsp;\[Link text\] \(url\)
 
-![Image](http://icons.iconarchive.com/icons/saviourmachine/chat/32/online-icon.png)  &nbsp;&nbsp;&nbsp;&nbsp;  --> &nbsp;`![Alt Text](url)`
+![Image](http://icons.iconarchive.com/icons/saviourmachine/chat/32/online-icon.png)  &nbsp;&nbsp;&nbsp;&nbsp;  --> &nbsp;`![Alt Text](url to image)`
 
 Normal text  
-### \#\#\# Heading3
-#### \#\#\#\# Heading4
+#### \#\#\#\# Heading3
+##### \#\#\#\#\# Heading4
 
 `` `<p>inline code</p>` ``
 
 ```HTML 
    ```HTML (or javascript)
-   <p>
-       formatted text
-   </p>
+   <div>
+       <p>formatted code with colors</p>
+    </div>
    ```    .
 ```
 
