@@ -138,7 +138,7 @@ Git is the most popular version-control system for tracking changes in source co
 
 #### How to install npm packages?
 
-Downloaded packages´ name and version number are save in package.json file as dependency or development dependency. The packages themselves are stored in "node_modules" directory in the root that is auto-created with install
+Downloaded packages´ name and version number are save in `package.json` file as dependency or development dependency. The packages themselves are stored in "node_modules" directory in the root that is auto-created with install
 
 Those packages that contain js script or css that are used when generating our final files for release that are provided to browse must be saved with: <br> 
 `npm i 'package_name'` &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; `npm install 'package_name'`
