@@ -124,20 +124,16 @@ Git is the most popular version-control system for tracking changes in source co
 ## Node.js & Npm
 
 #### Node
-##### Node is an asynchronous event driven runtime environment for JavaScript. Thanks to Node.js it is possible to use JavaScript in backend servers as well as in developing tools like a real programming language, and not only limited to run as script in web browses. Node extends JavaScript to be a "real" programming language. It is very lightweight.
-
-##### Node can be run on servers serving data powering apps and sites. Node is also widly used in development environments to automate all sorts of developing tasks. Node includes NPM by default that is used to download and handle packages and search for lot build modules. [Extesive Node.js turotial HERE](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)
+##### Node is a lightweight runtime environment for JavaScript. There are two main usage fields for node; as a backend server or as a development tool om local machines. On server-side Node.js  is used for serving data and powering apps and sites. The other field of usage for Node.js is as a development tool we use when we build our apps and sites. There on our local computers Node.js can execute programs written in JavaScript to perform a various task that help us with development. Even though JavaScript is originally a scrip language, Node.js extends JavaScript to be a "real" programming language. [Extensive Node.js tutorial can be found HERE](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)
 
 `node -v` cmd command that checks if and what version is installed on the machine <br>
 `node filename.js` cmd command to run a file written in JavaScript in node <br>
-`var http = require('http');`in node-files we must include modules that are either downloaded (and stores in `node_modules` in root) or are built-in by default installation. [Build-in Node.js modules HERE ](https://www.w3schools.com/nodejs/ref_modules.asp)
+`var http = require('http');`in node-files we must include modules/packages that are either downloaded (and stores in `node_modules` in our epo root) or are built-in in node by default. [List of build-in Node.js modules HERE ](https://www.w3schools.com/nodejs/ref_modules.asp)
  
 #### NPM
-##### NPM is a package manager for Node.js modules/packages. Through NPM you can download packages of two types. Packages that are node related and automate or execute tasks within node runtime. Or packages that has nothing to do with node such as loadash or normilize.css that we can download to use in various script or automate tasks that autogenerate a lot of code. 
+##### Node.js, when installed, includes Node Package Manager (NPM) by default. NPM is a tool that is used to search for, download and handle mode modules/packages. Those packages are JavaScript programs written by others performing tasks that automate things and save us a lot od development time. Packages we download through npm can be JavaScript programs used in development but also code and css that we need when publishing our code to browser (ie loadash or normilize.css). Always initiate npm in the root of your local repo. 
 
-Always initiate npm in the root of your local repo. This will auto-create `package.json` file. 
-
-`npm init -y`
+`npm init -y`  This will auto-create `package.json` file. 
 
 
 #### How to install npm packages?
