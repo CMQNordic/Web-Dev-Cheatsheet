@@ -103,6 +103,7 @@ Git is the most popular version-control system for tracking changes in source co
 |EMMET SNIPPETS|Def. in VSCode|Cust.|Output|
 |:---|:---|:---|:---|
 |New html doc| ! |   |   |
+|cComment| c |   |  <!-- --> |
 |Link to css| link:css |   |   |
 |Include js script| script:src |   |   |
 |Paragraph| p{text} |p.myClass{paragraph text}   |   |

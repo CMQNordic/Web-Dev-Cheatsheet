@@ -1,0 +1,52 @@
+.image-wrapper {
+	padding: 0.5rem;
+}
+.image-wrapper:after {
+	content: "";
+	display: block;
+	clear:both;
+}
+.image-text {
+	margin-top: 0;
+}
+.image {
+	float: left;
+	margin-right: 0.8rem;
+	border-radius: 10px;
+}
+
+.box_container {
+	max-width: 600px;
+	margin: 0px auto; /* This centers vertically a div in other div*/
+	padding: 1%; 
+}
+
+.box_container:after {
+	content: "";	/* Clearing of container containing floating objects. */
+	display: block;
+	clear:both;
+}
+
+.box {
+	float: left;
+	width: 33.3%;
+	height: 3rem;
+	line-height: 3rem; /* Same as height, this centers text vertically */
+	text-align: center; /* This centers horizontally */
+}
+
+.gray {
+	background-color:lightgray;
+}
+.yellow {
+	background-color: yellow;
+}
+.blue {
+	background-color: blue;
+}
+.green {
+	background-color: green;
+}
+.brown {
+	background-color: brown;
+}
