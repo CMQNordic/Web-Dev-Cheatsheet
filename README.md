@@ -6,11 +6,11 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 >- [__VSCode, Extensions & EMMET__ &nbsp; _How to configure your code editor, EMMET commands and some useful extensions._](#vscode,-extensions-&-emmet)
 >- [___Node.js & Npm___ &nbsp;_How to download packages and automate the workflow._](#nodejs-&-npm)
 >   - ['npm i normalize.css' or' npm i -D webpack'?](#how-to-install-npm-packages?)
+>   - [_Packages_](#useful-npm-packages)
 >   - [_package.json_](#packagejson)
->   - [_Useful Npm Packages_](#useful-npm-packages)
 >- [__Webpack__ &nbsp; _Bundle your files and create build/automation of files._](#webpack)
 >   - [_webpack.config.js_](#webpackconfigjs)
->   - [_TODO_](#XXX)
+>   - [_webpack server_](#webpack-server)
 >- [__Markdown__ _(Style text in .md files, cheatsheet)_](#markdown)
 
 
@@ -164,11 +164,11 @@ file here TODO
 
 |npm install|flag|What for?|
 |:---|:---|:---|
-|normalize.css<br>lodash|||
-|webpack<br>webpack-cli|-D|for general webpack functionality|
-|css-loader<br>style-loader|-D|for importing css to js files and browser to read it|
+|normalize.css<br>loadash||CSS package for resetting all browsers to same state <br> loadash???|
+|webpack<br>webpack-cli<br>webpack-dev-server|-D|Webpack functionality. Bundling & automation<br>Server that auto-injects (hot) CSS/JS into chrome at runtime|
+|css-loader<br>style-loader|-D|For importing css to js files <br> Get browser to read CSS from JS files.|
 |postcss-loader |-D|For postCSS functionality|
-|autoprefixer<br>postcss-simple-vars<br>postcss-nested  |-D|css modules for postCSS|
+|autoprefixer<br>postcss-simple-vars<br>postcss-nested  |-D|For adding autoprefixes <br> For variables in CSS <br> For nesting in CSS|
 |xxx|||
 |yyy|||
 
@@ -189,8 +189,52 @@ file here TODO
 
 ### _webpack.config.js_
 ```
-Fite here TODO
+File here TODO
 ```
+
+### _Webpack Server_
+Webpack server can inject js and CSS into a running browser without reloading the page. This is very convenient when developing, therefore it is very popular do use in developing phase. In order to get it work following steps need to configured:
+
+- Install npm packages: `css-loader` | `style-loader` | `webpack-dev-server`
+
+The first two are for bundling CSS into our output .js file, as due to this we can inject css-changes to browser without reloading it.
+
+- In `package-json` add new rule to run the server: `"dev": "webpack-dev-server" `
+
+- In `webpack.config.js`add:
+```
+/* Telling webpack that that all files ending with .css shall be handled by following packages*/ 
+
+module: {
+		rules: [
+			{
+				test: /\.css$/i, /* Only if file ends in .css */
+				use: ['style-loader','css-loader']
+			}
+		]
+	},
+```
+
+```
+ /* Telling webpack to watch for changes in a directory and inject those to the running browser(s) at localhost:3000 */
+
+DevServer: {
+		contentBase: path.join(__dirname, 'app'),	/* Base folder where our index.html file lives */
+		hot: true, /* Auto inject at save. The main entry point .js file must contain following: if (module.hot) module.hot.accept(); */
+		port: 3000
+	},
+```
+
+- In our main entry point js file `App.js` add this in order to get css into js and hot auto injection of .js file to browser to work.
+```
+import '../styles/styles.css'
+
+if (module.hot)
+{
+	module.hot.accept();
+}
+```
+
 
 
 <br/>
