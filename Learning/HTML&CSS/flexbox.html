@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=100%, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Flexbox examples</title>
+
+	<link rel="stylesheet" href="flexbox.css">
+</head>
+
+<body>
+	<p class="title">Flexbox examples</p>
+
+	<!-- FORM -->
+	<!-- .container>form>(.form-row>label+input:text)*2 -->
+	<div class="form-container">
+		<form class="form">
+			<div class="form-row">
+				<label for="name">Name:</label>
+				<input type="text" id="name" />
+			</div>
+			<div class="form-row">
+				<label for="email">Email:</label>
+				<input type="email" id="email" />
+			</div>
+		</form>
+	</div>
+
+	<!-- 3 COLUMNS WITH TEXT -->
+	<div class="column-container">
+		<div class="main-column box">
+			<h3>Main column</h3>
+			<p>Lorem ipsum dolor consectetur adipisicing elit sit amet consectetur adipisicing elit. Totam laudantium
+				ducimus reprehenderit ut
+				pariatur tempore consectetur adipisicing elit id vitae nulla amet, illum animi facilis ullam </p>
+			<p>inventore deserunt aspernatur minima minus doloribus commodi?
+				Consectetur adipisicing elit consectetur adipisicing elit
+				consectetur adipisicing elit consectetur adipisicing elit
+				Consectetur adipisicing elit consectetur adipisicing elit
+			</p>
+		</div>
+		<div class="sidebar-left box">
+			<h3>Sidebar left</h3>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat excepturi placeat sit</p>
+		</div>
+		<div class="sidebar-right box">
+			<h3>Sidebar right</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sit nostrum libero
+				velit nemo quas maiores inventore, veniam, magni laboriosam.</p>
+		</div>
+	</div>
+
+	<!-- 3 CALL-OUTS -->
+	<!-- (.call-out>h4+p)*3 -->
+	<div class="call-out-container">
+		<div class="call-out">
+			<h4>Service 1</h4>
+			<p>Lorem nihil vitae odit, rem aspernatur sequi sit esse officia, nobis est corporis reiciendis autem
+				aliquam corrupti quasi inventore dignissimos temporibus id.</p>
+		</div>
+		<div class="call-out">
+			<h4>Service 2</h4>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum provident ipsam dignissimos natus
+				distinctio nisi, blanditiis tenetur laudantium officiis itaque iusto non, reprehenderit expedita illo
+				error maiores corrupti tempore perferendis.</p>
+		</div>
+		<div class="call-out">
+			<h4>Service 3</h4>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		</div>
+	</div>
+
+	<!-- FIX SIZE BOXES -->
+	<div class="fix-size-container">
+		<!-- (.fix-size-box>p{Box $})*6 -->
+		<div class="fix-size-box">
+			<p>Box 1</p>
+		</div>
+		<div class="fix-size-box">
+			<p>Box 2</p>
+		</div>
+		<div class="fix-size-box">
+			<p>Box 3</p>
+		</div>
+		<div class="fix-size-box">
+			<p>Box 4</p>
+		</div>
+		<div class="fix-size-box">
+			<p>Box 5</p>
+		</div>
+		<div class="fix-size-box">
+			<p>Box 6</p>
+		</div>
+	</div>
+
+	<!-- CENTERED TEXT -->
+	<div class="centered-text-container">
+		<div class="text-to-center">Text to center</div>
+	</div>
+
+	<!-- SPLIT COLUMN -->
+
+
+</body>
+</html>

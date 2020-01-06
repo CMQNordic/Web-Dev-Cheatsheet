@@ -1,0 +1,110 @@
+body {
+	background-color: lightgray;
+}
+.title {
+	text-align: center;
+	font-weight: bold;
+}
+
+/**** FORM ****/
+.form-container {
+	background-color: white;
+	max-width: 800px;
+	margin:50px auto; /* centers the container horizontally! */
+	padding:25px 50px;
+}
+.form-row {
+	display:flex;	/* Setting on container. Each become in inline. */
+	padding: 5px 0;
+}
+.form-row input {
+	flex:1;		/*The child will take 100% of empty width in this case*/
+}
+
+/***** 3 COLUMNS WITH TEXT *****/
+.column-container {
+	background-color: white;
+	max-width: 1200px;
+	margin:30px auto 0 auto;
+	display: flex;
+}
+.box {
+	margin:0 15px;
+}
+.main-column {
+	background-color: whitesmoke;
+	flex:2;
+	order: 2;
+}
+.sidebar-left {
+	background-color: whitesmoke;
+	flex:1;
+	order: 1;
+}
+.sidebar-right {
+	background-color: whitesmoke;
+	flex:1;
+	order: 2;
+}
+
+
+/**** 3 CALL-OUTS ****/
+.call-out-container {
+	background-color: white;
+	max-width: 1200px;
+	margin:30px auto 0 auto;
+}
+
+/* Only screens with bigger size receive the flex based properties. 
+Responsive layout is easy with flexbox.*/
+@media (min-width: 700px) {
+	.call-out-container {
+		display: flex;
+		justify-content: space-between;   /* Distributes items evenly from start. space-evenly add space in start  */
+		/* align-items:stretch; */  /* Default value is: stretch. But flex-start, flex-end adapt height to content */
+	}
+}
+
+.call-out:nth-child(1) {background-color: teal;}
+.call-out:nth-child(2) {background-color: violet;}
+.call-out:nth-child(3) {background-color: yellow;}
+
+.call-out {
+	padding: 0 10px;
+	box-sizing: border-box; /* Add this when setting width with padding to leave padding out of width */
+	flex-basis:30%; /* To use instead of width for flexbox item width */
+}
+
+
+/**** FIX SIZE BOXES   *****/
+.fix-size-container {
+	background-color: white;
+	max-width: 1200px;
+	margin:30px auto 0 auto;
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap; /* Default is nowrap */
+}
+.fix-size-box {
+	background-color: green;
+	width:150px;
+	height: 100px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+
+/**** CENTERED TEXT ****/lf
+.centered-text-container {
+	background-color: white;
+	max-width: 800px;
+	height: 250px;
+	margin:30px auto 0 auto;
+	display:flex;
+}
+.text-to-center {
+	margin: auto;
+}

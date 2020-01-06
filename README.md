@@ -3,14 +3,16 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 # Contents
 >- [__Introduction__](#introduction)
 >- [__GIT & Cmd__ &nbsp;&nbsp; _Source control and github and some useful cmd commands._](#git-&-cmd)
->- [__VSCode, Extensions & EMMET__ &nbsp; _How to configure your code editor, EMMET commands and some useful extensions._](#vscode,-extensions-&-emmet)
+>- [__VSCode__  &nbsp; _How to configure your code editor, emmet commands and some useful extensions._](#vscode)
+>   - [_VSCode Extensions_](#extensions)
+>   - [_EMMET_](#emmet)
 >- [___Node.js & Npm___ &nbsp;_How to download packages and automate the workflow._](#nodejs-&-npm)
->   - ['npm i normalize.css' or' npm i -D webpack'?](#how-to-install-npm-packages?)
->   - [_Packages_](#useful-npm-packages)
+>   - [Installing](#how-to-install-npm-packages?)
+>   - [_NPM Packages_](#useful-npm-packages)
 >   - [_package.json_](#packagejson)
 >- [__Webpack__ &nbsp; _Bundle your files and create build/automation of files._](#webpack)
+>   - [_Webpack Server with PostCSS_](#webpack-server-with-postcss)
 >   - [_webpack.config.js_](#webpackconfigjs)
->   - [_webpack server_](#webpack-server)
 >- [__Markdown__ _(Style text in .md files, cheatsheet)_](#markdown)
 
 
@@ -27,18 +29,18 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 
 
 
-## __GIT & CMD__             
-Git is the most popular version-control system for tracking changes in source code during software development. Install it on your computer or check if you have it installed with cmd command: <br>
+# __GIT & CMD__             
+Git is the most popular version-control system used for tracking changes in source-code. Install it on your computer (or check if you have it installed) with cmd command: <br>
 `git --version`
 
- Here come most common git commands to run from command window.Note that in VScode there is a Command Palette (open with `CTRL-SHIT_P`) chose commands from list. VSCode do also have a GUI with buttons to easily work with GIT. Still good to know how to do it from command line anyway!  
+ Here come some of the most common git-commands to run from command window. Note that in VScode there is a __Command Palette__ (open with `CTRL-SHIT_P`) where you can choose all GIT commands from a list and do not want to write command in the terminal. VSCode do also have a Git-GUI with buttons to make it easier to work with git. Still good to know syntax of commands to run them from command line when needed!  
 
- ##### Configure git on your local machine, telling who you are for committing changes. Set email, user name with:
+- Configure git on your local machine, telling who you are for committing changes. Set email, user name with:
 
  `git config --global user.name "Your Name"` <br>
  `git config --global user.email  your@email.com` <br>
 
-##### Create a local repo by navigating to the folder in cmd window that you wits to become a repo. Then either create a new repo from scratch with:
+- Create a local repo by navigating to the folder in cmd window that you wits to become a repo. Then either create a new repo from scratch with:
 
 `git init` (master is your local_branch_name by default)
 
@@ -86,8 +88,10 @@ Git is the most popular version-control system for tracking changes in source co
 
 
 
-## VSCode, Extensions & EMMET
+# VSCode
 ##### VSCode is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and has lots of good extensions available. Out-of-the-box support for EMMET snippets and Intellisense increases development speed and gets you started right away. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and Less. VSCode supports word based completions for any programming language. VSCode has built in support for Git. Introduction Videos: [HERE](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)
+
+## Extensions
 
 
 |VSCODE EXTENSIONS| the most usefull ones|
@@ -98,7 +102,11 @@ Git is the most popular version-control system for tracking changes in source co
 |Git Lens|TODO|
 
 <br>
-<br>
+
+## EMMET
+
+
+
 
 |EMMET SNIPPETS|Def. in VSCode|Cust.|Output|
 |:---|:---|:---|:---|
@@ -166,8 +174,7 @@ file here TODO
 |:---|:---|:---|
 |normalize.css<br>loadash||CSS package for resetting all browsers to same state <br> loadash???|
 |webpack<br>webpack-cli<br>webpack-dev-server|-D|Webpack functionality. Bundling & automation<br>Server that auto-injects (hot) CSS/JS into chrome at runtime|
-|css-loader<br>style-loader|-D|For importing css to js files <br> Get browser to read CSS from JS files.|
-|postcss-loader |-D|For postCSS functionality|
+|postcss-loader<br>css-loader<br>style-loader|-D|For loading postcss modules<br>For importing css to js files <br> Get browser to read CSS from JS files.|
 |autoprefixer<br>postcss-simple-vars<br>postcss-nested  |-D|For adding autoprefixes <br> For variables in CSS <br> For nesting in CSS|
 |xxx|||
 |yyy|||
@@ -187,22 +194,30 @@ file here TODO
 ##### You usually run in development mode as it is faster and when only in production mode in end as it is slower to pack and minify everything. In dev mode we do things a bit differently to speed up development.for example we load CSS though javascript to apply new CSS on the fly to the browser during development.
 
 
-### _webpack.config.js_
+#### _webpack.config.js_
 ```
 File here TODO
 ```
 
-### _Webpack Server_
+#### _Webpack Server with PostCSS_
 Webpack server can inject js and CSS into a running browser without reloading the page. This is very convenient when developing, therefore it is very popular do use in developing phase. In order to get it work following steps need to configured:
 
-- Install npm packages: `css-loader` | `style-loader` | `webpack-dev-server`
+- Install npm packages: `css-loader` | `style-loader` | `postcss-loader` | `webpack-dev-server`
 
 The first two are for bundling CSS into our output .js file, as due to this we can inject css-changes to browser without reloading it.
 
-- In `package-json` add new rule to run the server: `"dev": "webpack-dev-server" `
+- In `package-json` add new rule to run the server: 
+```
+"dev": "webpack-dev-server"
+```
 
 - In `webpack.config.js`add:
 ```
+const postCSSPlugins = [
+    `list here all downloaded postCSS plugins you use `
+]
+
+
 /* Telling webpack that that all files ending with .css shall be handled by following packages*/ 
 
 module: {
@@ -213,10 +228,9 @@ module: {
 			}
 		]
 	},
-```
 
-```
- /* Telling webpack to watch for changes in a directory and inject those to the running browser(s) at localhost:3000 */
+
+/* Telling webpack to watch for changes in a directory and inject those to the running browser(s) at localhost:3000 */
 
 DevServer: {
 		contentBase: path.join(__dirname, 'app'),	/* Base folder where our index.html file lives */
@@ -233,6 +247,13 @@ if (module.hot)
 {
 	module.hot.accept();
 }
+
+```
+
+
+- In VSCode file `settings.json` (open from settings) add following line in order to avoid error in editor in CSS files when using scss syntax.
+```
+"files.associations": {"*.css": "scss"}
 ```
 
 
