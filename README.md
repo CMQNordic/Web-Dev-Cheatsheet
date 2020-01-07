@@ -1,11 +1,9 @@
-_Guide, notes, cheatsheets and project templates to quickly get started and look up information for commonly used tasks. Some cheatsheet for common commands._
-
-# Contents
->- [__Introduction__](#introduction)
->- [__GIT & Cmd__ &nbsp;&nbsp; _Source control and github and some useful cmd commands._](#git-&-cmd)
->- [__VSCode__  &nbsp; _How to configure your code editor, emmet commands and some useful extensions._](#vscode)
->   - [_VSCode Extensions_](#extensions)
->   - [_EMMET_](#emmet)
+# Modern Web Development - The Cheat-Sheet
+>- [__Introduction__  <br> What can I find here?](#introduction)
+>- [__GIT & Cmd__ <br>_Source control and github and some useful cmd commands._](#git-&-cmd)
+>- [__VSCode__  <br> _How to configure your favorite code editor, emmet commands and some useful extensions to start with._](#vscode)
+>   - [_Most useful VSCode extensions_](#Most-useful-VSCode-extensions)
+>   - [_EMMET commands_](#emmet)
 >- [___Node.js & Npm___ &nbsp;_How to download packages and automate the workflow._](#nodejs-&-npm)
 >   - [Installing](#how-to-install-npm-packages?)
 >   - [_NPM Packages_](#useful-npm-packages)
@@ -17,8 +15,8 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 
 
 
-## __Introduction__             
-##### Some introduction text here **TODO**
+# Introduction            
+Following blog is a short guides to modern web development technologies including notes, summaries and cheatsheet. Target audience for this blog are developers that need a reminder/cheatsheet to fresh up some terms and get a starting point to.
 
 <br/>
 
@@ -29,54 +27,64 @@ _Guide, notes, cheatsheets and project templates to quickly get started and look
 
 
 
-# __GIT & CMD__             
-Git is the most popular version-control system used for tracking changes in source-code. Install it on your computer (or check if you have it installed) with cmd command: <br>
+# __GIT & Cmd__             
+Git => most popular version control system for corporation and tracking changes in source-code. 
+
+Install it on your computer (or check if installed) with command: <br>
 `git --version`
+ 
+>	Note! _In VSCode's "Command Palette" (open with `CTRL-SHIFT-P`) you can run all GIT commands from a list, instead writing memories command in the terminal. VSCode do also have a Git GUI with buttons to simply som common tasks. But it is still good to know syntax of commands to run them from command line when needed!_
 
- Here come some of the most common git-commands to run from command window. Note that in VScode there is a __Command Palette__ (open with `CTRL-SHIT_P`) where you can choose all GIT commands from a list and do not want to write command in the terminal. VSCode do also have a Git-GUI with buttons to make it easier to work with git. Still good to know syntax of commands to run them from command line when needed!  
+ ### Here come some of the most common git commands to run from command window:
+ Some  [tutorial can be found: HERE](https://www.youtube.com/watch?v=HVsySz-h9r4) and [HERE](https://www.youtube.com/watch?v=FdZecVxzJbk)
 
-- Configure git on your local machine, telling who you are for committing changes. Set email, user name with:
+- __Configure git__ on your local machine by telling who you are for committing changes - set email, user name with:
 
- `git config --global user.name "Your Name"` <br>
- `git config --global user.email  your@email.com` <br>
+ 	`git config --global user.name "Your Name"` <br>
+ 	`git config --global user.email  your@email.com` <br>
+	 `git config --list` &nbsp;&nbsp; _(views set info)_ 
 
-- Create a local repo by navigating to the folder in cmd window that you wits to become a repo. Then either create a new repo from scratch with:
+- __Create a local repo__ by navigating to the folder in cmd window that you wish to become a repo. Then either create a new repo from scratch with:
 
-`git init` (master is your local_branch_name by default)
+	`git init`
 
-##### ... or clone a repo from web by:
+	 ... or clone a repo from remote by:
 
-`git clone http://url_to_repo_to_copy.git` (master is your local_branch_name by default)
+	`git clone http://YourRemoteRepoURL.git`
 
-##### Now in order to push the local repo to remote repo you must set a remote_name/remote_url to the location of your remote repo by:
+	Note! In both cases automatically our 'local_branch_name name' is named `master` and is checked-out locally!
 
-`git remote -v` <br>
-`git remote set-url origin http://url_to_your_online_repo.git` (remote_name is 'origin')
+- At some point we need to push (upload) our local repo to a remote repo (i.e on GitHub). Then you must __set a remote_url__:
 
-##### Work on files locally. When done stage and commit with:
-`git status`  _(lists all files to stage/commit)_ <br>
-`git add -a`  _(stages/prepares ALL changes)_ <br>
-`git commit -m 'description'`
+	`git remote -v`  &nbsp;&nbsp; _(show what is you current remote repo url and name)_ <br>
+	`git remote set-url origin http://url_to_your_online_repo.git`  &nbsp;&nbsp; _(here we choose 'origin' as our remote_branch_name)_
 
-##### To upload your local changes to remote repo firs pull from remote (there might be changed on remote on same place you changed then there might be conflicts that is best to resolve locally and test locally first). Then push everything to remote repo:
+- After working a while with your projects locally you shall stage the changes and later __commit__ to your local repo with:
 
-`git pull origin master` (git pull 'remote_name' 'local_branch_name') <br>
-`git push origin master` (git push  'remote_name' 'local_branch_name')<br> 
+	`git status` &nbsp;&nbsp; _(lists all changes to stage/commit)_ <br>
+	`git add -a` &nbsp;&nbsp; _(stages all changes)_ <br>
+	`git commit -m 'your description'`
 
-##### It is common that you work on your local brach so that you do not work toward the main master. After you are done there then the changes can be merged/commited to master. To create a new branch and work toward it you check out by:
+- When time to push __local changes to remote repo__  then first pull from from remote as there might be changed on remote conflicting with your changes. It is always best to resolve those conflicts and test locally before updating remote repo:
 
-`git checkout -b 'myLockalBranch'`
+	`git pull origin master` &nbsp;&nbsp; _(git pull from 'remote_branch_name' to 'local_branch_name')_ <br>
+	`git push origin master` _(git push to 'remote_branch_name' from 'local_branch_name')<br> 
+
+-	Create a new branch and work toward with and check-out by:
+
+	`git checkout -b 'myChosenName'`  &nbsp;&nbsp; _(__TODO__ ???)_
 
 <br>
+<br>
 
-|Usefull cmd | |
+|Useful cmd commands | |
 |:---|:---|
 |pwd|Writes out current location|
 |dir|Lists directories and files in current location|
 |cd 'path'|Changes 'path' location. 'cd..' changes back|
-|mkdir 'new_dir_name'|creates a new directory in current location|
-|touch 'filename_with_extension'|creates a new file in current location|
-|xxx|desription|
+|mkdir 'new_dir_name'|Creates a new directory in current location|
+|touch 'filename_with_extension'|Creates a new file in current location|
+|xxx|__TODO__|
 
 
 <br/>
@@ -89,12 +97,15 @@ Git is the most popular version-control system used for tracking changes in sour
 
 
 # VSCode
-##### VSCode is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and has lots of good extensions available. Out-of-the-box support for EMMET snippets and Intellisense increases development speed and gets you started right away. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and Less. VSCode supports word based completions for any programming language. VSCode has built in support for Git. Introduction Videos: [HERE](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)
+ VSCode is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and has lots of good external extensions available in an easy way. Out-of-the-box support for EMMET snippets and Intellisense gets you started right away with your WEB project. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and Less. VSCode has also built in support for Git. VSCode supports word based completions for any programming language. <br> [Introduction Videos: HERE](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)
 
-## Extensions
+ __TODO__
+ Write something what is missing by default and good to know....
+
+## Most useful VSCode extensions
 
 
-|VSCODE EXTENSIONS| the most usefull ones|
+|| |
 |---|---|
 |Auto-Open Markdown Preview | Opens a preview window on the side for preview of selected .mp file|
 |Code Spell Checker|Spelling checker and autocorrect for source files|
@@ -104,21 +115,26 @@ Git is the most popular version-control system used for tracking changes in sour
 <br>
 
 ## EMMET
+EMMET generate code from snippets for and is enabled by default for HTML, CSS, SASS in VSCode. 
 
+__TODO__ what does it not support?
+
+Best for HTML and CSS only?
 
 
 
 |EMMET SNIPPETS|Def. in VSCode|Cust.|Output|
 |:---|:---|:---|:---|
-|New html doc| ! |   |   |
-|cComment| c |   |  <!-- --> |
-|Link to css| link:css |   |   |
-|Include js script| script:src |   |   |
-|Paragraph| p{text} |p.myClass{paragraph text}   |   |
-|Div| div | .btnClass.__btnClass#ElemId |   |
-|List| ul>li*3 | Ul.navigation>li#item$.*3{item$}  |  |
+|New doc| ! |   | `HTML doc structure` |
+|Comment| c |   |  `<!-- -->` |
+|Css| link:css |   | `Inc CSS`|
+|Script| script:src |   | `Inc js` |
+|Lorem| lorem23 |   | `Random text with 23 words`  |
+|Paragraph| p{Text} |p.myClass._Big{Text}|`<p class="myClass _Big">Text</p>`|
+|Div| div | .btnClass.__bigger#myButton{Text} |`<div class="btnClass __bigger" id="myButton">Text</div>`|
+|List| ul>li*3 |ul.nav>li.item$#item$*2{Item $}|`<ul class="nav"><li class="item1" id="item1">Item 1</li><li class="item2" id="item2">Item 2</li></ul>`|
 |Form|  | div>p+form:post>input:text+input:email+input:submit  |  |
-|Section Article|  | section>(article.containter>h1+p+button)*3 |  |
+|Section|  | section>(article.containter>h1+p+button)*3 |  |
 |Other|  | nav>.container>ul.navigation#mainMenu>li*3#item${list item $}  | |
 |Other| |.columns>(.column>.box>h2{I am a box})+(.column>.box>h3{I am another box})|
 
@@ -133,16 +149,22 @@ Git is the most popular version-control system used for tracking changes in sour
 ## Node.js & Npm
 
 #### Node
-##### Node is a lightweight runtime environment for JavaScript. There are two main usage fields for node; as a backend server or as a development tool om local machines. On server-side Node.js  is used for serving data and powering apps and sites. The other field of usage for Node.js is as a development tool we use when we build our apps and sites. There on our local computers Node.js can execute programs written in JavaScript to perform a various task that help us with development. Even though JavaScript is originally a scrip language, Node.js extends JavaScript to be a "real" programming language. [Extensive Node.js tutorial can be found HERE](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)
+Node is a lightweight runtime environment for JavaScript. There are two main usage areas for node: as a backend server or as a development tool on local machines. Server side Node.js  is used for serving data and powering apps and sites. When using as a development tool we automate and speed up building of our apps and sites. On our local computers Node.js can execute programs written in java script to perform various task that help us with development. JavaScript is originally a scrip language but Node.js extends JavaScript to be a "real" programming language. <br> [Extensive Node.js tutorial can be found HERE](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)
 
-`node -v` cmd command that checks if and what version is installed on the machine <br>
-`node filename.js` cmd command to run a file written in JavaScript in node <br>
-`var http = require('http');`in node-files we must include modules/packages that are either downloaded (and stores in `node_modules` in our epo root) or are built-in in node by default. [List of build-in Node.js modules HERE ](https://www.w3schools.com/nodejs/ref_modules.asp)
+Command that checks if or what version is installed on the machine: <br>
+`node -v` <br><br>
+Command to run a file written in JavaScript by node.js: <br>
+`node filename.js` <br><br>
+JS "node-files" can must include modules/packages that are either downloaded (and stores in `node_modules` in our project root), or are built-in in node by default. [List of build-in Node.js modules HERE ](https://www.w3schools.com/nodejs/ref_modules.asp).<br>
+`var http = require('http');` <br>.<br>
+Example:
+__TODO__
  
 #### NPM
-##### Node.js, when installed, includes Node Package Manager (NPM) by default. NPM is a tool that is used to search for, download and handle mode modules/packages. Those packages are JavaScript programs written by others performing tasks that automate things and save us a lot od development time. Packages we download through npm can be JavaScript programs used in development but also code and css that we need when publishing our code to browser (ie loadash or normilize.css). Always initiate npm in the root of your local repo. 
+Node Package Manager (NPM) comes with node.js by default. NPM is a tool, package manager, that is used to search for/download and handle packages. Those packages are JavaScript programs written by others performing tasks that automate various things and save us a lot od development time. Packages are downloaded through npm can be JavaScript tools used in development but also code that we need when publishing our code to browser (ie loadash or normalize.css). 
 
-`npm init -y`  This will auto-create `package.json` file. 
+-	Always initiate npm in the root of your local repo. This will auto-create `package.json` file: <br>
+`npm init -y`  
 
 
 #### How to install npm packages?
@@ -153,18 +175,42 @@ Those packages that contain js script or css that are used when generating our f
 `npm i 'package_name'` &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; `npm install 'package_name'`
 
 Many packages are just used during development to enhance and speed up development workflows anf those do not need to be present in the released version. Those packages we install with --save-dev option or -D:<br>
- `__npm i - 'package_name'` &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; `npm install \-\-save-dev 'package_name'`
+ `npm install 'package_name' --save-dev` &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; `npm i -D 'package_name'`
 
- Note that the whole "node_modules" directory is usually excluded from GIT. Only `package.json` is under source control. This is because when the `node_modules` with all modules are missing, then npm automatically installs the packages. All dependency files in `node_modules` can be downloaded with command:
-
+ Note! The whole directory where packages are saved, "node_modules", is usually excluded from GIT. Only `package.json` that contain list of packages our project depend on is under source control. This is because when/if the `node_modules` with all modules are missing, then npm automatically installs the needed packages. 
+ <br>
+ <br>
+ All dependency files in node_modules can be downloaded with command:<br>
  `npm install`
 
-### _package.json_
-A very important file in the repo root. Specially important if you aim to publish your code as a package. There is for example set the name and version will be required when publishing. Description/keywords helps people discover your package, as it’s listed in npm search. You should also specify a license for your package. The main field is a module ID that is the primary entry point to your program, if your package is named foo, and a user installs it, and then does require("foo"), then your main module’s exports object will be returned. The “scripts” property is a dictionary containing script commands that are run at various times in the life cycle of your development. An example of default file this file might look for a standard web
+## __package.json file__
+A very important file in the repo root that is autogenerated when we run npm -init. Specially important if you aim to publish your code as a package. For example name and version that will be required when publishing are set there. Description/keywords helps people discover your package as it’s listed in npm search.  The “scripts” property is a dictionary containing script commands that are run at various times in the life cycle of your development. An example of default file this file might look for a standard web
 
-#### _package.json_
+_package.json_
 ```
-file here TODO
+{
+  "name": "travel-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "loadash": "^1.0.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "css-loader": "^3.4.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-simple-vars": "^5.0.2",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
 ```
 
 
@@ -174,8 +220,8 @@ file here TODO
 |:---|:---|:---|
 |normalize.css<br>loadash||CSS package for resetting all browsers to same state <br> loadash???|
 |webpack<br>webpack-cli<br>webpack-dev-server|-D|Webpack functionality. Bundling & automation<br>Server that auto-injects (hot) CSS/JS into chrome at runtime|
-|postcss-loader<br>css-loader<br>style-loader|-D|For loading postcss modules<br>For importing css to js files <br> Get browser to read CSS from JS files.|
-|autoprefixer<br>postcss-simple-vars<br>postcss-nested  |-D|For adding autoprefixes <br> For variables in CSS <br> For nesting in CSS|
+|<br>postcss-loader<br>css-loader<br>style-loader|-D|Webpack modules:<br>For loading postcss modules.<br>For importing css to js files.<br>Get browser to read CSS from JS files.|
+|<br>autoprefixer<br>postcss-simple-vars<br>postcss-nested  |-D|PostCSS modules:<br>For adding autoprefixes <br> For variables in CSS <br> For nesting in CSS|
 |xxx|||
 |yyy|||
 
@@ -191,15 +237,44 @@ file here TODO
 
 ##### Webpack is a bundler and dependencies manager and "build" tool for all assets within an web app. It handles files such ass javascript, css and graphics. It can automatically transform and autogenerate output files  from several resources, takes dependencies into considerations. For example it build one js file from several files written in ES6 and one css file from several sass files. Through its packages it can perform a variety of tasks. It is a standard to use in big web projects as it streamlines the workflow. Without it would be very hard to import and add all script dependencies manually. We pack simply and effective packages and bundles all  sort of files we work during development  just into a few optimized files used by browser.
 
+[A tutorial HERE](https://www.youtube.com/watch?v=lziuNMk_8eQ)
+
 ##### You usually run in development mode as it is faster and when only in production mode in end as it is slower to pack and minify everything. In dev mode we do things a bit differently to speed up development.for example we load CSS though javascript to apply new CSS on the fly to the browser during development.
 
 
-#### _webpack.config.js_
+## __webpack.config.js__
 ```
-File here TODO
+const path = require('path');
+const postCSSPlugins = [
+	require('autoprefixer'),
+	require('postcss-nested'),
+	require('postcss-simple-vars')
+];
+
+_module.exports = {
+	entry: './app/assets/scripts/App.js',	/* Main .js file to load that contains all dependencies */
+	output: {
+		filename: 'bundeld.js',	/* Name of the autogenerated file with all dependencies bundled together */
+		path: path.resolve(__dirname,'app')	/* Directory where to put the autogenerated file  */
+	},
+	module: {
+		rules: [
+			{
+				test: /\.css$/i, /* Only if file ends in .css */
+				use: ['style-loader','css-loader', {loader: 'postcss-loader', options: {plugins: postCSSPlugins}}]
+			}
+		]
+	},
+	devServer: { /* DevServer will watch for changes in contentBase directory and inject those to the running browser(s) */
+		contentBase: path.join(__dirname, 'app'),	/* Base folder where our index.html file lives */
+		hot: true, /* Auto inject at save. The main entry point .js file must contain following: if (module.hot) module.hot.accept(); */
+		port: 3000
+	},
+	mode: 'development' 
+}
 ```
 
-#### _Webpack Server with PostCSS_
+#### _Webpack Dev Server with PostCSS_
 Webpack server can inject js and CSS into a running browser without reloading the page. This is very convenient when developing, therefore it is very popular do use in developing phase. In order to get it work following steps need to configured:
 
 - Install npm packages: `css-loader` | `style-loader` | `postcss-loader` | `webpack-dev-server`
