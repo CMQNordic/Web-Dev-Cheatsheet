@@ -1,0 +1,13 @@
+.example {
+
+	&__rightContainer {
+		background-color: lightgray;
+		
+	}
+	
+}
+
+.example__leftContainer {
+	background-color: green;
+
+}

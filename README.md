@@ -28,12 +28,18 @@ Following blog is a short guides to modern web development technologies includin
 
 
 # __GIT & Cmd__             
-Git => most popular version control system for corporation and tracking changes in source-code. 
+Git => most popular version control system for corporation and tracking changes in source-code. Memorize some commands to run those from command window for best practice. 
 
-Install it on your computer (or check if installed) with command: <br>
+Repository = Repo = Project <br>
+Commit = Save to git history <br>
+Branch = ... <br>
+Working Directory = All you files that you currently "checked out" and work on = All files you see and can edit for a certain repo <br>
+Check-out = switching between different versions of code (switching branches or ) <br>
+
+- Install it on your computer (or check if installed) with command: <br>
 `git --version`
  
->	Note! _In VSCode's "Command Palette" (open with `CTRL-SHIFT-P`) you can run all GIT commands from a list, instead writing memories command in the terminal. VSCode do also have a Git GUI with buttons to simply som common tasks. But it is still good to know syntax of commands to run them from command line when needed!_
+>	_Note! In VSCode's "Command Palette" (open it with `CTRL-SHIFT-P`) you can run all GIT commands from a list, instead writing memories command in the terminal. VSCode do also have a Git GUI with buttons to simply som common tasks. Still good to know syntax of commands to run them from command line when needed!_
 
  ### Here come some of the most common git commands to run from command window:
  Some  [tutorial can be found: HERE](https://www.youtube.com/watch?v=HVsySz-h9r4) and [HERE](https://www.youtube.com/watch?v=FdZecVxzJbk)
@@ -52,7 +58,7 @@ Install it on your computer (or check if installed) with command: <br>
 
 	`git clone http://YourRemoteRepoURL.git`
 
-	Note! In both cases automatically our 'local_branch_name name' is named `master` and is checked-out locally!
+	Note! In both cases automatically our 'local_branch_name name' is named `master` and is checked-out locally! See what branch you have with<br> `git branch`
 
 - At some point we need to push (upload) our local repo to a remote repo (i.e on GitHub). Then you must __set a remote_url__:
 
@@ -62,8 +68,8 @@ Install it on your computer (or check if installed) with command: <br>
 - After working a while with your projects locally you shall stage the changes and later __commit__ to your local repo with:
 
 	`git status` &nbsp;&nbsp; _(lists all changes to stage/commit)_ <br>
-	`git add -a` &nbsp;&nbsp; _(stages all changes)_ <br>
-	`git commit -m 'your description'`
+	`git add -A` &nbsp;&nbsp; _(stages all changes)_ <br>
+	`git commit -m 'commit description'`
 
 - When time to push __local changes to remote repo__  then first pull from from remote as there might be changed on remote conflicting with your changes. It is always best to resolve those conflicts and test locally before updating remote repo:
 
@@ -72,7 +78,7 @@ Install it on your computer (or check if installed) with command: <br>
 
 -	Create a new branch and work toward with and check-out by:
 
-	`git checkout -b 'myChosenName'`  &nbsp;&nbsp; _(__TODO__ ???)_
+	`git checkout -b 'myBranchName'`  &nbsp;&nbsp; _(__TODO__ ???)_
 
 <br>
 <br>
@@ -221,7 +227,7 @@ _package.json_
 |normalize.css<br>loadash||CSS package for resetting all browsers to same state <br> loadash???|
 |webpack<br>webpack-cli<br>webpack-dev-server|-D|Webpack functionality. Bundling & automation<br>Server that auto-injects (hot) CSS/JS into chrome at runtime|
 |<br>postcss-loader<br>css-loader<br>style-loader|-D|Webpack modules:<br>For loading postcss modules.<br>For importing css to js files.<br>Get browser to read CSS from JS files.|
-|<br>autoprefixer<br>postcss-simple-vars<br>postcss-nested  |-D|PostCSS modules:<br>For adding autoprefixes <br> For variables in CSS <br> For nesting in CSS|
+|<br>postcss-import<br>postcss-simple-vars<br>postcss-nested<br>autoprefixer  |-D|PostCSS modules:<br>For importing code to CSS & NPM-modules files <br> For variables in CSS <br> For nesting in CSS<br>For adding autoprefixes|
 |xxx|||
 |yyy|||
 
@@ -399,5 +405,21 @@ Normal text
 
 ---
 <br>
+
+
+
+CSS
+
+Usually in body:
+
+font-family - 'Roboto' or sans-serif är några
+color - color of the text ie #333 is dark gray
+.img max-width: 100%  - only images that are larger than screen are scaled down to fit screen width.
+
+### Center a text on a div-box/img
+- On parent set: position:relative
+- On element we center set: position:absolute, _(this will take the element out of normal flow)_
+<br>Horizontal center: width:100% & text-align:center
+<br>Vertical center: top:0 & left:0 & transform: translateY(-50%) - _(moves up 50% of its own height)_ 
 
 
