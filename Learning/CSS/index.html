@@ -4,12 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="style.css">
 
 	<title>Learning CSS</title>
 </head>
 <body>
-	<h1>Learning CSS</h1>
+	<h1>Learning CSS.</h1>
 	<header>
 		<nav>
 			<ul>
@@ -20,13 +19,37 @@
 	</header>
 
 	<section class="example">
-		<div class="example__leftContainer">
-			<p>left container</p>
+		<div class="example__header">
+			<p class="example__header__title">
+				Title...
+			</p>
+			<p class="example__header__description">
+				Description...
+			</p>
 		</div>
-		<div class="example__rightContainer">
-			<p>right container</p>
+		<div class="example__container">
+			<div class="example__container__left">
+				<div class="example__container__left__description">
+					Description...
+				</div>
+				<div class="example__container__left__buttons">
+					<button class="example__container_btn">NO CSS</button>
+					<button class="example__container_btn">WITH CSS</button>
+				</div>
+				<div class="example__container__left__htmlCode">
+					HTML code...
+				</div>
+				<div class="example__container__left__cssCode">
+					CSS code...
+				</div>
+			</div>
+			<div class="example__container__right">
+				right container
+			</div>
 		</div>
 	</section>
 	
+	<!-- WebPack Server auto creates the bundled file to inject in same dir as index.html file  -->
+	<script src="./bundeld.generated.js"></script>
 </body>
 </html>
