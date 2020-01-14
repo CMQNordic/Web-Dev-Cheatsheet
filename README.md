@@ -463,4 +463,30 @@ color - color of the text ie #333 is dark gray
 
 
 
+# Main HTML flow & HTML5 Structure
+
+Elements in HTML are mostly "inline" or "block" elements. there are many other display types to use. Read here 
+https://www.w3schools.com/cssref/pr_class_display.asp
+
+<p>, <div>, <header>, <section>, <article> ...
+"Display: block" means that element fills the entire line of its parent and next element is always placed below. Height is determined depending on content inside such a element. Nothing can be displayed on its left or right side. Width and Height apply.
+
+<a> <span> <code> <button> ...
+"Display: inline" means that the element just take the width (and hight) corresponding to the content of such an element. If there is space beside, onother inline element is placed in that sppace. When it comes to margins and padding, browsers treat inline elements differently. Any height and width properties will have for most cases no effect (except button).You can add space to the left and right on an inline element, but you cannot add height to the top/bottom padding/margin. 
+
+
+"Display: inline-block" allows to set a width and height on the element. Also, with display: inline-block , the top and bottom margins/paddings are respected, but with display: inline they are not.
+
+# CENTERING THINGS
+
+A common task for CSS is to center text or images. In fact, there are three kinds of centering:
+
+-	Centering lines of text
+parent-container -> text-align: center
+
+-	Centering a block of text or an image
+-	Centering a block or an image vertically
+
+
+
 

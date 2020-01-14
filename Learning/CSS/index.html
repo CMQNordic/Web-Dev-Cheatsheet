@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 
 	<title>Learning CSS</title>
 </head>
+
 <body>
 	<h1>Learning CSS.</h1>
 	<header>
@@ -19,14 +21,14 @@
 	</header>
 
 	<section class="example">
-		<div class="example__header">
+		<header class="example__header">
 			<p class="example__header__title">
 				Title...
 			</p>
 			<p class="example__header__description">
 				Description...
 			</p>
-		</div>
+		</header>
 		<div class="example__container">
 			<div class="example__container__left">
 				<div class="example__container__left__description">
@@ -44,12 +46,139 @@
 				</div>
 			</div>
 			<div class="example__container__right">
-				right container
+
+				<div style="display:flex; justify-content: space-evenly; border: 2px solid black; padding: 10px;">
+					<style>
+						.e3-parent,
+						.e4-parent {
+							width: 40%;
+							height: 200px;
+
+							position: relative;
+
+							border: 3px solid orange;
+							background-color: red;
+						}
+
+						.e3-parent__background {
+							width: 100%;
+							height: 100%;
+
+							border: 1px dotted black;
+							background-color: lime;
+						}
+
+						.e3-parent__centered-div {
+
+							/* Will make elem inline, width shrinks to content */
+							position: absolute;
+							/* Center text horizontally, with stretched background/width */
+							width: 100%;
+							text-align: center;
+							/* Center vertically*/
+							left: 0;
+							top: 50%;
+							transform: translateY(-50%);
+
+							border: 1px dotted black;
+							background-color: gray;
+						}
+
+						.e4-parent__background {
+							width: 100%;
+							height: 100%;
+							background-image: url('../assets/nature.jpg');
+							background-size: cover;
+
+							border: 1px dotted black;
+							background-color: lime;
+						}
+
+						.e4-parent__centered-div {
+							/* Will make elem inline, width shrinks to content */
+							position: absolute;
+							/* Center the div vertically and horizontally*/
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							/* Note! Text seems to have bad breaking inside transformed left */
+							/* elements for small devices. This fix it. Why? */
+							width: fit-content;
+							/* Center the text within div */
+							text-align: center;
+							padding: 0.2rem 3%;
+
+							border: 1px dotted black;
+							background-color: rgba(128, 128, 128, 0.8);
+							color: white;
+						}
+					</style>
+					<div class="e3-parent">
+						<div class="e3-parent__background ">e3</div>
+						<div class="e3-parent__centered-div">
+							<span>Centered</span><br>
+							<span>Text in a DIV element</span>
+						</div>
+					</div>
+
+					<div class="e4-parent">
+						<div class="e4-parent__background">e4</div>
+						<div class="e4-parent__centered-div">
+							<span>Centered</span><br>
+							<span>Text in a DIV element</span>
+						</div>
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</section>
-	
+
+
+
+
+
+	<style>
+		.wrapper {
+			border: 1px solid;
+			width: 100%;
+			height: 100%;
+			margin: 2%;
+		}
+
+		.e1 {
+			border: 1px dotted;
+			margin-top: 2%;
+			margin-left: 2%;
+			width: 40%;
+			height: 10%;
+			padding-top: 2%;
+			padding-left: 2%;
+		}
+
+		.inline-block-elem {
+			display: inline-block;
+		}
+	</style>
+
+	<div class="wrapper">
+		<div class="e1">DIV (block)</div>
+		<section class="e1">SECTION (block)</section>
+		<span class="e1">SPAN (inline)</span>
+		<a class="e1">A (inline)</a>
+		<div class="e1">DIV (block)</div>
+		<button class="e1">BUTTON (inline)</button>
+		<code class="e1">CODE (inline)</code>
+		<div class="e1 inline-block-elem">DIV (inline-block)</div>
+		<span class="e1 inline-block-elem">SPAN (inline-block)</span>
+		<button class="e1 inline-block-elem">BUTTON (inline-block)</button>
+	</div>
+
+
+
 	<!-- WebPack Server auto creates the bundled file to inject in same dir as index.html file  -->
 	<script src="./bundeld.generated.js"></script>
 </body>
+
 </html>
