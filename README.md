@@ -11,7 +11,7 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 >- __SETTING UP DEVELOPMENT ENVIRONMENT & TOOLS__
 >	- 	[__VSCode__](#vscode) - _Configuration of your code editor, intellisense and emmet commands._
 >   	- [Useful VSCode extensions](#Useful-VSCode-extensions)
->   	- [EMMET commands](#emmet-commands)
+>   	- [EMMET snippets](#emmet-commands)
 >	- [__GIT & Cmd__](#git-&-cmd) - _Source control, github and some useful git/cmd commands._
 >		- [_Useful git commands_](#useful-git-commands:) 
 >		- [_Useful cmd commands_](#useful-cmd-commands:) 
@@ -26,19 +26,22 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 >   	- [_'webpack.config.js'_ file](#webpackconfigjs-file) - _How it can look like._
 >	- [__Markdown__ ](#markdown) - _Text styling, create a nice 'readme' file._
 >- __CODE EFFECTIVELY__
->	- [__CSS__](#css) - _Things to know to produce good CSS._
+>	- [__CSS__](#css) - _How to style pages with CSS._
 > 		- [PostCSS](#PostCSS) - _Nesting, variables, mixins_
 > 		- [Organize your code](#file-structure) - _How to split and organize your files._
-> 		- COMMONLY PERFORMED TASKS
-> 			- [Floating](#floating)
+> 		- [Commonly performed tasks](#commonly-performed-tasks)
+> 			- [Float](#floating)
 > 			- [Flexbox](#flexbox)
 > 			- [CSS Grid](#css-grid)
-> 			- [Centering of Elements](#centering-of-elements)
-> 			- [Working with Text And Fonts](#working-with-texts-fonts)
->	- [__HTML__](#html) - _Things to know to produce good HTML._
+> 			- [Centering of elements](#centering-of-elements)
+> 			- [Working with texts and fonts](#working-with-texts-fonts)
+>	- [__HTML__](#html) - _How to design and code a page._
 > 		- xxx
 >	- [__JS__](#js) - _Things to know to produce good JS._
 > 		- xxx
+>	- [__Content for web__](#content-for-web) - _All aboout using images, backgrounds and icons._
+> 		- Resolution and DPI
+> 		- Responsive images
 >- __LEARN FROM EXAMPLES__
 >	- [__TODO__](#xxx) - _TODO._
 
@@ -49,7 +52,7 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 
 ## [What to expect to find here?](#)
 
-Following blog is a short guide and look up manual to modern web development technologies. It includes short explanations, important things to remember and cheat-sheets to look up against in efficient way. The targeted audience for this blog are developers that need fast look up (or fresh up)their knowledge. Use this guide to get started and code faster and more efficient.
+Following article is an look up manual for web development technologies based on . It includes short explanations, important things to remember and cheat-sheets to look up against in efficient way. The targeted audience for this blog are developers that need fast look up (or fresh up)their knowledge. Use this guide to get started and code faster and more efficient.
 
 This guide is a based of our experience, read articles and various courses.
 
@@ -63,45 +66,39 @@ This guide is a based of our experience, read articles and various courses.
 
 ## [__VSCode__](#)
 
-__This section is about:__<br>
+_This section is about:_<br>
 _Configuration of your code editor, intellisense and emmet commands._
 
 _Introduction videos - [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)_
 
-<br>
 
- __VSCode__ is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and has lots of good external extensions available in an easy way. Out-of-the-box support for EMMET snippets and Intellisense gets you started right away with your WEB project. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and Less. VSCode has also built in support for Git. VSCode supports word based completions for any programming language. <br> 
+ __VSCode__ is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and more. Additionally it has many extensions available to download from NPM market. Installing VSCode gets you started right away with very helpful build in EMMET snippets and intellisense support. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and LESS. VSCode has also built in support for GIT. <br> 
 
- __#TODO__ - Write something what is missing by default and good to know....
 
 ### [Useful VSCode extensions](#)
+Some VSCode extensions that are good to install and learn how to use.
 
 || |
 |---|---|
-|Auto-Open Markdown Preview | Opens a preview window on the side for preview of selected .mp file|
-|Code Spell Checker|Spelling checker and autocorrect for source files|
+|Code Spell Checker|Spelling autocorrector|
 |Git History|TODO|
 |Git Lens|TODO|
 
 ### [EMMET commands](#)
-EMMET generate code from snippets for and is enabled by default for HTML, CSS, SASS in VSCode. 
+EMMET does autogenerate code from snippets for HTML, CSS, SASS in VSCode. 
 
-#TODO - what does it not support?
-
-Best for HTML and CSS only?
-
-|SNIPPETS|VSCode|Custom|HTML output|
+||Snippet|Custom|HTML output|
 |:---|:---|:---|:---|
 |New doc| ! |   | `HTML doc structure` |
 |Comment| c |   |  `<!-- -->` |
-|Css| link:css |   | `Inc CSS`|
-|Script| script:src |   | `Inc js` |
+|Css| link:css |   | `<link rel="stylesheet" href="style.css">`|
+|Script| script:src |   | `<script src=""></script>` |
 |Lorem| lorem23 |   | `Random text with 23 words`  |
-|Paragraph| p{Text} |p.myClass._Big{Text}|`<p class="myClass _Big">Text</p>`|
-|Div| div | .btnClass.__bigger#myButton{Text} |`<div class="btnClass __bigger" id="myButton">Text</div>`|
-|List| ul>li*3 |ul.nav>li.item$#item$*2{Item $}|`<ul class="nav"><li class="item1" id="item1">Item 1</li><li class="item2" id="item2">Item 2</li></ul>`|
-|Form|  | div>p+form:post>input:text+input:email+input:submit  |  |
-|Section|  | section>(article.containter>h1+p+button)*3 |  |
+|Paragraph| p |p.myClass._Big{Text}|`<p class="myClass _Big">Text</p>`|
+|Div| div | .btnClass1.btnClass2#myButton{Text} |`<div class="btnClass1 btnClass2" id="myButton">Text</div>`|
+|List| ul>li*3 |ul.nav>li.item$#item$*2{Item $}|`<ul class="nav">`<br>`<li class="item1" id="item1">Item 1</li>`<br>`<li class="item2" id="item2">Item 2</li>`<br>`</ul>`|
+|Form|  | div>p+form:post>input:text+input:email+input:submit  | `<div>`<br>`<p></p>`<br>`<form action="" method="post">`<br>`<input type="text" name="" id="">`<br>`<input type="email" name="" id="">`<br>`<input type="submit" value="">`<br>`</form>`<br>`</div>` |
+|Menu|  | section>(article.containter>h1+p+button)*2 |  |
 |Other|  | nav>.container>ul.navigation#mainMenu>li*3#item${list item $}  | |
 |Other| |.columns>(.column>.box>h2{I am a box})+(.column>.box>h3{I am another box})|
 
@@ -132,14 +129,14 @@ Best for HTML and CSS only?
 
 ## [__GIT & Cmd__](#)
 
-__This section is about:__<br>
-_Source control, github and some useful git/cmd commands._
+___This section is about:___<br>
+___Source control, github and some useful git/cmd commands.___
 
  _Good tutorial can be found: [here](https://www.youtube.com/watch?v=HVsySz-h9r4) and [here](https://www.youtube.com/watch?v=FdZecVxzJbk)_
 
 <br>
 
-__Git__ is the most popular version control system for corporation and tracking changes in source code. To start with - some commonly used expression to understand: 
+__Git__ is the most popular version control system for corporation and tracking changes in source code. Following come some basic expressions to understand:
 ```
 Repository 			=> Repo => Our 'project' under source control. Can be local or remote.
 Commit 				=> Save to git history
@@ -151,7 +148,7 @@ Working Directory 	=> All files that you currently have "checked out" and edit/w
 
 
 ### [Useful git commands:](#)
-- __Install it__ on your computer (or check if installed) with command: <br>
+- __Install Git__ on your computer (or check if installed) with command: <br>
 `git --version`
  
 >	_Note! In VSCode's "Command Palette" (open it with `CTRL-SHIFT-P`) you can run all GIT commands from a list, instead writing memories command in the terminal. VSCode do also have a Git GUI with buttons to simply som common tasks. Still good to know syntax of commands to run them from command line when needed!_
@@ -161,7 +158,7 @@ Working Directory 	=> All files that you currently have "checked out" and edit/w
 
  	`git config --global user.name "Your Name"` <br>
  	`git config --global user.email  your@email.com` <br>
-	 `git config --list` &nbsp;&nbsp; _(views set info)_ 
+	 `git config --list` &nbsp;&nbsp; _(views saved configuration info)_ 
 
 - __Create a local repo__ by navigating to the folder in cmd window that you wish to become a repo. Then either create a new repo from scratch with:
 
@@ -226,7 +223,7 @@ Working Directory 	=> All files that you currently have "checked out" and edit/w
 ## [__Node.js & Npm__](#)
 
 __This section is about:__<br>
-_How to download packages to automate your work.._
+_How to download packages to automate your work._
 
  _Extensive node.js tutorial can be found [here](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)._<br>
  _List of build-in node.js modules [here](https://www.w3schools.com/nodejs/ref_modules.asp)._
@@ -365,12 +362,43 @@ During development you run webpack in development mode as then it bundles faster
 
 PostCSS is an npm package widely used with webpack. It is like an empty shell that on its own do not do anything. It uses "loaders" (other npm packages), that can load and execute various PostCSS packages (other npm packages). Webpack, when bundling, uses PostCSS packages to execute and understand different file formats we that we chose to use for our development. For example non standard stuff like CSS variable, nesting in CSS can be used by developer and though Webpack bundler be transformed to valid CSS that browser understands thanks to PostCSS packages. 
 
+In order for webpack to understand and know what PostCSS loaders and what PostCSS packages to use for various files it must be instructed in webpack.config.js file
+
+You can check our our example of webpack.config.ja file but follwing comes description on some settings in more details way if you want to know what-is-what.
+
+<br>
+
+_Instructing webpack that all files with ending .css shall be handled by following PostCSS loaders:_ 
+
+```
+module: {
+		rules: [
+			{
+				test: /\.css$/i, /* Only if file ends in .css */
+				use: ['style-loader','css-loader']
+			}
+		]
+	},
+```
+
+
+/* Telling webpack that that all files ending with .css shall be handled by following loaders*/ 
+
+module: {
+		rules: [
+			{
+				test: /\.css$/i, /* Only if file ends in .css */
+				use: ['style-loader','css-loader']
+			}
+		]
+	},
+
 
 <br>
 
 ### [Webpack devServer](#)
 
-__Webpack devServer__ (webpack-dev-server) is a webpack npm package that is started from command line, usually by running a NPM-script. When running it can automatically inject code to running browser(s) instantly when tracked project files (i.e HTML, CSS and JS) are saved. The injection is done is such a way that browser do not perform 'hard refresh' and keeps its state. This is VERY convenient when developing and CSS styling.The server can also be reached from several browsers on the same wify network. It is very popular dev server to use when building and styling your web app. In order to get it work some configurations need to be done and some npm packaged downloaded. Following is described what need to be done to gest started with webpack DevServer:
+__Webpack devServer__ (webpack-dev-server) is a webpack npm package that is started from command line, usually by running a NPM-script. When running it can automatically inject code to running browser(s) instantly when tracked project files (i.e HTML, CSS and JS) are saved. The injection is done is such a way that browser do not perform 'hard refresh' and keeps its state. This is VERY convenient when developing and CSS styling.The server can also be reached from several browsers on the same wi-fy network. It is very popular dev server to use when building and styling your web app. In order to get it work some configurations need to be done and some npm packaged downloaded. Following is described what need to be done to gest started with webpack DevServer
 
 - Make sure webpack is installed
 
@@ -384,12 +412,13 @@ __Webpack devServer__ (webpack-dev-server) is a webpack npm package that is star
 - Create [webpack.config.js](#webpackconfigjs-file) file in the root of your repo:<br>
 `mkdir webpack.config.js`
 
+```
 const postCSSPlugins = [
     `list here all downloaded postCSS plugins you use `
 ]
 
 
-/* Telling webpack that that all files ending with .css shall be handled by following packages*/ 
+/* Telling webpack that that all files ending with .css shall be handled by following loaders*/ 
 
 module: {
 		rules: [
@@ -444,6 +473,7 @@ Recommended VSCode Extensions:
 
 Auto-Open Markdown Preview      - Opens a preview window on the side for preview of selected .mp file.
 ```
+
 #### Markdown Syntax
 
 _\_italic text\__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -522,44 +552,92 @@ module.exports = {
 ```
 
 
->\>Text 1 _`<br>`_ <br>
->\>Text 2 on the second line
+> \>Text 1 _`<br>`_ <br>
+> \>Text 2 on the second line
 
 - \- ul item &nbsp; _(or use '1.' for ol)_
 - \- ul item
     - \- ul subitem a (tabbed)
 
 
-
-|Name|Email|
-|---|---|
-|Peter|peter@devoote.se|
-|Martin Czerwinski|martin@cmq.se|
 ```
 |Name|Email|
 |---|---|
 |Peter|peter@devoote.se|
 |Martin Czerwinski|martin@cmq.se|
 ```
+|Name|Email|
+|---|---|
+|Peter|peter@devoote.se|
+|Martin Czerwinski|martin@cmq.se|
 
-<br>[- BACK TO TOP -](#contents)
+
+<br>
+
+[- BACK TO TOP -](#contents)
 
 ---
 ---
-<br>
-<br>
+<br><br>
 
 
 # CODE EFFECTIVELY
-## CSS
 
-Usually in body:
+## [__CSS__](#)
 
-font-family - 'Roboto' or sans-serif är några
-color - color of the text ie #333 is dark gray
-.img max-width: 100%  - only images that are larger than screen are scaled down to fit screen width.
+__This section is about:__<br>
+ _How to style pages with CSS._
+
+_Some good tutorial [HERE](xxx)_
+
+
+In programming languages the word __container__ is generally used for structures that can contain more than one element. A __wrapper__ instead is something that wraps around a single object to provide more functionalities and interfaces to it. DIV tag is a very common to use for this purpose with class name container/wrapper.
+
+[Structure](#)
+
+TODO
+
+### [Commonly performed tasks](#)
+
+__This section is about:__<br>
+_Source control, github and some useful git/cmd commands._
+
+- ### [Common expressions](#)
+
+Eample of styling for body:
+
+`font-family: 'roboto', sans-serif;`  - some common styles <br>
+`img {
+	max-width: 100%;
+	height: auto;
+}` - images larger than screen are scaled down to fit screen width and keep aspect ratio.
+
+- ### [__Float__](#)
+
+	TODO
+
+- ### [Flexbox](#)
+
+	TODO
+
+- ### [CSS GRID](#)
+
+	TODO
+
+- ### [Centering of elements](#)
 
 ### Center a text on a div-box/img
+
+- Two (&more) elements in a container:
+	- csdfsd
+
+
+- Ono text element in a container:
+
+- One box element in a container:
+
+
+
 - On parent set: position:relative
 - On element we center set: position:absolute, _(this will take the element out of normal flow)_
 <br>Horizontal center: width:100% & text-align:center
@@ -572,9 +650,21 @@ color - color of the text ie #333 is dark gray
 
 -	Center texts within a image
 
+<br>
 
+[- BACK TO TOP -](#contents)
 
-# Main HTML flow & HTML5 Structure
+---
+---
+<br>
+
+## [HTML](#)
+
+__This section is about:__<br>
+ _How to style pages with CSS._
+
+_Some good tutorial [HERE](xxx)_
+
 
 Elements in HTML are mostly "inline" or "block" elements. there are many other display types to use. Read here 
 https://www.w3schools.com/cssref/pr_class_display.asp
@@ -596,12 +686,41 @@ A common task for CSS is to center text or images. In fact, there are three kind
 parent-container -> text-align: center
 
 -	Centering a block of text or an image
--	Centering a block or an image vertically'
-
-sdsa
+-	Centering a block or an image vertically
 
 
+# Screens and IMAGES
 
+__Screen Resolution__
+Resolution refers to number of pixels that make up the image on a screen. A higher pixel count means that sharper picture and possibility to show big sharp images with good quality. Resolution is expressed using horizontal and vertical pixel counts.<br> 
+1366x768
+
+Smartphone 360x640 (#1 popular)
+Smartphone 375xX (#2 popular)
+
+`Notebooks/Pads - Wildly used, HD, 1366x768. (aka 720) (#3 popular)` <br>
+`Notebooks/Pads - FULL HD (aka 1080) is 1920x1080 (#4 popular)` <br>
+`Monitors/TVs - 3K is 3200×1800.`<br>
+`Monitors/TVs - 4K (UHD = ultra HD) is 3840×2160.`
+`TV's - 7680x4320`
+
+__Aspect ratio__
+The predominant display aspect ratio on 2020s PC market, including laptops,tablets, and monitors, is 16:9. Also referred to as widescreen aspect ratio. I.e FULL HD 1920x1080 have 16:9 aspect ratio.
+
+
+
+<br><br>[- __BACK TO TOP__ -](#contents)
+
+---
+---
+<br><br>
+
+## [Content for web](#)
+
+__This section is about:__<br>
+_All about using images, backgrounds and icons._
+
+_Introduction videos - [here](xxx)_
 
 
 
