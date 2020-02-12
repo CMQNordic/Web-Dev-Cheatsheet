@@ -1,8 +1,9 @@
 const path = require('path');
 
 /****************************************************************************************************/
-/* Root of our index.html file */
-const indexRoot = "./learning/css"; 
+/****************************************************************************************************/
+
+const indexRoot = "./learning/css"; /* Root of our index.html file */
 
 /* Entry file to bundle with imported dependencies. Must contain: (module.hot) module.hot.accept() */
 const JSToBundle = "./WebPackRelated/app.js";
@@ -29,7 +30,8 @@ const postCSS_Plugins = [
 	require('postcss-nested'),
 	require('autoprefixer')
 ];
-/***************************************************************************************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
 
 module.exports = {
 	mode: modeType,

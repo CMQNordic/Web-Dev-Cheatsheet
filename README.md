@@ -12,6 +12,7 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 >	- 	[__VSCode__](#vscode) - _Configuration of your code editor, intellisense and emmet commands._
 >   	- [Useful VSCode extensions](#Useful-VSCode-extensions)
 >   	- [EMMET snippets](#emmet-commands)
+>   	- [Shortcuts](#vscode-shortcuts)
 >	- [__GIT & Cmd__](#git-&-cmd) - _Source control, github and some useful git/cmd commands._
 >		- [_Useful git commands_](#useful-git-commands:) 
 >		- [_Useful cmd commands_](#useful-cmd-commands:) 
@@ -66,25 +67,29 @@ This guide is a based of our experience, read articles and various courses.
 
 ## [__VSCode__](#)
 
-_This section is about:_<br>
-_Configuration of your code editor, intellisense and emmet commands._
+This section is about:<br>
+Configuration of your code editor, intellisense and emmet commands.
 
-_Introduction videos - [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)_
+_Introduction videos [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)_
 
+<br>
 
  __VSCode__ is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and more. Additionally it has many extensions available to download from NPM market. Installing VSCode gets you started right away with very helpful build in EMMET snippets and intellisense support. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and LESS. VSCode has also built in support for GIT. <br> 
 
 
-### [Useful VSCode extensions](#)
+### [__Useful VSCode extensions__](#)
 Some VSCode extensions that are good to install and learn how to use.
 
 || |
 |---|---|
-|Code Spell Checker|Spelling autocorrector|
-|Git History|TODO|
-|Git Lens|TODO|
+|Live Server|A Quick Development Live Server with live browser reload. (For quick preview instead of webkit dev server)|
+|Code Spell Checker|Spelling autocorrector.|
+|Git History|Views branches|
+|Node.js Modules Intellisense|Scans builtin modules, dependencies, devDependencies and file modules and proposes when coding|
 
-### [EMMET commands](#)
+<br>
+
+### [__EMMET commands__](#)
 EMMET does autogenerate code from snippets for HTML, CSS, SASS in VSCode. 
 
 ||Snippet|Custom|HTML output|
@@ -97,9 +102,9 @@ EMMET does autogenerate code from snippets for HTML, CSS, SASS in VSCode.
 |Paragraph| p |p.myClass._Big{Text}|`<p class="myClass _Big">Text</p>`|
 |Div| div | .btnClass1.btnClass2#myButton{Text} |`<div class="btnClass1 btnClass2" id="myButton">Text</div>`|
 |List| ul>li*3 |ul.nav>li.item$#item$*2{Item $}|`<ul class="nav">`<br>`<li class="item1" id="item1">Item 1</li>`<br>`<li class="item2" id="item2">Item 2</li>`<br>`</ul>`|
-|Form|  | div>p+form:post>input:text+input:email+input:submit  | `<div>`<br>`<p></p>`<br>`<form action="" method="post">`<br>`<input type="text" name="" id="">`<br>`<input type="email" name="" id="">`<br>`<input type="submit" value="">`<br>`</form>`<br>`</div>` |
-|Menu|  | section>(article.containter>h1+p+button)*2 |  |
-|Other|  | nav>.container>ul.navigation#mainMenu>li*3#item${list item $}  | |
+|Form| form | div>p+form:post>input:text+input:email+input:submit  | `<div>`<br>`<p></p>`<br>`<form action="" method="post">`<br>`<input type="text" name="" id="">`<br>`<input type="email" name="" id="">`<br>`<input type="submit" value="">`<br>`</form>`<br>`</div>` |
+|Article| article  | section>(article.containter>h1+p+button)*2 |  |
+|Menu| ul>li*3  | nav>.container>ul.navigation#mainMenu>li*3#item${list item $}  | |
 |Other| |.columns>(.column>.box>h2{I am a box})+(.column>.box>h3{I am another box})|
 
 
@@ -107,8 +112,14 @@ EMMET does autogenerate code from snippets for HTML, CSS, SASS in VSCode.
 
 
 
+### [__VSCode shortcuts__](#)
+Some useful commands to use in VSCode. 
 
-
+||Shortcut|Action|
+|:---|:---|:---|
+|Terminal| `Ctrl Ö` | Open new terminal window |
+|Search project| `Ctrl P` | Open search in project |
+|Search commands| `Ctrl Shift P` | Open command palette |
 
 
 
@@ -129,85 +140,105 @@ EMMET does autogenerate code from snippets for HTML, CSS, SASS in VSCode.
 
 ## [__GIT & Cmd__](#)
 
-___This section is about:___<br>
-___Source control, github and some useful git/cmd commands.___
+This section is about:<br>
+Source control, github and some useful git/cmd commands.
 
- _Good tutorial can be found: [here](https://www.youtube.com/watch?v=HVsySz-h9r4) and [here](https://www.youtube.com/watch?v=FdZecVxzJbk)_
+_Good tutorial can be found [here](https://www.youtube.com/watch?v=HVsySz-h9r4) and [here](https://www.youtube.com/watch?v=FdZecVxzJbk)_
 
 <br>
 
-__Git__ is the most popular version control system for corporation and tracking changes in source code. Following come some basic expressions to understand:
-```
-Repository 			=> Repo => Our 'project' under source control. Can be local or remote.
-Commit 				=> Save to git history
-Branch 				=> __#TODO__
-Check-out			=> Switching between different versions of code (switching branches or #TODO )
-Working Directory 	=> All files that you currently have "checked out" and edit/work on
-```
+__Git__ is the most popular version-control system for tracking changes in source code during software development. To start with get familiar with some common expressions:
+
+|Expressions |Descriptions |
+|:---|:---|
+|Repository| Shortly called 'Repo'. A folder location where our project with all change history is stored. Can be local on our machine or remote on i.e. github.|
+|Working Directory| Local folder location where all project files that we currently work on (that we have checked out) are located.|
+|Stage|Temporarily save changed files in local repo, as ready for commit|
+|Commit|Permanently save change files to local repo with an label/description|
+|Branch|A movable pointer to one of gits committed versions of code. When you add new feature you spawn new branch to encapsulate the changes.|
+|Clone|Fetch code from a remote repo to our local repo.|
+|Rebase||
+|HEAD|The most recent commit to a branch (tip of a branch)|
+|Index|Area where staged files are held for a commit|
+|Remote|A common repository online i.e on GitHub or Bitbucket|
+|Push/Pull|upload/Download data from remote|
+|Check out|Switching between different versions of code that are already in our local system. Checking out updates the files in working directory to match those we check out from i.e. specific branch.|
 
 
-
-### [Useful git commands:](#)
-- __Install Git__ on your computer (or check if installed) with command: <br>
-`git --version`
+### [__Useful Git commands:__](#)
+- __Install Git.__ To start with make sure to install git on your computer. To check if it is already installed use command 
+<br> `> git --version`  &nbsp;&nbsp; _(shows current installed git version)_ 
+<br> `> git --help`  &nbsp;&nbsp; _(shows list of commands with some descriptions)_ 
+<br> `> git config --help`  &nbsp;&nbsp; _(shows help about a specific here config command)_ 
  
->	_Note! In VSCode's "Command Palette" (open it with `CTRL-SHIFT-P`) you can run all GIT commands from a list, instead writing memories command in the terminal. VSCode do also have a Git GUI with buttons to simply som common tasks. Still good to know syntax of commands to run them from command line when needed!_
+>	_Note! In VSCodes 'Command palette', opened with `CTRL-SHIFT-P`, you can run all git commands by choosing from a list instead writing commands in the terminal. VSCode do also have a simple git GUI to simply some common tasks like viewing changed files and committing changes. Still it is good to know syntax of those basic commands in order to being able to run them from command line as it is often required!_
 
 
-- __Configure git__ on your local machine by telling who you are for committing changes - set email, user name with:
+- __Configure Git.__ Initially make sure to tell git your credentials to use when committing:
 
- 	`git config --global user.name "Your Name"` <br>
- 	`git config --global user.email  your@email.com` <br>
-	 `git config --list` &nbsp;&nbsp; _(views saved configuration info)_ 
+ 	`> git config --global user.name "Your Name"` <br>
+ 	`> git config --global user.email "Your@Email.com"` <br>
+	`> git config --list` &nbsp;&nbsp; _(this views all saved configuration information)_ 
 
-- __Create a local repo__ by navigating to the folder in cmd window that you wish to become a repo. Then either create a new repo from scratch with:
+- __Create a local repo.__ This can be done in two ways. First create new local repo by navigating in command window to a folder that you wish to become the working directory for your project. Then you can transform this folder to a new local repo with followong command:
 
-	`git init`
+	`> git init` &nbsp;&nbsp; _(this turns local directory that is not under version control to a git tracked local repo)_ <br>
+	`> git init [LocalFolderName]` &nbsp;&nbsp; _(this creates new local directory let makes it an emty local repo)_ 
 
-	 ... or clone a repo from remote by:
+	 ... or other way to create local repo is to clone an already existing repo from remote to your local machine. From given location in command window
 
-	`git clone http://YourRemoteRepoURL.git`
+	`> git clone [http://RemoteRepoURL.git] [LocalFolderName]` &nbsp;&nbsp; _(this creates new folder LocalFolderName, copies all versions of code to it and check-outs latest code version.)_
 
-	Note! In both cases automatically our 'local_branch_name name' is named `master` and is checked-out locally! See what branch you have with<br> `git branch`
+	In both cases we end up with a git repository on our local machine (local repo). In both cases our 'local_branch_name' gets named 'master' and automatically check-out the latest version of the code! 
+	<br> `> git branch` &nbsp;&nbsp; _(to see what branch you have checked-out )_ 
 
-- At some point we need to push (upload) our local repo to a remote repo (i.e on GitHub). Then you must __set a remote_url__:
+>	Note! Git stores all of its history data in a hidden file stored in a hidden folder locally in the root of the repository (folder is named .git)
 
-	`git remote -v`  &nbsp;&nbsp; _(show what is you current remote repo url and name)_ <br>
-	`git remote set-url origin http://url_to_your_online_repo.git`  &nbsp;&nbsp; _(here we choose 'origin' as our remote_branch_name)_
+- __Stage & Commit.__ After working a while (by adding new files in working directory or editing existing once) shall stage the changes and later_commit those to your local repo with:
 
-- After working a while with your projects locally you shall stage the changes and later __commit__ to your local repo with:
+	`> git status` &nbsp;&nbsp; _(lists useful info such as all changes to stage/commit aswell as errors/conflicts if any)_ <br>
+	`> git add -A (--all)` &nbsp;&nbsp; _(stages all changes. Just git add = git add -A)_ <br>
+	`> git commit -m 'description'` _(commits all changes with a message)_
 
-	`git status` &nbsp;&nbsp; _(lists all changes to stage/commit)_ <br>
-	`git add -A` &nbsp;&nbsp; _(stages all changes)_ <br>
-	`git commit -m 'commit description'`
+- __Set url to a Remote Repo.__ In order to synch changes with a remote repo i.e on GitHub, an address must be set.
 
-- When time to push __local changes to remote repo__  then first pull from from remote as there might be changed on remote conflicting with your changes. It is always best to resolve those conflicts and test locally before updating remote repo:
+	`git remote -v`  &nbsp;&nbsp; _(shows what is you current remote repo url and remote_repo_name)_ <br>
+	`git remote set-url origin http://url_to_your_online_repo.git`  &nbsp;&nbsp; _(here we choose 'origin' as our remote_branch_name together with corresponding address)_
 
-	`git pull origin master` &nbsp;&nbsp; _(git pull from 'remote_branch_name' to 'local_branch_name')_ <br>
-	`git push origin master` _(git push to 'remote_branch_name' from 'local_branch_name')<br> 
+- __Pull & Push changes from remote.__ We can not only stor the changes in local repo. We must stor it remotely too. When it's time to push local changes to remote repo  then first pull from from remote. This because there might be changed on remote conflicting with your changes. It is always best to resolve those conflicts and test locally before finally uploading to remote repo:
 
--	Create a new branch and work toward with and check-out by:
+	`git pull origin master` &nbsp;&nbsp; _(git pulls changes from 'remote_branch_name' - origin to 'local_branch_name' - master')_ <br>
+	`git push origin master` &nbsp;&nbsp; _(git uploads changes to 'remote_branch_name' - origin from 'local_branch_name' - master)_<br> 
 
-	`git checkout -b 'myBranchName'`  &nbsp;&nbsp; _(__TODO__ ???)_
+-	__Create new branch.__ For new feature new branch...:
+
+	`git branch [newBranchName]`  &nbsp;&nbsp; _(this creates a new branch)_ <br>
+	`git checkout -b [newBranchName]`  &nbsp;&nbsp; _(this creates a new branch and checks it out)_
 
 <br>
 
-### [Useful cmd commands:](#)
+### [__Useful Cmd commands:__](#)
+It is good to know and memorize those basic command that are often used.
 
 | | |
 |:---|:---|
 |pwd|Writes out current location|
 |dir|Lists directories and files in current location|
-|cd 'path'|Changes 'path' location. 'cd..' changes back|
-|mkdir 'new_dir_name'|Creates a new directory in current location|
-|touch 'filename_with_extension'|Creates a new file in current location|
-|xxx|__#TODO__|
+|cd [path]|Changes location. 'cd..' changes back|
+|mkdir [dirName]|Creates a new directory in current location|
+|touch [fileName]|Creates a new file in current location|
+|cat [fileName]|Opens a file|
+|ipconfig|detailed information about your current network adapter connection including current IP address|
+|copy [soure] [dest]|Copies a source file to destination|
+|cls|Clear the command screen|
+
+
 
 
 
 <br>
 
-### [.gitignore file](#)
+### [__.gitignore File__](#)
 
 #TODO
 
@@ -243,15 +274,15 @@ __Node__ is a lightweight runtime environment for JavaScript. There are two mai
 `node FilenameToRun.js` <br><br>
 
 
-- JavaScript (.js) node-files usually include modules/packages that are either downloaded (and stores in `node_modules` in our project root) or are built-in in node by default. Following line in top of the file includes a default `http` module that can be used to make request through HTTP.<br>
+- JavaScript (.js) node-files usually include modules/packages that are either downloaded (and stored in root folder `node_modules`) or are by default built-in in node.js. Following line in top of the file includes/uses a default `http` module that can be used to make request through HTTP.<br>
 `var http = require('http');` <br>...<br>
-#TODO add more usefull functions
+#TODO add more useful module includes
 
 
 
 
 ### Npm
-__Node Package Manager__ (NPM) comes with node.js by default. NPM is a tool, package manager, that is used to search for/download and handle packages. Those packages are JavaScript programs written by others performing tasks that automate various things and save us a lot od development time. Packages are downloaded through npm can be JavaScript tools used in development but also code that we need when publishing our code to browser (ie loadash or normalize.css). 
+__Node Package Manager__ (NPM) comes by default with node.js. NPM is a package manager tool that is used to search for and download packages. Those packages are JavaScript programs written by others performing tasks that automate various things and save us a lot of development time time. Packages are downloaded through npm can be JavaScript tools used in development but also code that we need when publishing our code to browser (ie loadash or normalize.css). 
 
 <br>
 
