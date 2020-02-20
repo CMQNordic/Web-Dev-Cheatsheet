@@ -11,20 +11,22 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 >- __SETTING UP DEVELOPMENT ENVIRONMENT & TOOLS__
 >	- 	[__VSCode__](#vscode) - _Configuration of your code editor, intellisense and emmet commands._
 >   	- [Useful VSCode extensions](#Useful-VSCode-extensions)
->   	- [EMMET snippets](#emmet-commands)
->   	- [Shortcuts](#vscode-shortcuts)
+>   	- [EMMET snippets](#emmet-snippets)
+>   	- [VSCode Shortcuts](#vscode-shortcuts)
 >	- [__GIT & Cmd__](#git-&-cmd) - _Source control, github and some useful git/cmd commands._
 >		- [_Useful git commands_](#useful-git-commands:) 
 >		- [_Useful cmd commands_](#useful-cmd-commands:) 
->		- [_.gitignore file_](#.gitignore-file) - _how it can look like._
+>		- [.gitignore file](#.gitignore-file)
 >	- [___Node.js & Npm___](#nodejs-&-npm) - _How to download packages to automate your work._
->   	- [Installing Node & Npm](#how-to-install-npm-packages?)
->   	- [Useful Npm packages](#useful-npm-packages)
->   	- [_'package.json'_ file](#packagejson-file) - _How it can look like._
+>   	- [Install Node.js](#install-node.js-and-execute-programs)
+>   	- [Useful Node.js modules](#useful-node.js-modules)
+>   	- [Install nmp packages](#install-npm-packages-and-use-those)
+>   	- [Useful npm packages](#useful-npm-packages)
+>   	- [Package.json file](#packagejson-file)
 >	- [__Webpack__](#webpack) - _Bundling and auto-building your source files._
 >   	- [Bundling with PostCSS](#bundling-with-postcss)
 >   	- [Webpack devServer](#webpack-devserver-with-postcss)
->   	- [_'webpack.config.js'_ file](#webpackconfigjs-file) - _How it can look like._
+>   	- [Webpack.config.js file](#webpackconfigjs-file) 
 >	- [__Markdown__ ](#markdown) - _Text styling, create a nice 'readme' file._
 >- __CODE EFFECTIVELY__
 >	- [__CSS__](#css) - _How to style pages with CSS._
@@ -67,32 +69,32 @@ This guide is a based of our experience, read articles and various courses.
 
 ## [__VSCode__](#)
 
-This section is about:<br>
-Configuration of your code editor, intellisense and emmet commands.
+This section is about: Configuration of your code editor, intellisense and emmet commands.
 
 _Introduction videos [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)_
 
 <br>
 
- __VSCode__ is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js and more. Additionally it has many extensions available to download from NPM market. Installing VSCode gets you started right away with very helpful build in EMMET snippets and intellisense support. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and LESS. VSCode has also built in support for GIT. <br> 
+ __VSCode__ is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js, NPM and more. (TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language). Additionally VSCode has many extensions available to download from NPM market. Installing VSCode gets you started right away with very helpful build in EMMET snippets and intellisense support. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and LESS. VSCode has also built in support for GIT.<br> 
 
 
 ### [__Useful VSCode extensions__](#)
-Some VSCode extensions that are good to install and learn how to use.
+VSCode have many extensions. Here is a list of a couple useful once to install and learn how to use.
 
 || |
 |---|---|
-|Live Server|A Quick Development Live Server with live browser reload. (For quick preview instead of webkit dev server)|
-|Code Spell Checker|Spelling autocorrector.|
-|Git History|Views branches|
-|Node.js Modules Intellisense|Scans builtin modules, dependencies, devDependencies and file modules and proposes when coding|
+|Live Server|A lightweight development Live Server with live reload. Use for quick preview instead of Webkit Dev Server
+|Code Spell Checker|Spelling autocorrector with fix proposals.|
+|Git History|Views branches and history of code in a nice way|
+|Node.js Modules Intellisense|Plugin that autocomplete JavaScript/TypeScript modules in import statements. Scans builtin modules, dependencies and file modules.|
+|..|..|
 
 <br>
 
-### [__EMMET commands__](#)
-EMMET does autogenerate code from snippets for HTML, CSS, SASS in VSCode. 
+### [__EMMET snippets](#)
+Use EMMET to speed up writing  code. It autogenerates code from short text snippets for HTML, CSS, SASS. 
 
-||Snippet|Custom|HTML output|
+|||||
 |:---|:---|:---|:---|
 |New doc| ! |   | `HTML doc structure` |
 |Comment| c |   |  `<!-- -->` |
@@ -106,16 +108,17 @@ EMMET does autogenerate code from snippets for HTML, CSS, SASS in VSCode.
 |Article| article  | section>(article.containter>h1+p+button)*2 |  |
 |Menu| ul>li*3  | nav>.container>ul.navigation#mainMenu>li*3#item${list item $}  | |
 |Other| |.columns>(.column>.box>h2{I am a box})+(.column>.box>h3{I am another box})|
+|...|...|...|
+
+<br>
 
 
 
 
+### [__VSCode Shortcuts__](#)
+Make sure to memorize some useful shortcut commands to use in VSCode. 
 
-
-### [__VSCode shortcuts__](#)
-Some useful commands to use in VSCode. 
-
-||Shortcut|Action|
+||||
 |:---|:---|:---|
 |Terminal| `Ctrl Ö` | Open new terminal window |
 |Search project| `Ctrl P` | Open search in project |
@@ -140,85 +143,121 @@ Some useful commands to use in VSCode.
 
 ## [__GIT & Cmd__](#)
 
-This section is about:<br>
-Source control, github and some useful git/cmd commands.
+This section is about GIT as source control with some common git- & cmd-commands.
 
 _Good tutorial can be found [here](https://www.youtube.com/watch?v=HVsySz-h9r4) and [here](https://www.youtube.com/watch?v=FdZecVxzJbk)_
 
 <br>
 
 __Git__ is the most popular version-control system for tracking changes in source code during software development. To start with get familiar with some common expressions:
-
-|Expressions |Descriptions |
+| | |
 |:---|:---|
-|Repository| Shortly called 'Repo'. A folder location where our project with all change history is stored. Can be local on our machine or remote on i.e. github.|
-|Working Directory| Local folder location where all project files that we currently work on (that we have checked out) are located.|
-|Stage|Temporarily save changed files in local repo, as ready for commit|
-|Commit|Permanently save change files to local repo with an label/description|
-|Branch|A movable pointer to one of gits committed versions of code. When you add new feature you spawn new branch to encapsulate the changes.|
-|Clone|Fetch code from a remote repo to our local repo.|
-|Rebase||
+|Repository| Shortly called "Repo". A  location ("container") where our project files with all change history is stored. Can be located on our local machine or remotely on i.e. github.|
+|Working Directory| Local folder location where your command window points to - where you run your git commands |
+|Working Tree|Local folder location where your repo have checked out git code. A set of files that we work with on a branch that is linked to the repository |
+|Check out|Switching between different versions of code that that we can edit.<br> Checking out updates the files in working directory to match those we check out from i.e. specific branch.|
+|Branch|A movable pointer to one of versions of code.<br> Usually when you add new feature you spawn new branch to encapsulate the changes.|
+|Stage|Temporarily save changed files in local repo (=added to index), marked as ready to commit|
+|Commit|Permanently save changed files to local repo with an label/description|
+|Clone|Fetch code from a remote repo to local repo.|
+|Rebase|In Git there are two main ways to integrate changes from one branch into another: merge and rebase. Rebase is moves the entire feature branch to originate from its parents HEAD. |
 |HEAD|The most recent commit to a branch (tip of a branch)|
 |Index|Area where staged files are held for a commit|
-|Remote|A common repository online i.e on GitHub or Bitbucket|
-|Push/Pull|upload/Download data from remote|
-|Check out|Switching between different versions of code that are already in our local system. Checking out updates the files in working directory to match those we check out from i.e. specific branch.|
+|Remote|A remote online repository that have an url i.e on GitHub or Bitbucket|
+|Push/Pull|Upload/Download code from remote repo|
 
+<br>
 
-### [__Useful Git commands:__](#)
-- __Install Git.__ To start with make sure to install git on your computer. To check if it is already installed use command 
-<br> `> git --version`  &nbsp;&nbsp; _(shows current installed git version)_ 
-<br> `> git --help`  &nbsp;&nbsp; _(shows list of commands with some descriptions)_ 
-<br> `> git config --help`  &nbsp;&nbsp; _(shows help about a specific here config command)_ 
+### [__Useful Git commands__](#)
+It is recommended to understand and memorize those basic command that are often used.
+
+`CTRL-Ö` &nbsp;&nbsp;  -  &nbsp;&nbsp;  VSCode shortcut that toggle open/close terminal window.
+
+- __Install Git.__ To start with make sure to install git on your computer. To check if it is already installed use comman.
+<br> `> git --version`  &nbsp;&nbsp; _shows current installed git version_ 
+<br> `> git --help`  &nbsp;&nbsp; _shows list of commands with some descriptions_ 
+<br> `> git config --help`  &nbsp;&nbsp; _shows help about a specific command here: config_ 
  
->	_Note! In VSCodes 'Command palette', opened with `CTRL-SHIFT-P`, you can run all git commands by choosing from a list instead writing commands in the terminal. VSCode do also have a simple git GUI to simply some common tasks like viewing changed files and committing changes. Still it is good to know syntax of those basic commands in order to being able to run them from command line as it is often required!_
+>	_Note! In VSCodes a 'Command palette' can be opened with `CTRL-SHIFT-P`. From there you can run all git commands by choosing those from a list instead of writing commands in the terminal window. VSCode do also have a simple git GUI in order to simply some common tasks performed regularly. Still it is good to know syntax of those basic git commands in order to being able to run them from command line as it is sometimes required!_
 
 
-- __Configure Git.__ Initially make sure to tell git your credentials to use when committing:
+- __Configure Git.__ Initially make sure to tell git your credentials as git uses those when committing code:
+
+	`> git config --list` &nbsp;&nbsp; _(this views all saved configuration information)_ <br>
+	`> git remote -v` &nbsp;&nbsp; _(shows from where our checked out code originates from. Our origin.)_ <br>
+	`> git branch` &nbsp;&nbsp;  (to see what branch you have checked-out ) <br>
+	`> git status` &nbsp;&nbsp; _(lists useful info such as all changes to stage/commit aswell as errors/conflicts if any)_ 
 
  	`> git config --global user.name "Your Name"` <br>
  	`> git config --global user.email "Your@Email.com"` <br>
-	`> git config --list` &nbsp;&nbsp; _(this views all saved configuration information)_ 
 
-- __Create a local repo.__ This can be done in two ways. First create new local repo by navigating in command window to a folder that you wish to become the working directory for your project. Then you can transform this folder to a new local repo with followong command:
 
-	`> git init` &nbsp;&nbsp; _(this turns local directory that is not under version control to a git tracked local repo)_ <br>
-	`> git init [LocalFolderName]` &nbsp;&nbsp; _(this creates new local directory let makes it an emty local repo)_ 
+
+
+- __Create a local repo.__ This can be done in two ways. One way is to create new local repo by navigating in command window to a folder that you wish to become the repo for your project. Then you can transform this local folder to a repo with following command:
+
+	`> git init` &nbsp;&nbsp; _(this turns a working directory that is not under version control to a git tracked local repo. Hidden .git folder is created.)_ <br>
+	`> git init [LocalFolderName]` &nbsp;&nbsp; _(first new folder is created in working directory, and then it is turned into an empty local repo)_ 
 
 	 ... or other way to create local repo is to clone an already existing repo from remote to your local machine. From given location in command window
 
-	`> git clone [http://RemoteRepoURL.git] [LocalFolderName]` &nbsp;&nbsp; _(this creates new folder LocalFolderName, copies all versions of code to it and check-outs latest code version.)_
+	`> git clone [http://RemoteRepoURL.git] [LocalFolderName]` &nbsp;&nbsp; _(first new folder is created in working directory, and then repo from remote is committed into it. The latest version of master is checked out)_
 
-	In both cases we end up with a git repository on our local machine (local repo). In both cases our 'local_branch_name' gets named 'master' and automatically check-out the latest version of the code! 
-	<br> `> git branch` &nbsp;&nbsp; _(to see what branch you have checked-out )_ 
+	Note! In both cases we end up with a local git repo. In both cases our 'local_branch_name' gets named 'master' and  latest version of the code is checked out automatically! Write `git branch`  to see what branch you have checked-out. 
 
->	Note! Git stores all of its history data in a hidden file stored in a hidden folder locally in the root of the repository (folder is named .git)
+>	Note! Git stores all of its history in a hidden folder .git in the root of the repository.)
 
-- __Stage & Commit.__ After working a while (by adding new files in working directory or editing existing once) shall stage the changes and later_commit those to your local repo with:
+- __Stage & Commit.__ After adding new files in working tree or editing existing ones we shall stage the changes, and later commit those to your local repo. Do this with:
 
 	`> git status` &nbsp;&nbsp; _(lists useful info such as all changes to stage/commit aswell as errors/conflicts if any)_ <br>
-	`> git add -A (--all)` &nbsp;&nbsp; _(stages all changes. Just git add = git add -A)_ <br>
-	`> git commit -m 'description'` _(commits all changes with a message)_
+	`> git add . (= -A or --all)` &nbsp;&nbsp; _(stages all changes in index)_ <br>
+	`> git commit -m 'description'` _(commits all changes in stage area with a description)_
 
-- __Set url to a Remote Repo.__ In order to synch changes with a remote repo i.e on GitHub, an address must be set.
+-   __Undo changes__. There are different ways to undo or revert made changes:<br>
+
+	`> git restore [.] or [fileName])` &nbsp;&nbsp; _(permanently deletes changes in working tree but do nothing to staged ones.)_ <br>
+	`> git restore --staged [.] or [fileName])` &nbsp;&nbsp; _(reverses changes that are staged back to working tree to be unstaged. Note! If same file in working tree differs from staged one,then the staged change will be permanently deleted!))_ <br>
+	`> git checkout -- [.] or [fileName]` &nbsp;&nbsp; _(permanently deletes changes in working tree but do nothing to staged ones. Also it re-checkouts all the files again.)_ <br>
+
+	So in order to permanently remove both staged files and the unstaged ones:<br>
+	`> git restore --staged .`
+	`> git checkout -- .`
+
+	`> git rm [filename]` &nbsp;&nbsp; _(permanently removes the file from working tree and automatically stages this change so when committed then the file is removed)_ <br>
+
+-   __Merge and Diffs and Logs__. <br>	
+	`> git log -- [.] or [fileName]` &nbsp;&nbsp; _(shows commits for file or files_ <br>
+
+	`> git diff [.] or [fileName]` &nbsp;&nbsp; _(shows diff between changed file(s) in working tree vs staged area.)_ <br>
+	`> git diff --staged [.] or [fileName]` &nbsp;&nbsp; _(shows diff between file or files in staged area vs committed.)_
+
+- __Set url to a Remote Repo.__ In order to synch changes with a remote repo i.e on GitHub, an address must be set. <br>
 
 	`git remote -v`  &nbsp;&nbsp; _(shows what is you current remote repo url and remote_repo_name)_ <br>
-	`git remote set-url origin http://url_to_your_online_repo.git`  &nbsp;&nbsp; _(here we choose 'origin' as our remote_branch_name together with corresponding address)_
+	`git remote set-url origin http://url_to_your_online_repo.git`  &nbsp;&nbsp; _(here we choose 'origin' as our remote_branch_name together with corresponding url. We can then push/pull to the origin url.)_
 
-- __Pull & Push changes from remote.__ We can not only stor the changes in local repo. We must stor it remotely too. When it's time to push local changes to remote repo  then first pull from from remote. This because there might be changed on remote conflicting with your changes. It is always best to resolve those conflicts and test locally before finally uploading to remote repo:
+- __Pull & Push changes from/to remote.__ We can not only store the changes in local repo. We shall store it remotely too. When time to push local changes to remote  then first pull from from remote. This because there might be changed on remote conflicting with your changes. It is always best to resolve those conflicts and test locally before finally uploading (pushing) the result to remote repo:
 
 	`git pull origin master` &nbsp;&nbsp; _(git pulls changes from 'remote_branch_name' - origin to 'local_branch_name' - master')_ <br>
 	`git push origin master` &nbsp;&nbsp; _(git uploads changes to 'remote_branch_name' - origin from 'local_branch_name' - master)_<br> 
 
 -	__Create new branch.__ For new feature new branch...:
 
-	`git branch [newBranchName]`  &nbsp;&nbsp; _(this creates a new branch)_ <br>
-	`git checkout -b [newBranchName]`  &nbsp;&nbsp; _(this creates a new branch and checks it out)_
+	`git branch [newBranchName]`  &nbsp;&nbsp; _(creates a new branch but stays on the one we have checked out)_ <br>
+	`git checkout -b [newBranchName]`  &nbsp;&nbsp; _(creates a new branch and checks it out)_
+
+-	__Clone someones remote repo__ When you want to copy a public remote repo to your own.
+
+	- Create own empty remote repo i.e. A
+	- Clone a remote public repo to a local repo
+	- Change remote origin URL for the newly created repo to your own remote repo.
+	- Push changes to your remote URL. This will upload all copied files to your own remote repo.
+
 
 <br>
 
 ### [__Useful Cmd commands:__](#)
-It is good to know and memorize those basic command that are often used.
+It is good to know and memorize those basic command that are often used:
 
 | | |
 |:---|:---|
@@ -238,9 +277,30 @@ It is good to know and memorize those basic command that are often used.
 
 <br>
 
-### [__.gitignore File__](#)
+### [__.gitignore file__](#)
 
-#TODO
+A file in root of your project which tells Git witch files to ignore. Normally auto-created when initiating git. Example of a git file:
+
+```
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*~
+*.sass-cache
+node_modules/
+.tmp/
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+
+and more...
+```
 
 
 <br><br>[- BACK TO TOP -](#contents)
@@ -257,58 +317,99 @@ __This section is about:__<br>
 _How to download packages to automate your work._
 
  _Extensive node.js tutorial can be found [here](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)._<br>
+ _Typescript description can be found [here](https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d)._<br>
  _List of build-in node.js modules [here](https://www.w3schools.com/nodejs/ref_modules.asp)._
+<br><br>
+
+### [__Node.js__](#)
+
+__Node.js__ is a _lightweight_ runtime environment for JavaScript. There are two main usage areas for Node.js. 1) One as a backend server that executes javascript. 2) Other one as a development/automation tool used on developers computers. 
+
+Server-side Node.js  is used for serving data and powering apps and sites. When using it as a development tool we can automate common tasks and speed up building of our apps and sites. 
+
+Node.js can execute programs written in JavaScript. Originally JavaScript is a scripting language but Node.js "extends" JavaScript to be a "real" programming language. It do not understand TypeScript files bu there is a nmp package (typescript) that can transform typescript (.ts) files to javascript (.js) files.
 
 <br>
 
-### Node.js
+### [Install Node.js and execute programs](#)
+- Following command check if node is __installed__ on your machine.If not just google and install it. <br>
+`node -v` <br>
 
-__Node__ is a lightweight runtime environment for JavaScript. There are two main usage areas for node: as a backend server or as a development tool on local machines. Server side Node.js  is used for serving data and powering apps and sites. When using as a development tool we automate and speed up building of our apps and sites. On our local computers Node.js can execute programs written in java script to perform various task that help us with development. JavaScript is originally a scrip language but Node.js extends JavaScript to be a "real" programming language. 
-
-
-- With this cmd command you can check if node is installed on your machine: <br>
-`node -v` <br><br>
-
-
-- To execute a java script file with node use following cmd command: <br>
-`node FilenameToRun.js` <br><br>
+- To __execute__ a java script file with node use following cmd command: <br>
+`node anyFileToRun.js` <br><br>
 
 
-- JavaScript (.js) node-files usually include modules/packages that are either downloaded (and stored in root folder `node_modules`) or are by default built-in in node.js. Following line in top of the file includes/uses a default `http` module that can be used to make request through HTTP.<br>
-`var http = require('http');` <br>...<br>
-#TODO add more useful module includes
-
-
-
-
-### Npm
-__Node Package Manager__ (NPM) comes by default with node.js. NPM is a package manager tool that is used to search for and download packages. Those packages are JavaScript programs written by others performing tasks that automate various things and save us a lot of development time time. Packages are downloaded through npm can be JavaScript tools used in development but also code that we need when publishing our code to browser (ie loadash or normalize.css). 
+>	JavaScript that is run by node.js usually include (require) packages that are either downloaded though npm (and stored in root folder `node_modules`) or built-in in node.js. In order to use those packages those must be "required" in top of the .js file. For example:
+`var http = require('http');`.
 
 <br>
 
-### [How to install npm packages?](#)
+
+### [Useful Node.js modules](#)
+
+Following are some common packages and functions that are useful and good to memorize.
+
+|||||
+|:--|:--|:--|:--|
+|require(__fs__)|access filesystem|__writeFile__(__dirname +"./[FileName]",<br> [TextToAdd],<br> function() {...})|YES|
+|require(__http__)|Access www|__get__(url,<br>function(resp) {<br> response.__pipe__(fs.__createWriteStream__([FileName])) <br>})|YES|
+|require(__http__)|...|...|YES|
+
+
+
+>	Note! Even though it is not required, it is a good practice to use ; at end of each statement. <br>
+In node 'var' and 'const' are used when declaring variables. Var variables can be updated and re-declared within its scope, const variables can neither be updated nor re-declared. <br>
+
+
+
+### [__Npm__](#)
+
+
+__Node Package Manager__ (NPM) comes by default with node.js. NPM is a package manager tool that is used to search for and download packages that can be run by Node.js. Those packages are JavaScript programs written by others performing tasks that automate various things and save developers precious time. Packages that are downloaded through npm can be JavaScript tools used to automate development, but also code snippets that project use when aut-creating code that we later send to browser (ie loadash or normalize.css are project dependent npm packages). 
+
+<br>
+
+### [Install npm packages and use those](#)
 
 -	First always __initiate npm in the root__ of your local repo.<br>
-`npm init -y`  
-> This will auto-create a default `package.json` file!
+`> npm init -y`  
 
-- Install packages of two types.Those packages that contain js script or css that are used when generating our final files Or packages that are just used during development (enhance and speed up development). Those later ones shall be installed with flag: `--save-dev option` or `-D`:<br><br>
+>	Note! By using -y do not need to answer questions, we use predefined values. Running this command will auto-create a default __`package.json`__ file that is very important file for npm!
+
+- Now keep on and install packages of two types. <br>
+1) Those that contain js script or css that are part of our final file that is sent to browser (project dependant).<br>
+2) Packages that are just used during development to automate tasks to enhance and speed up development. Those shall be installed with flag: `--save-dev` option or shorty `-D`:<br><br>
 _For development only:_<br> 
- `npm install 'package_name' --save-dev` &nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp; `npm i -D 'package_name'`<br>
- _FProject dependant:_<br>
- `npm i 'package_name'` &nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp; `npm install 'package_name'`
+`> npm install --save-dev [package_name]` &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; `npm i -D [package_name]`<br>
+ _Project dependant:_<br>
+ `> npm install [package_name]` &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;  `npm i [package_name]`
 
- > Note! Downloaded package -name and -version number are save in `package.json` file as 'dependency' or 'development dependency'. The package files themselves are stored in auto-created folder in root `node_modules`. This folder is usually excluded from GIT. Only `package.json` that contain 'the list' of packages that our project use is under source control. This is because when/if the `node_modules` with all files is of some reason missing - then npm automatically installs the needed packages. 
+ > Note! Name and version of downloaded nmp package is save in `package.json` file as a 'dependency' or 'development dependency'. The package itself is stored in auto-created folder `node_modules` in project root. This folder is usually by default excluded from tracking by GIT. Only the file itself - `package.json` - that contain 'the list' of packages that our project use is under GIT source control. This because if `node_modules` folder would of some reason be deleted - then npm can from `package.json` file automatically restore all in it defined packages. 
 
- - All dependency files in `node_modules` can be downloaded with command:<br>
- `npm install`
+ - All packaged defined in `package.json` can be downloaded to  `node_modules` with command:<br>
+ `> npm install`
+
+
+-	Instead of npm install, you can use a command to freshen already installed packages. Then npm checks if there exist newer versions in the online npm repository that satisfy specified semantic versioning ranges and installs them and updates package.json file with the new version. <br>
+ `> npm update --save`
+
+- Ask npm to list which packages have newer versions available: <br>
+ `> npm outdated`
+ 
+
+ - Ask npm to install the latest version of a package and update oackage.json file with that version: <br>
+ `> npm install lodash@latest --save`
+ 
+
+
+<br>
 
 ### [Useful NPM Packages](#)
 
-|npm install|flag|What for?|
+|Npm install|flag|Usage|
 |:---|:---|:---|
-|normalize.css<br>loadash||CSS package for resetting all browsers to same state <br> loadash???|
-|webpack<br>webpack-cli<br>webpack-dev-server|-D|Webpack functionality. Bundling & automation.<br><br>Server that auto-injects JS into chrome at runtime.|
+|normalize.css<br>loadash||CSS package for resetting all browsers to same state. <br> Loadash is for ...???|
+|<br>webpack<br>webpack-cli<br>webpack-dev-server|-D|_Common Webpack functionality_<br>For bundling & automation.<br>For command line functionality<br>Dev server that auto-injects JS into chrome at runtime.|
 |<br>postcss-loader<br>css-loader<br>style-loader|-D|_Webpack loaders_<br>For loading postCSS modules.<br>For importing css to js files.<br>Get browser to read CSS from JS files.|
 |<br>postcss-import<br>postcss-simple-vars<br>postcss-nested<br>autoprefixer  |-D|PostCSS modules:<br>For importing code to CSS & NPM-modules files <br> For variables in CSS <br> For nesting in CSS<br>For adding autoprefixes|
 |xxx|||
@@ -329,31 +430,35 @@ _For development only:_<br>
 
 ### [package.json file](#)
 
-This is an important file in the repo root that is auto-generated when we initiate npm. Specially important if you aim to publish your code as a package. Name and Version will be required when publishing are set there.  The 'scripts' property is a dictionary containing script commands that can be run from cmd or VSCode.
+This is an important file in the root of the repo. It is auto-generated when we initiate npm. This is an important project file. The 'scripts' property is a dictionary containing script commands that can be run from command line. Dependencies are the packages that are used in within the project.
 
 _Example of an package.json file:_
 ```
 {
-  "name": "ProjectName",
+  "name": "travel-site",
   "version": "1.0.0",
+  "description" : "Travel site for SunTravel company.",
+  "author" : "CMQ Nordic AB",
+  "license" : "ICS",
   "scripts": {
     "build": "webpack",
-    "devServer": "webpack-dev-server"
+    "dev": "webpack-dev-server"
   },
   "dependencies": {
     "loadash": "^1.0.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.3",
-    "css-loader": "^3.4.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.2.1",
-    "postcss-simple-vars": "^5.0.2",
-    "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.10.1",
+    "postcss-loader": "^3.0.0",
+    "css-loader": "^3.4.1",
+    "style-loader": "^1.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-simple-vars": "^5.0.2",
+    "postcss-nested": "^4.2.1",
+    "autoprefixer": "^9.7.3"
   }
 }
 ```
@@ -680,6 +785,35 @@ Eample of styling for body:
 -	Center a div within div
 
 -	Center texts within a image
+
+
+### [__BEM__](#)
+Structured your CSS and UI in an organized way. Benefits are: 
+- __modularity__ -  ability to transfer blocks from your finished projects to new ones as blocs are independent standalone objects.
+- __Reusability__ - With a set of style guidelines in place, you can build a library of blocks, making your CSS super effective and reusable.
+- __Structure__ - BEM methodology gives your CSS code a solid structure that remains simple and easy to understand.
+
+
+	-	__block__ represents the higher level of an abstraction or component.
+	-	__.block__element__ represents a descendent of .block that helps form .block as a whole.
+	-	__.block--modifier__ represents a different state or version of .block.
+
+
+```
+	.block {}							
+	.block__element {} 
+	.block--modifier {}
+
+	.person {}
+	.person__hand {}
+	.person--female {}
+	.person--female__hand {}
+	.person__hand--left {}
+```
+
+
+
+
 
 <br>
 
