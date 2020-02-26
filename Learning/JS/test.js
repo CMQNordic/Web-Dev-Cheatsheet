@@ -1,5 +1,15 @@
 var a = "hi";
 var count = 0;
+var color = "#faa"
+
+var t = import('http');
+
+
+fr = import(rwere);
+
+
+var g = import('http');
+
 
 function aFunction()
 {

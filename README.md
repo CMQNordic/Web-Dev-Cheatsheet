@@ -10,9 +10,9 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 >	- [What can I expect to find here?](#introduction)
 >- __SETTING UP DEVELOPMENT ENVIRONMENT & TOOLS__
 >	- 	[__VSCode__](#vscode) - _Configuration of your code editor, intellisense and emmet commands._
->   	- [Useful VSCode extensions](#Useful-VSCode-extensions)
->   	- [EMMET snippets](#emmet-snippets)
->   	- [VSCode Shortcuts](#vscode-shortcuts)
+>   	- [VSCode extensions](#useful-VSCode-extensions)
+>   	- [VSCode Shortcuts](#useful-vscode-shortcuts)
+>   	- [EMMET snippets](#useful-emmet-snippets)
 >	- [__GIT & Cmd__](#git-&-cmd) - _Source control, github and some useful git/cmd commands._
 >		- [_Useful git commands_](#useful-git-commands:) 
 >		- [_Useful cmd commands_](#useful-cmd-commands:) 
@@ -51,7 +51,7 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 
 <br>
 
-# __INTRODUCTION__    
+# __[INTRODUCTION](#)__    
 
 ## [What to expect to find here?](#)
 
@@ -68,70 +68,88 @@ This guide is a based of our experience, read articles and various courses.
 
 
 ## [__VSCode__](#)
+### This section is about VSCode and some features that will speed up  your coding.
 
-This section is about: Configuration of your code editor, intellisense and emmet commands.
-
-_Introduction videos [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)_
+_Useful introduction videos [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)_
 
 <br>
 
- __VSCode__ is a lightweight code editor that comes with built-in support for JavaScript, TypeScript, Emmet, IntelliSense, Node.js, NPM and more. (TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language). Additionally VSCode has many extensions available to download from NPM market. Installing VSCode gets you started right away with very helpful build in EMMET snippets and intellisense support. IntelliSense is provided for JavaScript, TypeScript, JSON, HTML, CSS, SCSS and LESS. VSCode has also built in support for GIT.<br> 
+ __VSCode__ is an lightweight and popular code editor that comes with built-in support for many useful features. To open a VSCode window with your last project write `"code"` in command window. To open project in your the directory you are currently in write `"code ."` in command window.
 
+ Below are some features that you get out-of-the-box when installing VSCode. The features support:
+
+ - __Node.js & Nmp__: Runtime environment for JavaScript and corresponding world’s largest free JavaScript package online registry.
+ - __JavaScript:__ Programming language for the web that can update and change both HTML and CSS.
+ - __TypeScript__: Strict syntactical superset of JavaScript that adds optional static typing to the language.
+ - __Emmet__: Usage of code shortenings when writing html and css that are expanded into full pieces of code.
+ - __IntelliSense__: Code editing features including code completion, parameter info and quick info.
+
+ - __Extensions:__ Search marketplace for a larg variety of extensions directly from VSCode GUI.
+- __GIT:__ Integration toward Git with simple graphical interface and usage of most frequent git functions straight from VSCode GUI.
+- __Multi-Cursor editing:__ Allows you to edit multiple parts of the document at once.
+ - __Debugging, Code navigation__ and more... 
+ 
+ <br>
 
 ### [__Useful VSCode extensions__](#)
-VSCode have many extensions. Here is a list of a couple useful once to install and learn how to use.
+ VSCode has many extensions available to download from online npm registry with over 350000 packages. Installing VSCode gets you started right away with very helpful build in features but it is recommended to extend its functionality by installing some extensions.<br> 
 
-|| |
+|VSCode&nbsp;extension&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |---|---|
-|Live Server|A lightweight development Live Server with live reload. Use for quick preview instead of Webkit Dev Server
-|Code Spell Checker|Spelling autocorrector with fix proposals.|
-|Git History|Views branches and history of code in a nice way|
-|Node.js Modules Intellisense|Plugin that autocomplete JavaScript/TypeScript modules in import statements. Scans builtin modules, dependencies and file modules.|
-|..|..|
+|Vscode-icons|A set of nice icons for different file types shown in VSCode UI that makes navigating and finding a special file type easier.|
+|Color Highlight|Highlight colors as defined with # char in files and makes it easier to see what color is used directly in the editor.Note! VSCode have a similar build-in feature but only for CSS files. This plugin extends it to other file types.|
+|Rainbow Brackets|Provides different colors for the round brackets, the square brackets and the squiggly brackets so it is easier to distinguish|
+|Code Spell Checker|Checking for spelling mistakes and proposes corrections.|
+|Live Server|A lightweight local dev server with live reload for saved HTML & CSS changes. Easy to install and start with one click to run preview of a file in browser.  Note! To compare with Webpack Dev Server having a key feature - hot module replacement - auto-injects changes without refreshing browser window from in-memoty. Fast.|
+|Git Graph|Visualize commits to git repository in a graph to easily view which commits and branches are where relative to one another. It doesn’t have nearly the features that a full GUI git client like GitKraken has, but it does a nice job of being a lightweight free tool for visualizing the state of your repository’s commits.|
+|Git Lens|Extensive valuable insights via powerful comparison commands and other git functions.|
 
 <br>
 
-### [__EMMET snippets](#)
+### [__Useful VSCode Shortcuts__](#)
+It is recommended to memorize some useful shortcut commands that make you to work more effectively. 
+
+||VSCode&nbsp;short&nbsp;command&nbsp;&nbsp;||
+|:---|:---|:---|
+|Show/Hide&nbsp;terminal| `Ctrl-Ö [;]`  |Toggles open/close of a terminal window. |
+|Show/Hide&nbsp;sidebar| `Ctrl-B` | Toggles showing/hiding of sidebar window. |
+|Search&nbsp;project| `Ctrl-P` | Opens search window to search for files and functions. Use `ESC` to close it. |
+|Search&nbsp;commands| `Ctrl-Shift-P` | Opens search window to search for available commands. Use `ESC` to close it. |
+|Open&nbsp;intellisense&nbsp;dialog| `Ctrl-Space` |  Open intelliSense dialog with proposals. Use `ESC` to close it. |
+|Mirror&nbsp;cursor&nbsp;start/end&nbsp;tags| `Ctrl-D` | Highlights and mirrors cursor to matching tags so we can edit those simultaneously. This can be enabled by default in settings by checking "mirrorCursorOnMatchingTag" in settings.|
+|Format&nbsp;document| `Shift-Alt-F` |  Formats code in current document |
+|Select multiple cursors| `Alt-Select` |  Adds extra cursor for every clicked position when holding ALT |
+|Move cursor forward/back| `Ctrl-[⇒] or [⇐]` |  Moves cursor forward or back to next statement |
+|Select block of text| `Shift-Alt` |  Select rectangular block of text. |
+|Move selection up or down| `Alt-[⇩] or [⇧]` |  Moves current selection up or down a line. |
+
+<br>
+
+### [__Useful EMMET snippets__](#)
 Use EMMET to speed up writing  code. It autogenerates code from short text snippets for HTML, CSS, SASS. 
 
-|||||
+||Easy|More&nbsp;complicated|Generated code|
 |:---|:---|:---|:---|
-|New doc| ! |   | `HTML doc structure` |
-|Comment| c |   |  `<!-- -->` |
-|Css| link:css |   | `<link rel="stylesheet" href="style.css">`|
-|Script| script:src |   | `<script src=""></script>` |
-|Lorem| lorem23 |   | `Random text with 23 words`  |
-|Paragraph| p |p.myClass._Big{Text}|`<p class="myClass _Big">Text</p>`|
-|Div| div | .btnClass1.btnClass2#myButton{Text} |`<div class="btnClass1 btnClass2" id="myButton">Text</div>`|
-|List| ul>li*3 |ul.nav>li.item$#item$*2{Item $}|`<ul class="nav">`<br>`<li class="item1" id="item1">Item 1</li>`<br>`<li class="item2" id="item2">Item 2</li>`<br>`</ul>`|
-|Form| form | div>p+form:post>input:text+input:email+input:submit  | `<div>`<br>`<p></p>`<br>`<form action="" method="post">`<br>`<input type="text" name="" id="">`<br>`<input type="email" name="" id="">`<br>`<input type="submit" value="">`<br>`</form>`<br>`</div>` |
-|Article| article  | section>(article.containter>h1+p+button)*2 |  |
-|Menu| ul>li*3  | nav>.container>ul.navigation#mainMenu>li*3#item${list item $}  | |
-|Other| |.columns>(.column>.box>h2{I am a box})+(.column>.box>h3{I am another box})|
-|...|...|...|
+|New doc| `!` |   | `New default HTML document structure` |
+|Comment| `c `|   |  `<!-- -->` |
+|Include CSS in header| `link:css` |   | `<link rel="stylesheet" href="style.css">`|
+|Include script from file| `script:src` |   | `<script src=""></script>` |
+|Dummy text| `lorem23` |   | `Random text with 23 words`  |
+|Paragraph| _p_ | `p.title.title--bold{Hello}`|`<p class="title title--bold">Hello</p>`|
+|Div| _div_ | `.text-area#title{Text}` |`<div class="text-area" id="title">Text</div>`|
+|Menu| _ul>(li>a)*2_ | `ul.nav>(li.nav__row>a.nav__item#nav-item-${I$})*2` |`<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-1">Item1</a></li>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-2">Item2</a></li>`<br>`</ul>`|
+|Menu| _ul>(li>a)*2_ | `ul.nav>(li.nav__row>a.nav__item#nav-item-${Item$})*2` |`<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-1">I1</a></li>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-2">I2</a></li>`<br>`</ul>`|
+|Form| _form>input*2_ | `div>p+form:post>input:text+input:email+input:submit`  | `<div>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<p></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<form action="" method="post">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="text" name="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="email" name="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="submit" value="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</form>`<br>`</div>` |
+|Article| _section>article_  | `section.a>(article.a__wrap>h1.a__titel+p.a__descr+button.a__buttot)*1` |`<section class="a">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<article class="a__wrap">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<h1 class="a__titel"></h1>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<p class="a__descr"></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<button class="a__buttot"></button>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</article>`<br>`</section>` |
+|css||`w100p+h100e+m10p20px10e20p`|`width: 100%; `<br>` height: 100em; `<br>` margin: 10% 20px 10em 20%;`|
+|css||`fw:400+bc+m10-10-10-10`|`font-weight: 400; `<br>` background-color: #fff; `<br>` margin: 10px 10px 10px 10px; ` |
+|css|_bdrs9_|`-bdrs9`|`border-radius: 9px; `<br>` -webkit-border-radius: 9px; `<br>` -moz-border-radius: 9px;`|
+|css|_bd_|`fs20+bc+bd+bdrs5`|`font-style: 20px; `<br>` background-color: #fff;`<br>` border: 1px solid #000;`<br>`border-radius: 5px;`|
+
+
+
 
 <br>
-
-
-
-
-### [__VSCode Shortcuts__](#)
-Make sure to memorize some useful shortcut commands to use in VSCode. 
-
-||||
-|:---|:---|:---|
-|Terminal| `Ctrl Ö` | Open new terminal window |
-|Search project| `Ctrl P` | Open search in project |
-|Search commands| `Ctrl Shift P` | Open command palette |
-
-
-
-
-
-
-
-
-
 
 
 <br><br>[- BACK TO TOP -](#contents)
@@ -142,51 +160,54 @@ Make sure to memorize some useful shortcut commands to use in VSCode.
 
 
 ## [__GIT & Cmd__](#)
-
-This section is about GIT as source control with some common git- & cmd-commands.
+### This section is about GIT as source control with some common git- & cmd-commands.
 
 _Good tutorial can be found [here](https://www.youtube.com/watch?v=HVsySz-h9r4) and [here](https://www.youtube.com/watch?v=FdZecVxzJbk)_
 
 <br>
 
 __Git__ is the most popular version-control system for tracking changes in source code during software development. To start with get familiar with some common expressions:
-| | |
+|Expression | |
 |:---|:---|
-|Repository| Shortly called "Repo". A  location ("container") where our project files with all change history is stored. Can be located on our local machine or remotely on i.e. github.|
-|Working Directory| Local folder location where your command window points to - where you run your git commands |
-|Working Tree|Local folder location where your repo have checked out git code. A set of files that we work with on a branch that is linked to the repository |
-|Check out|Switching between different versions of code that that we can edit.<br> Checking out updates the files in working directory to match those we check out from i.e. specific branch.|
-|Branch|A movable pointer to one of versions of code.<br> Usually when you add new feature you spawn new branch to encapsulate the changes.|
-|Stage|Temporarily save changed files in local repo (=added to index), marked as ready to commit|
-|Commit|Permanently save changed files to local repo with an label/description|
-|Clone|Fetch code from a remote repo to local repo.|
-|Rebase|In Git there are two main ways to integrate changes from one branch into another: merge and rebase. Rebase is moves the entire feature branch to originate from its parents HEAD. |
-|HEAD|The most recent commit to a branch (tip of a branch)|
-|Index|Area where staged files are held for a commit|
-|Remote|A remote online repository that have an url i.e on GitHub or Bitbucket|
-|Push/Pull|Upload/Download code from remote repo|
+|Repository&nbsp;&nbsp;(Repo)|Folder location to container where our ALL project files with all change history is stored. Can be located on our local machine or remotely on i.e. github. |
+|Working&nbsp;&nbsp;directory| Folder location where all your checked out files are stored. |
+|Index|Area where staged files are held before a commit.|
+|Working&nbsp;&nbsp;tree|Area where files that we currently work on and changed are located. <br>When the files are staged then those are added to index. When the files are committed then those are added to repo. |
+|Checking out|Switching between different versions of code that we can view and edit.<br> Checking out updates the files in working directory to match those we check out from i.e. specific branch.|
+|Branch|A movable pointer to one of versions of code.<br> Usually when you adding new feature you spawn a new branch to encapsulate the changes.|
+|Stage|Temporarily save changed files in local repos index, marked as ready to commit.|
+|Commit|Permanently save changed files to local repo with an label and description|
+|Clone|Fetch a repo containing of all versions of files from a remote repo to local repo.|
+|Merge / Rebase|In git there are two main ways to integrate changes from one branch into another: merge and rebase. <br> Merge commits the changes on the top of the branch we merge to. <br> Rebase is moves the entire feature branch to originate from its parents HEAD.  |
+|HEAD|The most recent commit to a branch. Tip of a branch.|
+|Detached HEAD|Means the HEAD do not point to a branch but directly to a commit i.e when you have checked out a single commit in the history. <br>Similarity like a pointer to a list vs copy to a list object.|
+|Remote|A remote online repository that have an url i.e on GitHub or Bitbucket. <br> In git this remote URL usually have a name i.e. origin -> where the code we work from originates from.|
+|Push/Fetch|Upload/Download files and history from/to remote repo|
+|Pull|/Download files and history from remote repo, merge our changes to it and check out latest code.|
 
 <br>
 
 ### [__Useful Git commands__](#)
 It is recommended to understand and memorize those basic command that are often used.
 
-`CTRL-Ö` &nbsp;&nbsp;  -  &nbsp;&nbsp;  VSCode shortcut that toggle open/close terminal window.
 
-- __Install Git.__ To start with make sure to install git on your computer. To check if it is already installed use comman.
-<br> `> git --version`  &nbsp;&nbsp; _shows current installed git version_ 
-<br> `> git --help`  &nbsp;&nbsp; _shows list of commands with some descriptions_ 
-<br> `> git config --help`  &nbsp;&nbsp; _shows help about a specific command here: config_ 
+
+- __Install Git.__ Initially make sure to install git on your computer and check its version when installed.
+<br> `> git --version`  &nbsp;&nbsp;&nbsp; _shows current installed git version_ 
+<br> `> git --help`  &nbsp;&nbsp;&nbsp; _shows list of commands with some descriptions_ 
+<br> `> git config --help`  &nbsp;&nbsp;&nbsp; _shows help about a specific command, here 'config' command._ 
  
->	_Note! In VSCodes a 'Command palette' can be opened with `CTRL-SHIFT-P`. From there you can run all git commands by choosing those from a list instead of writing commands in the terminal window. VSCode do also have a simple git GUI in order to simply some common tasks performed regularly. Still it is good to know syntax of those basic git commands in order to being able to run them from command line as it is sometimes required!_
+>	_Note! In VSCode you can open 'Command palette' (`CTRL-SHIFT-P`)  where you can run git commands by choosing those from a list instead of writing commands with  in the terminal window._
 
 
-- __Configure Git.__ Initially make sure to tell git your credentials as git uses those when committing code:
+- __Show info and configure Git.__ Different information need to be listed when working with git.
 
-	`> git config --list` &nbsp;&nbsp; _(this views all saved configuration information)_ <br>
-	`> git remote -v` &nbsp;&nbsp; _(shows from where our checked out code originates from. Our origin.)_ <br>
-	`> git branch` &nbsp;&nbsp;  (to see what branch you have checked-out ) <br>
-	`> git status` &nbsp;&nbsp; _(lists useful info such as all changes to stage/commit aswell as errors/conflicts if any)_ 
+	`> git config --list` &nbsp;&nbsp; _shows saved configuration and useful info i.e remote url and user_ <br>
+	`> git remote -v` &nbsp;&nbsp; _shows remote url and its name to use in push and pull_ <br>
+	`> git branch` &nbsp;&nbsp;  _shows all branches in local repo, marked * on currently checked-out one_ <br>
+	`> git status` &nbsp;&nbsp; _shows useful info such as all changes to stage/commit as well as errors/conflicts if any._ 
+
+	Important! Initially make sure to tell git your user credentials as those are needed to commit code:
 
  	`> git config --global user.name "Your Name"` <br>
  	`> git config --global user.email "Your@Email.com"` <br>
@@ -194,57 +215,83 @@ It is recommended to understand and memorize those basic command that are often 
 
 
 
-- __Create a local repo.__ This can be done in two ways. One way is to create new local repo by navigating in command window to a folder that you wish to become the repo for your project. Then you can transform this local folder to a repo with following command:
+- __Create a local repo.__ This can be done in two ways.<br><br> 
+	`___- One way___ is to create new empty folder and transform it to local empty repo with following command:
 
-	`> git init` &nbsp;&nbsp; _(this turns a working directory that is not under version control to a git tracked local repo. Hidden .git folder is created.)_ <br>
-	`> git init [LocalFolderName]` &nbsp;&nbsp; _(first new folder is created in working directory, and then it is turned into an empty local repo)_ 
+	`> git init` &nbsp;&nbsp; _turns a folder to an empty local repo. Hidden .git folder is created in the root._ <br>
+	`> git init [LocalFolderName]` &nbsp;&nbsp; _creates new folder in location when we run the command and then turns it into an empty local repo)_ 
+	
+	>	Note! In init case remote url, origin, is not set - undefined.
 
-	 ... or other way to create local repo is to clone an already existing repo from remote to your local machine. From given location in command window
+	 ___- Another way___ is is to clone an already existing repo, with all versions of the code, from remote to your local machine:
 
-	`> git clone [http://RemoteRepoURL.git] [LocalFolderName]` &nbsp;&nbsp; _(first new folder is created in working directory, and then repo from remote is committed into it. The latest version of master is checked out)_
+	`> git clone [http://RemoteRepoURL]` &nbsp;&nbsp; _existing repo with all code history is copied locally. Then cloned remote repository's currently active branch is checked out locally._ <br>
+	`> git clone [http://RemoteRepoURL] [LocalFolderName]` &nbsp;&nbsp; _first new folder here `LocalFolderName` is created in location where this command is run. Then existing repo with all code history is copied. Then cloned remote repository's currently active branch is checked out locally.)_
 
-	Note! In both cases we end up with a local git repo. In both cases our 'local_branch_name' gets named 'master' and  latest version of the code is checked out automatically! Write `git branch`  to see what branch you have checked-out. 
+	> Note! In both cases we end up with a local repo. In first case our local branch is named 'master' and it is checked out. In second case ... #todo and the checked out code is the one the HEAD point on the parent remote repo that we copy from. #todo how to change this? 
 
->	Note! Git stores all of its history in a hidden folder .git in the root of the repository.)
 
-- __Stage & Commit.__ After adding new files in working tree or editing existing ones we shall stage the changes, and later commit those to your local repo. Do this with:
 
-	`> git status` &nbsp;&nbsp; _(lists useful info such as all changes to stage/commit aswell as errors/conflicts if any)_ <br>
-	`> git add . (= -A or --all)` &nbsp;&nbsp; _(stages all changes in index)_ <br>
-	`> git commit -m 'description'` _(commits all changes in stage area with a description)_
+- __Stage & Commit.__ After editing existing files or adding new files in working tree we need to stage the changes, and later commit those to our local repo:
 
--   __Undo changes__. There are different ways to undo or revert made changes:<br>
+	`> git status` &nbsp;&nbsp; _lists info such as all changes to stage/commit as well as errors/conflicts if any_ <br>
+	`> git add [.] or [fileName]` &nbsp;&nbsp; _stages all or specific files by adding those to index_ <br>
+	`> git commit [.] or [fileName] -m 'commitDescription'` _commits all changes to repo with a description_
 
-	`> git restore [.] or [fileName])` &nbsp;&nbsp; _(permanently deletes changes in working tree but do nothing to staged ones.)_ <br>
-	`> git restore --staged [.] or [fileName])` &nbsp;&nbsp; _(reverses changes that are staged back to working tree to be unstaged. Note! If same file in working tree differs from staged one,then the staged change will be permanently deleted!))_ <br>
-	`> git checkout -- [.] or [fileName]` &nbsp;&nbsp; _(permanently deletes changes in working tree but do nothing to staged ones. Also it re-checkouts all the files again.)_ <br>
+-   __Undo changes__. There are different ways to undo or revert made changes or commits:<br>
 
-	So in order to permanently remove both staged files and the unstaged ones:<br>
-	`> git restore --staged .`
+	`> git restore [.] or [fileName])` &nbsp;&nbsp; _permanently deletes changes in working tree but do nothing to staged ones._ <br>
+	`> git restore --staged [.] or [fileName])` &nbsp;&nbsp; _unstage changes by moving staged to working tree. Note! If same file changed in working tree then the staged change will be permanently deleted!_ <br>
+	`> git checkout -- [.] or [fileName]` &nbsp;&nbsp; _permanently deletes changes in working tree and replaces with staged ones or one committed to repo._ <br>
+	`> git rm [filename]` &nbsp;&nbsp; _ this permanently deletes the file in working tree and automatically stages this change. Need to be commited in order to remove the file in repo too._ <br>
+
+	In order to ___permanently remove both___ staged files and the unstaged changes:<br>
+	`> git restore --staged .`<br>
 	`> git checkout -- .`
 
-	`> git rm [filename]` &nbsp;&nbsp; _(permanently removes the file from working tree and automatically stages this change so when committed then the file is removed)_ <br>
 
--   __Merge and Diffs and Logs__. <br>	
-	`> git log -- [.] or [fileName]` &nbsp;&nbsp; _(shows commits for file or files_ <br>
 
-	`> git diff [.] or [fileName]` &nbsp;&nbsp; _(shows diff between changed file(s) in working tree vs staged area.)_ <br>
-	`> git diff --staged [.] or [fileName]` &nbsp;&nbsp; _(shows diff between file or files in staged area vs committed.)_
+-   __Merge, diffs and logs__. <br>	
+	`> git log -- [.] or [fileName]` &nbsp;&nbsp; _shows all commits labels for file(s)_ <br>
+	`> git diff [.] or [fileName]` &nbsp;&nbsp; _shows changes between file(s) in working tree vs staged area or committed to repo._ <br>
+	`> git diff --staged [.] or [fileName]` &nbsp;&nbsp; _(shows changes between file(s)) in staged area vs committed in repo._
 
-- __Set url to a Remote Repo.__ In order to synch changes with a remote repo i.e on GitHub, an address must be set. <br>
+- __Set url to a emote repo.__ In order to synch changes with a remote repo on i.e GitHub, an address must be set. <br>
 
-	`git remote -v`  &nbsp;&nbsp; _(shows what is you current remote repo url and remote_repo_name)_ <br>
-	`git remote set-url origin http://url_to_your_online_repo.git`  &nbsp;&nbsp; _(here we choose 'origin' as our remote_branch_name together with corresponding url. We can then push/pull to the origin url.)_
+	`> git remote -v`  &nbsp;&nbsp; _shows what is you current remote repo url and name of remote repo (usually origin)_ <br>
+	`> git remote remove origin` &nbsp;&nbsp; _removes existing connection to a remote repo (if any)_<br>
+	`> git remote add origin [http://url.git]`  &nbsp;&nbsp; _sets new 'origin' as our remote_branch_name together with corresponding url._<br>
+	`> git remote set-url origin [http://url.git]`  &nbsp;&nbsp; _change url of our existing 'origin' (remote_branch_name). Now can push/pull to/from it._
 
-- __Pull & Push changes from/to remote.__ We can not only store the changes in local repo. We shall store it remotely too. When time to push local changes to remote  then first pull from from remote. This because there might be changed on remote conflicting with your changes. It is always best to resolve those conflicts and test locally before finally uploading (pushing) the result to remote repo:
+- __Fetch, Pull & Push changes from/to remote.__  When time to push changes in your local repo to remote then first fetch from from remote and merge  or rebase locally. This because there might be changes on remote conflicting with your changes. Solve all those conflicts and test locally before finally uploading (pushing) the result to remote repo. Good explanation [here.](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
-	`git pull origin master` &nbsp;&nbsp; _(git pulls changes from 'remote_branch_name' - origin to 'local_branch_name' - master')_ <br>
-	`git push origin master` &nbsp;&nbsp; _(git uploads changes to 'remote_branch_name' - origin from 'local_branch_name' - master)_<br> 
+
+	`> git pull origin master` &nbsp;&nbsp; _fetches & merges changes from remote repo, here "origin", to our local branch here "master"')_ <br>
+	`> git push origin master` &nbsp;&nbsp; _upload changes to remote repo, here origin, from #todo check here if we have 2 branches with changes how to puch both?_<br> 
+
+		 "Git pull" run two different git commands for you. You're better off, until you are well-experienced with Git, using separate "git fetch" and "git merge" commands. But this may Cause Conflicts to occur, so it’s recommended to use Git Pull with a clean copy. Note that "git pull --rebase" switches the second command to git rebase, but we won't get into details here.
+
+	`> git fetch origin --allow-unrelated-histories` &nbsp;&nbsp; _fetches changes from remote to local repo_ <br>
+	`> git merge origin/foo` &nbsp;&nbsp; merges changes from foo to your checked out local repo_ <br>
+
+
+	__==>__
+
+	`> git checkout foo` &nbsp;&nbsp; _Makes us to look at foo branch localy_ <br>	
+	`> git pull --allow-unrelated-histories` &nbsp;&nbsp; _fetches & merges changes to local checked out repo_ <br>
+	or <br>
+	`> git rebase origin --rebase --allow-unrelated-histories` &nbsp;&nbsp; fetches & rebases changes to local repo foo. The command tries to find out which commits are really your local ones, and which had come from upstream in an earlier fetch._ <br>
+
+		Note! `--allow-unrelated-histories` forces to accept files that are not related to the project i.e. when merging 2 different projects.
+
+		Note! Both of these commands are designed to integrate changes from one branch into another branch—they just do it in very different ways. When rebasing you move the base of the change ending point. Merging adds a new commit to your history. Merge preserves history whereas rebase rewrites it. Rebase will present conflicts one commit at a time whereas merge will present them all at once. It is better and much easier to handle the conflicts but you shouldn’t forget that reverting a rebase is much more difficult than reverting a merge if there are many conflicts. The golden rule of git rebase is to never use it on public branches. The first step in any workflow that leverages git rebase is to create a dedicated branch for each feature. This gives you the necessary branch structure to safely utilize rebasing.  If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.
+
+On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
 
 -	__Create new branch.__ For new feature new branch...:
 
-	`git branch [newBranchName]`  &nbsp;&nbsp; _(creates a new branch but stays on the one we have checked out)_ <br>
-	`git checkout -b [newBranchName]`  &nbsp;&nbsp; _(creates a new branch and checks it out)_
+	`> git branch [newBranchName]`  &nbsp;&nbsp; _(creates a new branch but stays on the one we have checked out)_ <br>
+	`> git checkout -b [newBranchName]`  &nbsp;&nbsp; _(creates a new branch and checks it out)_
 
 -	__Clone someones remote repo__ When you want to copy a public remote repo to your own.
 
@@ -252,6 +299,7 @@ It is recommended to understand and memorize those basic command that are often 
 	- Clone a remote public repo to a local repo
 	- Change remote origin URL for the newly created repo to your own remote repo.
 	- Push changes to your remote URL. This will upload all copied files to your own remote repo.
+	#todo
 
 
 <br>
