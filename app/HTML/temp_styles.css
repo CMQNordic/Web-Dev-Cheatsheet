@@ -1,0 +1,31 @@
+
+body {
+	color: green;
+}
+
+.btn--primary {
+	color: blue;
+}
+
+.btn--secondary {
+	color: red;
+}
+
+
+#back-box2 {
+	position:fixed;
+	top: 0px;
+	right: 0px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: gray;
+	text-decoration: none;
+}
+
+#back-button {
+	text-decoration:none;
+	color: white;
+	font-weight: 800;
+}

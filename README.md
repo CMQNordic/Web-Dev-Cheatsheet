@@ -1,33 +1,33 @@
-# __MODERN WEB DEVELOPMENT__
+
+# __Cheat Sheets and Guide for Web Designers and Web Developers__
+
+## Web designers or web developers must constantly search google for information as well as consult various cheat sheets as it is impossible to remember everything. Our experienced developer team have here compiled useful web development cheat sheets, guides and links that help you to quickly look up things or gest started with a project or task fast and efficient. The targeted audience for this article are developers that need quickly get started, look up or fresh up some knowledge. We strongly recommend to bookmark this page.
 
 
+## __[TABLE OF CONTENTS](#)__
 
-What each honored web developer should know - a sort of cheat sheet and look up manual.
-
-## __CONTENTS__
-
->- __INTRODUCTION__
->	- [What can I expect to find here?](#introduction)
->- __SETTING UP DEVELOPMENT ENVIRONMENT & TOOLS__
+>- __WEB DEVELOPMENT ENVIRONMENT & TOOLS__
 >	- 	[__VSCode__](#vscode) - _Configuration of your code editor, intellisense and emmet commands._
->   	- [VSCode extensions](#useful-VSCode-extensions)
+>   	- [Terminal in VSCode](#terminal-in-vscode)
+>   	- [VSCode Extensions](#useful-VSCode-extensions)
 >   	- [VSCode Shortcuts](#useful-vscode-shortcuts)
 >   	- [EMMET snippets](#useful-emmet-snippets)
 >	- [__GIT & Cmd__](#git-&-cmd) - _Source control, github and some useful git/cmd commands._
->		- [_Useful git commands_](#useful-git-commands:) 
->		- [_Useful cmd commands_](#useful-cmd-commands:) 
->		- [.gitignore file](#.gitignore-file)
+>		- [Git commands](#useful-git-commands:) 
+>		- [Cmd commands](#useful-cmd-commands:) 
+>		- [.Gitignore file](#.gitignore-file)
 >	- [___Node.js & Npm___](#nodejs-&-npm) - _How to download packages to automate your work._
 >   	- [Install Node.js](#install-node.js-and-execute-programs)
->   	- [Useful Node.js modules](#useful-node.js-modules)
->   	- [Install nmp packages](#install-npm-packages-and-use-those)
->   	- [Useful npm packages](#useful-npm-packages)
+>   	- [Node.js modules](#useful-node.js-modules)
+>   	- [Npm packages](#useful-npm-packages)
+ >   	- [Install Nmp packages](#install-npm-packages)
 >   	- [Package.json file](#packagejson-file)
 >	- [__Webpack__](#webpack) - _Bundling and auto-building your source files._
 >   	- [Bundling with PostCSS](#bundling-with-postcss)
->   	- [Webpack devServer](#webpack-devserver-with-postcss)
+>   	- [Webpack Dev Server](#webpack-dev-server)
 >   	- [Webpack.config.js file](#webpackconfigjs-file) 
->	- [__Markdown__ ](#markdown) - _Text styling, create a nice 'readme' file._
+>	- [__Markdown__ ](#markdown) - _Text styling markup for creating a nice 'readme' files._
+>   	- [Markdown syntax](#markdown-syntax) 
 >- __CODE EFFECTIVELY__
 >	- [__CSS__](#css) - _How to style pages with CSS._
 > 		- [PostCSS](#PostCSS) - _Nesting, variables, mixins_
@@ -38,7 +38,7 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 > 			- [CSS Grid](#css-grid)
 > 			- [Centering of elements](#centering-of-elements)
 > 			- [Working with texts and fonts](#working-with-texts-fonts)
->	- [__HTML__](#html) - _How to design and code a page._
+>	- [__HTML__](#HTML) - _How to design and code a page._
 > 		- xxx
 >	- [__JS__](#js) - _Things to know to produce good JS._
 > 		- xxx
@@ -49,110 +49,97 @@ What each honored web developer should know - a sort of cheat sheet and look up 
 >	- [__TODO__](#xxx) - _TODO._
 
 
-<br>
-
-# __[INTRODUCTION](#)__    
-
-## [What to expect to find here?](#)
-
-Following article is an look up manual for web development technologies based on . It includes short explanations, important things to remember and cheat-sheets to look up against in efficient way. The targeted audience for this blog are developers that need fast look up (or fresh up)their knowledge. Use this guide to get started and code faster and more efficient.
-
-This guide is a based of our experience, read articles and various courses.
-
-
-<br><br>[- BACK TO TOP -](#contents)
-
----
----
-<br><br>
-
+# __[WEB DEVELOPMENT ENVIRONMENT & TOOLS](#)__ 
 
 ## [__VSCode__](#)
-### This section is about VSCode and some features that will speed up  your coding.
 
-_Useful introduction videos [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code)_
+### [__What is VSCode and what is build in?__](#)
 
-<br>
+### [VSCode](https://code.visualstudio.com/) is a popular, free and lightweight code editor that comes with built-in support for a variety of useful features. Open new VSCode window with your last project by writing command `"code"` in terminal window. To open new project from a directory that you are currently in then write `"code ."` in command window. Good educational videos can be found [HERE.](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code) Below are listed some features that you get out-of-the-box when installing VSCode.
 
- __VSCode__ is an lightweight and popular code editor that comes with built-in support for many useful features. To open a VSCode window with your last project write `"code"` in command window. To open project in your the directory you are currently in write `"code ."` in command window.
-
- Below are some features that you get out-of-the-box when installing VSCode. The features support:
-
- - __Node.js & Nmp__: Runtime environment for JavaScript and corresponding world’s largest free JavaScript package online registry.
+ - __Node.js & Nmp__: Runtime environment for JavaScript and corresponding world’s largest free JavaScript online package registry.
  - __JavaScript:__ Programming language for the web that can update and change both HTML and CSS.
  - __TypeScript__: Strict syntactical superset of JavaScript that adds optional static typing to the language.
- - __Emmet__: Usage of code shortenings when writing html and css that are expanded into full pieces of code.
+ - __Emmet__: Usage of [EMMET](https://docs.emmet.io/) code shortenings when writing HTML and css that are expanded into full pieces of code.
  - __IntelliSense__: Code editing features including code completion, parameter info and quick info.
 
  - __Extensions:__ Search marketplace for a larg variety of extensions directly from VSCode GUI.
 - __GIT:__ Integration toward Git with simple graphical interface and usage of most frequent git functions straight from VSCode GUI.
 - __Multi-Cursor editing:__ Allows you to edit multiple parts of the document at once.
- - __Debugging, Code navigation__ and more... 
- 
- <br>
+ - __Debugging, Code navigation__ and much more.
 
-### [__Useful VSCode extensions__](#)
- VSCode has many extensions available to download from online npm registry with over 350000 packages. Installing VSCode gets you started right away with very helpful build in features but it is recommended to extend its functionality by installing some extensions.<br> 
+### [__Terminal in VSCode__](#)
 
-|VSCode&nbsp;extension&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+__Integrated Terminal window__ in VSCode is very handy feature and a time saver. When right-clicking a folder in explorer window you can easily open `VScode Terminal` directly in corresponding working location. You can also create multiple terminals open to different locations and easily navigate between them. In VSCode Terminal it is also possible to switch between shells that power the terminal from a drop down in the upper right corner. In user settings you can, if you wish, configure that instead of integrated VSCode Terminal open an external terminal of your choice. Just go to `Settings` and search for "terminal".
+
+Depending on you operating system `VSCode Terminal` uses different default shell. If you are used to certain shell and commands it can be a bit of annoying not getting them to work i.e. writing "ls -a" instead of "ls -force" might fail. Changing or adding default shell of your choice can be done as follows. Open control palette and search for command `Terminal: Select Default Shell`. Then you will get a list of available choices for you operating system i.e. Git Bash might be available. Then you can just choose one you prefer and will be added and set as default.
+
+>Note! You can open same location with different shells and easily toggle between them from a drop down list in right corner in the terminal window.
+
+>Note! Not sure that CSCode comes with a default Keyboard Shortcut for focusing Terminal window. We need to ba able to easily switch focus to terminal window. We recommend to set it to `ctrl+ö` in Settings > Keyboard Shortcuts > Terminal: Focus Terminal (search by "Focus+Terminal" string). then same command toggles the terminal window and focuses is if it is open.
+
+
+### [__Useful VSCode Extensions__](#)
+
+ VSCode has many extensions available for download from[ Visual Studio Marketplace](https://marketplace.visualstudio.com/). Despite those build-in features in VSCode we recommended to extend its functionality by installing some useful extensions. Some we use frequently are listed below:<br> 
+
+|VSCode&nbsp;extension&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Description|
 |---|---|
 |Vscode-icons|A set of nice icons for different file types shown in VSCode UI that makes navigating and finding a special file type easier.|
-|Color Highlight|Highlight colors as defined with # char in files and makes it easier to see what color is used directly in the editor.Note! VSCode have a similar build-in feature but only for CSS files. This plugin extends it to other file types.|
+|Color Highlight|Highlight colors as defined with # char in files and makes it easier to see what color is used directly in the editor.Note! VSCode have a similar build-in feature but only for CSS files. This plugin extends it to other file types.|____
 |Rainbow Brackets|Provides different colors for the round brackets, the square brackets and the squiggly brackets so it is easier to distinguish|
 |Code Spell Checker|Checking for spelling mistakes and proposes corrections.|
-|Live Server|A lightweight local dev server with live reload for saved HTML & CSS changes. Easy to install and start with one click to run preview of a file in browser.  Note! To compare with Webpack Dev Server having a key feature - hot module replacement - auto-injects changes without refreshing browser window from in-memoty. Fast.|
+|Live Server|A lightweight local dev server with live reload for saved HTML & CSS changes. Easy to install and start with one click to run preview of a file in browser.  Note! To compare with Webpack Dev Server having a key feature - hot module replacement - auto-injects changes without refreshing browser window from in-memory. Fast.|
 |Git Graph|Visualize commits to git repository in a graph to easily view which commits and branches are where relative to one another. It doesn’t have nearly the features that a full GUI git client like GitKraken has, but it does a nice job of being a lightweight free tool for visualizing the state of your repository’s commits.|
 |Git Lens|Extensive valuable insights via powerful comparison commands and other git functions.|
+|Markdown All in One|All you need for Markdown: export to HTML, keyboard shortcuts, table of contents, preview on sidebar and more).|
+|Markdown Shortcuts|Right clicking on .md file brings a list with markdown commands to. Speeds up a lot.|
 
-<br>
 
 ### [__Useful VSCode Shortcuts__](#)
-It is recommended to memorize some useful shortcut commands that make you to work more effectively. 
 
-||VSCode&nbsp;short&nbsp;command&nbsp;&nbsp;||
+We recommend to memorize some of the useful [VSCode shortcut commands](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2019). Those we use frequently are listed below:
+
+|Task|VSCode&nbsp;Shortcut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Description|
 |:---|:---|:---|
-|Show/Hide&nbsp;terminal| `Ctrl-Ö [;]`  |Toggles open/close of a terminal window. |
-|Show/Hide&nbsp;sidebar| `Ctrl-B` | Toggles showing/hiding of sidebar window. |
+|Show/Hide/Focus/Cursor&nbsp;in&nbsp;Terminal| `Ctrl+ö`  |Toggles VSCode terminal window. Focus unfocused terminal window and cursor (add Keyboard Shortcut `ctrl+ö` for "Terminal: Focus Terminal" and "Terminal: Scroll to Bottom" though settings). |
+|Show/Hide&nbsp;sidebar| `Ctrl+b` | Toggles VSCode sidebar window. |
+|Select block of text| `Shift+Alt [Select]` |  Select rectangular block of text. |
+|Open&nbsp;intellisense&nbsp;dialog| `Ctrl-Space` |  Open intelliSense dialog with proposals. Use `ESC` to close it. |
 |Search&nbsp;project| `Ctrl-P` | Opens search window to search for files and functions. Use `ESC` to close it. |
 |Search&nbsp;commands| `Ctrl-Shift-P` | Opens search window to search for available commands. Use `ESC` to close it. |
-|Open&nbsp;intellisense&nbsp;dialog| `Ctrl-Space` |  Open intelliSense dialog with proposals. Use `ESC` to close it. |
-|Mirror&nbsp;cursor&nbsp;start/end&nbsp;tags| `Ctrl-D` | Highlights and mirrors cursor to matching tags so we can edit those simultaneously. This can be enabled by default in settings by checking "mirrorCursorOnMatchingTag" in settings.|
+|Mirror&nbsp;cursor&nbsp;start/end&nbsp;tags| `Ctrl-D` | Highlights and mirrors cursor to matching start/end tags so we can edit those simultaneously. This can be enabled in settings by checking "mirrorCursorOnMatchingTag" in settings. By default it seems to be turned off.|
+|Select multiple cursors| `Alt-[Select]` |  Adds extra cursor for every selected (clicked) position while holding ALT. Then we can "group edit". |
 |Format&nbsp;document| `Shift-Alt-F` |  Formats code in current document |
-|Select multiple cursors| `Alt-Select` |  Adds extra cursor for every clicked position when holding ALT |
 |Move cursor forward/back| `Ctrl-[⇒] or [⇐]` |  Moves cursor forward or back to next statement |
-|Select block of text| `Shift-Alt` |  Select rectangular block of text. |
 |Move selection up or down| `Alt-[⇩] or [⇧]` |  Moves current selection up or down a line. |
 
-<br>
 
-### [__Useful EMMET snippets__](#)
-Use EMMET to speed up writing  code. It autogenerates code from short text snippets for HTML, CSS, SASS. 
+### [__Useful EMMET Snippets__](#)
 
-||Easy|More&nbsp;complicated|Generated code|
-|:---|:---|:---|:---|
-|New doc| `!` |   | `New default HTML document structure` |
-|Comment| `c `|   |  `<!-- -->` |
-|Include CSS in header| `link:css` |   | `<link rel="stylesheet" href="style.css">`|
-|Include script from file| `script:src` |   | `<script src=""></script>` |
-|Dummy text| `lorem23` |   | `Random text with 23 words`  |
-|Paragraph| _p_ | `p.title.title--bold{Hello}`|`<p class="title title--bold">Hello</p>`|
-|Div| _div_ | `.text-area#title{Text}` |`<div class="text-area" id="title">Text</div>`|
-|Menu| _ul>(li>a)*2_ | `ul.nav>(li.nav__row>a.nav__item#nav-item-${I$})*2` |`<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-1">Item1</a></li>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-2">Item2</a></li>`<br>`</ul>`|
-|Menu| _ul>(li>a)*2_ | `ul.nav>(li.nav__row>a.nav__item#nav-item-${Item$})*2` |`<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-1">I1</a></li>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-2">I2</a></li>`<br>`</ul>`|
-|Form| _form>input*2_ | `div>p+form:post>input:text+input:email+input:submit`  | `<div>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<p></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<form action="" method="post">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="text" name="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="email" name="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="submit" value="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</form>`<br>`</div>` |
-|Article| _section>article_  | `section.a>(article.a__wrap>h1.a__titel+p.a__descr+button.a__buttot)*1` |`<section class="a">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<article class="a__wrap">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<h1 class="a__titel"></h1>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<p class="a__descr"></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<button class="a__buttot"></button>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</article>`<br>`</section>` |
-|css||`w100p+h100e+m10p20px10e20p`|`width: 100%; `<br>` height: 100em; `<br>` margin: 10% 20px 10em 20%;`|
-|css||`fw:400+bc+m10-10-10-10`|`font-weight: 400; `<br>` background-color: #fff; `<br>` margin: 10px 10px 10px 10px; ` |
-|css|_bdrs9_|`-bdrs9`|`border-radius: 9px; `<br>` -webkit-border-radius: 9px; `<br>` -moz-border-radius: 9px;`|
-|css|_bd_|`fs20+bc+bd+bdrs5`|`font-style: 20px; `<br>` background-color: #fff;`<br>` border: 1px solid #000;`<br>`border-radius: 5px;`|
+ [EMMET](https://docs.emmet.io/) can autogenerate HTML and CSS code from short text snippets that are faster to write thn whole code expressions. Memorize some EMMET snippets to speed up your coding. [HERE](https://docs.emmet.io/cheat-sheet/) you can also find a handy cheat-sheet with all EMMET commands. Below we list some useful examples:
 
-
-
-
-<br>
+|Type|Functionality&nbsp;&nbsp;&nbsp;&nbsp;||EMMET snippet|Generated|
+|---|---|---|---|---|
+|HTML|New doc| `!` |   | `New HTML doc structure` |
+|HTML|Comment| `c `|   | `<!-- -->` |
+|HTML|CSS from file| `link:css` |   | `<link rel="stylesheet" href="style.css">`|
+|HTML|Script from file| `script:src` |   | `<script src=""></script>` |
+|HTML|Dummy text| `lorem23` |   | `Random text with 23 words`  |
+|HTML|Paragraph| _p_ | `p.hero__title--orange{Hello}`|`<p class="hero__title--orange">Hello</p>`|
+|HTML|Div| _div_ | `.text-area#title{Hello}` |`<div class="text-area" id="title">Hello</div>`|
+|HTML|Menu| _ul>(li>a)*2_ | `ul.nav>(li.nav__row>a.nav__item#nav-item-${I$})*2` |`<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-1">Item1</a></li>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-2">Item2</a></li>`<br>`</ul>`|
+|HTML|Menu| _ul>(li>a)*2_ | `ul.nav>(li.nav__row>a.nav__item#nav-item-${Item$})*2` |`<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-1">I1</a></li>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" class="nav__item" id="nav-item-2">I2</a></li>`<br>`</ul>`|
+|HTML|Form| _form>input*2_ | `div>p+form:post>input:text+input:email+input:submit`  | `<div>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<p></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<form action="" method="post">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="text" name="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="email" name="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="submit" value="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</form>`<br>`</div>` |
+|HTML|Article| _section>article_  | `section.s>(article.wrap>h1.s_t+p.s_d+button.s_b)*1` |`<section class="s">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<article class="wrap">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<h1 class="s_t"></h1>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<p class="s_d"></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<button class="s_b b"></button>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</article>`<br>`</section>` |
+|CSS| |`w100p+m10p20px10e20p`|   |`width: 100%; `<br>` margin: 10% 20px 10em 20%;`|
+|CSS| |`h100e+m10-10-10-10`|   |` height: 100em; `<br>` margin: 10px 10px 10px 10px; ` |
+|CSS| |`fw:400+bc+m10-10-10-10`|   |`font-weight: 400; `<br>` background-color: #fff; `<br>` margin: 10px 10px 10px 10px; ` |
+|CSS|_bdrs9_|`-bdrs9`|   |`border-radius: 9px; `<br>` -webkit-border-radius: 9px; `<br>` -moz-border-radius: 9px;`|
+|CSS| |`fs20+bc+bd+bdrs5`|   |`font-style: 20px; `<br>` background-color: #fff;`<br>` border: 1px solid #000;`<br>`border-radius: 5px;`|
 
 
-<br><br>[- BACK TO TOP -](#contents)
+<br><br>[- BACK TO TOP -](#table-of-contents)
 
 ---
 ---
@@ -160,85 +147,100 @@ Use EMMET to speed up writing  code. It autogenerates code from short text snipp
 
 
 ## [__GIT & Cmd__](#)
-### This section is about GIT as source control with some common git- & cmd-commands.
 
-_Good tutorial can be found [here](https://www.youtube.com/watch?v=HVsySz-h9r4) and [here](https://www.youtube.com/watch?v=FdZecVxzJbk)_
+### [__What is GIT and why use it from command line?__](#)
 
-<br>
+### [Git](https://git-scm.com/) is the most popular version control system for tracking changes in source code during software development. Even though VCCode and Visual Studio has GUI for Git commands we recommend to get familiar with and memorize  commonly used expressions and main commands as it is often required to run git commands from a command line window. Good Git tutorial can be found [HERE](https://www.youtube.com/watch?v=HVsySz-h9r4) and [HERE](https://www.youtube.com/watch?v=FdZecVxzJbk).
 
-__Git__ is the most popular version-control system for tracking changes in source code during software development. To start with get familiar with some common expressions:
-|Expression | |
+|GIT&nbsp;&nbsp;Expression | Description |
 |:---|:---|
-|Repository&nbsp;&nbsp;(Repo)|Folder location to container where our ALL project files with all change history is stored. Can be located on our local machine or remotely on i.e. github. |
-|Working&nbsp;&nbsp;directory| Folder location where all your checked out files are stored. |
-|Index|Area where staged files are held before a commit.|
-|Working&nbsp;&nbsp;tree|Area where files that we currently work on and changed are located. <br>When the files are staged then those are added to index. When the files are committed then those are added to repo. |
-|Checking out|Switching between different versions of code that we can view and edit.<br> Checking out updates the files in working directory to match those we check out from i.e. specific branch.|
-|Branch|A movable pointer to one of versions of code.<br> Usually when you adding new feature you spawn a new branch to encapsulate the changes.|
-|Stage|Temporarily save changed files in local repos index, marked as ready to commit.|
-|Commit|Permanently save changed files to local repo with an label and description|
-|Clone|Fetch a repo containing of all versions of files from a remote repo to local repo.|
-|Merge / Rebase|In git there are two main ways to integrate changes from one branch into another: merge and rebase. <br> Merge commits the changes on the top of the branch we merge to. <br> Rebase is moves the entire feature branch to originate from its parents HEAD.  |
-|HEAD|The most recent commit to a branch. Tip of a branch.|
-|Detached HEAD|Means the HEAD do not point to a branch but directly to a commit i.e when you have checked out a single commit in the history. <br>Similarity like a pointer to a list vs copy to a list object.|
-|Remote|A remote online repository that have an url i.e on GitHub or Bitbucket. <br> In git this remote URL usually have a name i.e. origin -> where the code we work from originates from.|
-|Push/Fetch|Upload/Download files and history from/to remote repo|
-|Pull|/Download files and history from remote repo, merge our changes to it and check out latest code.|
+|Repository&nbsp;&nbsp;(repo)|What is a repository? It is a folder location where all historical versions of project files files are stored and tracked by git. Can exist on our local machine or remotely on i.e. GitHub. A repository (shorter repo) have always a hidden folder named `.git` in the root. By deleting this hidden .git folder all historical versions are deleted and git tracking is disabled. Do not use space or tab in name of your repo. Name of remote and local and repositories can differ. |
+|Working&nbsp;&nbsp;directory| Working directory is the area where a single checkout (one version of the project) is stored. It is an "umbrella" term for all your files and folders that you can view and edit that git trace. |
+|Working&nbsp;&nbsp;tree|Term "working directory" refers to an area where all changes to files in your working directory are saved. Git traces changes to files in working directory. When those changes are saved then git automatically add those changes to `working tree` (simply in some index file down in .git folder). This is the "first level" of tracing of made. Subsequently changes in a working tree should be staged - meaning those are added to `index`. Finally changes in index can be committed then those are added to a `local repo`. From there we can push the changes to a `remote repo` which is the last "destination" of our changes (and safest). |
+|Index| Index is another git term used for `staging area`, witch is is a location where staged changes to files and folders are saved before a commit. Internally it is some index file down in .git folder saving the changes. |
+|Check out| Checking out is simply switching between different versions of code that we can view and edit in our working directory. When we `check out` a branch, or a specific commit or tag, then all files in our working directory will be updated to new versions, git simply overwrites ALL files and folders in our working directory. Additionally HEAD is then moved to point to tip of this new checked out branch.<br>A good question here is what happens to saved but not committed changes in working tree and index when we check out?<br>If we in our current working tree or index have uncommitted changes to files or folders, whose "parent" differ in any way from those we trying to check out, then git aborts the checkout. For example; if we are on Branch-A and have file s1 staged. Assume same file was meanwhile changed and committed on branch-B. If we in this situation want to check out branch B from Branch-A then it fails. But if file s1 have not be changed on branch-B then git proceeds and checks out Branch-B and keeps working tree and index as they were with our changes untouched.|
+|Clone|Cloning is making a copy of whole repository and saving in on another location. Usually a clone command automatically checks out the branch that is marked as active HEAD in parent, after it cas copied the repo. Usally it is "master" branch that is checked out in working directory by default after cloning.|
+|Branch|Branch is a movable "pointer" to latest commit (version) of the code. Every time you commit something to a branch then branch pointer moves forward automatically to point to this commit. Usually when you add a new feature you spawn a new branch i.e feature-x-branch to encapsulate the changes, check it out, work on on this branch with your feature and when finished with testing you merge back your changes from your feature branch to parent branch you originated from. In more complex projects we can for example have have dev-, release- or feature- branches. Note that the first by git automatically created branch when new repo is created is called by default `"master"`. |
+|HEAD| HEAD is a movable "pointer" to a commit that we currently have checked out in our working directory. In normal cases it always point to a branch therefore when branch moves to point to the latest commit then the HEAD do as well. But when a HEAD pointer directly to specific commit it is called a `detached HEAD` because it is not attached to a branch anymore. Note that when checkout a branch then HEAD pointer always changes to point to the tip of the branch we check out.|
+|Detached HEAD| Means the HEAD do not point to a branch but points to a specific fix commit. This happens when we check out a specific commit instead of a branch but sometimes this also might happens when a rebase fail. On a "detached checkout" you can look around, edit files and commit your changes BUT you will not be able to push from this "detached commit" and this commit will be lost when you change branch.   |
+|Stage|Staging can be described as saving of changes to local repos index|
+|Commit|When we commit we permanently save changes to local repo with an hash-label and description|
+|Commit Hash|An unique 40 char long SHA-1 hash that is created as unique ID for each commit. It can not be changed. Example: 4c511f16ef2644854d04cabebfcecc82be0eb04f|
+|Tag|A git tag is simply a label/stamp for commit that can be manually added to a special commit. Tags need to be manually added with a tag command and can look like this: rel-v.1.8.5 |
+|Merge & Rebase|In git there are two main ways to integrate changes from one branch into another: merge or rebase. Merge adds the changes to the tip of the branch we merge to in one single commit. Rebase moves the originating (starting) point of the branch to the tip of the branch we rebase to. Both have its advantages and disadvantages. Usually you can rebase on your own feature branch that you are in full control of, but you merge your changes to master or dev branch where many other work toward. |
+|Git Remote|Git remote is broader git system which is responsible for connecting to remote repositories and syncing changes. Remote servers i.e GitHub or Bitbucket have unique URL for each of its repos. In git - a connection to a remote server need to have a name, usually "origin", and the store correct url. |
+|Push/Fetch|Pushing nad Fetching is uploading and downloading of files and history from/to a remote repo. Note we do not checkout our working directory when executing this commands. Even if Fetch downloaded some newer changed files to pir machine we stay on the same code versions in working directory until we check out.|
+|Pull| Download all files and history from remote repo, locally merge our changes to it and finally check out latest code so that our working directory updates to with new file versions. |
+|Merge Conflict| Arise when two people have changed the same lines in a file, or if one developer deleted a file while another developer was modifying it. In these cases, Git cannot automatically determine what is correct. Git will mark the file as being conflicted and halt the merging process with test "Automatic merge failed; fix conflicts and then commit the result". It is then the developers' responsibility to resolve the conflict. |
+|Unrelated histories error| Somehow the local .git directory got deleted or corrupted. This leads Git to be unaware of your local history and will cause throwing this error when you try to push to or pull from the remote repository. To solve this use `--allow-unrelated-histories` option on pull/merge command. |
+|Upstream branch| Upstream branches are closely associated with remote branches and define the branch tracked on the remote repository by your local remote branch. When this is set on a branch then no need to write local branch name when merge/pull/push as it then choses the default set one. Set it for example with by `git push --set-upstream (or -u) origin master` to set default upstream origin/master. Check with `git branch -vv` that is is set. Later you just need to write `git push origin` to push from master when on master. Handy! |
 
-<br>
+ 
+
+![Git commands](./app/assets/images/git-commands.png)
+
+
+![Git commands](./app/assets/images/git-checkout.jpg)
+
 
 ### [__Useful Git commands__](#)
-It is recommended to understand and memorize those basic command that are often used.
+It is recommended to understand and memorize basic git command that are often used. Good article explaining merging and rebasing can be found [HERE.](https://www.atlassian.com/git/tutorials/merging-vs-rebasing). Download a complete [git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf) with all git commands. Additionally in VSCode you can open 'Command palette' (`CTRL-SHIFT-P`) where you can run git commands by choosing those from a list instead of writing the terminal window. Below we list most used git commands:
 
 
+- __Get Started and Help__<br>
+	Initially make sure to install git on your computer and check its version when installed.
+<br> `> git --version`  &nbsp;&nbsp;&nbsp; _shows installed git version_
+<br> `> git --help`  &nbsp;&nbsp;&nbsp; _prints a list of available git commands with short descriptions_ 
+<br> `> git [command] -h`  &nbsp;&nbsp;&nbsp; _prints out short help about a specific command_ 
+<br> `> git [command] --help`  &nbsp;&nbsp;&nbsp; _opens online help about a specific command (new window)_ 
 
-- __Install Git.__ Initially make sure to install git on your computer and check its version when installed.
-<br> `> git --version`  &nbsp;&nbsp;&nbsp; _shows current installed git version_ 
-<br> `> git --help`  &nbsp;&nbsp;&nbsp; _shows list of commands with some descriptions_ 
-<br> `> git config --help`  &nbsp;&nbsp;&nbsp; _shows help about a specific command, here 'config' command._ 
- 
->	_Note! In VSCode you can open 'Command palette' (`CTRL-SHIFT-P`)  where you can run git commands by choosing those from a list instead of writing commands with  in the terminal window._
+- __Configuration.__ <br>
+  	To look up configuration and information:
 
+	`> git status` &nbsp;&nbsp; _prints out useful info: current branch, changes to stage/commit, errors, conflicts and tips._ <br>
+	`> git config --list` &nbsp;&nbsp; _shows current configuration i.e. remote url, current user name/email and default editor_ <br>
+	`> git remote -v` &nbsp;&nbsp; _prints out Remote Name and Url. Usually an "origin" url to push/pull toward remote repo_ <br>
+	`> git branch -vv` &nbsp;&nbsp;  _prints out all existing branches in local repo, currently checked-out one marked with *, default upstream brach, how much localy ahead and the remote url _ <br>
 
-- __Show info and configure Git.__ Different information need to be listed when working with git.
+	Important! Initially make sure to __set your user credentials__ as those are needed to commit code:
 
-	`> git config --list` &nbsp;&nbsp; _shows saved configuration and useful info i.e remote url and user_ <br>
-	`> git remote -v` &nbsp;&nbsp; _shows remote url and its name to use in push and pull_ <br>
-	`> git branch` &nbsp;&nbsp;  _shows all branches in local repo, marked * on currently checked-out one_ <br>
-	`> git status` &nbsp;&nbsp; _shows useful info such as all changes to stage/commit as well as errors/conflicts if any._ 
+ 	`> git config --global user.name [your name]` <br>
+ 	`> git config --global user.email [your@email.com]` <br>
 
-	Important! Initially make sure to tell git your user credentials as those are needed to commit code:
+- __Create a Local Repo.__ <br>
+  	Creating a local repo can be done in two ways depending on if we start from fresh locally or copy existing repo.<br><br> 
+	__`1.`__ One way is to create __new empty local repo__:
 
- 	`> git config --global user.name "Your Name"` <br>
- 	`> git config --global user.email "Your@Email.com"` <br>
-
-
-
-
-- __Create a local repo.__ This can be done in two ways.<br><br> 
-	`___- One way___ is to create new empty folder and transform it to local empty repo with following command:
-
-	`> git init` &nbsp;&nbsp; _turns a folder to an empty local repo. Hidden .git folder is created in the root._ <br>
-	`> git init [LocalFolderName]` &nbsp;&nbsp; _creates new folder in location when we run the command and then turns it into an empty local repo)_ 
+	`> git init` &nbsp;&nbsp; _turns current directory folder to an new local repo. A hidden .git folder is created in the root._ <br>
+	`> git init [LocalFolderName]` &nbsp;&nbsp; _creates new folder in current location & turns this new folder into an empty repo_ 
 	
-	>	Note! In init case remote url, origin, is not set - undefined.
+	>	Note! In case above the remote url (origin) is undefined and must be set it we want to connect this new repo to a remote repo. A new default branch is created and named "master", and automatically checked out.
 
-	 ___- Another way___ is is to clone an already existing repo, with all versions of the code, from remote to your local machine:
+    __`2.`__ Another way is is to __copy already existing repo from remote__:
 
-	`> git clone [http://RemoteRepoURL]` &nbsp;&nbsp; _existing repo with all code history is copied locally. Then cloned remote repository's currently active branch is checked out locally._ <br>
-	`> git clone [http://RemoteRepoURL] [LocalFolderName]` &nbsp;&nbsp; _first new folder here `LocalFolderName` is created in location where this command is run. Then existing repo with all code history is copied. Then cloned remote repository's currently active branch is checked out locally.)_
+	`> git clone [RemoteRepoURL]` &nbsp;&nbsp; _copies a repo (with full history of all files and all branches) to your into new directory that is created in directory where you execute the command and named same as the remote repo._  <br>
+	`> git clone [RemoteRepoURL] [LocalFolderName]` &nbsp;&nbsp; _creates new folder in current location & copies whole remote repo into it. Also checks out aversion of files and set connection to our remote repo (sets remote url)_
 
-	> Note! In both cases we end up with a local repo. In first case our local branch is named 'master' and it is checked out. In second case ... #todo and the checked out code is the one the HEAD point on the parent remote repo that we copy from. #todo how to change this? 
+	> Note! Cloning also checks out a version of files and creates a remote connection called "origin" pointing back to the original repository. What is git clone checking out? The commit that HEAD is pointing to on the remote witch is usally "master". ???
+	<br>
 
+- __Set Remote URL.__<br> 
+  	In order to synch changes with a remote repo on i.e GitHub an address must be set. <br>
 
+	`> git remote -v`  &nbsp;&nbsp; _first print your current remote repo url and its name_ <br>
+	`> git remote remove origin` &nbsp;&nbsp; _removes existing connection to a remote repo (if any)_<br>
+	`> git remote add origin [RemoteRepoURL]`  &nbsp;&nbsp; _Adds new connection to remote repo named 'origin' and set url_<br>
+	`> git remote set-url origin [RemoteRepoURL]`  &nbsp;&nbsp; _change url  remote connection named 'origin' to push/pull from it._
 
-- __Stage & Commit.__ After editing existing files or adding new files in working tree we need to stage the changes, and later commit those to our local repo:
+- __Stage & Commit.__<br>
+  	After editing existing files or adding new files in working tree we need to stage the changes, and later commit those to our local repo:
 
 	`> git status` &nbsp;&nbsp; _lists info such as all changes to stage/commit as well as errors/conflicts if any_ <br>
 	`> git add [.] or [fileName]` &nbsp;&nbsp; _stages all or specific files by adding those to index_ <br>
 	`> git commit [.] or [fileName] -m 'commitDescription'` _commits all changes to repo with a description_
 
--   __Undo changes__. There are different ways to undo or revert made changes or commits:<br>
+-   __Undo Changes__<br>
+  	There are different ways to undo or revert made changes or commits:<br>
 
 	`> git restore [.] or [fileName])` &nbsp;&nbsp; _permanently deletes changes in working tree but do nothing to staged ones._ <br>
 	`> git restore --staged [.] or [fileName])` &nbsp;&nbsp; _unstage changes by moving staged to working tree. Note! If same file changed in working tree then the staged change will be permanently deleted!_ <br>
@@ -249,38 +251,39 @@ It is recommended to understand and memorize those basic command that are often 
 	`> git restore --staged .`<br>
 	`> git checkout -- .`
 
-
-
--   __Merge, diffs and logs__. <br>	
+-   __Merge, Diffs and Logs__. <br>
+  	
 	`> git log -- [.] or [fileName]` &nbsp;&nbsp; _shows all commits labels for file(s)_ <br>
 	`> git diff [.] or [fileName]` &nbsp;&nbsp; _shows changes between file(s) in working tree vs staged area or committed to repo._ <br>
 	`> git diff --staged [.] or [fileName]` &nbsp;&nbsp; _(shows changes between file(s)) in staged area vs committed in repo._
 
-- __Set url to a emote repo.__ In order to synch changes with a remote repo on i.e GitHub, an address must be set. <br>
+-   __Conflicts__<br>
+  	When pulling sometimes a background merge can fail. Then the merge is aborted conflicted files are added to local working tree and must be resolve to commit and fullfil the merge. <br>	
+   
+	`> Fix the conflict:`  &nbsp;&nbsp; First show files and diff. Then then most direct way to resolve a merge conflict is to edit the conflicted file in your favorite editor, i.e. open in VScode with `>code [filename]`, remove unwanted code and save the filet. Afterwards stage and commit with `git commit -m "merged and resolved the conflict."`
 
-	`> git remote -v`  &nbsp;&nbsp; _shows what is you current remote repo url and name of remote repo (usually origin)_ <br>
-	`> git remote remove origin` &nbsp;&nbsp; _removes existing connection to a remote repo (if any)_<br>
-	`> git remote add origin [http://url.git]`  &nbsp;&nbsp; _sets new 'origin' as our remote_branch_name together with corresponding url._<br>
-	`> git remote set-url origin [http://url.git]`  &nbsp;&nbsp; _change url of our existing 'origin' (remote_branch_name). Now can push/pull to/from it._
+	>Note!  The ======= line is the "center" of the conflict. Above is the code we merge from. Below is the code we merge to. 
 
-- __Fetch, Pull & Push changes from/to remote.__  When time to push changes in your local repo to remote then first fetch from from remote and merge  or rebase locally. This because there might be changes on remote conflicting with your changes. Solve all those conflicts and test locally before finally uploading (pushing) the result to remote repo. Good explanation [here.](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+- __Fetch, Pull & Push.__<br>
+  	When time to push changes in your local repo to remote then first fetch from from remote and merge  or rebase locally. This because there might be changes on remote conflicting with your changes. Solve all those conflicts and test locally before finally uploading (pushing) the result to remote repo. 
 
-
+	`> git push origin master` &nbsp;&nbsp; _upload changes to remote repo, here origin, from #todo check here if we have 2 branches with changes how to push both?_<br> 
 	`> git pull origin master` &nbsp;&nbsp; _fetches & merges changes from remote repo, here "origin", to our local branch here "master"')_ <br>
-	`> git push origin master` &nbsp;&nbsp; _upload changes to remote repo, here origin, from #todo check here if we have 2 branches with changes how to puch both?_<br> 
+	
 
-		 "Git pull" run two different git commands for you. You're better off, until you are well-experienced with Git, using separate "git fetch" and "git merge" commands. But this may Cause Conflicts to occur, so it’s recommended to use Git Pull with a clean copy. Note that "git pull --rebase" switches the second command to git rebase, but we won't get into details here.
+	`> git push -u (or --set-upstream) origin master` &nbsp;&nbsp; _`-u` or `--set-upstream` set the upstream branch for local master to `origin/master`. After this we can use command like `git push origin or` `git pull origin` without defining the second parameter (local branch) as we have a default upstream set for brunch we are working on (view it with `git branch -vv` command)_ <br>
+
+	>Note! "Git pull" run two different git commands for you. You're better off, until you are 		well-experienced with Git, using separate "git fetch" and "git merge" commands. But this may 	Cause Conflicts to occur, so it’s recommended to use Git Pull with a clean copy. Note that "git pull --rebase" switches the second command to git rebase, but we won't get into details here.<br>
 
 	`> git fetch origin --allow-unrelated-histories` &nbsp;&nbsp; _fetches changes from remote to local repo_ <br>
 	`> git merge origin/foo` &nbsp;&nbsp; merges changes from foo to your checked out local repo_ <br>
 
-
-	__==>__
+	-- equals -->
 
 	`> git checkout foo` &nbsp;&nbsp; _Makes us to look at foo branch localy_ <br>	
 	`> git pull --allow-unrelated-histories` &nbsp;&nbsp; _fetches & merges changes to local checked out repo_ <br>
 	or <br>
-	`> git rebase origin --rebase --allow-unrelated-histories` &nbsp;&nbsp; fetches & rebases changes to local repo foo. The command tries to find out which commits are really your local ones, and which had come from upstream in an earlier fetch._ <br>
+	`> git rebase origin --rebase --allow-unrelated-histories` &nbsp;&nbsp; fetches & rebases changes to local repo foo. The command tries to find out which commits are really your local ones, and which had come from upstream in an earlier fetch. <br>
 
 		Note! `--allow-unrelated-histories` forces to accept files that are not related to the project i.e. when merging 2 different projects.
 
@@ -288,12 +291,14 @@ It is recommended to understand and memorize those basic command that are often 
 
 On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
 
--	__Create new branch.__ For new feature new branch...:
+   - __Branch__<br>
+	For new feature new branch...:
 
-	`> git branch [newBranchName]`  &nbsp;&nbsp; _(creates a new branch but stays on the one we have checked out)_ <br>
+	`> git branch [newBranchName]`  &nbsp;&nbsp; _(creates a new branch but __stays__ on the checked out oue_ <br>
 	`> git checkout -b [newBranchName]`  &nbsp;&nbsp; _(creates a new branch and checks it out)_
 
--	__Clone someones remote repo__ When you want to copy a public remote repo to your own.
+- __Clone someones remote repo__<br> 
+  	When you want to copy a public remote repo to your own.
 
 	- Create own empty remote repo i.e. A
 	- Clone a remote public repo to a local repo
@@ -301,33 +306,28 @@ On the other hand, if you want to preserve the complete history of your project 
 	- Push changes to your remote URL. This will upload all copied files to your own remote repo.
 	#todo
 
+### [__Useful Cmd Commands:__](#)
 
-<br>
-
-### [__Useful Cmd commands:__](#)
 It is good to know and memorize those basic command that are often used:
 
-| | |
+|Cmd&nbsp;command|Description|
 |:---|:---|
-|pwd|Writes out current location|
-|dir|Lists directories and files in current location|
-|cd [path]|Changes location. 'cd..' changes back|
-|mkdir [dirName]|Creates a new directory in current location|
+|`pwd`| Print Working Directory. Writes out full path of currently executing folder. |
+|`ls -force` \| `dir -force` <br> `ls -a` \| `dir -a`|List all content (including hidden files) in current working directory. <br> "- force" for VSCode terminal /powershell) and "-a". for Git Bash. |
+|`cd [path]` <br> `cd ..`|Change location to path or back|
+|`mkdir [dirName]`|Creates a new directory in current location|
+|`rm [dirName]`|Deletes a directory|
 |touch [fileName]|Creates a new file in current location|
-|cat [fileName]|Opens a file|
+|cat [fileName]|Prints content of a file in terminal window|
 |ipconfig|detailed information about your current network adapter connection including current IP address|
 |copy [soure] [dest]|Copies a source file to destination|
-|cls|Clear the command screen|
+|`cls` or `clear`|Clear the command screen|
 
-
-
-
-
-<br>
 
 ### [__.gitignore file__](#)
 
-A file in root of your project which tells Git witch files to ignore. Normally auto-created when initiating git. Example of a git file:
+Gitignore file is a file in root of your project which tells Git witch files not to track. #todo who creates it?.<br> 
+A gitignore file may look like following:
 
 ```
 # Numerous always-ignore extensions
@@ -344,14 +344,13 @@ node_modules/
 .DS_Store
 Thumbs.db
 .cache
-.project
+.__project__
 .settings
 
-and more...
+...
 ```
 
-
-<br><br>[- BACK TO TOP -](#contents)
+<br><br>[- BACK TO TOP -](#table-of-contents)
 
 ---
 ---
@@ -361,63 +360,61 @@ and more...
 
 ## [__Node.js & Npm__](#)
 
-__This section is about:__<br>
-_How to download packages to automate your work._
+### [__What is Node.js and npm used for?__](#)
 
- _Extensive node.js tutorial can be found [here](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)._<br>
- _Typescript description can be found [here](https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d)._<br>
- _List of build-in node.js modules [here](https://www.w3schools.com/nodejs/ref_modules.asp)._
-<br><br>
+### Node.js is a lightweight runtime environment for JavaScript. Npm is a tool included in node.js that makes is possible to download and store packages that Node.ja later can run and use. Npm and Node.ja can automate lots of our work and speed up our development time significantly. Extensive node.js tutorial can be found [HERE](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm). Typescript tutorial can be found [HERE](https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d). List of modules/packages build-in in node.js can be listed [HERE](https://www.w3schools.com/nodejs/ref_modules.asp).
 
 ### [__Node.js__](#)
 
-__Node.js__ is a _lightweight_ runtime environment for JavaScript. There are two main usage areas for Node.js. 1) One as a backend server that executes javascript. 2) Other one as a development/automation tool used on developers computers. 
+There are two main usage areas for Node.js. One is as a backend server that execute javascript. Other one is as a development/automation tool used on our computers that we work with our development on. Server-side node is used for serving data and powering apps and sites. When using it as a development tool we can automate common tasks and speed up building of our apps and sites. 
 
-Server-side Node.js  is used for serving data and powering apps and sites. When using it as a development tool we can automate common tasks and speed up building of our apps and sites. 
+Node.js can execute programs written in JavaScript. Originally JavaScript is a scripting language but Node.js "extends" JavaScript to be a "real" programming language. Note.js unfortunately do not understand TypeScript but there is a nmp package (called `typescript`) that can automatically transform our typescript (.ts) files to javascript (.js) files.
 
-Node.js can execute programs written in JavaScript. Originally JavaScript is a scripting language but Node.js "extends" JavaScript to be a "real" programming language. It do not understand TypeScript files bu there is a nmp package (typescript) that can transform typescript (.ts) files to javascript (.js) files.
 
-<br>
+#### [Install Node.js and execute programs](#)
 
-### [Install Node.js and execute programs](#)
 - Following command check if node is __installed__ on your machine.If not just google and install it. <br>
-`node -v` <br>
+`node -v` 
 
 - To __execute__ a java script file with node use following cmd command: <br>
-`node anyFileToRun.js` <br><br>
+`node anyFileToRun.js` 
 
-
->	JavaScript that is run by node.js usually include (require) packages that are either downloaded though npm (and stored in root folder `node_modules`) or built-in in node.js. In order to use those packages those must be "required" in top of the .js file. For example:
+>	JavaScript programs that is run by node.js usually include (require) packages that are either downloaded though npm (and stored in root folder `node_modules`) or built-in in node.js. In order to use those packages those must be "required" in top of the .js file. For example:
 `var http = require('http');`.
 
-<br>
 
-
-### [Useful Node.js modules](#)
+#### [Useful Node.js modules](#)
 
 Following are some common packages and functions that are useful and good to memorize.
 
 |||||
 |:--|:--|:--|:--|
-|require(__fs__)|access filesystem|__writeFile__(__dirname +"./[FileName]",<br> [TextToAdd],<br> function() {...})|YES|
-|require(__http__)|Access www|__get__(url,<br>function(resp) {<br> response.__pipe__(fs.__createWriteStream__([FileName])) <br>})|YES|
+|require(__[fs](https://nodejs.org/api/fs.html#fs_file_system)__)|access filesystem|__[writeFile](https://nodejs.org/api/all.html#fs_fs_writefile_file_data_options_callback)__(__dirname +"./[FileName]",<br> [TextToAdd],<br> function() {...})|YES|
+|require(__[http](https://nodejs.org/api/http.html#http_http)__)|Access www|__[get](https://nodejs.org/api/http.html#http_http_get_url_options_callback)__(url,<br>function(resp) {<br> response.__[pipe](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)__(fs.__[createWriteStream](https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options)__([FileName])) <br>})|YES|
 |require(__http__)|...|...|YES|
-
-
 
 >	Note! Even though it is not required, it is a good practice to use ; at end of each statement. <br>
 In node 'var' and 'const' are used when declaring variables. Var variables can be updated and re-declared within its scope, const variables can neither be updated nor re-declared. <br>
 
 
-
 ### [__Npm__](#)
 
+NPM stands for Node Package Manager and comes by default with Node.js installation. NPM is a tool used to search for, download and store packages that can later be run by Node.js. NPM packages are JavaScript programs written by others performing various tasks that usually automate various things us lots of  precious time. Packages that are downloaded through npm can automate development, but also contain code that project use when auto-creating code that we later send to browser. For example [lodash](https://lodash.com/) or [normalize](http://nicolasgallagher.com/about-normalize-css/) are such a packages. 
 
-__Node Package Manager__ (NPM) comes by default with node.js. NPM is a package manager tool that is used to search for and download packages that can be run by Node.js. Those packages are JavaScript programs written by others performing tasks that automate various things and save developers precious time. Packages that are downloaded through npm can be JavaScript tools used to automate development, but also code snippets that project use when aut-creating code that we later send to browser (ie loadash or normalize.css are project dependent npm packages). 
 
-<br>
+#### [Useful NPM Packages](#)
 
-### [Install npm packages and use those](#)
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|flag|Usage|
+|:---|:---|:---|
+|[normalize.css](http://nicolasgallagher.com/about-normalize-css/)<br>[loadash](https://lodash.com/)||CSS package for resetting all browsers to same state. <br> Lodash is an JavaScript library to work with arrays, numbers, objects, strings, etc.|
+|<br>[webpack](https://www.npmjs.com/package/webpack)<br>[webpack-cli](https://www.npmjs.com/package/webpack-cli)<br>[webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)|-D|_Common Webpack functionality_<br>For bundling & automation.<br>For command line functionality<br>Dev server that auto-injects JS into chrome at runtime.|
+|<br>[postcss-loader](https://www.npmjs.com/package/postcss-loader)<br>[css-loader](https://www.npmjs.com/package/css-loader)<br>[style-loader](https://www.npmjs.com/package/style-loader)|-D|_Webpack loaders (CSS)_<br>For loading postCSS modules.<br>For importing css to js files.<br>Get browser to read CSS from JS files.|
+|<br>[postcss-import](https://www.npmjs.com/package/postcss-import)<br>[postcss-simple-vars](https://www.npmjs.com/package/postcss-simple-vars)<br>[postcss-nested](https://www.npmjs.com/package/postcss-nested)<br>[autoprefixer](https://www.npmjs.com/package/autoprefixer)  |-D|_PostCSS modules:_<br>For importing code to CSS & NPM-modules files <br> For variables in CSS <br> For nesting in CSS<br>For adding autoprefixes|
+|xxx|||
+|yyy|||
+
+
+#### [Install Npm packages](#)
 
 -	First always __initiate npm in the root__ of your local repo.<br>
 `> npm init -y`  
@@ -449,34 +446,7 @@ _For development only:_<br>
  `> npm install lodash@latest --save`
  
 
-
-<br>
-
-### [Useful NPM Packages](#)
-
-|Npm install|flag|Usage|
-|:---|:---|:---|
-|normalize.css<br>loadash||CSS package for resetting all browsers to same state. <br> Loadash is for ...???|
-|<br>webpack<br>webpack-cli<br>webpack-dev-server|-D|_Common Webpack functionality_<br>For bundling & automation.<br>For command line functionality<br>Dev server that auto-injects JS into chrome at runtime.|
-|<br>postcss-loader<br>css-loader<br>style-loader|-D|_Webpack loaders_<br>For loading postCSS modules.<br>For importing css to js files.<br>Get browser to read CSS from JS files.|
-|<br>postcss-import<br>postcss-simple-vars<br>postcss-nested<br>autoprefixer  |-D|PostCSS modules:<br>For importing code to CSS & NPM-modules files <br> For variables in CSS <br> For nesting in CSS<br>For adding autoprefixes|
-|xxx|||
-|yyy|||
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### [package.json file](#)
+### [Package.json file](#)
 
 This is an important file in the root of the repo. It is auto-generated when we initiate npm. This is an important project file. The 'scripts' property is a dictionary containing script commands that can be run from command line. Dependencies are the packages that are used in within the project.
 
@@ -511,7 +481,7 @@ _Example of an package.json file:_
 }
 ```
 
-<br><br>[- BACK TO TOP -](#contents)
+<br><br>[- BACK TO TOP -](#table-of-contents)
 
 ---
 ---
@@ -529,7 +499,7 @@ _Some good tutorial [HERE](https://www.youtube.com/watch?v=lziuNMk_8eQ)_
 Webpack is a bundler and dependencies manager and our "building" tool. Simply described:
 
 
-  `Webpack consumes many files that are not written in a way that browser understands (but we understand very well), and generates few minimal files (i.e. .html, .css and .js) that the browser can understand (but we have hard to read).`
+  `Webpack consumes many files that are not written in a way that browser understands (but we understand very well), and generates few minimal files (i.e. .HTML, .css and .js) that the browser can understand (but we have hard to read).`
 
 Webpack can for example (when instructed in webpack.config.js file) build one single .js file from several files  (i.e JS ES6, CSS and JS). Thanks to its many  packages it can perform a variety of tasks. Webpack is popular to use in big web projects as it streamlines ans simplifies the development. Without it would be very hard to import and add all script dependencies manually.
 
@@ -578,9 +548,8 @@ module: {
 	},
 
 
-<br>
 
-### [Webpack devServer](#)
+### [Webpack Dev Server](#)
 
 __Webpack devServer__ (webpack-dev-server) is a webpack npm package that is started from command line, usually by running a NPM-script. When running it can automatically inject code to running browser(s) instantly when tracked project files (i.e HTML, CSS and JS) are saved. The injection is done is such a way that browser do not perform 'hard refresh' and keeps its state. This is VERY convenient when developing and CSS styling.The server can also be reached from several browsers on the same wi-fy network. It is very popular dev server to use when building and styling your web app. In order to get it work some configurations need to be done and some npm packaged downloaded. Following is described what need to be done to gest started with webpack DevServer
 
@@ -617,7 +586,7 @@ module: {
 /* Telling webpack to watch for changes in a directory and inject those to the running browser(s) at localhost:3000 */
 
 DevServer: {
-		contentBase: path.join(__dirname, 'app'),	/* Base folder where our index.html file lives */
+		contentBase: path.join(__dirname, 'app'),	/* Base folder where our index.HTML file lives */
 		hot: true, /* Auto inject at save. The main entry point .js file must contain following: if (module.hot) module.hot.accept(); */
 		port: 3000
 	},
@@ -640,49 +609,7 @@ if (module.hot)
 "files.associations": {"*.css": "scss"}
 ```
 
-<br>[- BACK TO TOP -](#contents)
-
----
----
-<br>
-<br>
-
-### __Markdown__
-##### Markdown is a way to style text on the web. You control the display of the document. Files are saved as .md files and only special readers ca view it (or Chrome with plug-in). On github README.md in root is shown as main file. As best practice use markdown to style README.md file at github. A command to preview .md file in VSCode is CTRL-SHIFT-V. 
-
-Note! Each heading ie `## My heading` creates a class based on name; here class="my-heading". In order to navigate to it use `[Text to show](#my-heading)`. Used in content menus on top.
-
-```
-Recommended VSCode Extensions:
-
-Auto-Open Markdown Preview      - Opens a preview window on the side for preview of selected .mp file.
-```
-
-#### Markdown Syntax
-
-_\_italic text\__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-__\_\_bold text\_\___ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-~~striken text~~ &nbsp; -->&nbsp;~\~striken text\~\~ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Link text](http://www.di.se) &nbsp; -->&nbsp;\[Link text\] \(url\)
-
-![Image](http://icons.iconarchive.com/icons/saviourmachine/chat/32/online-icon.png)  &nbsp;&nbsp;&nbsp;&nbsp;  --> &nbsp;`![Alt Text](url to image)`
-
-Normal text  
-#### \#\#\#\# Heading3
-##### \#\#\#\#\# Heading4
-
-`` `<p>inline code</p>` ``
-
-```HTML 
-   ```HTML (or javascript)
-   <div>
-       <p>formatted code with colors</p>
-    </div>
-   ```    .
-```
-
-<br>
-
-### [webpack.config.js file](#)
+### [Webpack.config.js file](#)
 
 This is an important file in the repo root that you must create and add manually in order to give instruction to webpack how to run. Webpack when run, the first thing it does is to looks in running folder for this file.
 
@@ -701,8 +628,8 @@ const output_BundledDir = path.join(__dirname, '/app');
 const output_BundledFilename = "bundeld.js";
 
 /* Setting related to webpack-dev-server */
-const devServer_ContentBase = path.join(__dirname, '/app'); /* Root of our index.html that devServer runs */
-const devServer_HtmlFilesLocation = './app'; /* Location where html that shall be tracked when saved changes */
+const devServer_ContentBase = path.join(__dirname, '/app'); /* Root of our index.HTML that devServer runs */
+const devServer_HtmlFilesLocation = './app'; /* Location where HTML that shall be tracked when saved changes */
 const devServer_Port = '3000'; /* The port to serve the page on -> localhost:3000 */
 
 /* PostCSS plugins that are served to "postCSS-loader" */
@@ -718,8 +645,8 @@ module.exports = {
 	entry: entry_JSToBundle,	
 	output: { path: output_BundledDir, filename: output_BundledFilename },
 	devServer: { 
-		contentBase: devServer_ContentBase, /* Location of index.html file */
-		before: (app, server) => { server._watch(devServer_HtmlFilesLocation + '/**/*.html') }, /* For auto-reloading when a html file is saved */
+		contentBase: devServer_ContentBase, /* Location of index.HTML file */
+		before: (app, server) => { server._watch(devServer_HtmlFilesLocation + '/**/*.HTML') }, /* For auto-reloading when a HTML file is saved */
 		hot: true, /* For auto-inject of bundled file at save. Note! The .js that is entry point file must contain: if (module.hot) module.hot.accept() */
 		port: 3000, /* The port to run the site on -> localhost:3000 */
 		host: '0.0.0.0' /* Reach devServer from other devices on same wi-fi. Address: [IPv4 Address 192.168.X.X]:3000 (look up XXX  cmd>ipconfig)*/
@@ -736,36 +663,164 @@ module.exports = {
 ```
 
 
-> \>Text 1 _`<br>`_ <br>
-> \>Text 2 on the second line
+<br><br>[- BACK TO TOP -](#table-of-contents)
 
-- \- ul item &nbsp; _(or use '1.' for ol)_
-- \- ul item
-    - \- ul subitem a (tabbed)
+---
+---
+<br>
+<br>
+
+## [__Markdown__](#)
+
+Markdown is a lightweight markup language to style text on the web. The syntax is much simpler than HTML and originally was created for non-programmers to write easy-to-read format that could be converted directly into HTML. Markdown files are saved with extension .md and only special readers can view them i.e. GitHub readme-file-viewer or Chrome with a special plug-in. Using markdown for styling text makes it possible to view text in a nicer than simple text. VSCode have Markdown with preview build in. GitHub uses Markup to style th README.md files.
+
+> Note! Each heading starting with `#` i.e. `## Node.js & Npm-files`, in background creates a class based on name. In case here "`nodejs-npm`". In order to internally navigate to this heading use `[Pres HERE to go to Node.js](#nodejs-npm.files)` and an internal link will be created.
+
+>Note! When emty line is used then texts in between are part of same paragraph. But if 2+ empty lines exist then is means a new paragraph.
 
 
-```
-|Name|Email|
-|---|---|
-|Peter|peter@devoote.se|
-|Martin Czerwinski|martin@cmq.se|
-```
-|Name|Email|
-|---|---|
-|Peter|peter@devoote.se|
-|Martin Czerwinski|martin@cmq.se|
+__Recommended VSCode Extensions__
 
+[Markdown Shortcuts](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)<br>
+Adds a list of toggle commands/shortcuts shown in drop-down list when right-clicking in .md file. Very convenient to toggle a selection by choosing from a list. In settings __ or _ can be chosen to use instead of  ** and *. Also on title bas GUI icons are shown for .md files, can be customized in options.
+
+[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)<br>
+Exports to HTML. Export HTML to PDF with browser (e.g. Chrome) if you want.<br>
+Creates Table Of Content. Use <!-- omit in toc --> beside/above heading to ignore it.<br>
+Paste (CTRL-V) a link on selected text to create a markdown link.<br>
+Autocompletion of available assets with ./<br>
+
+
+### [__Markdown syntax__](#)
+
+Below we presen some Markdown syntax for most used tags. Copy it to you markdown file as it is.
+
+__`MARKDOWN LISTS`__ 
+
+  1. Chapter one
+  2. Chapter two
+     1. Subchapter one
+     2. Subchapter two
+  3. Chapter three
+  4. Chapter four
+
+  <br>
+
+  - \- Chapter One
+  - \- Chapter two
+    - \- Subchapter one
+    - \- Subchapter  two
+  - \- Chapter three
+  - \- Chapter four
 
 <br>
 
-[- BACK TO TOP -](#contents)
+__`MARKDOWN TEXTS`__
+
+## \#\# H2 text
+### \#\#\# H3 text
+#### \#\#\#\# H4 text
+##### \#\#\#\#\# H5 text
+
+Normal text
+
+_\_Italic text\__
+
+__\_\_Bold text\_\___ 
+
+~\~~~s'Striken text~~\~\~ 
+
+$
+\$
+f(x)=x/5*2y
+\$
+$
+
+<br>
+
+__`MARKDOWN LINKS`__
+
+External link: [HERE](http://www.di.se) &nbsp;&nbsp;&nbsp;  code=> &nbsp;&nbsp;&nbsp;  \[HERE\]\(http://.www.di.se\)
+
+Internal link: [HERE](#table-of-contents) &nbsp;&nbsp;&nbsp;  code=> &nbsp;&nbsp;&nbsp; \[HERE\]\(#table-of-contents\)
+
+<br>
+
+__`MARKDOWN IMAGES`__
+
+A nice picture: ![Forest](./app/CSS/assets/nature_251x201.jpg)
+
+Code => &nbsp;&nbsp; A nice picture: \!\[Forest\]\(./app/CSS/assets/nature_251x201.jpg\)
+
+<br>
+
+__`MARKDOWN TEXT BLOCKS`__
+
+This text highlighted as surrounded by ' and not formatted:<br>  `` `Unformatted highlighted <br> text <p>tHello!</p><br>` ``
+
+
+
+```
+.``` 
+- Unformatted lines <br> of text ending with [Enter]
+	[TAB] __Unformatted lines of text ending with__ [Enter]
+- Unformatted lines of text ending with [Enter]
+.```
+
+```
+
+```HTML 
+```HTML [or javascript] [or python]
+
+Code block - HTML formatted, autocolored [Enter]
+[Enter]
+<div> [Enter]
+	[TAB] <h1>Header</h1> [Enter]
+	[TAB] <p>formatted as HTML - code with colors</p> [Enter]
+</div> [Enter]
+```    .
+```
+
+<br>
+
+__`MARKDOWN TABLES`__
+
+|Sex|City|Name/Surname|
+|---|---|---|
+| Man | Dallas | Martin <br> Linn <br> [link](http://www.di.se) |
+|<br> Woman <br> Man | <br> Lund <br> London|___Anna__ \<b>test\</b> <br> `Carming <br>`_ <br> 59 years|
+| Man | York | Adam |
+
+<br>
+
+_And the code =>
+```
+|Sex|City|Name/Surname|
+|---|---|---|
+| Man | Dallas | Martin <br> Linn <br> [link](http://www.di.se) |
+|<br> Woman <br> Man | <br> Lund <br> London|___Anna__ \<b>test\</b> <br> `Carming <br>`_ <br> 59 years|
+| Man | York | Adam |
+```
+
+```
+Note! you can fill Title lables with &nbsp; in order to make the line not auto jump to new row
+
+```
+__`MARKDOWN ELEMENTS`__
+
+Line =>  ***
+
+
+
+
+<br><br>[- BACK TO TOP -](#table-of-contents)
 
 ---
 ---
 <br><br>
 
 
-# CODE EFFECTIVELY
+# __CODE EFFECTIVELY__
 
 ## [__CSS__](#)
 
@@ -935,5 +990,13 @@ _All about using images, backgrounds and icons._
 
 _Introduction videos - [here](xxx)_
 
+## SEO
 
+When a ord that someone search for is in H1 and then later in desrtiptio h2 and then many times in text in same article then google might show prio it in SEO. H1 text is then shown in google search description 
+
+Example.
+article
+h1 - what is babajaga?
+h2 - Many peapople wonder what babajaga is - here comes the answer.abs
+P - babajag is ... Often babajaga do... We se many babajagas in..
 
