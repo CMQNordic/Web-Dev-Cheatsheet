@@ -198,140 +198,72 @@ Figure: diagram of some commands in git
 ![Git commands](./app/assets/images/git-commands.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|Git command|Actions|||
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Git Commands|||
 |:--|---|---|---|
-|| <br>__HELP commands__<br><br> |||
-|`git`| Lists git commands with helpful short descriptions |||
-|`git`&nbsp;`<command> -h`| Shows short help about a specific command |||
-|`git`&nbsp;`<command> --help`| Shows extensive online help (new window) about a specific command |||
-|| <br>__INFO commands__<br><br>  |||
-|`git`&nbsp;`status`| Prints current repo status - current branch, changes in w-tree/index, errors, conflicts and info |||
-|`git`&nbsp;`log --oneline --graph -5`| List 5 last commits (use `--all` to se all)from HEAD down, nicely each commit on each line |||
-|`git`&nbsp;`branch -a -vv`| List all local and remote branches with corresponding upstream status for tracking ones|||
-|`git`&nbsp;`remote -v`| Prints all available remote connections with their set name and url |||
+|<br>__HELP__<br><br>|<br>|||
+|`git`| Lists git commands with helpful short descriptions. |||
+|`git`&nbsp;`log -h`| Prints short help about a specific command (here log). |||
+|`git`&nbsp;`reset --help`| Shows extensive online help (new window) about a specific command (here reset). |||
+|<br>__INFO__<br><br>|<br>|||
+|`git`&nbsp;`status`| Prints current repo status: current branch, changes in w-tree/index, errors, conflicts and info. |||
+|`git`&nbsp;`log --oneline --graph -5`| List 5 last commits from HEAD down, nicely each commit on each line. Use `--all` instead of `-5` to list all. |||
+|`git`&nbsp;`branch -a -vv`| List all local and remote-tracking branches with corresponding upstream status for tracking ones. |||
+|`git`&nbsp;`remote -v`| Prints all set remote connections together with their alias/name and url |||
 |`git`&nbsp;`--version`| Shows current git version |||
-|| <br>__CONFIGURATION commands__<br><br> |||
-|`git`&nbsp;`config --global user.name <your-name>`|  Set your name used in commits (shown to others) |||
-|`git`&nbsp;`config --global user.email <your-email>`|  Set your email used in commits (shown to others) |||
-|| <br>__REMOTE CONNECTION commands__<br><br> In order to easily synch changes with your corresponding remote repository i.e.on GitHub Git remote connection should be configured. |||
+|<br>__CONFIGURATION__<br><br>|<br>|||
+|`git`&nbsp;`config --global user.name <your-name>`|  Set desired name used to be in commits (shown to others) |||
+|`git`&nbsp;`config --global user.email <your-email>`|  Set desired email used in commits (shown to others) |||
+|<br>__REMOTE CONNECTION__<br><br>| <br> In order to easily synch changes toward corresponding remote repositories i.e. on GitHub remote connection should be added with a short alias/name i.e. "origin".<br><br> |||
 |`git`&nbsp;`remote remove <connection-name>`| Deletes a given remote connection |||
 |`git`&nbsp;`remote`&nbsp;`add <connection-name> <remote-url>`| Adds a new remote connection and sets given name and url on it |||
 |`git remote set-url <connection-name> <remote-url>`| Changes url to remote on a given connection |||
-|set upstream...| to do |||
-|| <br>__CREATE REPO commands__<br><br> Creating new local repo can be done in two ways depending on if we desire fresh new repo or if we want to copy an existing one from remote. |||
+|set upstream...| __TODO__ |||
+|<br>__CREATE REPO__<br><br>|<br>Creation of new repo locally can be done in two ways depending on if we desire a empty new repo or if we want to copy an existing one from remote.<br><br> |||
 |`git init`| Creates new empty local repo by turning current folder to a repo. To create the repo in a new sub-folder run `git`&nbsp;`init`&nbsp;`<new`&#8209;`repo`&#8209;`folder`&#8209;`name>` |||
-|| Generally for clone commands:<br> If not differently instructed Git will by default check out this local branch which is marked in remote as primary HEAD, usually called "master". This can be overwritten by adding `--branch <remote-branch-to-check-out>` to the command. Git also creates a remote connection called "origin" pointing to remote url we clone from. Git also in background creates a local "remote-tracking branch", usually called "origin/master" and connects our checked out branch to it as its "upstream". |||
-|`git`&nbsp;`clone`&nbsp;`<remote-url>`| Creates local repo by copying a repo from given remote url into a new folder named same as remote repo. Then downloads __all__ remote branches into it. |||
-|`git`&nbsp;`clone `&#8209;&#8209;`single-branch `&#8209;`b`&nbsp;`<remote-branch-to-clone> <remote-url>` | Creates local repo by copying a repo from given remote url into a new folder named same as remote repo. Then downloads only __one__ defined remote branch into it. |||
-|| <br>__CREATE BRANCH commands__<br><br>|||
-|| __General for checkout:__<br> Simple checkout switches the content we have in our working directory but with -b flag it also creates a new branch |||
-|`git checkout -b <new-local-branch>`| Creates & checks out new branch originating from current HEAD (= tip of the brunch we have checked out).`|||
-|`git checkout -b <new-local-branch> <from-local-branch>`| Creates & checks-out new branch originating from another given local branch. |||
-|| <br>__SWITCH BRANCH commands__<br><br> We recommend to switch branch with a "clean" working directory.|||
+|| ___Common for clone commands below:___<br> _If not differently instructed Git will by default check out the local branch which is marked in remote repo as primary HEAD (usually "master"). If another branch is desired to be checked out add `-b <remote-branch-to-check-out>` to the command. Git also creates a remote connection called "origin" pointing to remote url we clone from. In background Git also creates a local "remote-tracking branch" (usually "origin/master") and connects our checked out branch to it as its "upstream"._ |||
+|`git`&nbsp;`clone`&nbsp;`<remote-url>`| Creates local repo by copying a repo from given remote url into a new folder named same as the repo in remote. Then __downloads all__ remote branches into it. |||
+|`git`&nbsp;`clone `&#8209;&#8209;`single-branch `&#8209;`b`&nbsp;`<remote-branch-to-clone> <remote-url>` | Creates local repo by copying a repo from given remote url into a new folder named same as the repo in remote. Then __downloads only one__ defined remote branch into it. |||
+|<br>__CREATE BRANCH__<br><br>|<br>|||
+|`git branch <new-local branch> Rel-1.45` __TODO__ correct, test| Creates new branch originating from a specific tag. The new branch is not checked out, we still remain on the old one. |||
+|| ___General for checkout commands below:___<br> _If there are uncommitted modification and there is risk that the command overwrite those then checkout will abort. Plain checkout command switches the content we have in our working directory but with -b flag it also creates a new branch_ |||
+|`git checkout -b <new-local-branch>`| Creates & checks out new branch originating from current HEAD (= tip of the branch we have checked out).`|||
+|`git checkout -b <new-local-branch> <from-local-branch>`| Creates & checks out new branch originating from another specified local branch. |||
+|<br>__SYNCH WITH REMOTE__<br><br>|<br>Commands fetch, pull and push are used for synching with remote. Fetch is part of pull but pull additionally merges the __TODO__ When time to push changes in your local repo to remote then first fetch from from remote and merge  or rebase locally. This because there might be changes on remote conflicting with your changes. Solve all those conflicts and test locally before finally uploading (pushing) the result to remote repo.<br><br>Note! "Git pull" run two different git commands for you. You're better off, until you are 		well-experienced with Git, using separate "git fetch" and "git merge" commands. But this may 	Cause Conflicts to occur, so it’s recommended to use Git Pull with a clean copy. Note that "git pull --rebase" switches the second command to git rebase, but we won't get into details here.<br><br>Write something about --allow-unrelated-histories TODO  `--allow-unrelated-histories` forces to accept files that are not related to the project i.e. when merging 2 different projects. <br><br>|||
+| `git push -u URL-to-REMOTE TEST`| Fetches all remote branches from remote connection with name... |||
+| `git push -u <remote-name>`| Fetches all remote branches from defined remote connection. Due to flag `-u` an "upstream" is set for each of the local branches. |||
+| `git fetch` __TODO__ | Fetch all branches from remote |||
+|<br>__SWITCH BRANCH__<br><br>|<br>We recommend to switch branch with a "clean" working directory.<br><br>|||
 | `git checkout -- .` | #todo |||
 | `git checkout <other-local-branch>` | #todo |||
 | `git checkout <hash> or <tag>` | #todo |||
 | `git checkout HEAD^` | #todo |||
 | `git checkout -- <file-name>` | #todo |||
 | `git checkout <other-local-branch> -- <file-name>` | #todo |||
-|| <br>__STAGE & COMMIT commands__<br><br>|||
+|<br>__STAGE & COMMIT__<br><br>|<br>|||
 | `git add <.> or <file> ` |  Stages all files (or defined file) from working tree to index |||
 | `git commit <.> or <file> -m "commit-description"` |  Commits all files (or defined one) from index to commit history. |||
 | `git commit <.> or <file> -am "commit-description"` |  Commits all files (or defined one) from __both__ working tree and index to commit history. |||
-||<br>__UNDO commands__<br><br> There are different ways to "undo" saved, staged or committed modification. Note! Newly added files and folders are untracked before staged and therefore removed in slightly different way. |||
-||Roll back latest commit|||
-| `git reset HEAD^` | Undoes last commit and moves all files back to staging area. |||
-||Roll back staged files|||
-| `git reset -- . or [-- <file-name>]` | Moves all files (or defined one) from staging area to working tree. Note! __Risk to loose__ staged change if staged is at same time modified in working tree! |||
-||Roll back unstaged files|||
-| `git checkout -- . [or -- <file-name>]`  | Permanently removes all changed files (or defined one) from working tree. Files in index remains untouched. |||
-||Delete all uncommited files|||
-| `git reset --hard ` | Permanently remove all files that have not been committed. Clears both staging area and working tree. Files in ".gitignore" and "untracked" remain untouched. |||
-||Delete all untracked  files|||
-| `git clean -fd -- . [or -- <file-name>]` | Permanently remove all newly added "untracked" files from working tree and filesystem.  |||
-
-#### __UNDO CHANGES__
-There are different ways to unroll saved, staged or committed modifications to files. Note! New files and folders are untracked before staged and those are removed in a bit different way.
-
-Remove permanently from working tree:
-`> git restore <`file-name`>` &nbsp;&nbsp; permanently remove a __modified__ changes __from working tree__. Leave untracked files and index files untouched. <br>
-`> git checkout -- .` &nbsp;&nbsp; permanently remove all __modified__ changes __from working tree__. Leave untracked files and index untouched. <br>
-`> git clean -fd` &nbsp;&nbsp; permanently remove all __untracked__ files and directories __from working tree__. Leave modified changes and index untouched. Use __`-n`__ flag to preview what will be removed! 
-<br>
-<br>
-Move from index to working tree. Note! If same file is already in working tree then change from remote will be lost!'
-`> git restore --staged <`.`> or <`file-name`>` &nbsp;&nbsp; move changes from index to working tree.  <br>
-`> git reset --soft HEAD^`  &nbsp;&nbsp; move changes from last commit to staged area ("`--soft`" flag) & __delete__ last commit. Note! If the index is not "empty" then changes will be lost! Flag "`--hard`" deletes changes & cleans index, be careful!.<br>
-`> git checkout -- [.] or [fileName]` &nbsp;&nbsp; permanently deletes changes in working tree by overwriting those with staged or committed versions. <br>
-`> git commit --amend -m "CorrectedMessage"`  &nbsp;&nbsp; correct the commit message on latest commit<br>
-`> git rm [filename]` &nbsp;&nbsp; permanently delete the file in working tree & stages this change. You need to committed in order to remove the file in repo.<br>
+|<br>__MERGE & REBASET__<br><br>|<br>Note! Both of these commands are designed to integrate changes from one branch into another branch—they just do it in very different ways. When rebasing you move the base of the change ending point. Merging adds a new commit to your history. Merge preserves history whereas rebase rewrites it. Rebase will present conflicts one commit at a time whereas merge will present them all at once. It is better and much easier to handle the conflicts but you shouldn’t forget that reverting a rebase is much more difficult than reverting a merge if there are many conflicts. The golden rule of git rebase is to never use it on public branches. The first step in any workflow that leverages git rebase is to create a dedicated branch for each feature. This gives you the necessary branch structure to safely utilize rebasing.  If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.<br><br>On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.  <br><br> |||
+| `git merge <remote-name>/<remote-tracking-branch>` __TODO__ | Merges changes from a connected remote-tracking branch to the branch we  have checked out. Usually done after fetch have updated the remote-tracking branch.|||
+| `git rebase ...` __TODO__ | add good example|||
+|<br>__UNDO & CORRECT__<br><br>|<br>There are different ways to "undo" saved, staged or committed modification. Note! Newly added files and folders are untracked before staged and therefore removed in slightly different way.<br><br> |||
+| `git reset HEAD^` | __Roll back latest commit.__ Undoes last commit and moves all files back to staging area. |||
+| `git reset -- . or [-- <file-name>]` |__Roll back staged files.__ Moves all files (or defined one) from staging area to working tree.<br> Note! Risk to loose staged change if staged is at same time modified in working tree! |||
+| `git checkout -- . [or -- <file-name>]`|__Delete unstaged files.__ Permanently removes all changed files (or defined one) from working tree. Files in index remains untouched. |||
+| `git reset --hard ` |__Delete all uncommited files.__ Remove all uncommitted files. Clears both staging area and working tree. Files in ".gitignore" and "untracked" remain untouched. |||
+| `git clean -fd -- . [or -- <file-name>]`|__Delete all untracked files.__  Permanently remove all newly added "untracked" files from working tree and filesystem.  |||
+| `git commit --amend -m "Corrected message"` __TODO__ testa |  Correct the commit message on latest commit.  |||
+| `git commit --amend s1e"` __TODO__ testa |  Add additional modification to last commit.|||
+| ` git rm <file-name>` __TODO__ testa |  Delete a file in working tree & stages this change. You need to committed in order to remove the file in repo.  |||
+|<br>__CONFLICTS__<br><br>|<br>We get merging conflicts when we a merge/rebase need our intervention. Also when pulling from remote sometimes an internal merge can fail due to conflicts. Then the pull is aborted and conflicted files are added to "working tree" and must be resolved and committed to fullfil the merge. We recommend always to start a pull/merge/rebase with empty "working tree" and "index"<br><br> |||
+| `Fix the conflict` | First show files with git status. Then edit all conflicted files in your in i.e. VSCode. Git adds line `=======` in each "center" of the conflict. Above we find code we merge from (origin). Below is the code we merge to (local). Remove unwanted code, make sure file looks as expected, test and save. Finally commit with "`git commit`" and the merging operation will finnish.|||
+|<br>__DIFF AND LOGS__<br><br>|<br>It is easier to use graphical tools or VSCode plugins to show diffs but here are some command to use in command window.<br><br> |||
+| `git log -4 --oneline` | Shows last 4 commits for current branch, each on one line, nicely printed.  |||
+| `git log --all --oneline -- <file-name>` | Shows all commits for given file, each on one line.  |||
+| `git diff -- <file-name>` __TODO__ do we need --| Show changes for a file:. __working tree__ vs __index__ |||
+| `git diff --staged -- <file-name>` __TODO__ do we need --| Show changes for a file: __index__ vs __committed__ |||
 
 
-#### __MERGE & REBASE__
-todo
-
-#### __DIFF AND LOGS__
-_It is easier to use graphical s or VSCode plugins to show diffs but here are some command to use in command window:_
-  	
-`> git log -3 --oneline` &nbsp;&nbsp; shows last 3 commits for current branch <br>
-`> git log -3 --oneline -- [fileName]` &nbsp;&nbsp; shows last 3 commits file [fileName] <br>
-`> git diff -- [fileName] ` &nbsp;&nbsp; show changes between "working tree" vs "staged area"/"committed" for file [fileName] <br>
-`> git diff --staged -- [fileName]` &nbsp;&nbsp; show changes between staged area vs "committed" for file [fileName]
-
-####  __CONFLICTS__
-_Conflicts happens when we merge/rebase need our intervention.Also when pulling from remote sometimes a merge can fail due to conflicts. Then the pull/merge is aborted and conflicted files are added to "working tree" and must be resolved and committed fullfil the pull/merge. We recommend always to start a pull/merge/rebase with empty "working tree" and "index":_ <br>	
-   
-`> Fix the conflict:`  &nbsp;&nbsp; First show files with git status. Then edit the conflicted part in your favorite editor, i.e. open in VScode. Remove unwanted code and save the file. Afterwards stage and commit with `git commit -m "merged and resolved the conflict."`
-
-> Note!  The ======= line is the "center" of the conflict. Above is the code we merge from (origin). Below is the code we merge to (local). 
-
-#### __FEATCH/PULL & PUSH__
-When time to push changes in your local repo to remote then first fetch from from remote and merge  or rebase locally. This because there might be changes on remote conflicting with your changes. Solve all those conflicts and test locally before finally uploading (pushing) the result to remote repo. 
-
-`> git push origin master` &nbsp;&nbsp; upload changes to remote repo, here origin, from #todo check here if we have 2 branches with changes how to push both?<br> 
-`> git pull origin master` &nbsp;&nbsp; _fetches a specific branch "master" from connected remote repository named "origin", afterward merges the changes to our locally checkout branch')_ <br>
-`> git pull origin` &nbsp;&nbsp; _fetches ALL branches from repo on remote server, here "origin", to our local branch here "master"')_ <br>
-	
-
-`> git push -u (or --set-upstream) origin master` &nbsp;&nbsp; _`-u` or `--set-upstream` set the upstream branch for local master to `origin/master`. After this we can use command like `git push origin or` `git pull origin` without defining the second parameter (local branch) as we have a default upstream set for brunch we are working on (view it with `git branch -vv` command)_ <br>
-
->Note! "Git pull" run two different git commands for you. You're better off, until you are 		well-experienced with Git, using separate "git fetch" and "git merge" commands. But this may 	Cause Conflicts to occur, so it’s recommended to use Git Pull with a clean copy. Note that "git pull --rebase" switches the second command to git rebase, but we won't get into details here.<br>
-
-`> git fetch origin --allow-unrelated-histories` &nbsp;&nbsp; _fetches changes from remote to local repo_ <br>
-`> git merge origin/foo` &nbsp;&nbsp; merges changes from foo to your checked out local repo_ <br>
-
--- equals -->
-
-`> git checkout foo` &nbsp;&nbsp; _Makes us to look at foo branch localy_ <br>	
-`> git pull --allow-unrelated-histories` &nbsp;&nbsp; _fetches & merges changes to local checked out repo_ <br>
-or <br>
-`> git rebase origin --rebase --allow-unrelated-histories` &nbsp;&nbsp; fetches & rebases changes to local repo foo. The command tries to find out which commits are really your local ones, and which had come from upstream in an earlier fetch. <br>
-
-Note! `--allow-unrelated-histories` forces to accept files that are not related to the project i.e. when merging 2 different projects.
-
-Note! Both of these commands are designed to integrate changes from one branch into another branch—they just do it in very different ways. When rebasing you move the base of the change ending point. Merging adds a new commit to your history. Merge preserves history whereas rebase rewrites it. Rebase will present conflicts one commit at a time whereas merge will present them all at once. It is better and much easier to handle the conflicts but you shouldn’t forget that reverting a rebase is much more difficult than reverting a merge if there are many conflicts. The golden rule of git rebase is to never use it on public branches. The first step in any workflow that leverages git rebase is to create a dedicated branch for each feature. This gives you the necessary branch structure to safely utilize rebasing.  If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.
-
-On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
 
    - __Branch__<br>
 	For new feature new branch...:
