@@ -1,4 +1,3 @@
-
 # __Cheat Sheets and Guide for Web Designers and Web Developers__
 
 ## Web designers or web developers must constantly search google for information as well as consult various cheat sheets as it is impossible to remember everything. Our experienced developer team have here compiled useful web development cheat sheets, guides and links that help you to quickly look up things or gest started with a project or task fast and efficient. The targeted audience for this article are developers that need quickly get started, look up or fresh up some knowledge. We strongly recommend to bookmark this page.
@@ -13,7 +12,7 @@
 >   	- [VSCode Shortcuts](#useful-vscode-shortcuts)
 >   	- [EMMET snippets](#useful-emmet-snippets)
 >	- [__GIT & Command Line__](#git-&-command-line) - _Source control, github and some useful git/cmd commands._
->		- [Git commands](#useful-git-commands:) 
+>		- [Useful Git commands](#useful-git-commands:) 
 >		- [Cmd commands](#useful-cmd-commands:) 
 >		- [.Gitignore file](#.gitignore-file)
 >	- [___Node.js & Npm___](#nodejs-&-npm) - _How to download packages to automate your work._
@@ -90,8 +89,8 @@ Depending on you operating system `VSCode Terminal` uses different default shell
 |Rainbow Brackets|Provides different colors for the round brackets, the square brackets and the squiggly brackets so it is easier to distinguish|
 |Code Spell Checker|Checking for spelling mistakes and proposes corrections.|
 |Live Server|A lightweight local dev server with live reload for saved HTML & CSS changes. Easy to install and start with one click to run preview of a file in browser.  Note! To compare with Webpack Dev Server having a key feature - hot module replacement - auto-injects changes without refreshing browser window from in-memory. Fast.|
-|Git Graph|Visualize commits to git repository in a graph to easily view which commits and branches are where relative to one another. It doesn’t have nearly the features that a full GUI git client like GitKraken has, but it does a nice job of being a lightweight free tool for visualizing the state of your repository’s commits.|
-|Git Lens|Extensive valuable insights via powerful comparison commands and other git functions.|
+|Git Graph| Visualize branches and commits of a repository with one button click. Graph opens in and shows each branch in different color, your currently checked out branch, remote-tracking branches. From it GUI can run commands like fetch, revert, create branch, copy hash to clipboard and more. It doesn’t have all the features that a standalone GUI git client such as GitKraken has, but this lightweight free extension is very handy as it shows a "Git Graph" button on the status bar of VSCode and with one clock you can get full overview of you repo, branch and commits.|
+|Git Lens| Extensive valuable insights via powerful comparison commands and other git functions.|
 |Markdown All in One|All you need for Markdown: export to HTML, keyboard shortcuts, table of contents, preview on sidebar and more).|
 |Markdown Shortcuts|Right clicking on .md file brings a list with markdown commands to. Speeds up a lot.|
 
@@ -147,44 +146,207 @@ We recommend to memorize some of the useful [VSCode shortcut commands](https://d
 <br><br>
 
 
-## [__GIT & Command Line__](#)
+## [__GIT and Command line__](#)
 
-### [__What is GIT and why use it from command line?__](#)
+### [__What is GIT and why use it from command line?__](https://git-scm.com/)
 
-### [__Git__](https://git-scm.com/) is the most popular _version control system_ (VCS) for tracking changes in source code during software development. Even though both Microsoft Visual Studio and Visual Studio Code (VSCode) have a GUI for integrated Git we still recommend to get familiar with and memorize some commonly used expressions and commands. At workplaces you are sometimes forced to run git commands directly from a command line window.<br> 
-Good Git tutorials can be found [HERE (30 min, Core concepts)](https://www.youtube.com/watch?v=uR6G2v_WsRA), [HERE (30 min, Branch & merges)](https://www.youtube.com/watch?v=FyAAIHHClqI&t=1233s) and [HERE (30 min , Remotes)](https://www.youtube.com/watch?v=Gg4bLk8cGNo&t=7s).
+#### Git is the most popular _version control system_ (VCS) for tracking changes in source code during software development. It is a distributed version control system meaning that our local repository have exactly the same features as any other repository. You can work on your own repo on your local machine even without internet access. Then, when you have a connection again, you can push your changes to any other git repository you have access to.  Even though both Microsoft Visual Studio and Visual Studio Code (VSCode) have integrated Git with a GUI we still recommend to get familiar with and memorize most commonly used expressions and commands. At workplaces out there you are sometimes forced to run git commands directly from a command line window. This article fast and compact knowledge in those most common git topics with some useful commands.
 
-|Git&nbsp;expressions | Descriptions |
+Good Git tutorials can be found [HERE (30 min, Core concepts)](https://www.youtube.com/watch?v=uR6G2v_WsRA), [HERE (30 min, Branch & merges)](https://www.youtube.com/watch?v=FyAAIHHClqI&t=1233s) and [HERE (30 min , Remotes)](https://www.youtube.com/watch?v=Gg4bLk8cGNo&t=7s).<br>
+Good article explaining merging and rebasing can be found [HERE](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+
+|Git&nbsp;expressions | Description |
 |:---|:---|
-|Repository&nbsp;&nbsp;(repo)| What is a repository? It is a folder location in which git tracks changes to files and folders and simultaneously stores historical versions of project files. A `repository` or shortly `repo` have always a hidden folder named `.git` in its root. By deleting this hidden .git folder all historical versions are deleted and git tracking to this working directory is disabled. A repo can exist on our local machine or remotely on i.e. GitHub but can also be another repo in you local machine. Avoid using spaces or tabs in names of a repo. Names of remote and local and repos can differ.|
-|Clone|Cloning is simply making a copy of whole repository and saving in to another location. Normally the last thing a `clone command` do is to automatically check out the branch which is in cloned repo marked with active HEAD. Usually though, by default it is the "master" branch that is checked out in our working directory after cloning. |
-|Commit| A `commit` is a "snapshot" of all in git saved files and folders of your project at a certain moment. When we for example work on a feature with files in our working directory, then at some point we want to save our work more permanently and maybe let others to access our changes. Then those changes bust be committed - meaning - grouped into one git "object" and saved in git history with unique id, description, credentials of committer and date. A commit can be manually triggered with a `commit command` or as part of an merge operation.  |
-|Working&nbsp;&nbsp;directory| In git when using "working directory" we refer to a folder location where a single version of the project (the one that we have checked out) is stored. It is an "umbrella" term for all files and folders that git traces and that you can currently view and edit. |
-|Working&nbsp;&nbsp;tree|Term "working tree" refers to an area where changes to files in your working directory are stored. At the moment a change in your working directory is saved - it is added to `working tree`. This is so to say the "first level" of tracing of our made change. Those can not be restored if accidentally deleted though. Subsequently changes in a `working tree` should be staged, also call as `added to index`. Here git save the change and it can be restored if if was deleted in working tree. Finally changes in index can be `committed` then those the change is moved to `local repo history` with a unique labeled id. From there in order to share our change with others and make sure it will "survive" even if out local hard drive burns up, you can upload it (push) to a `remote repo`. |
-|Stage|Staging can be described as saving of changes to local repos index|
-|Commit|When we commit we permanently save changes to local repo with an hash-label and description|
-|Index| Index is another git term used for `staging area`, which is is a location where changes are stored before a commit. Internally it is some index file down in .git folder saving the changes when we execute `git add` command. |
-|Check out| Checking out is simply loading specific versions of code from our local repo to our working directory that we can view and edit locally in our working directory. When we `check out` a branch, a specific commit or tag then all files in our working directory will be automatically updated to new versions. Git simply overwrites ALL files and folders in our working directory. Additionally local HEAD pointer is moved to point to latest commit of this checked out branch.<br><br> A good question here is what happens to any `uncommitted changes` when we check out?<br> If we in our current working directory have made a change and saved it in working tree  (or staged those in index) then those uncommitted changes sometimes can make our checkout to fail. One case that blocks a new check out is for example when "parent" file of the changes differs in any way from same file in commit we wish to check out. Each time there is a risk that checked out file will overwrite something we have uncommitted then check out will fails. To do a check out in that case you must either commit, restore or stash the change.<br><br>_Note that if we check out a specific commit instead of a branch then our HEAD will not longer point on BRANCH and we will get in `Detached HEAD State`._ |
-|Branch| Consider a chain of objects connected to each other. Each object contain a committed version of code with a unique id. There is a start and end och this chain where the latest object is on the tip of the chain. This chain is a `branch` - a movable pointer that points to latest object (=commit) in this chain of commits. Every time you commit something to a branch then the `branch pointer` moves automatically forward to point this latest commit = to the tip of the branch. Usually when you add a new feature you ` branch out` (spawn a new branch) from a certain commit and give that new branch a special name i.e. "feature-x-branch". This because you want to encapsulate the changes while you work on those without affecting the parent branch. Then you need to check out the newly created "feature-x-branch", work on files in your working directory in order to finally commit those changes on you feature branch. In the end when satisfied you merge back your latest committed on "feature-x-branch" back to the parent branch you spawned from and delete the "feature-x-branch".<br> In more complex projects we can have hundreds of commits of dozen of branches i.e. dev-, release- or feature- branches of all kinds. Note that the first by git automatically created branch when new repo is created is by default called `"master"`. |
-|Remote| Usually we refer to the remote repo that we cloned our project from as `remote`. It is used widely. In Git though the command remote contains functionality which is responsible for connecting a local repo with a remote repo. To connect local repo with remote repo we need in git set remote url with can point to i.e. GitHub or Bitbucket but also to other repo location on our local machine. To avoid using this complicated path git defines a kind of "alias" for such a connection and usually it is named "`origin`" (as it is from where content in our local repo originates from). Fetching data from origin means we upload data from that remote repo to our local system. Note, within this article we assume that  the alias for our remote is named "`origin`" but you can name it differently or even add several remote connections to different remotes with different names.|
-|Local Branch & Remote Branch| By default when we locally initiate a new repo we only get one single `local branch` automatically by git named "`master`". But if we are fetching a repo from remote or clone a repo from remote then we "copy" those branches in remote and git saves those on our local machine as `remote branches` independently from out `local branches`. Git automatically name those remote branches on our local machine prefixed with used remote alias. Therefore we will often end up with a pair of branches "`master`" & "`origin/master`" or "`dev`" & "`origin/dev`". After a fetching the branches on remote and our local remote branches might get out-of-synch if someone is committing to remote. To synch our local remote branches a new fetch command must must be run as git do not automatically update our local system. Note that if we are in our working directory looking at an certain commit on i.e. local branch master and perform a fetch from remote that downloads several new commits from the branch "master" on remote, then those commits will update only local remote branch "origin/master" but we in our working directory will look at "old" commit as the local branch master is not committed automatically. It must be `manually merged`.<br><br>_You can check out a remote branch just like a local one, but this puts you in a `Detached HEAD State` so you can think of remote branches as read-only branches. This is done often to quicly check on some old version of code._ |
-|HEAD| HEAD is a movable "pointer" to a commit that we currently have checked out in our working directory. In normal cases it always point to a branch and therefore when branch moves to point to the latest commit then the HEAD do it as well. Branch and HEAD pointers are then attached. Normally when we check out a branch then HEAD pointer always point to Branch and changes to point to the tip of the branch and last commit. But when we check out a commit then HEAD points directly to specific commit and is then called `Detached HEAD` because it is not attached to a branch anymore.|
-|Detached HEAD| Means the HEAD do not point to a branch but points to a specific fix commit. This happens when we check out a specific commit, check out an remote branch or sometimes this also might happens when a rebase fail and leaves us in unfinished rebase in this state. On a "detached checkout" you can look around, edit files and commit your changes BUT you will not be able to push from this "detached commit" and your work  (commits ar staged changes) will be lost when you change branch. Internally git creates a branch without any starting point (unreferenced branch) when you commit in detached state and after a week or so git garbage collector will delete this branch! Usual procedure to save you changes and commits in detached state is simply to create new branch from this this unreferenced detached state branch and commit your changes there and then proceed as usually rebasing/merging to desired destination and so on. |
-|Commit Hash|An unique 40 char long SHA-1 hash that is created as unique ID for each commit. It can not be changed. Example: 4c511f16ef2644854d04cabebfcecc82be0eb04f|
-|Tag|A git tag is a label/stamp for commit that can be manually added to a special commit. Example: rel-v.1.8.5 |
-|Merge & Rebase|In git there are two ways to integrate changes from one branch into another - merge or rebase. Both have their advantages and disadvantages.<br><br>__Merge__ can be performed in two ways and it is important to understand how both work, specially if you want to merge your feature to a branch that many other persons work on.<br> __1.__"`Fast-forward merge`" (default option merge command `without --no-ff flag`) is possible only if the point where the both branches diverge from has not forked, meaning only the branch that we merge from received any new commits. In such a case if a fast-forward merge is performed then the branch pointer of the branch we merge into (here called parent) is simply moved to point to same commit/branch that we merge from. In that way ALL commits in our "feature-branch" are now "added" to the tip of the parent. It this desirable? Sometimes yes but consider a situation when feature you worked on contains of many minor commits on your "feature-branch". In case of a fast-forward merge ALL the commits with with their description will be visible and part of parent branch after such a merge. This can often be an disadvantage as it is much clearer from the point of reviewer to be able to see only one commit telling when "feature-x" was delivered and not 15 with your comment you made on your feature branch. Also in case of reverting the feature it is impossible to see from Git history which of the commit objects in parent really implement the feature. You would have to manually read all the log messages making reverting a the feature added in this way a true headache.<br> 2. "`Non-fast-forward merge`" is sometimes done by git automatically when commits do not fullfil criteria for fast-forward merge - but it can be forced by adding `--no-ff flag` to merge command. Then git will alway add our new committed feature in ONE new commit on the parent. Note, merge do not rewrite any history of already existing commits on the destination branch witch is regarded as more safe than rebase.<br><br>__Rebase__, from a content perspective, is changing the base of your "feature-branch" from one commit to another making it appear as if you'd created your branch from a different commit. As a result we get a linear succession of commits. It differs from merge by rewriting the commit history of already existing commits on the destination branch. Usage: If you want to get the latest updates from parent ( branch you branched from) into your "feature-branch", but you want to keep your branch's history clean so it appears as if you've been working off the latest master branch. This gives you also later the benefit of a clean merge of your feature branch back into parent! Usually you can rebase toward your own feature branch that you are in full control of and can mess up and take time to solve if something goes wrong, but you do a merge back to master or dev-branch or whatever you branched from. |
-|Fetch & Pull| Synchronizing data between your local machine and remote is an essential step in our daily work as the data we locally look at is just a "snapshot" and up-to-date only as the last time we explicitly downloaded fresh data from the remote with "fetch" or "pull".<br><br>__Fetch__ only downloads new data (by default all branches) from a remote repository and stores all in local repo but DO NOT integrate any of this new data into files in our checked out working directory. To integrate the commits into the branch we have checked out we need to run a merge command and `merge` from "remote branch" i.e "`origin/master`". <br><br>__Pull__ on other hand not only downloads new data but also integrates it into our current working files (checked out branch), updates our current HEAD to point to latest changes and sets XXX. Since "pull" in background try merge remote changes into our local ones, a so-called "merge conflict" can occur. Pull can also be flagged to do a Rebase instead of a background merge if desired. Like for many other actions it's highly recommended to start a "git pull" only with a clean working copy. This means that you should not have any uncommitted local changes before you pull to avoid problems that might be time consuming to solve. |
-|Push| Pushing is how you transfer commits from your local repository to a remote repo. It's the counterpart to git fetch |
-|Merge Conflict| Merge conflicts arise when two commits that are merged together have changed in the same parts of code and git do not know how to solve this. For example when one developer deleted a file in master while another developer on his feature-branch was modifying it. In such cases Git will mark the file as being `conflicted` and halt the merging process with terminal output "Automatic merge failed; fix conflicts and then commit the result". It is then the developers' responsibility to resolve the conflict. code from both files are then checked out in our working directory and are separated with "`=============`". We must manually edit the files to look as desired and then commit the changes in order for the merge to proceed. |
-|Unrelated&nbsp;Histories&nbsp;error| Sometimes our local .git directory that contain commit history get deleted or corrupted. This leads Git to be unaware of your local history and will cause throwing this error when you try to clone/fetch/push from remote. This also can happen when a new remote repo on GitHub is created with README file as initial commit, then this repo will get its own history. If you also create new local repo with same name but commit a single change then your local repo also gats a history. In such case trying doing a clone from one to another will fail with Unrelated Histories as error as both already got some history on their own. This can be solved using `--allow-unrelated-histories` flag on the command that fails. |
-|Upstream branch| Upstream branches are closely associated with remote branches and define the branch tracked on the remote repository by your local remote branch. When this is set on a branch then no need to write local branch name when merge/pull/push as it then choses the default set one. Set it for example with by `git push --set-upstream (or -u) origin master` to set default upstream origin/master. Check with `git branch -vv` that is is set. Later you just need to write `git push origin` to push from master when on master. Handy! |
+|Undracked files| git ignore and more---todo|
+|Git trees hiearci| there are 4 level of stroing modification. 1. File system, 2. Working tree, 3. Staging index, 4. commit history<br> TODO write more|
+|Repository&nbsp;&nbsp;(repo)| A Git __repository__ (or shortly __repo__) is a folder location in which Git tracks changes to files and folders and in which it stores historical versions of all project files. A repository has always a hidden folder named `.git` in its root. By deleting this hidden folder all historical versions are lost and Git stops tracking changes to content in this directory. We can clone a repo from a hosting services like GitHub or Bitbucket to our local machine.  Names of remote and local and repository can differ, you can rename your local clone as you want but do not use spaces or tabs in a repos name. You can change the name of a local repo simply by renaming its folder on file system. But if you change the name of a remote repo i.e. on GitHub, then this can affect those who connect to it. They then need update their local remote connections.|
+|Clone|__Cloning__ is simply making a copy of whole repository and saving it to another location. it is done with a `git clone` command and it automatically checks out the branch which HEAD by default points to on remote we clone from. Usually by default at remote it is the "master" branch and therefore when we clone a remote repo then locally a local "master" branch is automatically checked out in our working directory. |
+|Check out &<br> Change branch| __Checking out__ (also called "__changing of branch__") is loading of a specific version of code from our local repo into our working directory so that we can view and edit and work on those files. We can __check out__ a branch, a specific commit or tag. When checking out all files in our working directory are automatically updated to checked out versions as Git simply overwrites all files and folders in our working directory. Additionally our local HEAD pointer is moved to point toward the commit that is checked out. It is recommended to have a "clean" working directory when checking out (switching branches).<br><br> What happens to any "uncommitted" changes when we check out?<br> If we in our current working directory have changes in working tree or index, then those uncommitted changes sometimes can make our checkout to fail. If "parent" of any changed file differs in any way from same file in the commit we aim to check out from then Git abort the check out. To do a check out in that case you must either commit, restore or stash your changes to get a clean working directory.<br><br>Note that if we check out a specific commit instead of a branch then we check out our working directory in "detached HEAD" state. |
+|Stage|__Staging__ is saving changes to local repos staging are also called index.|
+|Commit | When we  __commit__ changes in Git we permanently save changes to local repo history with an hash-label and description. <br>Word __commit__ often refers to a unique labeled "snapshot" of changes of files and directories at a certain moment. For example when we work on a feature, edit and save files in our working directory, then at some point we want to save this work more permanently and maybe let others to access them. Then we can commit those changes to a branch and saved in git history as a __new commit__ with unique id, description, credentials of committer and date. A commit can be manually triggered with a `commit command` but can also be a background job as part of a Git merge operation. |
+|Commit hash|Commit __hash__ is an unique unchangeable 40 char long SHA-1 hash that is created as unique identification for each commit. Example: 4c511f16ef2644854d04cabebfcecc82be0eb04f. Generally 7 first characters are more than enough to be unique within a project and short 7-chars version" can be used in commands.|
+|Commit tag|Commit __tag__ is a label/stamp for commit that can be manually added to a commit. Example: rel-v.1.8.5 |
+|Working&nbsp;&nbsp;directory| In Git world expression __working directory__ refers to a folder location where a single version of the project is checked out and the files are stored in it. It is an "umbrella" term for all files and folders that git traces and that we can currently view and edit. |
+|Untracked files| Working directory can contain 4 types of files: untracked, modified, staged and committed. It is important to understand the difference between those:<br><br> __Untracked:__ New files that just have been added into the project and exist in working tree but have never been staged nor committed before.<br>__Modified:__ Files that have been staged or committed before and now were changed and exist in working tree.<br>__Staged:__ Files that have and added to our staging area.<br> __Committed:__ Files that have been committed into repo history. Most of our files in working directory are normally reare of this type.<br><br>Note! if we want to "undo" or "revert" changes from working tree this is done differently for untracked and differently for modified files. `Git clean ` command operates as "undo" on untracked files while git reset operates as "undo" on modified files. |
+|Clean&nbsp;working&nbsp;directory| Expression __clean__ working directory is widely used in Git documentation. A working directory is __clean__ when there are not any uncommitted changes in working tree nor index. If you are in progress of working with files in your working directory and do not feel ready to stage nor commit those changes before checking out something else then you can "_stash_" the changes to temporally __clean up__ your working directory.  |
+|Stash files| __Stashing__ takes the "dirty" state of your working directory — that is, your modified files in working tree and index, and stash (save) those on a stack of unfinished changes that you can reapply at any time later. Note! By default git do not stash untracked files therefore to be sure those are stashed we recommend to use `-u` flag. Command `git stash -u` will add the changes as an object on top of the stash stack. Later to getting back those changes simply write `git stash pop` and changes will be reverted to working directory and the stashed object is removed. To list all stashed objects in stack use `git stash list`.|
+|Working&nbsp;&nbsp;tree|Term __working tree__ refers to an area where changes to files in your working directory are stored. Same moment a change in your working directory is saved, it is added to __working tree__. This is the "first level" of tracking of our made change but notice that changes here can not be restored if accidentally deleted. |
+|Index| __Index__ is same thing as __staging area__, which is is a location where changes are stored before a commit. Internally it is some index file down in .git folder saving the changes when we execute `git add` command.<br><br> At some point a change in our "working tree" should be staged (added to index) from where the change can be restored in case of removal in "working tree". Finally our change in "index" can be "committed" to a repo history with a unique labeled hash. Think of it like a more permanent save. From there in order to share our change with others (and make sure the change will "survive" even if out local hard drive explodes) you can upload the change (push it) to a "remote repo". |
+|Remote| Expression __remote__ is widely used in Git documentation and it usually refers to remote repository or remote branch.<br><br> A git command __remote__ contains functionality which is responsible for connecting of a local repo to a remote repo. A __remote connection__ can be added to git remote and given a __name (alias)__ and __remote url__. It can be named as "origin" and is a shorter way to refer connection to our remote repo with its long url. Fetching data from remote means we upload data from remote repo that out remote connection point to.|
+|Branch| Consider a chain of objects connected to each other. Each object contain a committed version of code with a unique id. There is a start and end och this chain where the latest object is on the tip of the chain. Such a chain with to each other connected commits is a __branch__. One branch can start from a certain commit from another branch. Then it branch out from it. Also then using expression __branch__ we mean a movable pointer that points to latest object in this chain of commits. Every time you commit something to a branch then the branch pointer moves automatically forward to point this latest commit.<br><br> Usually when you add a new feature you "branch out" (spawn a new branch) from the last commit of branch that you currently have checked out, and give that new branch a special name i.e. "feat-x-branch". This because you want to encapsulate your new changes while you working without affecting the parent branch. Finally you commit those changes on you feature branch. In the end when satisfied you merge back your latest commit on your "feat-x-branch" back to the parent branch you spawned from and delete the "feat-x-branch".<br><br> In more complex projects we can have hundreds of commits on dozen of branches i.e. dev-, release- or feature- branches of all kinds. Note that the first by git automatically created branch when new repo is created is by default called "__master__". |
+| Tracking relationship | Understanding and making use of tracking relationships makes version control a whole lot easier. Very often we work on a local copy of a project from a central remote repo. This means that our local branch have a "sibling" a copy of itself with same name in the remote repo. This remote branch can be updated by others independently as we commit to our local branch. Very often we want to know how our local branch differ from its remote "sibling". We want often want to know by running simple git status if any commits were made to same branch in remote while we were working on it locally. Here is where "tracking" and "upstream" branches described in detail below help us. When a local branch is turned into a "`tracking branch`" then it automatically tracks its upstream branch (its "sibling" in remote) through a remote-tracking branch. <br><br>__Local branch__ (_i.e. master_) --> Local __Remote-tracking branch__ (_i.e. origin/master_)--> __Upstream branch (remote branch)__ (_master_)<br><br> |
+|Local&nbsp;branch&nbsp;& Tracking&nbsp;branch&nbsp;& Remote&#8209;tracking&nbsp;branch| __Local branch__ in is a branch that exists on your local machine in your local repo and can be named "master", "dev" or "feature-x-branch". A simple `git branch` command lists all existing local branches in our local repo.<br><br>__Tracking branch__ is a type of local branch that is connected to and "tracks" another local branch. It tracks the other branches updates and compares difference in number of commits between them. Usually connecting a local branch to track is called "setting upstream for a local branch" and is what makes this simple local branch to become a tracking branch.<br><br> __Remote-tracking branch__ in is a special local branch that is in some cases created automatically in the background by Git. Its name always consists of two parts `<remote-alias>/<remote-connection-name>` for example "origin/master" och "origin-repo-x/feat-x-branch". Its only purpose is to mirror corresponding remote branch, with same name, in remote.<br>A _remote-tracking branch_ is always __automatically created or updated__ in the background whenever any network communication toward corresponding remote branch is made, when a __successful push/pull/fetch__ was performed. All existing _remote-tracking branches_ in our local repo can be listed with a `git branch -r` command.<br><br> __To list all__ local "non-tracking branches" & "tracking branches" & "remote-tracking branches" run:<br> __`git branch -a -vv`__ command. The result can look something like this:<br><br> _* master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33f45fe&nbsp;&nbsp;[origin/master: ahead 1, behind 2]&nbsp;&nbsp;Added a new file.<br>&nbsp;&nbsp;feature-x-branch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09c51c6&nbsp;&nbsp;Merge from master branch.<br>&nbsp;&nbsp;remotes/origin/master&nbsp;&nbsp;&nbsp;a9a5bfc&nbsp;&nbsp;Added special character._<br><br> __Branch "* master"__ is as marked with "*" our currently checked out branch. It tracks a upstream branch in remote named "master" through its connection to a local remote-tracking branch named "origin/master" - this can be seen as in information withing []. due to this we know it is also a tracking branch (as it tracks "origin/master"). When remote-tracking branch here "origin/master" was synched last time then "master" in remote had 1 new commit not included in our local "master" branch, and our local "master" had 2 new commits not included in "remote master".<br> __Branch "feature-x-branch"__ is a normal non-tracking local branch with its last commit labeled 09c51c6.<br> __Branch "origin/master"__ is a remote-tracking branch that refers and mirrors corresponding upstream branch named "master" in remote. |
+| Remote&nbsp;branch&nbsp;& Upstream&nbsp;branch| __Remote branch__ is a branch that exists in a remote repository, usually on an online git-hosting service like GitHub. A remote branch that is connected/referenced from a local system is called __upstream branch__. You can often see expression that a "local branch tracks its upstream", meaning the local version is somehow connected to its "sibling in remote" and knows when any changes happens to him. Procedure of connecting a local branch with its corresponding remote-tracking branch is in git documentation often called as __"setting upstream for a branch"__. |
+| Setting Upstream| __How to set upstream for a local branch?__ <br> It can be done in two ways, manually or automatically in background when running other git command:<br><br>__Manually__: Only when there exists a "remote-tracking branch" on the local system then local branches upstream can be set with command `git branch --set-upstream-to [name of remote-tracking branch i.e. "origin/master"]`.<br><br>__Automatic:__ Whenever you run any first push/pull/fetch command to corresponding remote branch add `-u` flag like `git fetch -u [remote-connection][local-branch]`. This will not only create a remote-tracking branch `<remote-connection>/<local-branch>` but also connect it (set as upstream) for our local branch `<local-branch>`.<br><br>Note! __When cloning__ a repo from a remote Git automatically checks out a default local branch in our directory and makes this branch automatically to be a tracking branch by setting its upstream in the background. Therefore in most common cases after cloning from remote we end up with both local "master" and "origin/master" branches and we can run git pull & git push commands without any additional parameter straight out of the box. |
+| HEAD | __HEAD__ is a movable pointer always pointing to a commit that we currently have checked out in our working directory. In normal cases it always point to a branch and therefore when branch moves to point to the latest commit then automatically HEAD do it as well. Branch and HEAD pointers in such case are attached. When we __check out a branch__ then Git always lets HEAD pointer to point to branch and therefore always checks out last commit as head always point to it. But there are cases when we need to check out a commit! Then the HEAD points directly to specific commit and not the branch. Theis scenario is called "detached HEAD" because it is not attached as normally to a branch.|
+|Detached HEAD| __Detached HEAD__ means that our HEAD pointer do not point to a branch but points to a specific commit hash or tag. This happens when we check out a specific commit, check out a "remote-tracking branch" or sometimes this also might happens when a rebase fail and leave us "hanging" in unfinished state with HED pointing to some temporary commit. With working directory in this "detached" state you can look around at code, edit files and commit your changes as usual BUT you will __not__ be able to push/pull from/to this "detached" workspace and your precious work with commits or staged changes will eventually be lost when you check out something else. This because internally in detached state Git creates a branch without any starting point (unreferenced branch) and after a week or so Gits garbage collector will delete this branch as it cleans up all unreferenced branches from the memory!<br><br> Usual procedure to __save you changes and commits__ that you have done in a __detached state__ mode is simply to create new branch when in a detached working directory and commit you changes to this new branch. Following will do the trick:<br> `git checkout -b temp-branch-from-detached` & `git commit -am "All uncommitted changes from detached HEAD state committed."`|
+|Merge & Rebase|In Git there are two ways to integrate changes from one branch into another - merge or rebase. Both have their advantages and disadvantages.<br><br>__Merge__ can be performed in two ways and it is important to understand how both work, specially if you want to merge your feature to a branch that many other persons work on.<br> 1.__Fast-forward merge __(default with merge command - without `--no-ff` flag) is possible only if the point where the both branches diverge from has not forked, meaning only the branch that we merge from received any new commits. In such a case if a fast-forward merge is performed then the branch pointer of the branch we merge into (here called parent) is simply moved to point to same commit/branch that we merge from. In that way ALL commits in our "feature-branch" are now "added" to the tip of the parent. It this desirable? Sometimes yes but consider a situation when feature you worked on contains of many minor commits on your "feature-branch". In case of a fast-forward merge ALL the commits with with their description will be visible and part of parent branch after such a merge. This can often be an disadvantage as it is much clearer from the point of reviewer to be able to see only one commit telling when "feature-x" was delivered and not 15 with your comment you made on your feature branch. Also in case of reverting the feature it is impossible to see from Git history which of the commit objects in parent really implement the feature. You would have to manually read all the log messages making reverting a the feature added in this way a true headache.<br> 2. "`Non-fast-forward merge`" is sometimes done by git automatically when commits do not fullfil criteria for fast-forward merge - but it can be forced by adding `--no-ff flag` to merge command. Then git will alway add our new committed feature in ONE new commit on the parent. Note, merge do not rewrite any history of already existing commits on the destination branch witch is regarded as more safe than rebase.<br><br>__Rebase__, from a content perspective, is changing the base of your "feature-branch" from one commit to another making it appear as if you'd created your branch from a different commit. As a result we get a linear succession of commits. It differs from merge by rewriting the commit history of already existing commits on the destination branch. Usage: If you want to get the latest updates from parent ( branch you branched from) into your "feature-branch", but you want to keep your branch's history clean so it appears as if you've been working off the latest master branch. This gives you also later the benefit of a clean merge of your feature branch back into parent! Usually you can rebase toward your own feature branch that you are in full control of and can mess up and take time to solve if something goes wrong, but you do a merge back to master or dev-branch or whatever you branched from. |
+|Fetch & Pull| __Synchronizing data__ between your local machine and remote is an essential step in our daily work as the data we locally look at is just a "snapshot" and up-to-date only as the last time we explicitly downloaded fresh data from the remote with __fetch__ or __pull__.<br><br>__Fetch__ only downloads new data (by default all branches ERONG) from a remote repository and stores all in local repo but DO NOT integrate any of this new data into files in our checked out working directory. To integrate the commits into the branch we have checked out we need to run a merge command and `merge` from "remote branch" i.e "`origin/master`". <br><br>__Pull__ on other hand not only downloads remote repos but also updates our current working files (checked out branch) with the downloaded changes (by making a merge) and updates our current HEAD to point to latest changes. Since "pull" in background try merge remote changes into our local ones, a so-called "merge conflict" can occur. Pull can also be flagged to do a Rebase instead of a background merge if desired. Like for many other actions it's highly recommended to start a "git pull" only with a clean working copy. This means that you should not have any uncommitted local changes before you pull to avoid problems that might be time consuming to solve. |
+|Push| With Git __Push__ we upload commits from our local branch to corresponding remote branch.<br><br> When we execute the command while having checked out a local branch that __is "tracking branch"__ (meaning the branch we "are on" has an "upstream branch" set), then a simple `git push` command will instruct Git to take changes from the branch we "are currently on" and update corresponding "upstream branch" in remote. On the other hand if the "local branch" __is not a "tracking branch"__ then we must give Git additional instructions in order for Git to know the destination. Then the same command looks like `git push [remote connection name]`. Git will then connect to url specified in defined "remote connection" i.e. "origin", take changes in the branch we are on and copy those commits to remote branch that is named same as the one we push from. If we want to push from other branch than our checked out one, then full version of the command shall be used `git push [remote connection name] [local branch to push from]` i.e. `git push origin master`.<br><br> If we want to push __all existing local branches__ then flag `--all` instructs Git to repeat the procedure for all local branches `git git push [remote connection name] --all` i.e. `git push origin -all`.<br><br> __Note!__ If a branch with same name that the one we push from do not exist in remote repo then such a branch is then created in remote.<br><br> __Note!__ It is important to understand that if in remote branch that we try to push to exist changes/commits that we do not have in our local branch then the push will fail. This because push command to not perform any background merge! In such cases we first must update out local branch with those changes in remote using i.e. git pull. |
+|Merge Conflict| Merge conflicts arise when two commits that are merged together have changed in the same parts of code and git do not know how to solve this. For example when one developer deleted a file in master while another developer on his feature-branch was modifying it. In such cases Git will mark the file as being `conflicted` and halt the merging process with terminal output "Automatic merge failed; fix conflicts and then commit the result". It is then the developers' responsibility to resolve the conflict. code from both files are then checked out in our working directory and are separated with "`=============`". The files must be manually edit and saved and manually committed in order for the merge to finalize. |
+|Unrelated&nbsp;Histories&nbsp;error| Sometimes our local .git directory with its history get deleted or corrupted. This leads Git to be unaware of the local history and will throw this error when you try to clone/fetch/push from remote. This will also happen when a new remote repo is created (i.e. on GitHub) with README file as initial commit. Then this repo will get its own history due to the first commit. If you simultaneously create new local repo with same name and commit a single change then your local repo also gets a history created. In this case trying to clone one to another will fail with Unrelated Histories as error as both already got some history on their own. This can be solved using `--allow-unrelated-histories` flag on the command that fails. |
 
- 
+### [__Useful Git commands__](#)
+#### It is recommended to understand and memorize basic git command that are often used. In section below we list some good ones to know.
 
+  Download a complete list with all git commands [HERE](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf).
+
+> Note that in VSCode you can open 'Command palette' (`CTRL-SHIFT-P`) where you can run git commands by choosing those from a list instead of writing the terminal window.
+
+
+Figure: diagram of some commands in git
 ![Git commands](./app/assets/images/git-commands.png)
 
 
-![Git commands](./app/assets/images/git-checkout.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Git command|Actions|||
+|:--|---|---|---|
+|| <br>__HELP commands__<br><br> |||
+|`git`| Lists git commands with helpful short descriptions |||
+|`git`&nbsp;`<command> -h`| Shows short help about a specific command |||
+|`git`&nbsp;`<command> --help`| Shows extensive online help (new window) about a specific command |||
+|| <br>__INFO commands__<br><br>  |||
+|`git`&nbsp;`status`| Prints current repo status - current branch, changes in w-tree/index, errors, conflicts and info |||
+|`git`&nbsp;`log --oneline --graph -5`| List 5 last commits (use `--all` to se all)from HEAD down, nicely each commit on each line |||
+|`git`&nbsp;`branch -a -vv`| List all local and remote branches with corresponding upstream status for tracking ones|||
+|`git`&nbsp;`remote -v`| Prints all available remote connections with their set name and url |||
+|`git`&nbsp;`--version`| Shows current git version |||
+|| <br>__CONFIGURATION commands__<br><br> |||
+|`git`&nbsp;`config --global user.name <your-name>`|  Set your name used in commits (shown to others) |||
+|`git`&nbsp;`config --global user.email <your-email>`|  Set your email used in commits (shown to others) |||
+|| <br>__REMOTE CONNECTION commands__<br><br> In order to easily synch changes with your corresponding remote repository i.e.on GitHub Git remote connection should be configured. |||
+|`git`&nbsp;`remote remove <connection-name>`| Deletes a given remote connection |||
+|`git`&nbsp;`remote`&nbsp;`add <connection-name> <remote-url>`| Adds a new remote connection and sets given name and url on it |||
+|`git remote set-url <connection-name> <remote-url>`| Changes url to remote on a given connection |||
+|set upstream...| to do |||
+|| <br>__CREATE REPO commands__<br><br> Creating new local repo can be done in two ways depending on if we desire fresh new repo or if we want to copy an existing one from remote. |||
+|`git init`| Creates new empty local repo by turning current folder to a repo. To create the repo in a new sub-folder run `git`&nbsp;`init`&nbsp;`<new`&#8209;`repo`&#8209;`folder`&#8209;`name>` |||
+|| Generally for clone commands:<br> If not differently instructed Git will by default check out this local branch which is marked in remote as primary HEAD, usually called "master". This can be overwritten by adding `--branch <remote-branch-to-check-out>` to the command. Git also creates a remote connection called "origin" pointing to remote url we clone from. Git also in background creates a local "remote-tracking branch", usually called "origin/master" and connects our checked out branch to it as its "upstream". |||
+|`git`&nbsp;`clone`&nbsp;`<remote-url>`| Creates local repo by copying a repo from given remote url into a new folder named same as remote repo. Then downloads __all__ remote branches into it. |||
+|`git`&nbsp;`clone `&#8209;&#8209;`single-branch `&#8209;`b`&nbsp;`<remote-branch-to-clone> <remote-url>` | Creates local repo by copying a repo from given remote url into a new folder named same as remote repo. Then downloads only __one__ defined remote branch into it. |||
+|| <br>__CREATE BRANCH commands__<br><br>|||
+|| __General for checkout:__<br> Simple checkout switches the content we have in our working directory but with -b flag it also creates a new branch |||
+|`git checkout -b <new-local-branch>`| Creates & checks out new branch originating from current HEAD (= tip of the brunch we have checked out).`|||
+|`git checkout -b <new-local-branch> <from-local-branch>`| Creates & checks-out new branch originating from another given local branch. |||
+|| <br>__SWITCH BRANCH commands__<br><br> We recommend to switch branch with a "clean" working directory.|||
+| `git checkout -- .` | #todo |||
+| `git checkout <other-local-branch>` | #todo |||
+| `git checkout <hash> or <tag>` | #todo |||
+| `git checkout HEAD^` | #todo |||
+| `git checkout -- <file-name>` | #todo |||
+| `git checkout <other-local-branch> -- <file-name>` | #todo |||
+|| <br>__STAGE & COMMIT commands__<br><br>|||
+| `git add <.> or <file> ` |  Stages all files (or defined file) from working tree to index |||
+| `git commit <.> or <file> -m "commit-description"` |  Commits all files (or defined one) from index to commit history. |||
+| `git commit <.> or <file> -am "commit-description"` |  Commits all files (or defined one) from __both__ working tree and index to commit history. |||
+||<br>__UNDO commands__<br><br> There are different ways to "undo" saved, staged or committed modification. Note! Newly added files and folders are untracked before staged and therefore removed in slightly different way. |||
+||Roll back latest commit|||
+| `git reset HEAD^` | Undoes last commit and moves all files back to staging area. |||
+||Roll back staged files|||
+| `git reset -- . or [-- <file-name>]` | Moves all files (or defined one) from staging area to working tree. Note! __Risk to loose__ staged change if staged is at same time modified in working tree! |||
+||Roll back unstaged files|||
+| `git checkout -- . [or -- <file-name>]`  | Permanently removes all changed files (or defined one) from working tree. Files in index remains untouched. |||
+||Delete all uncommited files|||
+| `git reset --hard ` | Permanently remove all files that have not been committed. Clears both staging area and working tree. Files in ".gitignore" and "untracked" remain untouched. |||
+||Delete all untracked  files|||
+| `git clean -fd -- . [or -- <file-name>]` | Permanently remove all newly added "untracked" files from working tree and filesystem.  |||
+
+#### __UNDO CHANGES__
+There are different ways to unroll saved, staged or committed modifications to files. Note! New files and folders are untracked before staged and those are removed in a bit different way.
+
+Remove permanently from working tree:
+`> git restore <`file-name`>` &nbsp;&nbsp; permanently remove a __modified__ changes __from working tree__. Leave untracked files and index files untouched. <br>
+`> git checkout -- .` &nbsp;&nbsp; permanently remove all __modified__ changes __from working tree__. Leave untracked files and index untouched. <br>
+`> git clean -fd` &nbsp;&nbsp; permanently remove all __untracked__ files and directories __from working tree__. Leave modified changes and index untouched. Use __`-n`__ flag to preview what will be removed! 
+<br>
+<br>
+Move from index to working tree. Note! If same file is already in working tree then change from remote will be lost!'
+`> git restore --staged <`.`> or <`file-name`>` &nbsp;&nbsp; move changes from index to working tree.  <br>
+`> git reset --soft HEAD^`  &nbsp;&nbsp; move changes from last commit to staged area ("`--soft`" flag) & __delete__ last commit. Note! If the index is not "empty" then changes will be lost! Flag "`--hard`" deletes changes & cleans index, be careful!.<br>
+`> git checkout -- [.] or [fileName]` &nbsp;&nbsp; permanently deletes changes in working tree by overwriting those with staged or committed versions. <br>
+`> git commit --amend -m "CorrectedMessage"`  &nbsp;&nbsp; correct the commit message on latest commit<br>
+`> git rm [filename]` &nbsp;&nbsp; permanently delete the file in working tree & stages this change. You need to committed in order to remove the file in repo.<br>
+
+
+#### __MERGE & REBASE__
+todo
+
+#### __DIFF AND LOGS__
+_It is easier to use graphical s or VSCode plugins to show diffs but here are some command to use in command window:_
+  	
+`> git log -3 --oneline` &nbsp;&nbsp; shows last 3 commits for current branch <br>
+`> git log -3 --oneline -- [fileName]` &nbsp;&nbsp; shows last 3 commits file [fileName] <br>
+`> git diff -- [fileName] ` &nbsp;&nbsp; show changes between "working tree" vs "staged area"/"committed" for file [fileName] <br>
+`> git diff --staged -- [fileName]` &nbsp;&nbsp; show changes between staged area vs "committed" for file [fileName]
+
+####  __CONFLICTS__
+_Conflicts happens when we merge/rebase need our intervention.Also when pulling from remote sometimes a merge can fail due to conflicts. Then the pull/merge is aborted and conflicted files are added to "working tree" and must be resolved and committed fullfil the pull/merge. We recommend always to start a pull/merge/rebase with empty "working tree" and "index":_ <br>	
+   
+`> Fix the conflict:`  &nbsp;&nbsp; First show files with git status. Then edit the conflicted part in your favorite editor, i.e. open in VScode. Remove unwanted code and save the file. Afterwards stage and commit with `git commit -m "merged and resolved the conflict."`
+
+> Note!  The ======= line is the "center" of the conflict. Above is the code we merge from (origin). Below is the code we merge to (local). 
+
+#### __FEATCH/PULL & PUSH__
+When time to push changes in your local repo to remote then first fetch from from remote and merge  or rebase locally. This because there might be changes on remote conflicting with your changes. Solve all those conflicts and test locally before finally uploading (pushing) the result to remote repo. 
+
+`> git push origin master` &nbsp;&nbsp; upload changes to remote repo, here origin, from #todo check here if we have 2 branches with changes how to push both?<br> 
+`> git pull origin master` &nbsp;&nbsp; _fetches a specific branch "master" from connected remote repository named "origin", afterward merges the changes to our locally checkout branch')_ <br>
+`> git pull origin` &nbsp;&nbsp; _fetches ALL branches from repo on remote server, here "origin", to our local branch here "master"')_ <br>
+	
+
+`> git push -u (or --set-upstream) origin master` &nbsp;&nbsp; _`-u` or `--set-upstream` set the upstream branch for local master to `origin/master`. After this we can use command like `git push origin or` `git pull origin` without defining the second parameter (local branch) as we have a default upstream set for brunch we are working on (view it with `git branch -vv` command)_ <br>
+
+>Note! "Git pull" run two different git commands for you. You're better off, until you are 		well-experienced with Git, using separate "git fetch" and "git merge" commands. But this may 	Cause Conflicts to occur, so it’s recommended to use Git Pull with a clean copy. Note that "git pull --rebase" switches the second command to git rebase, but we won't get into details here.<br>
+
+`> git fetch origin --allow-unrelated-histories` &nbsp;&nbsp; _fetches changes from remote to local repo_ <br>
+`> git merge origin/foo` &nbsp;&nbsp; merges changes from foo to your checked out local repo_ <br>
+
+-- equals -->
+
+`> git checkout foo` &nbsp;&nbsp; _Makes us to look at foo branch localy_ <br>	
+`> git pull --allow-unrelated-histories` &nbsp;&nbsp; _fetches & merges changes to local checked out repo_ <br>
+or <br>
+`> git rebase origin --rebase --allow-unrelated-histories` &nbsp;&nbsp; fetches & rebases changes to local repo foo. The command tries to find out which commits are really your local ones, and which had come from upstream in an earlier fetch. <br>
+
+Note! `--allow-unrelated-histories` forces to accept files that are not related to the project i.e. when merging 2 different projects.
+
+Note! Both of these commands are designed to integrate changes from one branch into another branch—they just do it in very different ways. When rebasing you move the base of the change ending point. Merging adds a new commit to your history. Merge preserves history whereas rebase rewrites it. Rebase will present conflicts one commit at a time whereas merge will present them all at once. It is better and much easier to handle the conflicts but you shouldn’t forget that reverting a rebase is much more difficult than reverting a merge if there are many conflicts. The golden rule of git rebase is to never use it on public branches. The first step in any workflow that leverages git rebase is to create a dedicated branch for each feature. This gives you the necessary branch structure to safely utilize rebasing.  If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.
+
+On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
+
+   - __Branch__<br>
+	For new feature new branch...:
+
+	`> git branch [newBranchName]`  &nbsp;&nbsp; _(creates a new branch but __stays__ on the checked out oue_ <br>
+	`> git checkout -b [newBranchName]`  &nbsp;&nbsp; _(creates a new branch and checks it out)_
+
+- __Clone someones remote repo__<br> 
+  	When you want to copy a public remote repo to your own.
+
+	- Create own empty remote repo i.e. A
+	- Clone a remote public repo to a local repo
+	- Change remote origin URL for the newly created repo to your own remote repo.
+	- Push changes to your remote URL. This will upload all copied files to your own remote repo.
+	#todo
 
 ### [__Useful Git Aliases__](#)
 Copy those aliases to command prompt. Those are used often. Timesaver.blue
@@ -223,134 +385,6 @@ echo '>>> git status' &&
 echo ' ' &&
 git status 
 "`
-
-
-### [__Useful Git commands__](#)
-It is recommended to understand and memorize basic git command that are often used. Good article explaining merging and rebasing can be found [HERE.](https://www.atlassian.com/git/tutorials/merging-vs-rebasing). Download a complete [git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf) with all git commands. Additionally in VSCode you can open 'Command palette' (`CTRL-SHIFT-P`) where you can run git commands by choosing those from a list instead of writing the terminal window. Below we list most used git commands:
-
-#### __-- Get Started & Help --__
-Check your installed gits version and get fast information about commands:
-
-`> git --version`  &nbsp;&nbsp;&nbsp; shows installed git version<br> 
-`> git --help`  &nbsp;&nbsp;&nbsp; prints available git commands with short descriptions<br> 
-`> git status` &nbsp;&nbsp; prints out useful info: current branch, changes to stage/commit, errors, conflicts and tips.<br>
-`> git [command] -h`  &nbsp;&nbsp;&nbsp; prints short help about specific command<br> 
-`> git [command] --help`  &nbsp;&nbsp;&nbsp; extensive online help about specific command (new window)<br>
-
-#### __-- Configuration of Repo --__
-A new empty repo created with init need to be configured. Often a cloned one too. Make it a good habit always __set user and remote_ of a repo and review your configuration:
-
-Set user:<br>
-`> git config --global user.name [your name]`<br>
-`> git config --global user.email [your@email.com]`
-
-Set remote:<br> 
-`> see` [here](#remote)
-
-Look up configuration & info:<br>
-`> git config --list` &nbsp;&nbsp; prints out current configuration i.e. remote url, current user name/email and default editor. <br>
-`> git remote -v` &nbsp;&nbsp; prints out Remote Name and Url. Usually an "origin" url to push/pull toward remote repo <br>
-`> git branch -a -vv` &nbsp;&nbsp;  prints fetched local and remote branches with additional information.
-
-
-#### __-- Create a Repo --__
-Creating a local repo can be done in two ways depending on if we start from empty fresh repo or if we copy an existing one from remote.
-
-__`1.`__ One way is to create __new empty local repo__:
-
-`> git init` &nbsp;&nbsp; Turns folder where inti executes to an new local repo. A hidden .git folder is created in same folder. _If you instead wish first to create new folder and then initiate it as local repo run: `> git init [NewFolderName]`_ 
-	
->	Note! In case above the remote url (origin) is undefined and must be set it we want to connect this new repo to a remote repo. A new default branch is created and named "master", and automatically checked out.
-
-__`2.`__ Another way is is to __copy already existing repo from remote__:
-
-`> git clone [RemoteRepoLocation]` &nbsp;&nbsp; Copies a repo (all branches and full history of all files) to your location into a newly created directory named same as remote repo. _If you want a different name than one of remote repo, use: `git clone [RemoteRepoLocation] [LocalFolderName]`_
-
-> Note! Cloning also checks out a version of files and creates a remote connection called "origin" pointing back to the original repository. What is git clone checking out? The commit that HEAD is pointing to on the remote which is usally "master". ???
-	<br>
-
-	### __Remote__
-	In order to synch changes with a remote repo on i.e GitHub an address must be set. <br>
-
-	`> git remote -v`  &nbsp;&nbsp; _first print your current remote repo url and its name_ <br>
-	`> git remote remove origin` &nbsp;&nbsp; _removes existing connection to a remote repo (if any)_<br>
-	`> git remote add origin [RemoteRepoURL]`  &nbsp;&nbsp; _Adds new connection to remote repo named 'origin' and set url_<br>
-	`> git remote set-url origin [RemoteRepoURL]`  &nbsp;&nbsp; _change url  remote connection named 'origin' to push/pull from it._
-
-- __Stage & Commit.__<br>
-  	After editing existing files or adding new files in working tree we need to stage the changes, and later commit those to our local repo:
-
-	`> git status` &nbsp;&nbsp; _lists info such as all changes to stage/commit as well as errors/conflicts if any_ <br>
-	`> git add [.] or [fileName]` &nbsp;&nbsp; _stages all or specific files by adding those to index_ <br>
-	`> git commit [.] or [fileName] -m 'commitDescription'` _commits all changes to repo with a description_
-
--   __Undo Changes__<br>
-  	There are different ways to undo or revert made changes or commits:<br>
-
-	`> git restore [.] or [fileName])` &nbsp;&nbsp; _permanently deletes changes in working tree but do nothing to staged ones._ <br>
-	`> git restore --staged [.] or [fileName])` &nbsp;&nbsp; _unstage changes by moving staged to working tree. Note! If same file changed in working tree then the staged change will be permanently deleted!_ <br>
-	`> git checkout -- [.] or [fileName]` &nbsp;&nbsp; _permanently deletes changes in working tree and replaces with staged ones or one committed to repo._ <br>
-	`> git rm [filename]` &nbsp;&nbsp; _ this permanently deletes the file in working tree and automatically stages this change. Need to be commited in order to remove the file in repo too._ <br>
-
-	In order to ___permanently remove both___ staged files and the unstaged changes:<br>
-	`> git restore --staged .`<br>
-	`> git checkout -- .`
-
--   __Merge, Diffs and Logs__. <br>
-  	
-	`> git log -- [.] or [fileName]` &nbsp;&nbsp; _shows all commits labels for file(s)_ <br>
-	`> git diff [.] or [fileName]` &nbsp;&nbsp; _shows changes between file(s) in working tree vs staged area or committed to repo._ <br>
-	`> git diff --staged [.] or [fileName]` &nbsp;&nbsp; _(shows changes between file(s)) in staged area vs committed in repo._
-
--   __Conflicts__<br>
-  	When pulling sometimes a background merge can fail. Then the merge is aborted conflicted files are added to local working tree and must be resolve to commit and fullfil the merge. <br>	
-   
-	`> Fix the conflict:`  &nbsp;&nbsp; First show files and diff. Then then most direct way to resolve a merge conflict is to edit the conflicted file in your favorite editor, i.e. open in VScode with `>code [filename]`, remove unwanted code and save the filet. Afterwards stage and commit with `git commit -m "merged and resolved the conflict."`
-
-	>Note!  The ======= line is the "center" of the conflict. Above is the code we merge from. Below is the code we merge to. 
-
-- __Fetch, Pull & Push.__<br>
-  	When time to push changes in your local repo to remote then first fetch from from remote and merge  or rebase locally. This because there might be changes on remote conflicting with your changes. Solve all those conflicts and test locally before finally uploading (pushing) the result to remote repo. 
-
-	`> git push origin master` &nbsp;&nbsp; _upload changes to remote repo, here origin, from #todo check here if we have 2 branches with changes how to push both?_<br> 
-	`> git pull origin master` &nbsp;&nbsp; _fetches a specific branch "master" from connected remote repository named "origin", afterward merges the changes to our locally checkout branch')_ <br>
-	`> git pull origin` &nbsp;&nbsp; _fetches ALL branches from repo on remote server, here "origin", to our local branch here "master"')_ <br>
-	
-
-	`> git push -u (or --set-upstream) origin master` &nbsp;&nbsp; _`-u` or `--set-upstream` set the upstream branch for local master to `origin/master`. After this we can use command like `git push origin or` `git pull origin` without defining the second parameter (local branch) as we have a default upstream set for brunch we are working on (view it with `git branch -vv` command)_ <br>
-
-	>Note! "Git pull" run two different git commands for you. You're better off, until you are 		well-experienced with Git, using separate "git fetch" and "git merge" commands. But this may 	Cause Conflicts to occur, so it’s recommended to use Git Pull with a clean copy. Note that "git pull --rebase" switches the second command to git rebase, but we won't get into details here.<br>
-
-	`> git fetch origin --allow-unrelated-histories` &nbsp;&nbsp; _fetches changes from remote to local repo_ <br>
-	`> git merge origin/foo` &nbsp;&nbsp; merges changes from foo to your checked out local repo_ <br>
-
-	-- equals -->
-
-	`> git checkout foo` &nbsp;&nbsp; _Makes us to look at foo branch localy_ <br>	
-	`> git pull --allow-unrelated-histories` &nbsp;&nbsp; _fetches & merges changes to local checked out repo_ <br>
-	or <br>
-	`> git rebase origin --rebase --allow-unrelated-histories` &nbsp;&nbsp; fetches & rebases changes to local repo foo. The command tries to find out which commits are really your local ones, and which had come from upstream in an earlier fetch. <br>
-
-		Note! `--allow-unrelated-histories` forces to accept files that are not related to the project i.e. when merging 2 different projects.
-
-		Note! Both of these commands are designed to integrate changes from one branch into another branch—they just do it in very different ways. When rebasing you move the base of the change ending point. Merging adds a new commit to your history. Merge preserves history whereas rebase rewrites it. Rebase will present conflicts one commit at a time whereas merge will present them all at once. It is better and much easier to handle the conflicts but you shouldn’t forget that reverting a rebase is much more difficult than reverting a merge if there are many conflicts. The golden rule of git rebase is to never use it on public branches. The first step in any workflow that leverages git rebase is to create a dedicated branch for each feature. This gives you the necessary branch structure to safely utilize rebasing.  If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.
-
-On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
-
-   - __Branch__<br>
-	For new feature new branch...:
-
-	`> git branch [newBranchName]`  &nbsp;&nbsp; _(creates a new branch but __stays__ on the checked out oue_ <br>
-	`> git checkout -b [newBranchName]`  &nbsp;&nbsp; _(creates a new branch and checks it out)_
-
-- __Clone someones remote repo__<br> 
-  	When you want to copy a public remote repo to your own.
-
-	- Create own empty remote repo i.e. A
-	- Clone a remote public repo to a local repo
-	- Change remote origin URL for the newly created repo to your own remote repo.
-	- Push changes to your remote URL. This will upload all copied files to your own remote repo.
-	#todo
 
 ### [__Useful Cmd Commands:__](#)
 
