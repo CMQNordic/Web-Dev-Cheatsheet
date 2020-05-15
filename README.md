@@ -51,19 +51,12 @@ _Prerequisites: Some HTML & CSS skills._
 <p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 ## [__Visual Studio Code__]()
-
-|Content||
-|---|---|
-|[What is VSCode and what is built-in?](#what-is-vscode)| VSCode - Code editor |
-|[Customization of VSCode](#recommended-customization-of-vscode)| Keyboard Shortcuts |
-|[Navigation in VSCode](#navigation-in-vscode)| Find things |
-|[Terminal in VSCode](#terminal-in-vscode)| Integrated Terminal - Logs - Errors |
-|[Useful Shortcuts in VSCode](#useful-shortcuts-in-vscode)| Fast navigation |
-|[Useful Extensions in VSCode](#useful-extensions-in-vscode)| Extensions to install |
-|[EMMET Snippets in VSCode](#emmet-snippets-in-vscode)| HTML & CSS short commands |
+  __Content__<br>
+[What is VSCode and what is built-in?](#what-is-vscode)<br>
+[Customization](#recommended-customization-of-vscode) ◦ [Navigation](#navigation-in-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)
 
 
-__Recommended tutorials:__<br>
+__Recommended tutorials__<br>
 Good educational VSCode videos can be found [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code). 
 
 <br>
@@ -99,14 +92,17 @@ VsCode have an integrated terminal window that is a very important tool in your 
 We recommend to manually customize some shortcuts related to the terminal so that you can easily open and focus terminal window, scroll in it and resize the terminal window - all without lifting your fingers from the keyboard.
 
 Search for following string in _`Settings -> Keyboard Shortcuts`_  and set following:
+
+<br>
+
 |Search&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Set|
 |---|:---|
 |"Terminal: Scroll To Bottom",<br> "Toggle Integrated Terminal",<br> "Focus Terminal"|`Ctrl+Ö`|
 |"Kill Active Instance"|`Ctrl+K`|
-|"Terminal: Scroll Up (Line)"|`Ctrl+UpArrow`&nbsp;and<br>set "When" to `terminalFocus`|
-|"Terminal: Scroll Down (Line)"|`Ctrl+DownArrow`&nbsp;and<br>set "When" to `terminalFocus`|
-|"Terminal: Resize Pane Left"|`Ctrl+LeftArrow`&nbsp;and<br>set "When" to `terminalFocus`|
-|"Terminal: Resize Pane Right"|`Ctrl+RightArrow`&nbsp;and<br>set "When" to `terminalFocus`|
+|"Terminal: Scroll Up (Line)"|`Ctrl+UpArrow`&nbsp;and set "When" to `terminalFocus`|
+|"Terminal: Scroll Down (Line)"|`Ctrl+DownArrow`&nbsp;and set "When" to `terminalFocus`|
+|"Terminal: Resize Pane Left"|`Ctrl+LeftArrow`&nbsp;and set "When" to `terminalFocus`|
+|"Terminal: Resize Pane Right"|`Ctrl+RightArrow`&nbsp;and set "When" to `terminalFocus`|
 
 <br>
 <p align=right><a id="navigation-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
