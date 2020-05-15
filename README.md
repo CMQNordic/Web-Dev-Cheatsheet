@@ -128,16 +128,18 @@ __VSCode__ comes with an __integrated terminal window__ - which is a very handy 
 
 Changing to _default shell_ of your choice can be done by opening _`Command Palette (Ctrl+Shift+P) -> Terminal: Select Default Shell`_. There you will get a list of available choices for you operating system where "Git Bash" (the default shell that we use) is one of the options.
 
-If you run lots of git commands from command line we recommend you to move the terminal window to the right of your screen. Do this by right-clicking the top bar in terminal window and choosing_ Move Panel Right_. This is very handy to have it to the right because often output is spread on many vertical lines and we can see the results without need of scrolling.
+If you run lots of git commands from command line we recommend you to move the terminal window to the right of your screen. Do this by right-clicking the top bar in terminal window and choosing _Move Panel Right_. This is very handy to have it to the right because often output is spread on many vertical lines and we can see the results without need of scrolling.
 
 <br>
 <p align=right><a id="useful-shortcuts-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-### __[Useful Shortcuts in VSCode]()__
+### __[Useful shortcuts in VSCode]()__
 
 Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcuts`_. Online list of shortcuts can be found [here](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2019). Below we list our most frequently used VSCode shortcuts that are real time saves to use:
 
-|__NAVIGATION__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+<br>
+
+|__NAVIGATION__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<div width="100%"></div>|
 |:---|---|
 |`Ctrl+P`| __Search & Go to files...__<br>Opens __File Search__ window. Recently used on top. Use `ESC` to close it |
 |`Ctrl+Shift+P`| __Search & Run commands...__<br>Opens __Command Palette__. Recently used on top. Use `ESC` to close it |
