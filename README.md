@@ -20,7 +20,9 @@ _Prerequisites: Some HTML & CSS skills._
     - [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#vscode-shortcuts) ◦ [Extensions](#vscode-useful-extensions) ◦ [EMMET snippets](#emmet-snippets-in-vscode)
   - GIT
     - [What is GIT and why from command line?](#what-is-git) 
-    - [__Git expressions__](#common-git-expressions):<br> [Repository](#repository) ◦ [Type of files in Git](#files-in-git) ◦ [Cloning](#cloning-in-git) ◦ [Check-out & change branches](#check-out-change-branches) ◦ [Working directory](#working-directory) ◦ [Clean working directory](#clean-working-directory) ◦ [Stage](#stage) ◦ [Commit](#commit) ◦ [Commit Hash & Tag](#commit-hash-tag) ◦ [Stashing files](#stashing-files) ◦ [Working tree](#working-tree) ◦ [Stage or Index](#stage-or-index) ◦ [Repo history](#repo-history) ◦ [Remote](#remote) ◦ [Git Branch](#git-branch) ◦ [Tracking relationship](#tracking-relationship) ◦ [Local&nbsp;branch&nbsp;& Tracking&nbsp;branch&nbsp;& Remote&#8209;tracking&nbsp;branch](#local-branch) ◦ [Remote & Upstream branch](#remote-branch) ◦ [HEAD](#head) ◦ [Detached HEAD](#detached-head) ◦ [Merge & Rebase](#merge-rebase) ◦ [Fetch & Pull](#fetch-pull) ◦ [Push](#push) ◦ [Merge Conflicts](#merge-conflict) ◦ [Unrelated Histories errors](#unrelated-histories-error)
+    - [__Git expressions__](#common-git-expressions):<br> 
+    - [Repository](#repository)
+    -  ◦ [Type of files in Git](#files-in-git) ◦ [Cloning](#cloning-in-git) ◦ [Check-out & change branches](#check-out-change-branches) ◦ [Working directory](#working-directory) ◦ [Clean working directory](#clean-working-directory) ◦ [Stage](#stage) ◦ [Commit](#commit) ◦ [Commit Hash & Tag](#commit-hash-tag) ◦ [Stashing files](#stashing-files) ◦ [Working tree](#working-tree) ◦ [Stage or Index](#stage-or-index) ◦ [Repo history](#repo-history) ◦ [Remote](#remote) ◦ [Git Branch](#git-branch) ◦ [Tracking relationship](#tracking-relationship) ◦ [Local&nbsp;branch&nbsp;& Tracking&nbsp;branch&nbsp;& Remote&#8209;tracking&nbsp;branch](#local-branch) ◦ [Remote & Upstream branch](#remote-branch) ◦ [HEAD](#head) ◦ [Detached HEAD](#detached-head) ◦ [Merge & Rebase](#merge-rebase) ◦ [Fetch & Pull](#fetch-pull) ◦ [Push](#push) ◦ [Merge Conflicts](#merge-conflict) ◦ [Unrelated Histories errors](#unrelated-histories-error)
     - [__Useful Git commands__](#useful-git-commands-m):<br> 
   	  [HELP COMMANDS](#help-commands) ◦ [INFO & STATUS COMMANDS](#info-status-commands) ◦ [CONFIGURATION COMMANDS](#configuration-commands) ◦ [CREATE NEW REPOSITORY](#create-new-repo-commands) ◦ [CREATE NEW BRANCH](#create-new-branch-commands) ◦ [CHECK OUT BRANCH](#check-out-branch-commands) ◦ [SYNCHRONIZE WITH REMOTE](#synchronize-with-remote-command) ◦ [STAGE & COMMIT](#stage-commit-commands) ◦ [MERGE & REBASE](#merge-rebase-commands) ◦ [DIFF & LOGS](#diff-logs-commands) ◦ [UNDO & CORRECT](#undo-correct-commands) ◦ [CONFLICTS](#conflicts-commands)
     - [__Useful Cmd commands__](#useful-cmd-commands-m)
@@ -223,48 +225,36 @@ _Good Git tutorials can be found [here](https://www.youtube.com/watch?v=uR6G2v_W
 
 ### [__Common Git expressions__]()
     
-  [Repository](#repository) ◦ [Type of files in Git](#files-in-git) ◦ [Cloning](#cloning-in-git) ◦ [Check-out & change branches](#check-out-change-branches) ◦ [Working directory](#working-directory) ◦ [Clean working directory](#clean-working-directory) ◦ [Stage](#stage) ◦ [Commit](#commit) ◦ [Commit Hash & Tag](#commit-hash-tag) ◦ [Stashing files](#stashing-files) ◦ [Working tree](#working-tree) ◦ [Stage or Index](#stage-or-index) ◦ [Repo history](#repo-history) ◦ [Remote](#remote) ◦ [Git Branch](#git-branch) ◦ [Tracking relationship](#tracking-relationship) ◦ [Local&nbsp;branch&nbsp;& Tracking&nbsp;branch&nbsp;& Remote&#8209;tracking&nbsp;branch](#local-branch) ◦ [Remote & Upstream branch](#remote-branch) ◦ [HEAD](#head) ◦ [Detached HEAD](#detached-head) ◦ [Merge & Rebase](#merge-rebase) ◦ [Fetch & Pull](#fetch-pull) ◦ [Push](#push) ◦ [Merge Conflicts](#merge-conflict) ◦ [Unrelated Histories errors](#unrelated-histories-error)
+  [Repository](#repository) ◦ [Cloning](#cloning-in-git) ◦ [Working directory](#working-directory) ◦ [Check-out a branch](#check-out-change-branches) ◦ [Filetypes](#files-in-git) ◦ [Stage](#stage) ◦ [Commit](#commit) ◦ [Commit Hash & Tag](#commit-hash-tag) ◦ [Stashing files](#stashing-files) ◦ [Working tree](#working-tree) ◦ [Stage or Index](#stage-or-index) ◦ [Repo history](#repo-history) ◦ [Remote](#remote) ◦ [Git Branch](#git-branch) ◦ [Tracking relationship](#tracking-relationship) ◦ [Local&nbsp;branch&nbsp;& Tracking&nbsp;branch&nbsp;& Remote&#8209;tracking&nbsp;branch](#local-branch) ◦ [Remote & Upstream branch](#remote-branch) ◦ [HEAD](#head) ◦ [Detached HEAD](#detached-head) ◦ [Merge & Rebase](#merge-rebase) ◦ [Fetch & Pull](#fetch-pull) ◦ [Push](#push) ◦ [Merge Conflicts](#merge-conflict) ◦ [Unrelated Histories errors](#unrelated-histories-error)
 
 
 |<a id="repository">Repository</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
 |:---|
-|A Git repository, or just simply _a repo_, is a folder location in which Git tracks changes to files and folders and in which Git stores historical versions of all tracked files. A repo always has a hidden folder named ".git" in its root directory. By deleting this hidden folder all historical versions are lost and Git stops tracking changes to content in that directory. We can clone a repo from a hosting services like [GitHub](https://github.com/) or [Bitbucket](https://bitbucket.org/) to our local machine. there are local repositories that are on our local machine and remote repositories that are usually online and we need internet access to synch with those. Names of remote and local repositories can differ, you can rename your local clone as you want but do not use spaces or tabs in its name. You can change the name of a local repo simply by renaming the folder on your hard drive. But if you change the name of a remote repo on i.e. GitHub, then this can affect those who connect to it and they then need update their local remote connections with new URL<br><br>|
-
-|<a id="files-in-git">Type of files in Git</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
-|:---|
-|There exist 4 types of files in Git:<br><br> ⋅ __Untracked:__ Newly added files.<br> ⋅ __Modified:__ Existing files changed and saved in working tree.<br> ⋅ __Staged:__ Added to our staging area.<br> ⋅ __Committed:__ Saved in the repo history.<br><br>_Untracked files_ are basically files that Git do not have any previous version of in its history. Files that are newly added to your project get the status _untracked_. Those are added to the working tree but in order to become tracked and get a first initial version they must be either [_staged_](#stage) or [_committed_](#commit). Many Git commands like `git reset` or `git revert `do not affect untracked files and there is a special `git clear` command to remove those files from the project.<br><br>|
-
-|<a id="cloning-in-git">Cloning</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
-|:---|
-|Cloning is simply making a copy of a whole repo and saving it to another location. It is done with a `git clone` command that automatically checks out that branch that is in remote marked with HEAD. Usually it is a _"master"_ branch and therefore when we clone a remote repo then locally a branch called "`master`" is automatically created and checked out in our working directory.<br><br>|
-
-|<a id="check-out-change-branches">Check-out & change branches</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
-|:---|
-|Checking out a branch (also called _changing branch_) is loading of a new specific commit into your working directory. Git simply overwrites all current files and folders in the working directory with the ones that we check out. We can then view and edit those new versions of all "checkout" files and folders. We can check out a _branch_, a specific a _commit_ or _tag_. Additionally our local HEAD pointer is moved to point toward the [_commit_](#commit) that is checked out. It is recommended to have a [_clean_](clean-working-director) working directory when checking out.<br><br> What happens to [_uncommitted_](#files-in-git) changes?<br> If we try to check out our current working directory having uncommitted changes in index or working directory, then sometimes the checkout will fail. Git never overwrites your modification if there is risk to lose the modification. Therefore if "parent" of any modified file differs in any way from same file in the commit we aim to check out from, then Git abort the check out process. To perform a check out in such a case you must either [_commit_](#commit), restore or [_stash_](#stash-files) your changes.<br><br>Note that if we check out a specific commit instead of a branch then we check out the working directory in [_detached HEAD_](#detached-head) state.<br><br>|
+|A Git repository, or just simply _a repo_, is a folder location in which Git tracks changes to files and folders. Git stores historical versions of all tracked files there. It's folder named ".git" in its root directory. By deleting this folder all historical versions are lost and Git stops tracking changes to content in that directory. We have access to a remote repo and can clone it from a hosting services like [GitHub](https://github.com/) or [Bitbucket](https://bitbucket.org/) to our local machine. You can change the name of a local repo simply by renaming the folder on your hard drive. But when changing name of a remote repo on i.e. GitHub may affect persons who already use the old name as part of the URL in their configurations.<br><br>|
 
 |<a id="working-directory">Working directory</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
 |:---|
-|In Git world expression "working directory" refers to a folder location where our local repo exists and where a single version of the project is checked out - the files are stored in it. It is an "umbrella" term for all files and folders that git traces and that we can currently view and edit.<br><br> |
-
-|<a id="clean-working-directory">Clean Working Directory</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
-|:---|
-|Expression "clean working directory" is widely used in Git documentation. A working directory is clean when there are not any uncommitted changes in the working tree nor index. If you are in progress of working and do not feel ready to [stage](#stage) nor [commit](#commit) your modifications before checking out something else, then you can also [_stash_](#stash-files) the changes to temporally clean up your working directory.<br><br> |
-
-|<a id="stage">Stage</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
-|:---|
-|Staging is saving changes to the staging area in your local repo (that is also called _index_). From there we can can take decision if file shall be _restored_ or finally _committed_ to repo history.<br><br>|
+|In Git world expression "working directory" refers to a folder location where our local repo exists and where a single version of the project is checked out - the files are stored in it. It is an "umbrella" term for all files and folders that git traces and that we can currently view and edit.<br><br>Clean Working Directory<br>Expression "clean working directory" is widely used in Git documentation. A working directory is clean when there are not any uncommitted changes in the working tree nor index. If you are in progress of working and do not feel ready to [stage](#stage) nor [commit](#commit) your modifications before checking out something else, then you can also [_stash_](#stash-files) the changes to temporally clean up your working directory.<br><br>|
 
 |<a id="commit">Commit</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
 |:---|
-|When we commit a changes in Git we permanently save modified file or files to local repo´s history "labeled" with a unique hash-id, description and our name as committing person. The word "commit" often refers to a unique labeled "snapshot" of files and directories at a certain moment, also called for "blob". A commit operation can be manually triggered with a `git commit` command but can also be a background job as part of a `git merge` operation.<br><br>For example. Assume we work on a feature, edit and save files initially in our working directory. Then as we desire to save our work permanently and let others to have access to it we must commit all those modifications and get a new "snapshot" labeled with a hash. Not until then others can access this "commit" given a accessible path to it.<br><br> |
+|When we commit a changes in Git we permanently save modified file(s) to local repo´s history and label all the committed files with an unique hash-id, description and name of the committer. The word "commit" also often refers to a unique labeled "snapshot" of files and directories at a certain moment. A commit operation can be manually triggered with a `git commit` command but can also be a background job as part of a `git merge` operation.<br><br>|
 
-|<a id="commit-hash-tag">Commit Hash & Tag</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
+|<a id="head">HEAD</a><a href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
 |:---|
-|A commit hash is an unique unchangeable 40 characters long SHA-1 hash that is created as unique identification for each commit of files to a repo. Example of a commit hash: `4c511f16ef2644854d04cabebfcecc82be0eb04f`. Generally only 7 first characters enough to uniquely identify a commit within a normal project and therefore short 7-chars version can be used to refer to it.<br><br>A commit tag is a label/stamp that can be manually added to a commit to mark a particular commit with a human readable label. Example: rel-v.1.8.5.<br><br>|
+|HEAD in Git is a movable pointer always pointing to a commit that we currently have checked out in our working directory. In normal cases it always point to a branch and therefore when branch moves to point to the latest commit then automatically our HEAD does as well. Branch and HEAD pointers are in such a case "attached". When we check out a branch then Git always automatically let HEAD pointer to point to branch and as it always checks out latest commit. But note that there are cases when we need to check out a specific commit ot tag and not a branch! Then the HEAD points directly to this specific commit/tag and not the branch. This scenario is called [detached HEAD](#detached-head).<br><br>|
 
-|<a id="stashing-files">Stashing files</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
+|<a id="check-out-change-branches">Check-out a branch</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
 |:---|
-|Stashing takes the "dirty" state of your working directory — your modified files in working tree and index - and save those on a "stash-stack" of unfinished changes that you can reapply at any time later. Note! By default Git do not stash [untracked](#files-in-git) files therefore to handle those use "-u" flag.<br><br> The command `git stash -u` will add all changes as an object on top of the stash stack.<br><br> Later to get back to stashed changes simply run `git stash pop` command and your latest stashed changes will be reverted to current working directory and the stashed object removed from stash-stack. To list all stashed objects in stack run `git stash list` command.<br><br>|
+|Checking out a branch (also called _changing branch_) is loading of a new specific group of files and folders into our working directory. Git overwrites all current files and folders in our working directory with the ones that we are checking out. By doing this we can view and edit those new versions of the checked-out files. We can check out a _branch_, a specific a _commit hash_ or a _tag_. See check-out commands [here](#check-out-branch-commands). Additionally our local HEAD pointer is moved to point toward the [_commit_](#commit) that is checked out. It is recommended to have a [_clean_](clean-working-director) working directory when checking out.<br><br> What happens to [_uncommitted_](#files-in-git) changes?<br> If we try to check out our current working directory having uncommitted changes in index or working directory, then sometimes the checkout will fail. Git never overwrites your modification if there is risk to lose the modification. Therefore if "parent" of any modified file differs in any way from same file in the commit we aim to check out from, then Git abort the check out process. To perform a check out in such a case you must either [_commit_](#commit), restore or [_stash_](#stash-files) your changes.<br><br>Note that if we check out a specific commit instead of a branch then we check out the working directory in [_detached HEAD_](#detached-head) state.<br><br>|
+
+|<a id="cloning-in-git">Clone a branch</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
+|:---|
+|Cloning is simply making a copy of a whole repo and saving it to another location. It is done with a `git clone` command that automatically checks out that branch that is in remote marked with HEAD. Usually it is a _"master"_ branch and therefore when we clone a remote repo then locally a branch called "`master`" is automatically created and checked out in our working directory.<br><br>|
+
+|<a id="files-in-git">Filetypes</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
+|:---|
+|There exist 4 types of files in Git:<br><br> ⋅ __Untracked:__ Newly added files.<br> ⋅ __Modified:__ Existing files changed and saved in working tree.<br> ⋅ __Staged:__ Added to our staging area.<br> ⋅ __Committed:__ Saved in the repo history.<br><br>_Untracked files_ are basically files that Git do not have any previous version of in its history. Files that are newly added to your project get the status _untracked_. Those are added to the working tree but in order to become tracked and get a first initial version they must be either [_staged_](#stage) or [_committed_](#commit). Many Git commands like `git reset` or `git revert `do not affect untracked files and there is a special `git clear` command to remove those files from the project.<br><br>|
 
 |<a id="working-tree">Working tree</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
 |:---|
@@ -273,6 +263,20 @@ _Good Git tutorials can be found [here](https://www.youtube.com/watch?v=uR6G2v_W
 |<a id="stage-or-index">Stage or Index</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
 |:---|
 |Staging area is in Git documentation shortly called "index" and refers to an area within Git where modifications are saved before a _commit_. From here a change can for example be restored if it for example have been accidentally changed in your working directory. Here we do inspect the files and from here we usually commit if we are satisfied with the changes.<br><br>Note that there is a possibility in Git to commit directly from working three and omit the staging area, with help of `-a` flag.<br><br>|
+
+![Git commands](./app/assets/images/GIT_structure.JPG)
+
+|<a id="stage">Stage</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
+|:---|
+|Staging is saving changes to the staging area in your local repo. The staging are is also often called _index_. From there we can can take decision if file shall be _restored_ or finally _committed_ to repo history.<br><br>|
+
+|<a id="commit-hash-tag">Commit Hash & Tag</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>|
+|:---|
+|A commit _hash_ is an unique unchangeable 40 characters long SHA-1 hash that is created as unique identification for each commit of files to a repo. Example of a commit hash is `4c511f16ef2644854d04cabebfcecc82be0eb04f`. Normally only 7 first characters are enough to identify a commit within a normal project and therefore short "7-chars-version" can be used to refer to a commit.<br><br>A commit _tag_ is a label/stamp that can be manually added to a commit to mark a particular commit with a human readable label. Example: rel-v.1.8.5.<br><br>|
+
+|<a id="stashing-files">Stashing files</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
+|:---|
+|Stashing takes the "dirty" state of your working directory — your modified files in working tree and index - and save those on a "stash-stack" of unfinished changes that you can reapply at any time later. Note! By default Git do not stash [untracked](#files-in-git) files therefore to handle those use "-u" flag.<br><br> The command `git stash -u` will add all changes as an object on top of the stash stack.<br><br> Later to get back to stashed changes simply run `git stash pop` command and your latest stashed changes will be reverted to current working directory and the stashed object removed from stash-stack. To list all stashed objects in stack run `git stash list` command.<br><br>|
 
 |<a id="repo-history">Repo history</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
 |:---|
@@ -297,10 +301,6 @@ _Good Git tutorials can be found [here](https://www.youtube.com/watch?v=uR6G2v_W
 |<a id="remote-branch">Remote&nbsp;&&nbsp;Upstream&nbsp;branch</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
 |:---|
 |__Remote branch__ is a branch that exists in a remote repository, usually on an online git-hosting service like GitHub. A remote branch that is connected/referenced from a local system is in this context also called being an "upstream branch". You can often see expression that a "local branch tracks its upstream". It means the local version is somehow connected to its "sibling in remote" and tries to know everything that happens to him. Procedure of connecting a local branch with its corresponding branch in remote is in Git documentation often called as "setting [upstream](#upstream) for a local branch".<br><br> __How to set upstream for a local branch?__ It can be done in two ways:<br><br>▸ Manually: Only if there already exists a "remote-tracking branch" on the local system then any local branches upstream can be set with command `git branch --set-upstream-to [name of "remote-tracking branch"]`.<br><br>▸ Automatic: Whenever you run any first push/pull/fetch command to corresponding remote branch add `-u` flag like `git fetch -u [remote-connection][local-branch]`. This will not only create a remote-tracking branch (named <remote-connection>/<local-branch>) but also connect it (set as upstream) for our local branch.<br><br>Note! When cloning a repo from a remote then Git automatically checks out a default local branch and automatically make it a "tracking branch" by setting its upstream in the background. Therefore in most common cases after cloning from a remote we end up with two local branches, "master" and "origin/master", and we can run git `Git pull & push` commands without any additional parameter straight out of the box for this checkout branch.<br><br>|
-
-|<a id="head">HEAD</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
-|:---|
-|HEAD in Git is a movable pointer always pointing to a commit that we currently have checked out in our working directory. In normal cases it always point to a branch and therefore when branch moves to point to the latest commit then automatically our HEAD does as well. Branch and HEAD pointers are in such a case "attached". When we check out a branch then Git always automatically let HEAD pointer to point to branch and as it always checks out latest commit. But note that there are cases when we need to check out a specific commit ot tag and not a branch! Then the HEAD points directly to this specific commit/tag and not the branch. This scenario is called [detached HEAD](#detached-head).<br><br>|
 
 |<a id="detached-head">Detached HEAD</a><a align=left href="#common-git-expressions">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>| 
 |:---|
@@ -330,79 +330,98 @@ _Good Git tutorials can be found [here](https://www.youtube.com/watch?v=uR6G2v_W
 <br>
 <p align=right><a id="useful-git-commands-m" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-### [__Useful Git commands__](#) 
+<br>
 
-Some common and very usefull git commands tp know
+## [__Useful Git commands__](#) 
 
- ◦ [HELP COMMANDS](#help-commands) ◦ <br>
- ◦ [INFO & STATUS COMMANDS](#info-status-commands) ◦ <br>
- ◦ [COPY A REPO TO OUR OWN](#conflicts-commands) ◦ <br>
- ◦ [CONFIGURATION COMMANDS](#configuration-commands) ◦ <br>
- ◦ [CREATE NEW REPOSITORY](#create-new-repo-commands) ◦ <br>
- ◦ [CREATE NEW BRANCH](#create-new-branch-commands) ◦ <br>
- ◦ [CHECK OUT BRANCH](#check-out-branch-commands) ◦ <br>
- ◦ [SYNCHRONIZE WITH REMOTE](#synchronize-with-remote-command) ◦ <br>
- ◦ [STAGE & COMMIT](#stage-commit-commands) ◦ <br>
- ◦ [MERGE & REBASE](#merge-rebase-commands) ◦ <br>
- ◦ [DIFF & LOGS](#diff-logs-commands) ◦ <br>
- ◦ [UNDO & CORRECT](#undo-correct-commands) ◦ <br>
- ◦ [CONFLICTS](#conflicts-commands) ◦ <br>
+---
+
+Some common and very useful git commands tp know. Note that in VSCode you can open 'Command palette' (`CTRL-SHIFT-P`) where you can run git commands by choosing from a list instead of typing them into the terminal window.
+
+ - [Help commands](#help-commands) - _get information about commands_
+ - [Initial configuration](#configuration-commands) - _configure your git first of all_
+ - [Info & Status commands](#info-status-commands) - _get status and information_
+ - [Copy external repo](#clone-external-repo) - _copy remote repo as our own_
+ - [Create a new repo](#create-new-repo-commands) - _create a local repo_
+ - [Create a new branch](#create-new-branch-commands) - _create a new branch_
+ - [Check-out a branch or filename](#check-out-branch-commands) _checking out a branch or file_
+ - [SYNCHRONIZE WITH REMOTE](#synchronize-with-remote-command) ◦ <br>
+ - [STAGE & COMMIT](#stage-commit-commands) ◦ <br>
+ - [MERGE & REBASE](#merge-rebase-commands) ◦ <br>
+ - [DIFF & LOGS](#diff-logs-commands) ◦ <br>
+ - [UNDO & CORRECT](#undo-correct-commands) ◦ <br>
+ - [CONFLICTS](#conflicts-commands) ◦ <br>
  
-
-> Note that in VSCode you can open 'Command palette' (`CTRL-SHIFT-P`) where you can run git commands by choosing those from a list instead of writing the terminal window.
 
 ![Git commands](./app/assets/images/git-commands.png)
 
-|HELP&nbsp;COMMANDS<a id="help-commands" align=left href="#useful-git-commands-m" title="go to top">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>||||
-|:--|---|---|---|
-|`git`| Lists all git commands with short descriptions. |||
-|`git`&nbsp;`log -h`| Short help about a specific command (here log). |||
-|`git`&nbsp;`reset --help`| Extensive help (online in new window) about a specific command (here reset). |||
+
+|Help&nbsp;commands&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<a id="help-commands" href="#useful-git-commands-m" title="Back to top">↩</a>|
+|:--|:--|
+|`git`| Lists all git commands with short descriptions. |
+|`git`&nbsp;`<command> -h`| Short help about a specific command. |
+|`git`&nbsp;`<command> --help`| Extensive help about a specific command (online in new window).|
 
 <br>
 
-|INFO&nbsp;&&nbsp;STATUS&nbsp;COMMANDS<a id="info-status-commands" align=left href="#useful-git-commands-m" title="go to top">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>||||
-|:--|---|---|---|
-|`git`&nbsp;`--version`| Prints current git version |||
-|`git`&nbsp;`status`| Prints current repo status: current branch, changes in w-tree/index, errors, conflicts and info. |||
-|`git`&nbsp;`log --oneline --graph -5`| List 5 last commits from HEAD down, nicely each commit on each line. Use `--all` instead of `-5` to list all. |||
-|`git`&nbsp;`branch -a -vv`| List all local and remote-tracking branches with corresponding upstream status for tracking ones. |||
-|`git`&nbsp;`remote -v`| Prints all set remote connections together with their aliases/names and urls |||
+|Initial&nbsp;configuration|<a id="configuration-commands" href="#useful-git-commands-m" title="Back to top">↩</a>|
+|:--|:--|
+|`git`&nbsp;`config --global user.name <your-name>`|Set desired name used to be in commits (shown to others)|
+|`git`&nbsp;`config --global user.email <your-email>`|Set desired email used in commits (shown to others)|
 
 <br>
 
-|COPY REPO TO OUR OWN<a id="copy-repo-to-our-own" align=left href="#useful-git-commands-m" title="go to top">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-|:--|---|---|---|
-|||||
-|`git`&nbsp;`clone`&nbsp;`<remote-url>`|Clone a repo to your local hard drive|||
-|`on github`|Create new empty repo on your github. Copy the URL.|||
-|`git`&nbsp;`remote -v`<br>`git remote set-url`<br>`<connection-name> <remote-url>`|Change remote origin URL for the newly cloned repo to url of your own remote repo|||
-|`git push <remote-connection-name> <branch-to-push-from>`|Push changes to your remote URL. This will upload all copied files to your own remote repo|||
+|Info&nbsp;&&nbsp;Status&nbsp;commands&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<a id="info-status-commands" href="#useful-git-commands-m" title="Back to top">↩</a>|
+|:--|:--|
+|`git`&nbsp;`--version`| Prints current git version.|
+|`git`&nbsp;`status`| Prints current repo status:<br>Current branch, changes in w-tree/index, errors, conflicts and info.|
+|`git`&nbsp;`log --graph --oneline -5`| Prints 5 last commits from HEAD down, each commit on each line. Use `--all` instead of `-5` to list all. |
+|`git`&nbsp;`branch -a -vv`| Prints all local and remote-tracking branches with corresponding upstream status.|
+|`git`&nbsp;`remote -v`| Prints all set remote connections: name and url |
+
+
 
 <br>
 
-|CONFIGURATION&nbsp;COMMANDS<a id="configuration-commands" align=left href="#useful-git-commands-m" title="go to top">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-|:--|---|---|---|
-|`git`&nbsp;`config --global user.name <your-name>`|  Set desired name used to be in commits (shown to others) |||
-|`git`&nbsp;`config --global user.email <your-email>`|  Set desired email used in commits (shown to others) |||
+|Copy&nbsp;external&nbsp;repo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<a id="clone-external-repo" href="#useful-git-commands-m" title="Back to top">↩</a>|
+|:--|---|
+|`git`&nbsp;`clone`&nbsp;`<remote-url>`|Clones remote repo into a newly created directory named same as remote repo and checks it out. A remote connection is created in background pointing out the cloned URL.|
+|`On github ...`|Do create a new empty repo on your github account and save the URL to this new repo.|
+|`git remote set-url <connection-name> <our-remote-url>`|First with `git remote -v` get the name of existing connection (probably _origin_). Change existing remote URL for the newly cloned repo to url of our own created repo.|
+|`git push <remote-connection-name> <branch-to-push>`|Push/upload all copied files to own remote repo.|
 
 <br>
 
-|CREATE&nbsp;NEW&nbsp;REPOSITORY<a id="create-new-repo-commands" align=left href="#useful-git-cmmands-m" title="go to top">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>||||
-|:--|---|---|---|
-||__Create a new repo__<br>There are two ways of creating a local repo on your local machine. Either create a new repo from scratch or copy already existing one. |||
-|`git init`| Create a new empty local repo from scratch. To create the repo in a new sub-folder: `git`&nbsp;`init`&nbsp;`<folder`&#8209;`name>` |||
-||__Copy existing repo__<br>If not differently instructed Git by default will check-out this local branch which in remote is marked with HEAD (usually "master"). If another branch is desired to be checked out add `-b <remote-branch-to-check-out>` to the command. Git automatically, in background, creates a remote connection called "origin" pointing to remote url we clone from. Also a local "remote-tracking branch" (usually called "origin/master") is created and connects our checked out branch to it as its "upstream". |||
-|`git`&nbsp;`clone`&nbsp;`<remote-url>`| First creates new local repo by copying a repo from given url into new folder named same as remote repo. Then downloads ALL remote branches into it. |||
-|`git`&nbsp;`clone `&#8209;&#8209;`single-branch `&#8209;`b`&nbsp;`<remote-branch-to-clone> <remote-url>` | First create local repo by copying a repo from given remote url into a new folder named same as remote repo. Then download only one defined remote branch into it. |||
+|Create&nbsp;a&nbsp;new&nbsp;repo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<a id="create-new-repo-commands" href="#useful-git-commands-m" title="Back to top">↩</a>|
+|:--|:--|
+||There are _two ways_ of creating a repo on your local machine. Either create a new repo from scratch or create one by coping an already existing one.|
+|`git init`| Creates a new empty local repo from scratch in the current folder. To create the repo with different name (in a new sub-folder) use `git`&nbsp;`init`&nbsp;`<folder`&#8209;`name>`|
+||_When cloning existing repo_<br>Common is that Git automatically, in background, creates a remote connection named "_origin_" pointing to remote url we clone from. Also a local "_remote-tracking branch_" (usually called "origin/master") is created in background and is used on the local _master_ branch as its "upstream". If not differently instructed by default clone command will check-out that branch which in remote is marked with HEAD - usually named _master_. If different branch is desired to be checked out after a clone then add `-b <branch-name-to-check-out>`|
+|`git`&nbsp;`clone`&nbsp;`<remote-url>`|Clones remote repo into a newly created directory named same as remote repo. Copies the whole repo, with all its branches from the given url. Creates remote-tracking branches for each branch. If different directory is desired add `<new-local-repo-name>` at the end.|
+|`git clone`&nbsp;&#8209;&#8209;`single-branch`&nbsp;&#8209;`b`&nbsp;<br>`<remote-branch-name> <remote-url> <new-local-repo-name>` |Clones from url only one branch "remote-branch-name" from a remote repo into a newly created directory named "new-local-repo-name". Creates remote-tracking branches for the cloned branch. Checks out the cloned branch.|
 
 <br>
 
-|CREATE&nbsp;NEW&nbsp;BRANCH<a id="create-new-branch-commands" align=left href="#useful-git-commands-m" title="go to top">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-|:--|---|---|---|
-|`git branch <local-branch-name>`| Creates new branch but do not check it out |||
-|`git checkout -b <local-branch-name>`| Creates new branch and check it out. |||
-|`git branch`<br>`<local-branch-name> Rel-1.45`| Creates new branch originating from a specific tag. The new branch is NOT checked out! |||
+|Create&nbsp;a&nbsp;new&nbsp;branch|<a id="create-new-branch-commands" href="#useful-git-commands-m" title="Back to top">↩</a>|
+|:--|:--|
+|`git branch <new-branch-name>`| Creates new branch originating from HEAD on branch we are on. Does NOT CHECK OUT the branch.|
+|`git branch <new-branch-name> <hash-or-tag>`| Creates new branch originating from a specific hash or tag. Does NOT CHECK OUT the branch.|
+|`git checkout -b <new-branch-name>`| Creates new branch originating from HEAD on branch we are on and CHECKS OUT the new branch. If desired to checkout based not on current HEAD but another branch then add <branch-name-to-checkout-from>|
+
+<br>
+
+|Check&nbsp;-&nbsp;out&nbsp;a&nbsp;branch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<a id="check-out-branch-commands" href="#useful-git-commands-m" title="Back to top">↩</a>|
+|:--|:--|
+||_General for checkout commands_<br>If there are uncommitted modification and a risk that checkout command overwrite those then checkout will abort. Plain checkout command switches the content we have in our working directory but with `-b` flag it also creates a new branch.<br><br>By default git checkout will base the new-branch off the current HEAD.  If <branch-name-to-checkout-from> is added in the end then checkout bases new-branch off of existing-branch instead of the current HEAD.|
+| `git checkout .` |Overwrites all files that are not staged with the versions pointed out by current HEAD. Can be ued to clear or reset the working directory. stage files remain untouched. |
+|`git checkout <other-local-branch>`|Checks out a defined branch.|
+|`git checkout -- <file-name>`|checks out a defined filename (`--` used to mark start of file name) |
+|`git checkout <hash or tag>`|Checks out a defined hash or tag.|
+|`git checkout HEAD~2 --<file-name>`| Drops all modifications of <file-name> and replaces the file with its version from HEAD~2 = two commits before the current. |
+|`git checkout HEAD^`| Checks out previous commit from the one we point to in [Detached Head State](#detached-head) |
+|`git checkout <other-local-branch> -- <file-name>`|  Drops all modifications of <file-name> by replacing it by onother version of file from diffrent branch |
+|`git checkout -b <new-local-branch>`|Creates & checks out new branch originating from current HEAD (= tip of the branch we are currently on).|
+|`git checkout -b <new-local-branch> <from-local-branch>`| Creates & checks out new branch originating from another local branch.|
 
 <br>
 
@@ -413,20 +432,6 @@ Some common and very usefull git commands tp know
 |`git`&nbsp;`remote`&nbsp;`add`<br>`<connection-name> <remote-url>`| Add new remote connection with given name and url. First delete one existing with same name. |||
 |`git remote set-url`<br>`<connection-name> <remote-url>`| Changes url in existing remote connection |||
 |`TODO`| set upstream |||
-
-<br>
-
-|CHECK&nbsp;OUT&nbsp;BRANCH<a id="check-out-branch-commands" align=left href="#useful-git-commands-m" title="go to top">&nbsp;&nbsp;&nbsp;&nbsp;↩&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-|:--|---|---|---|
-|| ___General for checkout commands below:___<br> _If there are uncommitted modification and there is risk that the command overwrite those then checkout will abort. Plain checkout command switches the content we have in our working directory but with -b flag it also creates a new branch_ |||
-| `git checkout -- .` | #todo |||
-| `git checkout <other-local-branch>` | #todo |||
-| `git checkout <hash> or <tag>` | #todo |||
-| `git checkout HEAD^` | #todo |||
-| `git checkout -- <file-name>` | #todo |||
-| `git checkout <other-local-branch> -- <file-name>` | #todo |||
-|`git checkout -b <new-local-branch>`| Creates & checks out new branch originating from current HEAD (= tip of the branch we have checked out).`|||
-|`git checkout -b <new-local-branch> <from-local-branch>`| Creates & checks out new branch originating from another specified local branch. |||
 
 <br>
 
