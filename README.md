@@ -115,10 +115,6 @@ Navigation in VSCode... __TODO__
 
 __Add Folder To Workspace__ makes it possible to have several projects open in same workspace.
 
-
-
-
-
 <br>
 <p align=right><a id="terminal-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
@@ -141,25 +137,27 @@ Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcu
 
 |__NAVIGATION__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---|
-|`Ctrl+P`| __Search & Go to files...__<br>Opens __File Search__ window. Recently used on top. Use `ESC` to close it |
-|`Ctrl+Shift+P`| __Search & Run commands...__<br>Opens __Command Palette__. Recently used on top. Use `ESC` to close it |
+|`Ctrl+P`| __Search & Run files...__<br>Opens File Search window. Recently used on top. Use `ESC` to close it |
+|`Ctrl+Shift+P`| __Search & Run commands...__<br>Opens Command Palette. Recently used on top. Use `ESC` to close it |
 |`Ctrl+B`| __Toggle sidebar__<br>Toggles visibly of sidebar window |
-|`Ctrl+⇔`| __Jump whole words__<br>Move cursor whole words right/left|
-|`Ctrl+Shift+⇔⇕` |__Mass selection__<br>First press selects focused word. Next presses select sections to right/left/up/down|
+|`Ctrl+Shift+⇔⇕  ` |__Mass selection__<br>First press selects focused word. Next presses select sections to right/left/up/down|
 | `Ctrl+D` |__Select word & multi__<br>First press selects focused word. Next presses add multi-cursor on all same words. |
+|`Ctrl+<>`| __Jump whole words__<br>Move cursor whole words right/left|
 | `Alt+▲▼` |__Move whole line up/down__<br>Moves whole focused/selected row up or down |
-| `Alt+<mouse-click>` |__Add multi-cursors__<br>Adds extra cursor for every click |
 
 <br>
 
 |__CODING__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---|
 | `Ctrl+Space` | __Open intellisense__<br> Opens intellisense dialog for focused expression. Use `ESC` to close it. |
-| `Alt+Shift+F`* | __Format selection__<br> *Note! Must be set in `Keyboard Shortcuts -> Format selection` |
+| `Alt+Shift+F`* | __Format selection__<br> *Note! Download extension "Prettier" or for VSCode native must be set in `Keyboard Shortcuts -> Format selection` |
+| `Ctrl-S` |__Format on save__<br> *Can be enabled in settings by `Editor: Format On Save`. |
 | `Ctrl+F` | __Find & Replace in file__<br> Find all focused/selected words in file. Replace from new window. Use `ESC` to close it. |
 | `Ctrl+Shift+F` | __Find & Replace in proj__<br> Find all focused/selected words in project. Replace from new window. Use `ESC` to close it. |
 | `Alt+Shift+[Sel]`&nbsp; | __Group edit block__<br> Multi-cursors. Select a block of text to edit. |
-| `*` |__Select matching tags__<br> *Enable by enabling `mirrorCursorOnMatchingTag` in Settings. |
+| `Alt+<mouse-click>` |__Add multi-cursors__<br>Adds extra cursor for every click |
+| `Ctrl-I`* |__Wrap HTML in tag__<br> Wraps selected HTML code in new tag. *To work extension "Html tag wrapper" must be installed.  |
+| `*` |__Auto-select matching tags__<br> *Can be enabled in settings by `mirrorCursorOnMatchingTag`. |
 
 <br>
 
@@ -181,21 +179,29 @@ More and more is getting integrated into VSCode for each release but here are so
 
 You can search online for [VSCode Marketplace](https://marketplace.visualstudio.com/) for extensions or directly from VSCode.
 
-|Extension&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
-|:---|:---|
-| `VSCode Icons` | A set of nice icons shown in explorer bar in VSCode UI that makes navigating and finding a special file type easier. |
-| `Rainbow Brackets` |Provides different colors for round, square and the squiggly brackets so those ar easier to distinguish |
-| `Code Spell Checker` | Check for spelling mistakes and proposes corrections |
-| `Live Server` | A lightweight local dev server with live auto-reload when HTML & CSS files are saved. Easy one-click to run |
-| `Browser Preview` | Opens the debug server as a teb in your  VSCode so you do not need to navigate to separate browser window. |
-| `Git Graph` | Visualizes branches history in separate window nicely. Shows launching "Git Graph" button on the status bar  |
-| `Git Lens` | Extensive Git insights with own sidebar. Good file history comparison |
-| `Git History` | This tool draws nice file history diagrams |
-| `Markdown All in One` | Enable this when working with Markdown. Export to HTML, table of contents. |
-| `Markdown Shortcuts` | Enable this when working with Markdown. Icons in nav bar and right on .md file brings a list with markdown commands to |
-| `IntelliSense for CSS class names in HTML` | Autocompletion for CSS class definitions. CSS referenced through link in HTML |
-| `Quokka` | ... |
-| `Vue` | Syntax highlight for Vue.js framework |
+|Extension&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+|:---|:---|:---|
+|Common| `Prettier` | Code formatter tool. Set up to auto-format on save (` Editor: Format On Save`) or use shortcut to format selection `Alt+Shift+F`. Set `Prettier: Tab Width` to match `Tab size` to i.e. 4. Intendation can also be selected in bottom menu overwrites this for a certain type file type. Prettier will inherit this setting on file level. To use single quote instead of double quote enable` Prettier: Jsx Single Quote` `Prettier: Single Quote`. Note, had problems with single quote changing to double quote when Vetur was installed and interfering with prettier. Unstalling and installing Prettier & Vetur in this order solved it.|
+|Common| `Code Spell Checker` | Check for spelling mistakes and proposes corrections |
+|Common| `VSCode Icons` | A set of small icons shown in explorer bar that makes navigating and finding a special file type easier. |
+|Common| `Bracket Pair Colorizer` |Provides different colors for round, square and squiggly brackets so those ar easier to distinguish. |
+|Common| `Better comments` |More human-friendly highlighted comments with colour. use characters like `!` `?`   to get different color highlights. |
+|Web Dev| `ESLint` | Analyzes to quickly find problems when developing. Find and fix problems in your JavaScript, TypeScript and more. Rules [here](https://eslint.org/docs/rules/) |
+|Web dev| `Auto Rename Tag` | Renames start/end tags in all languages i.e. .vue files due to this extension. VS Code offers this feature by default only in html files to enable in setting "renameOnType" |
+|Web dev| `Auto Close Tag` | Automatically add HTML close tag after entering <tag>. It is has built-in in VSCode for HTML, Handlebars and Razor files but this extension is enables this for other languages like Vue, XML, PHP, JavaScript, TypeScript, JSX, TSX and so on |
+|Web dev| `Auto import` | Automatically finds, parses and adds to IntelliSense code actions proposals with code completion with available import actions. |
+|Web dev| `IntelliSense for CSS class names in HTML` | Autocompletion for CSS class definitions. CSS referenced through link in HTML |
+Web dev| `HTML Tag Wrapper` | Wraps a selection with new tag. Shortcut: `CTRL+I` |
+|Web dev - JS| `Quokka` | For Javascript - runtime values are updated and displayed in editor next to your code, as you type. documentation found [here](https://quokkajs.com/docs/index.html) |
+|Web dev - Vue| `Vetur` | Most useful and specific for Vue.js development with syntax-highlighting, EMMET, IntelliSense etc. Note, it includes auto-formatting that can interfere with "Prettier" formatter. Suggested to install Prettier first and customize the formatting and later install Vetur and set Prettier as main formatter for everything in Vetur settings. For  line intendation uncheck `Use Tabs`. Documentation [here](https://vuejs.github.io/vetur/) |
+|Web dev - Debug| `Browser Preview` | Open a real browser preview inside your editor that you can debug. Open it with click in icon in explorer menu to the left |
+|Web dev - Debug| `Live Server` | A lightweight local dev server with hot (auto-reload) when files are saved. Fast alternative to webpack-dev-server to run by one-click on icon in the bottom ribbon. |
+|Git| `Graph` | Visualizes branches history in separate window nicely. Shows launching "Git Graph" button on the status bar  |
+|Git| `Lens` | Extensive Git insights with own sidebar. Good file history comparison |
+|Git| `History` | This tool draws nice file history diagrams |
+|Markdown| `All in One` | Features like Export .MD to HTML, build table of contents and more. Enable when working with Markdown. |
+|Markdown| `Shortcuts` | Brings a list with markdown commands to with shortcuts and clickable icons on top bar. Enable when working with Markdown.|
+|C#| `C#` |  C# extension for Visual Studio Code |
 
 <br>
 <p align=right><a id="emmet-snippets-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
