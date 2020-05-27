@@ -164,11 +164,11 @@ Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcu
 
 |__TERMINAL__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---|
-| `Ctrl+Ö*`  | __Open/Hide & Focus__<br> Creates new terminal or focuses cursor when run in terminal window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
+| `Ctrl+Ö`*  | __Open/Hide & Focus__<br> Creates new terminal or focuses cursor when run in terminal window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
 | `Ctrl+L` |__Clear window__<br> Clear focused terminal window |
-| `Ctrl+K*` |__Kill terminal__<br> Kills current terminal and if last hides the window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
-| `Ctrl+▲▼*`   |__Scroll Up or Down__<br> Scroll up od down in focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
-| `Ctrl+◀▶*` |__Enlarge or Shrink__<br> Enlarge or shrinks focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
+| `Ctrl+K`* |__Kill terminal__<br> Kills current terminal and if last hides the window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
+| `Ctrl+▲▼`*   |__Scroll Up or Down__<br> Scroll up od down in focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
+| `Ctrl+◀▶`* |__Enlarge or Shrink__<br> Enlarge or shrinks focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
 
 <br>
 <p align=right><a id="useful-extensions-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
