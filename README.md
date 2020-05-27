@@ -95,14 +95,14 @@ Search for following string in _`Settings -> Keyboard Shortcuts`_  and set follo
 
 <br>
 
-|Search&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Set|
-|---|:---|
-|"Terminal: Scroll To Bottom",<br> "Toggle Integrated Terminal",<br> "Focus Terminal"|`Ctrl+Ö`|
-|"Kill Active Instance"|`Ctrl+K`|
-|"Terminal: Scroll Up (Line)"|`Ctrl+UpArrow`&nbsp;and set "When" to `terminalFocus`|
-|"Terminal: Scroll Down (Line)"|`Ctrl+DownArrow`&nbsp;and set "When" to `terminalFocus`|
-|"Terminal: Resize Pane Left"|`Ctrl+LeftArrow`&nbsp;and set "When" to `terminalFocus`|
-|"Terminal: Resize Pane Right"|`Ctrl+RightArrow`&nbsp;and set "When" to `terminalFocus`|
+|Search&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Set||
+|:--|:--|:--|
+|"Terminal: Scroll To Bottom",<br> "Toggle Integrated Terminal",<br> "Focus Terminal"<br>"View: Toggle Panel"|`Ctrl+Ö`|Opens new terminal, focus terminal and hides (toggles) if open|
+|"Kill Active Instance"|`Ctrl+K`|Terminates and closes the terminal
+|"Terminal: Scroll Up (Line)"|`Ctrl+UpArrow` + "When" to `terminalFocus`|
+|"Terminal: Scroll Down (Line)"|`Ctrl+DownArrow` + "When" to `terminalFocus`|
+|"Terminal: Resize Pane Left"|`Ctrl+LeftArrow` + "When" to `terminalFocus`|
+|"Terminal: Resize Pane Right"|`Ctrl+RightArrow` + "When" to `terminalFocus`|
 
 <br>
 <p align=right><a id="navigation-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
@@ -137,36 +137,36 @@ Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcu
 
 |__NAVIGATION__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---|
-|`Ctrl+P`| __Search & Run files...__<br>Opens File Search window. Recently used on top. Use `ESC` to close it |
+|`Ctrl+P`| __Search & Open files...__<br>Opens File Search window. Recently used on top. Use `ESC` to close it |
 |`Ctrl+Shift+P`| __Search & Run commands...__<br>Opens Command Palette. Recently used on top. Use `ESC` to close it |
-|`Ctrl+B`| __Toggle sidebar__<br>Toggles visibly of sidebar window |
+|`Ctrl+Enter`*| __Toggle sidebar visibility__<br>Toggles visibly of sidebar window.*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility` |
+|`Ctrl+⇔`| __Jump whole words__<br>Move cursor whole words right/left|
 |`Ctrl+Shift+⇔⇕  ` |__Mass selection__<br>First press selects focused word. Next presses select sections to right/left/up/down|
-| `Ctrl+D` |__Select word & multi__<br>First press selects focused word. Next presses add multi-cursor on all same words. |
-|`Ctrl+<>`| __Jump whole words__<br>Move cursor whole words right/left|
-| `Alt+▲▼` |__Move whole line up/down__<br>Moves whole focused/selected row up or down |
+| `Ctrl+▲` |__Select word & multi__<br>First press selects focused word. Next presses add multi-cursor on all same words Start-End tags.  Use `ESC` to abort. |
+| `Ctrl+▼`* |__Select whole line__<br>Select whole line downwards.  Use `ESC` to abort. *Must be set in Keyboard Shortcuts for `expandLineSelection` |
+| `Alt+▲▼` |__Move whole line up/down__<br>Moves whole focused/selected row up or down  |
+| `Ctrl+Alt+⇔`* |__Go to lins start/end__<br>Moves cursor start or end of line text. *Must be set in Keyboard Shortcuts for `cursor line start` & `cursor line end`  |
 
 <br>
 
 |__CODING__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
-|:---|---|
+|:---|---| 
 | `Ctrl+Space` | __Open intellisense__<br> Opens intellisense dialog for focused expression. Use `ESC` to close it. |
-| `Alt+Shift+F`* | __Format selection__<br> *Note! Download extension "Prettier" or for VSCode native must be set in `Keyboard Shortcuts -> Format selection` |
-| `Ctrl-S` |__Format on save__<br> *Can be enabled in settings by `Editor: Format On Save`. |
-| `Ctrl+F` | __Find & Replace in file__<br> Find all focused/selected words in file. Replace from new window. Use `ESC` to close it. |
+| `Ctrl+S` |__Format on save__<br> *Must be enabled in settings by `Editor: Format On Save`.  |
+| `Ctrl+F` | __Find & Replace in file__<br> Find all focused/selected words in file. Replace from new window. Use `ESC` to close it. | 
 | `Ctrl+Shift+F` | __Find & Replace in proj__<br> Find all focused/selected words in project. Replace from new window. Use `ESC` to close it. |
-| `Alt+Shift+[Sel]`&nbsp; | __Group edit block__<br> Multi-cursors. Select a block of text to edit. |
-| `Alt+<mouse-click>` |__Add multi-cursors__<br>Adds extra cursor for every click |
+| `Alt+<mouse-click>` |__Edit multi-cursors__<br>Adds extra cursor for every click |
+| `Alt+Shift+[Sel]`&nbsp; | __Edit multi-block__<br> Multi-cursors. Select a block of text to edit. |
 | `Ctrl-I`* |__Wrap HTML in tag__<br> Wraps selected HTML code in new tag. *To work extension "Html tag wrapper" must be installed.  |
-| `*` |__Auto-select matching tags__<br> *Can be enabled in settings by `mirrorCursorOnMatchingTag`. |
+| `*` |__Auto-rename matching tags__<br> *Can be enabled by installing extension `Auto Rename Tag`. |
 
 <br>
 
 |__TERMINAL__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---|
-| `Ctrl+Ö*`  | __Open & Focus__<br> Creates new terminal or focuses cursor when run in terminal window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
+| `Ctrl+Ö*`  | __Open/Hide & Focus__<br> Creates new terminal or focuses cursor when run in terminal window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
 | `Ctrl+L` |__Clear window__<br> Clear focused terminal window |
 | `Ctrl+K*` |__Kill terminal__<br> Kills current terminal and if last hides the window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
-| `Ctrl+J`  |__Hide terminal__<br> Hides terminal window without killing terminal(s) |
 | `Ctrl+▲▼*`   |__Scroll Up or Down__<br> Scroll up od down in focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
 | `Ctrl+◀▶*` |__Enlarge or Shrink__<br> Enlarge or shrinks focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
 
@@ -181,7 +181,6 @@ You can search online for [VSCode Marketplace](https://marketplace.visualstudio.
 
 |Extension&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|:---|:---|
-|Common| `Prettier` | Code formatter tool. Set up to auto-format on save (` Editor: Format On Save`) or use shortcut to format selection `Alt+Shift+F`. Set `Prettier: Tab Width` to match `Tab size` to i.e. 4. Intendation can also be selected in bottom menu overwrites this for a certain type file type. Prettier will inherit this setting on file level. To use single quote instead of double quote enable` Prettier: Jsx Single Quote` `Prettier: Single Quote`. Note, had problems with single quote changing to double quote when Vetur was installed and interfering with prettier. Unstalling and installing Prettier & Vetur in this order solved it.|
 |Common| `Code Spell Checker` | Check for spelling mistakes and proposes corrections |
 |Common| `VSCode Icons` | A set of small icons shown in explorer bar that makes navigating and finding a special file type easier. |
 |Common| `Bracket Pair Colorizer` |Provides different colors for round, square and squiggly brackets so those ar easier to distinguish. |
@@ -193,7 +192,7 @@ You can search online for [VSCode Marketplace](https://marketplace.visualstudio.
 |Web dev| `IntelliSense for CSS class names in HTML` | Autocompletion for CSS class definitions. CSS referenced through link in HTML |
 Web dev| `HTML Tag Wrapper` | Wraps a selection with new tag. Shortcut: `CTRL+I` |
 |Web dev - JS| `Quokka` | For Javascript - runtime values are updated and displayed in editor next to your code, as you type. documentation found [here](https://quokkajs.com/docs/index.html) |
-|Web dev - Vue| `Vetur` | Most useful and specific for Vue.js development with syntax-highlighting, EMMET, IntelliSense etc. Note, it includes auto-formatting that can interfere with "Prettier" formatter. Suggested to install Prettier first and customize the formatting and later install Vetur and set Prettier as main formatter for everything in Vetur settings. For  line intendation uncheck `Use Tabs`. Documentation [here](https://vuejs.github.io/vetur/) |
+|Web dev - Vue| `Vetur` | Most useful and specific for Vue.js development with syntax-highlighting, EMMET, IntelliSense etc. Note, it includes auto-formatting that can interfere with "Prettier" formatter. Suggested to install Prettier first and customize the formatting and later install Vetur and set Prettier as main formatter for everything in Vetur settings. For  line intendation uncheck `Use Tabs`. Disable Attribute wrapping with adding for `Default Formatter Options` setting `"js-beautify-html": {"wrap_attributes": "auto"}` and use `Vetur: Default Formatter: HTML` `js-beautify-html`. Documentation [here](https://vuejs.github.io/vetur/) |
 |Web dev - Debug| `Browser Preview` | Open a real browser preview inside your editor that you can debug. Open it with click in icon in explorer menu to the left |
 |Web dev - Debug| `Live Server` | A lightweight local dev server with hot (auto-reload) when files are saved. Fast alternative to webpack-dev-server to run by one-click on icon in the bottom ribbon. |
 |Git| `Graph` | Visualizes branches history in separate window nicely. Shows launching "Git Graph" button on the status bar  |
