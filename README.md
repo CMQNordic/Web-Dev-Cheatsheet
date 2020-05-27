@@ -93,16 +93,16 @@ We recommend to manually customize some shortcuts related to the terminal so tha
 
 Search for following string in _`Settings -> Keyboard Shortcuts`_  and set following:
 
-<br>
-
-|Search&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Set||
+|Fraze&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Shortcut||
 |:--|:--|:--|
 |"Terminal: Scroll To Bottom",<br> "Toggle Integrated Terminal",<br> "Focus Terminal"<br>"View: Toggle Panel"|`Ctrl+Ö`|Opens new terminal, focus terminal and hides (toggles) if open|
 |"Kill Active Instance"|`Ctrl+K`|Terminates and closes the terminal
-|"Terminal: Scroll Up (Line)"|`Ctrl+UpArrow` + "When" to `terminalFocus`|
-|"Terminal: Scroll Down (Line)"|`Ctrl+DownArrow` + "When" to `terminalFocus`|
-|"Terminal: Resize Pane Left"|`Ctrl+LeftArrow` + "When" to `terminalFocus`|
-|"Terminal: Resize Pane Right"|`Ctrl+RightArrow` + "When" to `terminalFocus`|
+|"Terminal: Scroll Up (Line)"|`Ctrl+UpArrow` and when to `terminalFocus`|
+|"Terminal: Scroll Down (Line)"|`Ctrl+DownArrow` and when to `terminalFocus`|
+|"Terminal: Resize Pane Left"|`Ctrl+LeftArrow` and when to `terminalFocus`|
+|"Terminal: Resize Pane Right"|`Ctrl+RightArrow` and when to `terminalFocus`|
+
+Some other shortcuts can be customized in _`Settings -> Keyboard Shortcuts`_. Please see chapter Shortcuts to witch are not default and need to be added manually. 
 
 <br>
 <p align=right><a id="navigation-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
@@ -137,36 +137,39 @@ Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcu
 
 |__NAVIGATION__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---|
-|`Ctrl+P`| __Search & Open files...__<br>Opens File Search window. Recently used on top. Use `ESC` to close it |
-|`Ctrl+Shift+P`| __Search & Run commands...__<br>Opens Command Palette. Recently used on top. Use `ESC` to close it |
-|`Ctrl+Enter`*| __Toggle sidebar visibility__<br>Toggles visibly of sidebar window.*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility` |
-|`Ctrl+⇔`| __Jump whole words__<br>Move cursor whole words right/left|
-|`Ctrl+Shift+⇔⇕  ` |__Mass selection__<br>First press selects focused word. Next presses select sections to right/left/up/down|
-| `Ctrl+▲` |__Select word & multi__<br>First press selects focused word. Next presses add multi-cursor on all same words Start-End tags.  Use `ESC` to abort. |
-| `Ctrl+▼`* |__Select whole line__<br>Select whole line downwards.  Use `ESC` to abort. *Must be set in Keyboard Shortcuts for `expandLineSelection` |
-| `Alt+▲▼` |__Move whole line up/down__<br>Moves whole focused/selected row up or down  |
-| `Ctrl+Alt+⇔`* |__Go to lins start/end__<br>Moves cursor start or end of line text. *Must be set in Keyboard Shortcuts for `cursor line start` & `cursor line end`  |
+|`Ctrl+⇔`| __Jump: Whole Words__<br>Moves cursor whole words/expressions left/right. |
+| `Ctrl+Alt+⇔`__*__ |__Jump: Start/End__<br>Moves cursor to start or end of a text line.<br> _*Must be set in Keyboard Shortcuts for `cursor line start` & `cursor line end`_  |
+| `Ctrl+▲`__*__ |__Select: Word & Multi-Cursor__<br>First press selects the focused word. Next presses add multi-cursor on all same words i.e. corresponding end tag. Use `ESC` to abort.<br> _*Must be set in Keyboard Shortcuts for `Add Selection To Next Find Match`_ |
+| `Ctrl+▼`__*__ |__Select: Line & Down__<br>First press selects whole line, next presses selects whole line downwards.  Use `ESC` to abort.<br> _*Must be set in Keyboard Shortcuts for `expandLineSelection`_ |
+|`Ctrl+Shift+▼▲◄►`__*__ |__Select: Block__<br> Selects blocks/lines from the focused cursor. <br> _*Must be set in Keyboard Shortcuts `Ctrl+Shift+▲` for `cursorUpSelect`_ |
+| `Shift+Tab/Å`* |__Indent Row__<br>`Tab` indents to left, `Å` to right.<br> _*Must be set in Keyboard Shortcuts for `Shift Å` for `Indent Line`_ |
+| `Alt+▲▼` |__Move Selection__<br>Moves whole focused selection up or down. |
+|`Ctrl+Enter`*| __Toggle Explorer & Focus__<br>Toggles visibly of sidebar explorer window. Second press focuses it. When in focus use `⇔` to navigate into folders. __`Enter`__ to open selected file. __`Ctrl+W`__ to close focused file.  <br> _*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility`_ and `Explorer: Focus On Folders View` with when set to `explorerViewletVisible && inputFocus`|
+|`Ctrl+P`| __Search & Toggle Files__<br>Opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. |
+|`Ctrl+Shift+P`| __Command Palette__<br>Opens Command Palette where commands can be easily searched. Recently used shown on top. Use `ESC` to exit. |
+| `Ctrl+F` | __Find & Replace in file__<br> Find all focused/selected words in file. Replace from new window. Use `ESC` to close it. | 
+| `Ctrl+Shift+F` | __Find & Replace in proj__<br> Find all focused/selected words in project. Replace from new window. Use `ESC` to close it. |
+
 
 <br>
 
 |__CODING__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---| 
+| `Ctrl+S`__*__ |__Format on save__<br> *Must be enabled in settings for `Editor: Format On Save`.  |
+| `Ctrl+Alt+-` | __Toggle comment__<br> Toggle the comment for whole focused line or lines. |
+|`Ctrl+Shift+§`__*__| __Go To Matching Bracket/Tag__<br>Moves cursor to corresponding matching Bracket or Tag<br> _*Install extension `Matchit` for both Tags & Brackets to work on same shortcut. Make sure shortcut (`Ctrl+Shift+§`) is set for ` MatchIt: Jump Items` in Keyboard Shortcuts. Optionally a shortcut for  `Emmet: Go To Matching Pair` can be set too, but when having both Bracket/Tag on same shortcut did not work together out of the box in VSCode. Extensions solves this and works for both tags & brackets with same shortcut.)_|
+| `Ctrl-I`* |__Wrap HTML in Tag__<br> Wraps selected HTML code in new tag. *To work extension "Html tag wrapper" must be installed.  |
+| `Alt+<click>` |__Add Cursors__<br>Adds extra cursor for every mouse click. Use  `Alt+Shift+[Sel]` for whole block. Use `ESC` to exit. |
+|__`*`__ |__Auto Rename Tags__<br> _*Can be enabled by installing extension `Auto Rename Tag` but then it only works for html files. With extension `Auto Rename Tag` it work in all kind of files including html and vue._ |
 | `Ctrl+Space` | __Open intellisense__<br> Opens intellisense dialog for focused expression. Use `ESC` to close it. |
-| `Ctrl+S` |__Format on save__<br> *Must be enabled in settings by `Editor: Format On Save`.  |
-| `Ctrl+F` | __Find & Replace in file__<br> Find all focused/selected words in file. Replace from new window. Use `ESC` to close it. | 
-| `Ctrl+Shift+F` | __Find & Replace in proj__<br> Find all focused/selected words in project. Replace from new window. Use `ESC` to close it. |
-| `Alt+<mouse-click>` |__Edit multi-cursors__<br>Adds extra cursor for every click |
-| `Alt+Shift+[Sel]`&nbsp; | __Edit multi-block__<br> Multi-cursors. Select a block of text to edit. |
-| `Ctrl-I`* |__Wrap HTML in tag__<br> Wraps selected HTML code in new tag. *To work extension "Html tag wrapper" must be installed.  |
-| `*` |__Auto-rename matching tags__<br> *Can be enabled by installing extension `Auto Rename Tag`. |
 
 <br>
 
 |__TERMINAL__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:---|---|
-| `Ctrl+Ö`*  | __Open/Hide & Focus__<br> Creates new terminal or focuses cursor when run in terminal window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
+| `Ctrl+Ö`__*__ | __Open/Focus/Hide__<br> Creates new terminal or focuses cursor when run in terminal window.<br> _*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_ |
 | `Ctrl+L` |__Clear window__<br> Clear focused terminal window |
-| `Ctrl+K`* |__Kill terminal__<br> Kills current terminal and if last hides the window.<br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
+| `Ctrl+K`__*__ |__Kill terminal__<br> Kills current terminal and if last hides the window.<br>_*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_ |
 | `Ctrl+▲▼`*   |__Scroll Up or Down__<br> Scroll up od down in focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
 | `Ctrl+◀▶`* |__Enlarge or Shrink__<br> Enlarge or shrinks focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode) |
 
@@ -189,6 +192,7 @@ You can search online for [VSCode Marketplace](https://marketplace.visualstudio.
 |Web dev| `Auto Rename Tag` | Renames start/end tags in all languages i.e. .vue files due to this extension. VS Code offers this feature by default only in html files to enable in setting "renameOnType" |
 |Web dev| `Auto Close Tag` | Automatically add HTML close tag after entering <tag>. It is has built-in in VSCode for HTML, Handlebars and Razor files but this extension is enables this for other languages like Vue, XML, PHP, JavaScript, TypeScript, JSX, TSX and so on |
 |Web dev| `Auto import` | Automatically finds, parses and adds to IntelliSense code actions proposals with code completion with available import actions. |
+|Web dev| `MatchIt` | Automatically navigates with `Ctrl Alt §` to matching bracket or tag. |
 |Web dev| `IntelliSense for CSS class names in HTML` | Autocompletion for CSS class definitions. CSS referenced through link in HTML |
 Web dev| `HTML Tag Wrapper` | Wraps a selection with new tag. Shortcut: `CTRL+I` |
 |Web dev - JS| `Quokka` | For Javascript - runtime values are updated and displayed in editor next to your code, as you type. documentation found [here](https://quokkajs.com/docs/index.html) |
