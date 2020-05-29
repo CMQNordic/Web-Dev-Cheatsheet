@@ -16,8 +16,8 @@ _Prerequisites: Some HTML & CSS skills._
 
  ► __Technologies & Tools__
   - [__Visual Studio Code__](#visual-studio-code)
-    - [What is VSCode and what is built-in?](#what-is-vscode)<br>
-  	[Customization](#recommended-customization-of-vscode) ◦ [Navigation](#navigation-in-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)
+    - [What is VSCode and what is built-in?](#what-is-vscode)
+	[Customization](#recommended-customization-of-vscode) ◦ [Navigation](#navigation-in-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)
   - Node.js & Npm
     - [What is Node.js and Npm used for?](#nodejs-&-npm)
   	- [Node.js](#install-node.js-and-execute-programs) ◦ [Node.js modules](#useful-node.js-modules)
@@ -32,17 +32,20 @@ _Prerequisites: Some HTML & CSS skills._
 	- [Markdown syntax](#markdown-syntax) 
   
 ► __HTML, CSS and JS__
-- [__CODE EFFECTIVELY__](#code-effectively)
-	- [__CSS__](#css)
-		- [Commonly performed tasks](#commonly-performed-tasks)
-		- [Center a text on a div-box/img](#center-a-text-on-a-div-boximg)
-		- [__BEM__](#bem)
-	- [HTML](#html)
-- [CENTERING THINGS](#centering-things)
-- [Screens and IMAGES](#screens-and-images)
-	- [__Article & Section__](#article--section)
-	- [Content for web](#content-for-web)
-	- [SEO](#seo)
+- [__CSS__](#css)
+			- [Structure](#structure)
+			- [BEM](#bem)
+			- [Commonly performed tasks](#commonly-performed-tasks)
+			- [Floating](#floating)
+			- [Flexbox](#flexbox)
+			- [CSS Grid](#css-grid)
+- [__HTML__](#html)
+			- [Page structure](#page-structure)
+			- [User Input with Forms](#user-input-with-forms)
+- [__Screens and Content__](#screens-and-content)
+			- [Screen Resolution](#screen-resolution)
+			- [Aspect ratio](#aspect-ratio)
+- [__SEO__](#seo)
 
 <br>
 
@@ -145,11 +148,10 @@ Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcu
 | `Shift+Tab/Å`* |__Indent Row__<br>`Tab` indents to left, `Å` to right.<br> _*Must be set in Keyboard Shortcuts for `Shift Å` for `Indent Line`_ |
 | `Alt+▲▼` |__Move Selection__<br>Moves whole focused selection up or down. |
 |`Ctrl+Enter`*| __Toggle Explorer & Focus__<br>Toggles visibly of sidebar explorer window. Second press focuses it. When in focus use `⇔` to navigate into folders. __`Enter`__ to open selected file. __`Ctrl+W`__ to close focused file.  <br> _*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility`_ and `Explorer: Focus On Folders View` with when set to `explorerViewletVisible && inputFocus`|
-|`Ctrl+P`| __Search & Toggle Files__<br>Opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. |
+|`Ctrl+P` `Ctrl+Tab`| __Search & Toggle Files__<br>`Ctrl-P` opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. `Ctrl-Tab` toggle 2 lastly used. |
 |`Ctrl+Shift+P`| __Command Palette__<br>Opens Command Palette where commands can be easily searched. Recently used shown on top. Use `ESC` to exit. |
 | `Ctrl+F` | __Find & Replace in file__<br> Find all focused/selected words in file. Replace from new window. Use `ESC` to close it. | 
 | `Ctrl+Shift+F` | __Find & Replace in proj__<br> Find all focused/selected words in project. Replace from new window. Use `ESC` to close it. |
-
 
 <br>
 
@@ -157,7 +159,7 @@ Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcu
 |:---|---| 
 | `Ctrl+S`__*__ |__Format on save__<br> *Must be enabled in settings for `Editor: Format On Save`.  |
 | `Ctrl+Alt+-` | __Toggle comment__<br> Toggle the comment for whole focused line or lines. |
-|`Ctrl+Shift+§`__*__| __Go To Matching Bracket/Tag__<br>Moves cursor to corresponding matching Bracket or Tag<br> _*Install extension `Matchit` for both Tags & Brackets to work on same shortcut. Make sure shortcut (`Ctrl+Shift+§`) is set for ` MatchIt: Jump Items` in Keyboard Shortcuts. Optionally a shortcut for  `Emmet: Go To Matching Pair` can be set too, but when having both Bracket/Tag on same shortcut did not work together out of the box in VSCode. Extensions solves this and works for both tags & brackets with same shortcut.)_|
+|`Ctrl+Shift+enter`__*__| __Go To Matching Bracket/Tag__<br>Moves cursor to corresponding matching Bracket or Tag<br> _*Install extension `Matchit` for both Tags & Brackets to work on same shortcut. Set shortcut (`Ctrl+Shift+enter`) for ` MatchIt: Jump Items` in Keyboard Shortcuts (something else is set by default). Optionally a shortcut can be set without extension, but when having both `Emmet: Go To Matching Pair` (for Tag) and `Go To Bracket` (for Brackets) on same shortcut it failed to work in VSCode. Extension solves this and works for both tags & brackets with same shortcut.)_|
 | `Ctrl-I`* |__Wrap HTML in Tag__<br> Wraps selected HTML code in new tag. *To work extension "Html tag wrapper" must be installed.  |
 | `Alt+<click>` |__Add Cursors__<br>Adds extra cursor for every mouse click. Use  `Alt+Shift+[Sel]` for whole block. Use `ESC` to exit. |
 |__`*`__ |__Auto Rename Tags__<br> _*Can be enabled by installing extension `Auto Rename Tag` but then it only works for html files. With extension `Auto Rename Tag` it work in all kind of files including html and vue._ |
@@ -692,88 +694,26 @@ __`MARKDOWN ELEMENTS`__
 
 Line =>  ___
 
----
 
+<br>
 
+# [__CSS__](#)
 
-<br><br>[- BACK TO TOP -](#table-of-contents)
-
----
----
-<br><br>
-
-
-# __CODE EFFECTIVELY__
-
-## [__CSS__](#)
-
-__This section is about:__<br>
- _How to style pages with CSS._
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 _Some good tutorial [HERE](xxx)_
 
+#### [Structure](#)
+
+---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 In programming languages the word __container__ is generally used for structures that can contain more than one element. A __wrapper__ instead is something that wraps around a single object to provide more functionalities and interfaces to it. DIV tag is a very common to use for this purpose with class name container/wrapper.
 
-[Structure](#)
+#### [BEM](#)
 
-TODO
-
-### [Commonly performed tasks](#)
-
-__This section is about:__<br>
-_Source control, github and some useful git/cmd commands._
-
-- ### [Common expressions](#)
-
-Eample of styling for body:
-
-`font-family: 'roboto', sans-serif;`  - some common styles <br>
-`img {
-	max-width: 100%;
-	height: auto;
-}` - images larger than screen are scaled down to fit screen width and keep aspect ratio.
-
-- ### [__Float__](#)
-
-	TODO
-
-- ### [Flexbox](#)
-
-	TODO
-
-- ### [CSS GRID](#)
-
-	TODO
-
-- ### [Centering of elements](#)
-
-### Center a text on a div-box/img
-
-- Two (&more) elements in a container:
-	- csdfsd
-
-
-- Ono text element in a container:
-
-- One box element in a container:
-
-
-
-- On parent set: position:relative
-- On element we center set: position:absolute, _(this will take the element out of normal flow)_
-<br>Horizontal center: width:100% & text-align:center
-<br>Vertical center: top:0 & left:0 & transform: translateY(-50%) - _(moves up 50% of its own height)_ 
-
-
-- Style a box with frame and nice text ?? called title???
-
--	Center a div within div
-
--	Center texts within a image
-
-
-### [__BEM__](#)
+---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 Structured your CSS and UI in an organized way. Benefits are: 
 - __modularity__ -  ability to transfer blocks from your finished projects to new ones as blocs are independent standalone objects.
 - __Reusability__ - With a set of style guidelines in place, you can build a library of blocks, making your CSS super effective and reusable.
@@ -798,24 +738,67 @@ Structured your CSS and UI in an organized way. Benefits are:
 ```
 
 
-
-
-
-<br>
-
-[- BACK TO TOP -](#contents)
+#### [Commonly performed tasks](#)
 
 ---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+__Styling__
+```css
+TODO
+
+font-family: 'roboto', sans-serif; /* some common nice fonts */
+img {
+	max-width: 100%;
+	height: auto;
+} /*images larger than screen are scaled down to fit screen width and keep aspect ratio*/
+```
+
+__Centering of elements__
+A common task for CSS is to center text or images. In fact, there are three kinds of centering:
+
+-	Centering lines of text
+parent-container -> text-align: center
+-	Centering a block of text or an image
+-	Centering a block or an image vertically
+- Two (&more) elements in a container:
+- Ono text element in a container:
+- One box element in a container:
+- On parent set: position:relative
+- On element we center set: position:absolute, _(this will take the element out of normal flow)_
+<br>Horizontal center: width:100% & text-align:center
+<br>Vertical center: top:0 & left:0 & transform: translateY(-50%) - _(moves up 50% of its own height)_ 
+- Style a box with frame and nice text ?? called title???
+-	Center a div within div
+-	Center texts within a image
+
+#### [Floating](#)
+
 ---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+	TODO
+
+#### [Flexbox](#)
+
+---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+	TODO
+
+#### [CSS Grid](#)
+
+---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+	TODO
+
+<br>
 <br>
 
-## [HTML](#)
+# [__HTML__](#)
 
-__This section is about:__<br>
- _How to style pages with CSS._
-
-_Some good tutorial [HERE](xxx)_
-
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 Elements in HTML are mostly "inline" or "block" elements. there are many other display types to use. Read here 
 https://www.w3schools.com/cssref/pr_class_display.asp
@@ -829,40 +812,10 @@ https://www.w3schools.com/cssref/pr_class_display.asp
 
 "Display: inline-block" allows to set a width and height on the element. Also, with display: inline-block , the top and bottom margins/paddings are respected, but with display: inline they are not.
 
-# CENTERING THINGS
+#### [Page structure](#)
 
-A common task for CSS is to center text or images. In fact, there are three kinds of centering:
-
--	Centering lines of text
-parent-container -> text-align: center
-
--	Centering a block of text or an image
--	Centering a block or an image vertically
-
-
-# Screens and IMAGES
-
-__Screen Resolution__
-Resolution refers to number of pixels that make up the image on a screen. A higher pixel count means that sharper picture and possibility to show big sharp images with good quality. Resolution is expressed using horizontal and vertical pixel counts.<br> 
-1366x768
-
-Smartphone 360x640 (#1 popular)
-Smartphone 375xX (#2 popular)
-
-`Notebooks/Pads - Wildly used, HD, 1366x768. (aka 720) (#3 popular)` <br>
-`Notebooks/Pads - FULL HD (aka 1080) is 1920x1080 (#4 popular)` <br>
-`Monitors/TVs - 3K is 3200×1800.`<br>
-`Monitors/TVs - 4K (UHD = ultra HD) is 3840×2160.`
-`TV's - 7680x4320`
-
-__Aspect ratio__
-The predominant display aspect ratio on 2020s PC market, including laptops,tablets, and monitors, is 16:9. Also referred to as widescreen aspect ratio. I.e FULL HD 1920x1080 have 16:9 aspect ratio.
-
-
-<br>
-
-## [__Article & Section__]()
-<p align=right><a align=right href="#table-of-content">↩ Back To Top</a></p>
+ ---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 The `article` tag is used for wrapping self-containing content on a page (can be removed from the page and put on some another page). It can contain several `section` tags inside it, that are similar to the `div` tag, but it is more meaningful since it wraps logical groups of related content (e.g. a chapter of an article).
 
@@ -887,14 +840,110 @@ The `article` tag is used for wrapping self-containing content on a page (can be
 </main>
 ```
 
-## [Content for web](#)
+#### [User Input with Forms](#)
 
-__This section is about:__<br>
-_All about using images, backgrounds and icons._
+ ---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-_Introduction videos - [here](xxx)_
+```html
+<form>
+	<div class="row">
+		<h1>User Form</h1>
+		<hr>
+		<div class="form-group">
+			<label for="email">Mail</label>
+			<input type="text" id="email" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" id="password" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="age">Age</label>
+			<input type="number" id="age" class="form-control">
+		</div>
+	</div>
 
-## SEO
+	<div class="row">
+		<div class="form-group">
+			<label for="sendmail">
+				<input type="checkbox" id="sendmail" value="SendMail"> Send Mail
+			</label>
+			<label for="sendSMS">
+				<input type="checkbox" id="sendSM" value="SendInfoMail"> Send SMS
+			</label>
+		</div>
+
+		<div class="form-group">
+			<label for="male">
+				<input type="radio" id="male" value="Male"> Male
+			</label>
+			<label for="female">
+				<input type="radio" id="female" value="Female"> Female
+			</label>
+		</div>
+
+		<div class="form-group">
+			<label for="priority">Priority</label>
+			<select id="priority" class="form-control">
+				<option></option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row">
+		<br>
+		<label for="message">Message</label><br>
+		<textarea id="message" rows="5" class="form-control"></textarea>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<button class="btn btn-primary">Submit!</button>
+	</div>
+
+</form>
+```
+
+<br>
+<br>
+
+# [__Screens and Content__](#)
+
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+This setion is about screen sizes,  images, backgrounds and icons.
+
+#### [Screen Resolution]()
+
+Resolution refers to number of pixels that make up the image on a screen. A higher pixel count means that sharper picture and possibility to show big sharp images with good quality. Resolution is expressed using horizontal and vertical pixel counts.<br> 
+1366x768
+
+Smartphone 360x640 (#1 popular)
+Smartphone 375xX (#2 popular)
+
+`Notebooks/Pads - Wildly used, HD, 1366x768. (aka 720) (#3 popular)` <br>
+`Notebooks/Pads - FULL HD (aka 1080) is 1920x1080 (#4 popular)` <br>
+`Monitors/TVs - 3K is 3200×1800.`<br>
+`Monitors/TVs - 4K (UHD = ultra HD) is 3840×2160.`
+`TV's - 7680x4320`
+
+
+#### [Aspect ratio]()
+
+ ---
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+The predominant display aspect ratio on 2020s PC market, including laptops,tablets, and monitors, is 16:9. Also referred to as widescreen aspect ratio. I.e FULL HD 1920x1080 have 16:9 aspect ratio.
+
+
+br>
+<br>
+
+# [__SEO__](#)
+
+<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 When a ord that someone search for is in H1 and then later in desrtiptio h2 and then many times in text in same article then google might show prio it in SEO. H1 text is then shown in google search description 
 
