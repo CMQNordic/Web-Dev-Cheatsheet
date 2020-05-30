@@ -15,8 +15,8 @@ _Prerequisites: Some HTML & CSS skills._
 #### __TABLE OF CONTENT__
 
  ► __Technologies & Tools__
-  - [__Visual Studio Code__](#visual-studio-code)
-  - [What is built-in?](#what-is-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Navigation](#navigation-in-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)
+  - [Visual Studio Code](#visual-studio-code)  
+   _[Built-in stuff](#what-is-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Navigation](#navigation-in-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
   - Node.js & Npm
     - [What is Node.js and Npm used for?](#nodejs-&-npm)
   	- [Node.js](#install-node.js-and-execute-programs) ◦ [Node.js modules](#useful-node.js-modules)
@@ -31,6 +31,11 @@ _Prerequisites: Some HTML & CSS skills._
 	- [Markdown syntax](#markdown-syntax) 
   
 ► __HTML, CSS and JS__
+- [\#H1](#h1)
+  - [\#\# H2 text](#h2-idh2-text-497h2-texth2)
+    - [\#\#\# H3 text](#h3-idh3-text-497h3-texth3)
+      - [\#\#\#\# H4 text](#h4-idh4-text-497h4-texth4)
+        - [\#\#\#\#\# H5 text](#h5-idh5-text-497h5-texth5)
 - [__CSS__](#css)
       - [Structure](#structure)
       - [BEM](#bem)
@@ -78,7 +83,7 @@ _Out of the box_ features in VSCode:
  - __Node.js & Npm__: Build in runtime environment for JavaScript with corresponding package manager.
  - __JavaScript:__ Supported language used for web development.
  - __TypeScript__: Supported language that adds strict typing syntax to JavaScript.
- - __Emmet__: Short text snippets that autogenerate pieces of HTML or CSS code.
+ - __Emmet__: Short text snippets that auto-generate pieces of HTML or CSS code.
  - __IntelliSense__: Editing features including code completion, parameter info and quick lookups.
  - __Extensions:__ Integrated marketplace for a large variety of extensions that expand functionality of VSCode.
 - __GIT:__  Integrated support for Git with handy graphical interface for most common functions.
@@ -92,40 +97,96 @@ Install it from from [here](https://code.visualstudio.com/download).
 
 ### __[Customization of VSCode]()__
 
-__Formatting__
-For HTML, CSS and JavaScript there are default settings set for how to format. 
+__Formatting__  
+For HTML, CSS and JavaScript there are default settings set for how to format in VSCode but extensions like Prettier or Vetur (for vue) can overwrite or add formatting functionality. Usually it is a bit time consuming to set up your environment, to work with the extensions of your choice. Here you can read about our configuration of development environment, some extensions we use and finally our settings.json file with our setting to use if desired
 
-How to wrap HTML attributes?
-In _Keyboard Shortcuts_ in VSCode search for `Format: Wrap Attributes` and `Wrap Line Length` (use words `html wrap`). `Auto` is normally set by default. 
+__Our preferred settings:__
+>   We use  __`Format: Wrap Attributes`__ = __"preserve-aligned"__ with __`Wrap Line Length`__ = __160__.  As Tab indent __`Editor: Tab Size`__ = __2__. We like to __auto-format__ on __save__ and __paste__ and it must be manually enabled for __`Editor: Format On Save`__ and __`Editor: Format On Paste`__.
 
-We prefer:
-To use __`Format: Wrap Attributes`__ = __"preserve-aligned"__ with __`Wrap Line Length`__ = __160__ for a bit wider screens and __tab indent__ set to __2__ (`Editor: Tab Size`). We like to __auto-format on save and paste__ and it must be manually enabled for __`Editor: Format On Save`__ and __`Editor: Format On Paste`__.
+__How to wrap HTML attributes?__  
+In _Settings_ search for `Format: Wrap Attributes` and `Wrap Line Length` (search words "html wrap"). `Auto` is normally set and can be changed if you prefer different formatter type for HTML attributes. See below how different choices of formatter types generate results. Our favorite is "preserve-aligned".
 
-We do not use plugin __Prettier__ for formatting becouse as we use auto-format on save at writing moment it is impossible to disable this for some type of files. We do not want this formatter for markdown files.
+__Prettier extension.__  
+We do not use extension Prettier for formatting because because we use auto-format on save and at writing moment it is impossible to disable this for some type of files. We do not want Prettier to format our markdown files but it seems to impossible to disable. Therefor for the moment we do not use Prettier.
 
-Vue & Vetur  
-Vetur's default HTML formatter can be set to prettyhtml, prettier. Those are build in. To set rules for formatter `vetur.format.defaultFormatterOptions` shall be used in settings.
-
-For vue development you shall use plugin __Vetur__, but at writing moment it supports formatting of whole vue-documents only. Format of a selected part of a .vue doc is not implemented at writing moment - therefore the default key shortcut for formatting selection (`Ctrl+K Ctrl+F`) will not have any effect in .vue files (but Ctrl+Alt+F formatting whole doc works).
+__Vetur (for Vue development)__  
+For vue development you shall use VSCode extension Vetur. Vetur's default HTML formatter is "prettier" but can be set to "prettyhtml" for HTML parts, as we prefer. Those formatters that Vetur uses internally are are build in and do not require installation of the extensions separately! To set rules for formatter of your choice  `vetur.format.defaultFormatterOptions` shall be added in settings.json with configurations. See example of our _setting.json_ file how it can be configured. unfortunately Vetur at writing moment supports formatting of whole documents only. Format of a selected part of a .vue doc is not possible. Therefore the default key shortcut for formatting selection (`Ctrl+K Ctrl+F`) will not have any effect in .vue files (but shortcut `Ctrl+Alt+F` will format whole doc works as expected).
  
-At writing moment (May 2020) Vetur by default (with Prettier set as vue Vetur HTML formatter) does heavy attribute formatting for HTML templates in .vue files. It might not be desired. To formatting totally fot HTML parts of vue code set `none` in settings for `Vetur › Format › Default Formatter: HTML`. But if you want to change formatting behavior, at writing moment only possible way we found is by setting `js-beautify-html` as default formatter for `Vetur › Format › Default Formatter: HTML` and adding following to  _setting.json_ file (note you can also use "auto" to disable wrapping, but we prefer "preserve-aligned"):
+At writing moment (May 2020) Vetur by default prettier set default internal HTML formatter (you can see this in extension settings) and unfortunately does heavy attribute formatting in HTML templates. We do not like it. To simply disable it set `none` in settings for `Vetur › Format › Default Formatter: HTML`. But if you want to change formatting behavior, at writing moment only possible way we found is by setting `js-beautify-html` as default HTML formatter i Vetur and add following customization (search for `vetur.format.defaultFormatter.html`) to _setting.json_ file.
+<br>
 
-Settings for Vetur (.vue html parts)
-```json
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "preserve-aligned"
-    }
-  }
+__Setting.json file__  
+Our default settings for our development. To copy just past in at the end of your file setting.json file (Ctrl+Shift+P -> "settings.json")  
+
+```javascript
+//
+// Liveserver extension
+//
+"liveServer.settings.useBrowserPreview": true, // open live server in VScode instead of browser (default false)
+"liveServer.settings.donotShowInfoMsg": true, // disable info pop ups (dafault false)
+//
+// Browser preview extension
+//
+"browser-preview.startUrl": "http://localhost:8080", // set default url to load in browser preview opened in VScode
+//
+// VSCode Editor
+//
+"[html]": {
+  "editor.defaultFormatter": "vscode.html-language-features" //dafaukt formatter for HTML files
+},
+"editor.tabSize": 2, // nbr of spaces for a tab indent in general (default 4)
+"editor.formatOnPaste": true, // auto-format on paste (default false)
+"editor.formatOnSave": true, // auto-format on save (default false)
+//
+// VSCode Editor: html
+//
+"html-css-class-completion.enableEmmetSupport": true, // enables emmet (dafault false)
+"html.format.wrapAttributes": "preserve-aligned", // prefered html attribute wrapping method (default auto)
+"html.format.wrapLineLength": 160, // prefered length of line for wrapping (default 120)
+"html.format.preserveNewLines": true, // when formatting, and a line added after element, do not remove it (dafault true)
+"html.format.maxPreserveNewLines": 1, // when formatting do not not remove this nbt of empty lines. (default null or 0)
+"html.format.extraLiners": "", // adds empty efter those html tags. (default "head, body, /html")
+//
+// vetur extension (for Vue files)
+//
+"vetur.format.options.tabSize": 2, // nbr of spaces for a tab indent in vue files (default 4) 
+"vetur.format.defaultFormatter.html": "js-beautify-html", // prefered html attribute wrapping method (default prettier that wraps all)
+"vetur.format.defaultFormatterOptions": {
+  "js-beautify-html": {
+    "wrap_attributes": "preserve-aligned", // prefered vue attribute wrapper ("auto" is no wrapping at all) 
+    "preserve_newlines": true, // when formatting, and a line added after element, do not remove it
+    "max_preserve_newlines": 1 // when formatting do not not remove this nbt of empty lines.
+  },
+  "prettier": { // Prettier is used internally as formatter and setting can be set here
+    "semi": true, // if false - no semi-collon at end of js-statements
+    "singleQuote": true, // if false - use double quotes
+    "jsxSingleQuote": true, // if false -> use double quotes
+    "bracketSpacing": true // if true -> { foo: bar }
+  },
+},
+//
+// Markdown & Markdown Shortcuts extensions
+//
+"markdown.extension.preview.autoShowPreviewToSide": true, // When opening -md file, auto open previow on the side
+"markdown.extension.tableFormatter.enabled": false, // false - do not format tables
+"markdown.extension.tableFormatter.normalizeIndentation": false, //  false - do not normalize tables structure
+"markdown.extension.italic.indicator": "_", // use _ instead of *
+"markdownShortcuts.bold.marker": "__", // use _ instead of **
+"markdownShortcuts.bullets.marker": "-", // use - instead of *
+"markdown.extension.toc.updateOnSave": false, // do not update table on save (default true)
+"markdownShortcuts.icons.image": true, // show icon in upper/right corenr of window
+"markdownShortcuts.icons.link": true, // show icon in upper/right corenr of window
+"markdownShortcuts.icons.citations": false // show icon in upper/right corenr of window
+// Disable any markdown formatter if set
+// "[markdown]": {
+//   "editor.defaultFormatter": "esbenp.prettier-vscode"
+// }
 ```
 
-
-<br>
-Examples how it might look for HTML files for different  `Format: Wrap Attributes`
+__Formatter types__
 
 ```html
-<!-- Attribute wrapping disabled. -->
+<!-- "none" - attribute wrapping disabled. -->
 <!-- Set "Wrap Line Length" to to disable -->
 <div id="app" class="container" style="width:200px; height: 300px; background-color: saddlebrown; color: black;">
   <img src="http://www.cdn/Loggo-200x35-e1477061960632.png" alt="Company Logo" width="65" height="20" style="display: inline-block;">
@@ -179,56 +240,6 @@ Examples how it might look for HTML files for different  `Format: Wrap Attribute
 ```
 
 <br>
-Example of our settings.json
-
-```json
-  //
-  // liveserver
-  //
-  "liveServer.settings.useBrowserPreview": true,
-  "liveServer.settings.donotShowInfoMsg": true,
-  //
-  // editor
-  //
-  // "auto-close-tag.fullMode": true
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "editor.tabSize": 2,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.renameOnType": true,
-  //
-  // markdown
-  //
-  "markdown.extension.preview.autoShowPreviewToSide": true,
-  //
-  // html
-  //
-  "html-css-class-completion.enableEmmetSupport": true,
-  "html.format.wrapAttributes": "preserve-aligned",
-  "html.format.wrapLineLength": 160,
-  //
-  // vue - vetur
-  //
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "preserve_newlines": true, // true - existing line breaks before elements are preserved
-      "max_preserve_newlines": 1, // defines number of line breaks to be preserved
-      "wrap_attributes": "preserve-aligned" // "preserve-aligned" // "auto" 
-    },
-    // Vetur uses Prettier internally even when prettier is not installed
-    "prettier": {
-      "semi": true, // false - no ; at end of js-statements
-      "singleQuote": true, // false - use double quotes
-      "jsxSingleQuote": true, // false - use double quotes
-      "bracketSpacing": true // true - Example: { foo: bar }
-    }
-  },`
-```
-
-<br>
 
 __Terminal__  
 VsCode have an integrated terminal window. We recommend to manually customize some shortcuts related to the terminal so that you can easily open and focus terminal window, scroll in it and resize it - all without lifting your fingers from the keyboard. Search and change for following string in __`Settings -> Keyboard Shortcuts`__
@@ -270,48 +281,54 @@ If you run lots of git commands from command line we recommend you to move the t
 
 ### __[Useful shortcuts in VSCode]()__
 
-Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcuts`_. Online list of shortcuts can be found [here](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2019). Below we list our most frequently used VSCode shortcuts that are real time saves to use:
+Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcuts`_. Global user defined `settings.json` or `defaultSetting.json` can easily be opened from` Command Palette` (`Ctrl-Shift-P`) - search for _settings_. Below we list our most frequently used VSCode shortcuts that make our development a lot faster.    
+Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2019). 
 
 <br>
 
-| __NAVIGATION__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |                                                                                                                                                                                                                                                                                                                                                                                                             |
-| :------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Ctrl+⇔`                                                                                           | __Jump: Whole Words__<br>Moves cursor whole words/expressions left/right.                                                                                                                                                                                                                                                                                                                                   |
-| `Ctrl+Alt+⇔`__*__                                                                                  | __Jump: Start/End of Line__<br>Moves cursor to start or end of a text line.<br> _*Must be set in Keyboard Shortcuts for `cursor line start` & `cursor line end`_                                                                                                                                                                                                                                            |
-| `Ctrl+▲`__*__                                                                                      | __Select: Word & Multi Word__<br>First press selects the focused word. Next presses add multi-cursor on all same words i.e. corresponding end tag. Use `ESC` to abort.<br> _*Must be set in Keyboard Shortcuts for `Add Selection To Next Find Match`_                                                                                                                                                      |
-| `Ctrl+▼`__*__                                                                                      | __Select: Row & Down__<br>First press selects whole line, next presses selects whole line downwards.  Use `ESC` to abort.<br> _*Must be set in Keyboard Shortcuts for `expandLineSelection`_                                                                                                                                                                                                                |
-| `Ctrl+Shift+▼▲◄►`__*__                                                                             | __Select: Block__<br> Selects blocks/lines from the focused cursor. <br> _*Must be set in Keyboard Shortcuts `Ctrl+Shift+▲` for `cursorUpSelect`_                                                                                                                                                                                                                                                           |
-| `Shift+Tab/Å`*                                                                                     | __Indent Row__<br>`Tab` indents to left, `Å` to right.<br> _*Must be set in Keyboard Shortcuts for `Shift Å` for `Indent Line`_                                                                                                                                                                                                                                                                             |
-| `Alt+▲▼`                                                                                           | __Move Selection__<br>Moves whole focused selection up or down.                                                                                                                                                                                                                                                                                                                                             |
-| `Ctrl+Enter`*                                                                                      | __Toggle Explorer & Focus__<br>Toggles visibly of sidebar explorer window. Second press focuses it. When in focus use `⇔` to navigate into folders. __`Enter`__ to open selected file. __`Ctrl+W`__ to close focused file.  <br> _*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility`_ and `Explorer: Focus On Folders View` with when set to `explorerViewletVisible && inputFocus` |
-| `Ctrl+P` `Ctrl+Tab`                                                                                | __Search & Toggle Files__<br>`Ctrl-P` opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. `Ctrl-Tab` toggle 2 lastly used.                                                                                                                           |
-| `Ctrl+Shift+P`                                                                                     | __Command Palette__<br>Opens Command Palette where commands can be easily searched. Recently used shown on top. Use `ESC` to exit.                                                                                                                                                                                                                                                                          |
-| `Ctrl+F`                                                                                           | __Find & Replace in file__<br> Find all focused/selected words in file. Replace from new window. Use `ESC` to close it.                                                                                                                                                                                                                                                                                     |
-| `Ctrl+Shift+F`                                                                                     | __Find & Replace in proj__<br> Find all focused/selected words in project. Replace from new window. Use `ESC` to close it.                                                                                                                                                                                                                                                                                  |
+| NAVIGATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||
+|:--|:--|
+|`Ctrl+◄►`|__Jump: Whole words__ <br> Moves focused cursor whole words/expressions left/right.
+|`Ctrl+Alt+◄►`__\*__ | __Jump: Start/End of line__ <br> Moves focused cursor to start/end of line.<br> _\*Must be set in Keyboard Shortcuts for `Cursor Line Start` & `Cursor Line End`_.
+|`Ctrl+Å`__\*__ | __Jump: Matching Brackets/Tags__ <br> Moves cursor selecting a Bracket/Tag to corresponding matching Bracket/Tag<br> _\*Install extension `Matchit` for both Tags & Brackets to work on same shortcut. In Keyboard Shortcuts set shortcut (`Ctrl+Shift+Å`) for ` MatchIt: Jump Items` (something else might set by default by the extension). Optionally, without extension) same shortcut can be set for `Emmet: Go To Matching Pair` (for Tag) and `Go To Bracket` (for Brackets) but it failed to work in VSCode for vue files. Extension solves this and works for both tags & brackets with same shortcut in html,js and vue files for {},(),[], <>)_
+|`Ctrl+▲`__\*__ | __Select: Word__ <br> First press selects the focused word. Subsequent presses add multi-cursor on same words. Can be used for selecting matching HTML tag. Use `ESC` to abort. <br> _\*Must be set in Keyboard Shortcuts for `Add Selection To Next Find Match`_
+|`Ctrl+▼`__\*__ | __Select: Line & Down__ <br> Selects whole focused row. First press selects row, next presses continues selection downwards. Use `ESC` to abort. <br> _\*Must be set in Keyboard Shortcuts for `Expand Line Selection`_.
+|`Ctrl+Shift+▼▲◄►`__\*__ | __Select/Unselect Block__ <br> Selects/Unselects blocks starting from the focused cursor. <br> _\*Must be set in Keyboard Shortcuts - `Ctrl+Shift+▲` for `Cursor Up Select`_.
+|`Alt+▲▼` | __Move Whole Line(s)__ <br> Moves whole focused line (or several selected lines) up or down.
+|`Shift+Tab` <br> `Shift+Back`__\*__ | __Indent Row Left/Right__ <br> `Shift+Tab` indents whole line left. <br> `Shift+BACK` indents whole line right. <br>  _\*Must be set in Keyboard Shortcuts for `Indent Line` as `Shift+Backspace`_.
+|`Ctrl+Enter`__\*__ | __Toggle Explorer Window & Focus__ <br> Toggles visibly of sidebar explorer window. Second press focuses it. When in focus use `⇔` to navigate into folders. __`Enter`__ to open selected file. __`Ctrl+W`__ to close focused file. <br> _\*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility`_ and `Explorer: Focus On Folders View` with when set to `explorerViewletVisible && inputFocus` 
+|`Ctrl+P` <br> `Ctrl+Tab`| __Search & Toggle Files__ <br> `Ctrl-P` opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. `Ctrl-Tab` is too handy to toggle 2 lately used files.
+|`Ctrl+Shift+P` | __Command Palette__ <br> Opens Command Palette where commands can be easily searched. Recently used shown on top. Use `ESC` to exit.
+|`Ctrl+F` | __Search & Replace in file__ <br> Find all focused/selected words in file. Replace from new window. Use `ESC` to exit.
+|`Ctrl+Shift+F` | __Search & Replace in proj__ <br> Find all focused/selected words in project. Replace from new window. Use `ESC` to exit.
 
 <br>
 
-| __CODING__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| :--------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Ctrl+S`__*__                                                                                                    | __Format on save__<br> *Must be enabled in settings for `Editor: Format On Save`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `Ctrl+Alt+-`                                                                                                     | __Toggle comment__<br> Toggle the comment for whole focused line or lines.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `Ctrl+Shift+enter`__*__                                                                                          | __Go To Matching Bracket/Tag__<br>Moves cursor to corresponding matching Bracket or Tag<br> _*Install extension `Matchit` for both Tags & Brackets to work on same shortcut. Set shortcut (`Ctrl+Shift+enter`) for ` MatchIt: Jump Items` in Keyboard Shortcuts (something else is set by default). Optionally a shortcut can be set without extension, but when having both `Emmet: Go To Matching Pair` (for Tag) and `Go To Bracket` (for Brackets) on same shortcut it failed to work in VSCode. Extension solves this and works for both tags & brackets with same shortcut.)_ |
-| `Ctrl-I`*                                                                                                        | __Wrap HTML in Tag__<br> Wraps selected HTML code in new tag. *To work extension "Html tag wrapper" must be installed.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `Alt+<click>`                                                                                                    | __Add Cursors__<br>Adds extra cursor for every mouse click. Use  `Alt+Shift+[Sel]` for whole block. Use `ESC` to exit.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| __`*`__                                                                                                          | __Auto Rename Tags__<br> _*Can be enabled by installing extension `Auto Rename Tag` but then it only works for html files. With extension `Auto Rename Tag` it work in all kind of files including html and vue._                                                                                                                                                                                                                                                                                                                                                                   |
-| `Ctrl+Space`                                                                                                     | __Open intellisense__<br> Opens intellisense dialog for focused expression. Use `ESC` to close it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| CODING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+|:--|:--|
+| `Ctrl+S`__\*__ | __Format on save__<br> When saving the file then automatically format it <br> _\*Must be enabled in Settings for `Editor: Format On Save`_
+| __\*__ | __Format on paste__<br> When pasting in new code then automatically format it <br> _\*Must be enabled in settings for `Editor: Format On Paste`_
+|`Ctrl+Alt+-` | __Toggle comment__ <br> Toggle the comment for whole focused line ores.
+|`Ctrl+Ä`__\*__ | __Delete All Left__ <br> Deletes everything to left of focused cursor. Handy to use to "reverse" `Enter` - when want to remove newly inserted line. <br> _\*Must be set in Keyboard Shortcuts `Delete All Left`_.
+|`Ctrl-I`__\*__ | __Wrap HTML in Tag__ <br> Wraps selected HTML code in new tag. <br> _\*Extension "Html tag wrapper" must be installed and then it works for html files and as well html parts in vue files._
+|`Alt+<click>` | __Add Multi-Cursors__ <br> Adds extra cursor for every mouse click. Use `ESC` to exit.
+| __`*`__  | __Rename Matching Tags__ <br> Auto-renaming of a matching HTML tag when a tag i selected can be enabled in _Settings_ by setting `renameOnType` (before, now deprecated, `mirrorCursorOnMatchingTag`). Problem is that it only works in .html files then. _\*To get it work with other file-types you need to install extension `Auto Rename Tag` and then by default it works in all kind of files including html and vue. In the extension settings you can define which file types you want this to be executed for._
+| __`*`__  | __Auto Closing Tags__ <br> Auto-closing a HTML tag when (when <p> written then </p> automatically added). Can be enabled in _Settings_ by setting `autoClosingTags`. Problem is that it only works in .html files then. _\*To get it work with other file-types you need to install extension `Auto Close Tag` and then by default it works in all kind of files including html and vue. In the extension settings you can define which file types you want this to be executed for._
+|`Ctrl+Space`  | __Open intellisense__ <br> Opens intellisense dialog for focused expression. Use `ESC` to close it.
 
 <br>
 
-| __TERMINAL__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |                                                                                                                                                                                               |
-| :----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Ctrl+Ö`__*__                                                                        | __Open/Focus/Hide__<br> Creates new terminal or focuses cursor when run in terminal window.<br> _*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_ |
-| `Ctrl+L`                                                                             | __Clear window__<br> Clear focused terminal window                                                                                                                                            |
-| `Ctrl+K`__*__                                                                        | __Kill terminal__<br> Kills current terminal and if last hides the window.<br>_*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_                   |
-| `Ctrl+▲▼`*                                                                           | __Scroll Up or Down__<br> Scroll up od down in focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)                       |
-| `Ctrl+◀▶`*                                                                           | __Enlarge or Shrink__<br> Enlarge or shrinks focused terminal window. <br>*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)                         |
+| TERMINAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||
+|:--|:--|
+|`Ctrl+Ö`__\*__ | __Open/Focus/Hide__ <br> Creates new terminal or focuses cursor when run in terminal window. <br> _\*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_
+|`Ctrl+L` | __Clear window__ <br> Clear focused terminal window 
+|`Ctrl+K`__\*__ | __Kill terminal__ <br> Kills current terminal and if last hides the window.<br>_*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_
+|`Ctrl+▲▼`__\*__ | __Scroll Up or Down__ <br> Scroll up od down in focused terminal window. <br> _\*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_
+|`Ctrl+◀▶`__\*__ | __Enlarge or Shrink__ <br> Enlarge or shrinks focused terminal window. <br> _\*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode_
+
 
 <br>
+
 <p align=right><a id="useful-extensions-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 ### __[Useful extensions in VSCode]()__
@@ -713,8 +730,54 @@ Autocompletion of available assets with ./<br>
 
 ### [__Markdown syntax__](#)
 
-Below we presen some Markdown syntax for most used tags. Copy it to you markdown file as it is.
+__`GENERAL`__  
 
+Line spacing:
+```
+Hello<-- no space
+World
+
+Result:
+Hello World
+```
+
+```
+Hello  <-- two spaces
+World
+
+Result:
+Hello
+World
+```
+
+<br>
+Horizontal line:
+
+```
+---
+
+Result:
+___________________________________________
+```
+
+<br>
+Special characters
+
+```
+\\      backslash
+\`      backtick
+\*      asterisk
+\_      underscore
+\{ \}   curly braces
+\[ \]   square brackets
+\( \)   parentheses
+\#      hash 
+\+      plus
+\-      minus
+\.      dot
+\!      exclamation 
+&nbsp;  space
+```
 __`MARKDOWN LISTS`__ 
 
   1. Chapter one
@@ -737,24 +800,19 @@ __`MARKDOWN LISTS`__
 
 __`MARKDOWN TEXTS`__
 
+|||
+|---|---|
+| normal text      |   normal text
+|`_italic text_`   |  _italic text_  
+`__bold text__`    |  __bold text__  
+`~~striken text~~` |  ~~striken text~~  
+`$f(x)=x/5*2y$`    |  $f(x)=x/5*2y$
+
+# \#H1
 ## \#\# H2 text
 ### \#\#\# H3 text
 #### \#\#\#\# H4 text
 ##### \#\#\#\#\# H5 text
-
-Normal text
-
-_\_Italic text\__
-
-__\_\_Bold text\_\___ 
-
-~\~~~s'Striken text~~\~\~ 
-
-$
-\$
-f(x)=x/5*2y
-\$
-$
 
 <br>
 
@@ -805,51 +863,25 @@ Code block - HTML formatted, autocolored [Enter]
 
 __`MARKDOWN TABLES`__
 
+```
 | Sex                 | City                  | Name/Surname                                               |
 | ------------------- | --------------------- | ---------------------------------------------------------- |
 | Man                 | Dallas                | Martin <br> Linn <br> [link](http://www.di.se)             |
 | <br> Woman <br> Man | <br> Lund <br> London | ___Anna__ \<b>test\</b> <br> `Carming <br>`_ <br> 59 years |
 | Man                 | York                  | Adam                                                       |
+```
 
 <br>
+Result->  
+<br><br>
 
-And the code =>
-```
 | Sex                 | City                  | Name/Surname                                               |
 | ------------------- | --------------------- | ---------------------------------------------------------- |
 | Man                 | Dallas                | Martin <br> Linn <br> [link](http://www.di.se)             |
 | <br> Woman <br> Man | <br> Lund <br> London | ___Anna__ \<b>test\</b> <br> `Carming <br>`_ <br> 59 years |
 | Man                 | York                  | Adam                                                       |
-```
 
-```
-Note! you can fill Title lables with &nbsp; in order to make the line not auto jump to new row
 
-```
-__`MARKDOWN ELEMENTS`__
-
-Line =>  ---
-
-__`MARKDOWN PARAGRAPHS`__
-
-```
-Hello  (<-- no space)
-World
-
-Result:
-
-Hello World
-```
-
-```
-Hello  (<-- two spaces)
-World
-
-Result:
-
-Hello
-World
-```
 <br>
 
 # [__CSS__](#)
