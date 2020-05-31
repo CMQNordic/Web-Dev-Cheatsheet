@@ -15,8 +15,8 @@ _Prerequisites: Some HTML & CSS skills._
 #### __TABLE OF CONTENT__
 
  ► __Technologies & Tools__
-  - [Visual Studio Code](#visual-studio-code)  
-   _[Built-in stuff](#what-is-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Navigation](#navigation-in-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
+  - [__Visual Studio Code__](#visual-studio-code)  
+   _[Built-in stuff](#what-is-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
   - Node.js & Npm
     - [What is Node.js and Npm used for?](#nodejs-&-npm)
   	- [Node.js](#install-node.js-and-execute-programs) ◦ [Node.js modules](#useful-node.js-modules)
@@ -31,28 +31,25 @@ _Prerequisites: Some HTML & CSS skills._
 	- [Markdown syntax](#markdown-syntax) 
   
 ► __HTML, CSS and JS__
-- [\#H1](#h1)
-  - [\#\# H2 text](#h2-idh2-text-497h2-texth2)
-    - [\#\#\# H3 text](#h3-idh3-text-497h3-texth3)
-      - [\#\#\#\# H4 text](#h4-idh4-text-497h4-texth4)
-        - [\#\#\#\#\# H5 text](#h5-idh5-text-497h5-texth5)
 - [__CSS__](#css)
-      - [Structure](#structure)
-      - [BEM](#bem)
-      - [Commonly performed tasks](#commonly-performed-tasks)
-      - [Floating](#floating)
-      - [Flexbox](#flexbox)
-      - [CSS Grid](#css-grid)
-      - [Bootstrap](#bootstrap)
+    - [Structure](#structure)
+    - [BEM](#bem)
+    - [Commonly performed tasks](#commonly-performed-tasks)
+    - [Floating](#floating)
+    - [Flexbox](#flexbox)
+    - [CSS Grid](#css-grid)
+    - [Bootstrap](#bootstrap)
 - [__HTML__](#html)
-      - [Basics](#basics)
-      - [Page structure](#page-structure)
-      - [Page Components](#page-components)
-      - [User Input with Forms](#user-input-with-forms)
+    - [Basics](#basics)
+    - [Page structure](#page-structure)
+    - [Page Components](#page-components)
+    - [User Input with Forms](#user-input-with-forms)
 - [__Screens and Content__](#screens-and-content)
-      - [Screen Resolution](#screen-resolution)
-      - [Aspect ratio](#aspect-ratio)
+    - [Screen Resolution](#screen-resolution)
+    - [Aspect ratio](#aspect-ratio)
 - [__SEO__](#seo)
+    - [todo](#aspect-ratio)
+
 
 <br>
 
@@ -61,63 +58,63 @@ _Prerequisites: Some HTML & CSS skills._
 <p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 ## [__Visual Studio Code__]()
-  __Content__<br>
-[What is VSCode and what is built-in?](#what-is-vscode)<br>
-[Customization](#recommended-customization-of-vscode) ◦ [Navigation](#navigation-in-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)
+  __Content:__<br>
+_[Build-in stuff](#what-is-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
 
+[VSCode](https://code.visualstudio.com/) is a vary popular, lightweight and free code editor from Microsoft that comes with a variety of handy built-in features. Install VSCode from from [here](https://code.visualstudio.com/download). In this chapter we summarize customization options, extensions and shortcuts. List of EMMET snippets for commonly used elements can be found here.
 
-__Recommended tutorials__<br>
-Good educational VSCode videos can be found [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code). 
+Recommended tutorials: Some YouTube videos to watch [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code). 
 
-<br>
 <p align=right><a id="what-is-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-__[What is VSCode and what is built-in?]()__
+### __[What's built-in in VSCode?]()__
 
-[VSCode](https://code.visualstudio.com/) is a vary popular, lightweight and free code editor from Microsoft that comes with a variety of handy built-in features. Open the directory you are currently in by writing following in terminal window:
 
- __`code .`__
+ Open VSCode in the directory you are currently in by writing following in terminal window:
 
-_Out of the box_ features in VSCode:
+```
+ code .
+```
+Some build-in features in VSCode:
 
  - __Node.js & Npm__: Build in runtime environment for JavaScript with corresponding package manager.
- - __JavaScript:__ Supported language used for web development.
- - __TypeScript__: Supported language that adds strict typing syntax to JavaScript.
+ - __JavaScript:__ Language used for web development.
+ - __TypeScript__: Language that adds strict typing syntax to JavaScript.
  - __Emmet__: Short text snippets that auto-generate pieces of HTML or CSS code.
- - __IntelliSense__: Editing features including code completion, parameter info and quick lookups.
+ - __IntelliSense__: Editing features including code completion, parameter info, code proposals and quick lookups.
  - __Extensions:__ Integrated marketplace for a large variety of extensions that expand functionality of VSCode.
-- __GIT:__  Integrated support for Git with handy graphical interface for most common functions.
+- __GIT:__  Integrated support for Git with handy graphical interface for those most common functions.
 - __Multi-Cursor editing:__ Allows you to edit multiple parts of the documents at once.
 - __Debugging, Code navigation__: Possible to debug your code easily.
 
-Install it from from [here](https://code.visualstudio.com/download).
 
-<br>
 <p align=right><a id="recommended-customization-of-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 ### __[Customization of VSCode]()__
 
-__Formatting__  
-For HTML, CSS and JavaScript there are default settings set for how to format in VSCode but extensions like Prettier or Vetur (for vue) can overwrite or add formatting functionality. Usually it is a bit time consuming to set up your environment, to work with the extensions of your choice. Here you can read about our configuration of development environment, some extensions we use and finally our settings.json file with our setting to use if desired
+VSCode have one setting file (`settings.json`) where user defined settings are set. This file can be modified directly but normally it is modified when you change something in the UI opened from `Preferences->Settings`. The default setting for each feature can be found in file `defaultSettings.json`. Both files can be opened from Command Palette (`Ctrl+Alt+P`) and searching for word "_setting_s".
 
-__Our preferred settings:__
->   We use  __`Format: Wrap Attributes`__ = __"preserve-aligned"__ with __`Wrap Line Length`__ = __160__.  As Tab indent __`Editor: Tab Size`__ = __2__. We like to __auto-format__ on __save__ and __paste__ and it must be manually enabled for __`Editor: Format On Save`__ and __`Editor: Format On Paste`__.
+The same apply to Keyboard Shortcuts. There is a file named `keybindings.json` that we can edit and is usually modified though UI from `Preferences->Keyboard Shortcuts`. The default shortcut definitions for each combination can be found in file `DefaultKeybindings`. Both files can be opened from Command Palette (`Ctrl+Alt+P`) and searching for word "_keyboard shortcuts_".
+
+__Formatting__  
+Formatting of code in order to always to look same, readable and standardized is important. For HTML, CSS and JavaScript there are default settings preset in VSCode defining how to format.There exist external extensions like Prettier or Vetur (for vue) that can overwrite native formatting customization and add formatting functionality on their own. Usually it is a bit of trouble to set up development environment that works well with all the extensions of your choice. Here you can read about configuration of our development environment, check what extensions we use and copy our` settings.json` and `keybindings.json` files defining our tested and recommended customization.
 
 __How to wrap HTML attributes?__  
 In _Settings_ search for `Format: Wrap Attributes` and `Wrap Line Length` (search words "html wrap"). `Auto` is normally set and can be changed if you prefer different formatter type for HTML attributes. See below how different choices of formatter types generate results. Our favorite is "preserve-aligned".
 
-__Prettier extension.__  
+__Prettier extension__  
 We do not use extension Prettier for formatting because because we use auto-format on save and at writing moment it is impossible to disable this for some type of files. We do not want Prettier to format our markdown files but it seems to impossible to disable. Therefor for the moment we do not use Prettier.
 
-__Vetur (for Vue development)__  
+__Vetur (for vue development)__  
 For vue development you shall use VSCode extension Vetur. Vetur's default HTML formatter is "prettier" but can be set to "prettyhtml" for HTML parts, as we prefer. Those formatters that Vetur uses internally are are build in and do not require installation of the extensions separately! To set rules for formatter of your choice  `vetur.format.defaultFormatterOptions` shall be added in settings.json with configurations. See example of our _setting.json_ file how it can be configured. unfortunately Vetur at writing moment supports formatting of whole documents only. Format of a selected part of a .vue doc is not possible. Therefore the default key shortcut for formatting selection (`Ctrl+K Ctrl+F`) will not have any effect in .vue files (but shortcut `Ctrl+Alt+F` will format whole doc works as expected).
  
 At writing moment (May 2020) Vetur by default prettier set default internal HTML formatter (you can see this in extension settings) and unfortunately does heavy attribute formatting in HTML templates. We do not like it. To simply disable it set `none` in settings for `Vetur › Format › Default Formatter: HTML`. But if you want to change formatting behavior, at writing moment only possible way we found is by setting `js-beautify-html` as default HTML formatter i Vetur and add following customization (search for `vetur.format.defaultFormatter.html`) to _setting.json_ file.
 <br>
 
-__Setting.json file__  
+__Our preferred settings__  
 Our default settings for our development. To copy just past in at the end of your file setting.json file (Ctrl+Shift+P -> "settings.json")  
 
+__setting.json file__
 ```javascript
 //
 // Liveserver extension
@@ -184,6 +181,7 @@ Our default settings for our development. To copy just past in at the end of you
 ```
 
 __Formatter types__
+Set in Settings for `Default Formatter: HTML`.
 
 ```html
 <!-- "none" - attribute wrapping disabled. -->
@@ -229,57 +227,27 @@ __Formatter types__
 </div>
 
 <!-- "preserve-aligned" -->
-<!-- Preserve own wraps but if too long wraps to new line and then align attributes -->
-<!-- Favorite, works also for vue templates with js-beautify-html in Vetur -->
-<div id="app" class="container"
-		 style="width:200px; height: 300px; background-color: saddlebroblack;">
+<!-- Preserve own wraps but if too long text parts wraps to new line and then align attributes. Aligns everything wrapped -->
+<!-- Works also for vue templates with js-beautify-html in Vetur -->
+<div id="app" class="container" style="width:200px; height: 300px; background-color: saddlebroblack;">
 	<img src="http://www.cdn/Loggo-200x35-e1477061960632.png" alt="Company Logo" width="65" height="20"
-			 style="display: inline-block;">
+		 style="display: inline-block;">
 	<p class="welcome large-text" style="text-align: center; display: inline-block;">Welcome to formatting</p>
 </div>
 ```
 
-<br>
 
-__Terminal__  
-VsCode have an integrated terminal window. We recommend to manually customize some shortcuts related to the terminal so that you can easily open and focus terminal window, scroll in it and resize it - all without lifting your fingers from the keyboard. Search and change for following string in __`Settings -> Keyboard Shortcuts`__
-
-| Fraze&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Shortcut                                      |                                                                |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- | :------------------------------------------------------------- |
-| "Terminal: Scroll To Bottom",<br> "Toggle Integrated Terminal",<br> "Focus Terminal"<br>"View: Toggle Panel"                                                                                                                                    | `Ctrl+Ö`                                      | Opens new terminal, focus terminal and hides (toggles) if open |
-| "Kill Active Instance"                                                                                                                                                                                                                          | `Ctrl+K`                                      | Terminates and closes the terminal                             |
-| "Terminal: Scroll Up (Line)"                                                                                                                                                                                                                    | `Ctrl+UpArrow` and when to `terminalFocus`    | Scrolling                                                      |
-| "Terminal: Scroll Down (Line)"                                                                                                                                                                                                                  | `Ctrl+DownArrow` and when to `terminalFocus`  | Scrolling                                                      |
-| "Terminal: Resize Pane Left"                                                                                                                                                                                                                    | `Ctrl+LeftArrow` and when to `terminalFocus`  | Scrolling                                                      |
-| "Terminal: Resize Pane Right"                                                                                                                                                                                                                   | `Ctrl+RightArrow` and when to `terminalFocus` | Scrolling                                                      |
-
-
-<br>
-<p align=right><a id="navigation-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
-
-### __[Navigation in VSCode]()__
-
-Navigation in VSCode... __TODO__
-
- __Command Palette__ is a very handy tool where you can search for any command, setting or functionality within VSCode. 
-
-__Add Folder To Workspace__ makes it possible to have several projects open in same workspace.
-
-<br>
 <p align=right><a id="terminal-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 ### __[Terminal in VSCode]()__
 
-__VSCode__ comes with an __integrated terminal window__ - which is a very handy and time-saving. Terminal window opens pointing directly to your working directory. It is also possible to switch between _shells_ that power the terminal from a drop down in the right-' upper corner.
+VSCode comes with an _integrated terminal window_ which is a very handy and time-saving. Terminal window opens pointing directly to your working directory. It is also possible to switch between _shells_ that power the terminal from a drop down in the right-' upper corner.
 
-Changing to _default shell_ of your choice can be done by opening _`Command Palette (Ctrl+Shift+P) -> Terminal: Select Default Shell`_. There you will get a list of available choices for you operating system where "Git Bash" (the default shell that we use) is one of the options.
+Changing to _default shell_ of your choice can be done by opening _Command Palette_ (`Ctrl+Shift+P`) -> `Terminal: Select Default Shell`. There you will get a list of available choices for you operating system where "Git Bash" (the default shell that we use) is one of the options.
 
-If you run lots of git commands from command line we recommend you to move the terminal window to the right of your screen. Do this by right-clicking the top bar in terminal window and choosing _Move Panel Right_. This is very handy to have it to the right because often output is spread on many vertical lines and we can see the results without need of scrolling.
-
-<br>
 <p align=right><a id="useful-shortcuts-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-### __[Useful shortcuts in VSCode]()__
+### __[Useful Shortcuts in VSCode]()__
 
 Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcuts`_. Global user defined `settings.json` or `defaultSetting.json` can easily be opened from` Command Palette` (`Ctrl-Shift-P`) - search for _settings_. Below we list our most frequently used VSCode shortcuts that make our development a lot faster.    
 Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2019). 
@@ -320,79 +288,311 @@ Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/e
 
 | TERMINAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||
 |:--|:--|
-|`Ctrl+Ö`__\*__ | __Open/Focus/Hide__ <br> Creates new terminal or focuses cursor when run in terminal window. <br> _\*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_
+|`Ctrl+Ö`__\*__ | __Open/Focus/Hide__ <br> Opens new terminal, focuses it and on subsequent presses  hides if open <br> _\*Must be set in Keyboard Shortcuts for` Terminal: Scroll To Bottom` & `Toggle Integrated Terminal` & ` Focus Terminal` & `View: Toggle Panel`._
 |`Ctrl+L` | __Clear window__ <br> Clear focused terminal window 
-|`Ctrl+K`__\*__ | __Kill terminal__ <br> Kills current terminal and if last hides the window.<br>_*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_
-|`Ctrl+▲▼`__\*__ | __Scroll Up or Down__ <br> Scroll up od down in focused terminal window. <br> _\*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode)_
-|`Ctrl+◀▶`__\*__ | __Enlarge or Shrink__ <br> Enlarge or shrinks focused terminal window. <br> _\*Must be set in "Keyboard Shortcuts" [read more here](#recommended-customization-of-vscode_
+|`Ctrl+K`__\*__ | __Kill terminal__ <br> Kills current terminal and if last hides the window. <br> _\*Must be set in Keyboard Shortcuts for `Kill Active Instance`_.
+|`Ctrl+▲▼`__\*__ | __Scroll Up or Down__ <br> Scroll up od down in focused terminal window. <br> _\*Must be set in Keyboard Shortcuts for `Terminal: Scroll Up (Line)` & `Terminal: Scroll Down (Line)`._
+|`Ctrl+◄►`__\*__ | __Enlarge or Shrink__ <br> Enlarge or shrinks focused terminal window. <br> _\*Must be set in Keyboard Shortcuts for `Terminal: Resize Pane Left` & `Terminal: Resize Pane Right`._
 
+<br>
+
+__Keybindings.json__  
+Our keybinding we use
+
+```
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+alt+oem_minus",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_2",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "workbench.action.terminal.scrollToBottom",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+end",
+    "command": "-workbench.action.terminal.scrollToBottom",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+pageup",
+    "command": "-workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.terminal.kill"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+pagedown",
+    "command": "-workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "workbench.action.terminal.resizePaneLeft",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-md-shortcut.toggleBold",
+    "when": "editorTextFocus && markdownShortcuts:enabled"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+oem_7",
+    "command": "workbench.files.action.compareWithSaved"
+  },
+  {
+    "key": "ctrl+k d",
+    "command": "-workbench.files.action.compareWithSaved"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "cursorLineEnd"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "cursorLineStart"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "explorerViewletVisible && inputFocus"
+  },
+  {
+    "key": "shift+delete",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible  && !inputFocus"
+  },
+  {
+    "key": "shift+delete",
+    "command": "-deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "cursorUpSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "-cursorUpSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+up",
+    "command": "-cursorUpSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+oem_6",
+    "command": "extension.matchitJumpItems",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+oem_5",
+    "command": "-extension.matchitJumpItems",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+oem_3",
+    "command": "-workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "bracket-pair-colorizer.expandBracketSelection"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "-editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "editor.emmet.action.balanceOut",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "cursorDownSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "-cursorDownSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+backspace",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_6",
+    "command": "-editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_7",
+    "command": "deleteAllLeft"
+  }
+]
+```
 
 <br>
 
 <p align=right><a id="useful-extensions-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-### __[Useful extensions in VSCode]()__
 
-More and more is getting integrated into VSCode for each release but here are some good extensions that we recommend at the writing moment.
+### __[Useful Extensions in VSCode]()__
+
+More and more is getting integrated into VSCode for each release but here are some good extensions that we use at the writing moment (May 2020) and recommend..
 
 You can search online for [VSCode Marketplace](https://marketplace.visualstudio.com/) for extensions or directly from VSCode.
 
-| Extension&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp; | Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Common                                      | `Code Spell Checker`                                                                                                                                                                     | Check for spelling mistakes and proposes corrections                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Common                                      | `VSCode Icons`                                                                                                                                                                           | A set of small icons shown in explorer bar that makes navigating and finding a special file type easier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Common                                      | `Bracket Pair Colorizer`                                                                                                                                                                 | Provides different colors for round, square and squiggly brackets so those ar easier to distinguish.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Common                                      | `Better comments`                                                                                                                                                                        | More human-friendly highlighted comments with colour. use characters like `!` `?`   to get different color highlights.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Web Dev                                     | `ESLint`                                                                                                                                                                                 | Analyzes to quickly find problems when developing. Find and fix problems in your JavaScript, TypeScript and more. Rules [here](https://eslint.org/docs/rules/)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Web dev                                     | `Auto Rename Tag`                                                                                                                                                                        | Renames start/end tags in all languages i.e. .vue files due to this extension. VS Code offers this feature by default only in html files to enable in setting "renameOnType"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Web dev                                     | `Auto Close Tag`                                                                                                                                                                         | Automatically add HTML close tag after entering <tag>. It is has built-in in VSCode for HTML, Handlebars and Razor files but this extension is enables this for other languages like Vue, XML, PHP, JavaScript, TypeScript, JSX, TSX and so on                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Web dev                                     | `Auto import`                                                                                                                                                                            | Automatically finds, parses and adds to IntelliSense code actions proposals with code completion with available import actions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Web dev                                     | `MatchIt`                                                                                                                                                                                | Automatically navigates with `Ctrl Alt §` to matching bracket or tag.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Web dev                                     | `IntelliSense for CSS class names in HTML`                                                                                                                                               | Autocompletion for CSS class definitions. CSS referenced through link in HTML                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Web dev                                     | `HTML Tag Wrapper`                                                                                                                                                                       | Wraps a selection with new tag. Shortcut: `CTRL+I`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Web dev - JS                                | `Quokka`                                                                                                                                                                                 | For Javascript - runtime values are updated and displayed in editor next to your code, as you type. documentation found [here](https://quokkajs.com/docs/index.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Web dev - Vue                               | `Vetur`                                                                                                                                                                                  | Most useful and specific for Vue.js development with syntax-highlighting, EMMET, IntelliSense etc. Note, it includes auto-formatting that can interfere with "Prettier" formatter. Suggested to install Prettier first and customize the formatting and later install Vetur and set Prettier as main formatter for everything in Vetur settings. For  line intendation uncheck `Use Tabs`. Disable Attribute wrapping with adding for `Default Formatter Options` setting `"js-beautify-html": {"wrap_attributes": "auto"}` and use `Vetur: Default Formatter: HTML` `js-beautify-html`. Read more [here](#recommended-customization-of-vscode). Documentation [here](https://vuejs.github.io/vetur/) |
-| Web dev - Debug                             | `Browser Preview`                                                                                                                                                                        | Open a real browser preview inside your editor that you can debug. Open it with click in icon in explorer menu to the left                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Web dev - Debug                             | `Live Server`                                                                                                                                                                            | A lightweight local dev server with hot (auto-reload) when files are saved. Fast alternative to webpack-dev-server to run by one-click on icon in the bottom ribbon.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Git                                         | `Graph`                                                                                                                                                                                  | Visualizes branches history in separate window nicely. Shows launching "Git Graph" button on the status bar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Git                                         | `Lens`                                                                                                                                                                                   | Extensive Git insights with own sidebar. Good file history comparison                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Git                                         | `History`                                                                                                                                                                                | This tool draws nice file history diagrams                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Markdown                                    | `All in One`                                                                                                                                                                             | Features like Export .MD to HTML, build table of contents and more. Enable when working with Markdown.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Markdown                                    | `Shortcuts`                                                                                                                                                                              | Brings a list with markdown commands to with shortcuts and clickable icons on top bar. Enable when working with Markdown.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| C#                                          | `C#`                                                                                                                                                                                     | C# extension for Visual Studio Code                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|Extension&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+|:--|:--|:--|
+|Common | `Code Spell Checker` | Auto-corrects spelling mistakes and proposes corrections. |
+|Common | `VSCode-icons` | A set of small icons shown in explorer bar that makes navigating and finding of certain file types easier. |
+|Common | `Bracket Pair Colorizer` | Provides different colors for brackets so those ar easier to distinguish. |
+|Web Dev | `ESLint` | Analyzes your code,finds and fix problems in your JavaScript, TypeScript files and more. Rules [here](https://eslint.org/docs/rules/). |
+|Web Dev | `Auto Rename Tag`  | Renames matching tags. Works for all file types .html as well as .vue files. VSCode offers this feature by default (enabled in Setting by `renameOnType`) but then works only for html files (not vue). |
+|Web Dev | `Auto Close Tag` | Automatically an close tag after entering <tag>. It is built-in in VSCode for HTML files but this extension enables this for other languages like Vue, XML, PHP, JavaScript. |
+|Web Dev | `Auto import` | Automatically finds, parses and adds to IntelliSense code actions proposals with code completion with available import actions. |
+|Web dev | `MatchIt`| Automatically navigates between focused, matching  brackets or tags.  By default shortcut `Ctrl Alt §` is added. |
+|Web Dev | `IntelliSense for CSS class names` | Provides CSS class name completion for the HTML `class` attribute based on the definitions found in your workspace, or external stylesheets referenced through the `link` elements in HTML files elements. Supports a variety of files including vue (require Vetur) and django. |
+|Web Dev | `HTML Tag Wrapper` | Wraps selected elements in HTML into a new tag. Default shortcut: `Ctrl+I`. |
+| Web Dev - Vue | `Vetur` | For vue.js development with syntax-highlighting, formatting, EMMET, IntelliSense etc. Included auto-formatting might interfere with "Prettier" formatter. Suggested to install Prettier first, customize it for HTML and JS later install Vetur. Vetur uses Prettier internally as main formatter (no extension is needed)  for HTML and JS features within vue files. Disable html attribute wrapping by adding in Setting for `Default Formatter Options` following `"js-beautify-html": {"wrap_attributes": "auto"}` and use `js-beautify-html` formatter as `Vetur: Default Formatter: HTML`. Read more [here](#recommended-customization-of-vscode). Documentation [here](https://vuejs.github.io/vetur/). |
+|Web Dev - Vue | `Vue VSCode Snippets`| Snippets to supercharge you workflow. Snippets like `vmethod` and `vdata` expands to data and method js-script code. |
+|Web Dev - JS | `Quokka` | For Javascript. At runtime, as you type various calculated values are updated and displayed in editor next to your code. Documentation found [here](https://quokkajs.com/docs/index.html). |
+|Web dev - Debug | `Browser Preview`| Open a real browser preview inside your VSCode editor so that you can edit code, debug an see your brawler as same time. Open it with click. Can be customizes UL to open in extension settings. |
+|Web dev - Debug | `Live Server`| A lightweight local dev-server with hot (auto-reload) feature built-in when files are saved. A fast and easy alternative to webpack-dev-server that you can run by one-click on icon in the bottom ribbon. |
+|Git | `Graph`| Visualizes branches history in separate window nicely. Shows handy "Git Graph" button on the status bar. |
+|Git | `Lens`| Extensive Git insights with own sidebar in explorer. Good file history comparison.  |
+|Git | `History` | This tool draws nice file history diagrams. |
+|Markdown | `All in One`| Features like "export .md to .html", build tables of contents and more. |
+|Markdown | `Shortcuts`| Add a list of shortcuts and clickable icons on top bar. Handy when working much with Markdown content and highlighting, adding images and styling text. |
+|C#| `C#`| C# extension for Visual Studio Code. |
+
 
 <br>
+
 <p align=right><a id="emmet-snippets-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 ### __[EMMET Snippets in VSCode]()__
 
 
-EMMET snippets autogenerate full code blocks code from short text snippets.  [Here](https://docs.emmet.io/cheat-sheet/) is a handy cheat-sheet with all EMMET commands. Read more about EMMET snippets [here](https://docs.emmet.io/).
+EMMET snippets auto-generate full code blocks code from short text snippets.  [Here](https://docs.emmet.io/cheat-sheet/) is a handy cheat-sheet with all EMMET commands. Read more about EMMET [here](https://docs.emmet.io/).
 
-| HTML&nbsp;CODE                                                             | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __New doc__<br>__`!`__                                                     | _`New HTML doc structure`_                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| __Comment__<br>__`c`__                                                     | `<!-- -->`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| __CSS from file__<br>__`link:css`__                                        | `<link rel="stylesheet" href="style.css">`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| __JS from file__<br>__`script:src`__                                       | `<script src="app.js"></script>`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| __Dummy texts__<br>__`lorem4`__                                            | _`Four random lorem words`_                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| __Paragraph__<br>__`p.hero__title--orange{Hi}`__                           | `<p class="hero__title--orange">Hi</p>`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| __Div__<br>__`.nav__item#nav_item-1{Hi}`__                                 | `<div class="nav__item" id="nav_item-1">Hi</div>`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| __Menu__<br>__`ul.nav>(li.nav_row>a#nav_item-\${I\$})*2`__                 | `<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-1">I1</a></li>`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-2">I2</a></li>`<br>`</ul>`                                                                                                                                                                                                                                                                                                                                                                                                                |
-| __Form__<br>__`div>p+form:post>input:text+input:email+input:submit`__      | `<div>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<p></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<form action="" method="post">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="text" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="email" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="submit" value="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</form>`<br>`</div>`                                                                                                                                                                                           |
-| __Article__<br>__`section.sect>(article.wrap>h1.s_t+p.s_d+button.s_b)*1`__ | `<section class="sect">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<article class="wrap">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<h1 class="s_t"></h1>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<p class="s_d"></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<button class="s_b"></button>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</article>`<br>`</section>`                                                                                                                                                                                                                                        |
-| <br>__CSS&nbsp;CODE__<br><br>                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| __`w100p`__                                                                | `width: 100%;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| __`h100e`__                                                                | `height: 100em;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| __`m10p20px10e20p`__                                                       | `margin: 10% 20px 10em 20%;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| __`p10-20-10-20`__                                                         | `padding: 10px 20px 10px 20px;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| __`pos`__                                                                  | `position: relative;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| __`bg`__                                                                   | `background: #000;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| __`bc`__                                                                   | `background-color: #fff;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| __`bd`__                                                                   | `border: 1px solid #000;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| __`bdrs8`__                                                                | `border-radius: 8px;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| __`ff+fw400+fs20`__                                                        | `font-family: serif;`<br>`font-weight: 400;`<br>`font-style: 20px;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-
+| HTML&nbsp;CODE | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|:--|:--|
+| __New doc__<br>__`!`__ | _`New HTML doc structure`_
+| __Comment__<br>__`c`__ | `<!-- -->`
+| __CSS from file__<br>__`link:css`__ | `<link rel="stylesheet" href="./style.css">`
+| __JS from file__<br>__`script:src`__ | `<script src="./app.js"></script>`
+| __Dummy texts__<br>__`lorem4`__ | _`Four random lorem words`_ 
+| __Paragraph__<br>__`p.hero__title--orange{Hi}`__| `<p class="hero__title--orange">Hi</p>`
+| __Div__<br>__`.nav__item#nav_item-1{Hi}`__ | `<div class="nav__item" id="nav_item-1">Hi</div>`
+| __Menu__<br>__`ul.nav>(li.nav_row>a#nav_item-\${I\$})*2`__ | `<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-1">I1</a></li>`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-2">I2</a></li>`<br>`</ul>`
+| __Form__<br>__`div>p+form:post>input:text+input:email+input:submit`__ | `<div>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<p></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<form action="" method="post">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="text" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="email" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="submit" value="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</form>`<br>`</div>`
+| __Article__<br>__`section.sect>(article.wrap>h1.s_t+p.s_d+button.s_b)*1`__ | `<section class="sect">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<article class="wrap">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<h1 class="s_t"></h1>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<p class="s_d"></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<button class="s_b"></button>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</article>`<br>`</section>`
+| <br>__CSS&nbsp;CODE__<br><br>||
+| __`w100p`__ | `width: 100%;`
+| __`h100e`__ | `height: 100em;`
+| __`m10p20px10e20p`__ | `margin: 10% 20px 10em 20%;`
+| __`p10-20-10-20`__ | `padding: 10px 20px 10px 20px;`
+| __`pos`__ | `position: relative;`
+| __`bg`__ | `background: #000;`
+| __`bc`__ | `background-color: #fff;`
+| __`bd`__ | `border: 1px solid #000;`
+| __`bdrs8`__ | `border-radius: 8px;`
+| __`ff+fw400+fs20`__ | `font-family: serif;`<br>`font-weight: 400;`<br>`font-style: 20px;`
 
 <br>
 
@@ -425,19 +625,27 @@ Node.js can execute programs written in JavaScript. Originally JavaScript is a s
 
 Following are some common packages and functions that are useful and good to memorize.
 
-|                                                                  |                   |                                                                                                                                                                                                                                                                                                                                  |      |
-| :--------------------------------------------------------------- | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- |
-| require(__[fs](https://nodejs.org/api/fs.html#fs_file_system)__) | access filesystem | __[writeFile](https://nodejs.org/api/all.html#fs_fs_writefile_file_data_options_callback)__(__dirname +"./[FileName]",<br> [TextToAdd],<br> function() {...})                                                                                                                                                                    | YES  |
-| require(__[http](https://nodejs.org/api/http.html#http_http)__)  | Access www        | __[get](https://nodejs.org/api/http.html#http_http_get_url_options_callback)__(url,<br>function(resp) {<br> response.__[pipe](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)__(fs.__[createWriteStream](https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options)__([FileName])) <br>}) | YES  |
-| require(__http__)                                                | ...               | ...                                                                                                                                                                                                                                                                                                                              | YES  |
-
 >	Note! Even though it is not required, it is a good practice to use ; at end of each statement. <br>
 In node 'var' and 'const' are used when declaring variables. Var variables can be updated and re-declared within its scope, const variables can neither be updated nor re-declared. <br>
 
+- __require([fs](https://nodejs.org/api/fs.html#fs_file_system))__ - Access filesystem
+```javascript
+writeFile(__dirname +"./[FileName]",
+          [TextToAdd],
+          function() {...})
+```
+
+- __require([http](https://nodejs.org/api/http.html#http_http))__ - Access http 
+```javascript
+get(url,
+    function(resp) {
+    response.pipe(fs.createWriteStream([FileName])) 
+})
+```
 
 ### [__Npm__](#)
 
-NPM stands for Node Package Manager and comes by default with Node.js installation. NPM is a tool used to search for, download and store packages that can later be run by Node.js. NPM packages are JavaScript programs written by others performing various tasks that usually automate various things us lots of  precious time. Packages that are downloaded through npm can automate development, but also contain code that project use when auto-creating code that we later send to browser. For example [lodash](https://lodash.com/) or [normalize](http://nicolasgallagher.com/about-normalize-css/) are such a packages. 
+NPM stands for Node Package Manager and comes by default with node.js installation. NPM is a tool used to search for, download and store packages that can later be run by Node.js. NPM packages are JavaScript programs written by others performing various tasks that usually automate various things us lots of  precious time. Packages that are downloaded through npm can automate development, but also contain code that project use when auto-creating code that we later send to browser. For example [lodash](https://lodash.com/) or [normalize](http://nicolasgallagher.com/about-normalize-css/) are such a packages. 
 
 __Install Npm packages__
 
@@ -473,17 +681,16 @@ _For development only:_<br>
 
 #### [Useful NPM Packages](#)
 
-| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                                       | flag | Usage                                                                                                                                                     |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [normalize.css](http://nicolasgallagher.com/about-normalize-css/)<br>[loadash](https://lodash.com/)                                                                                                                                                                            |      | CSS package for resetting all browsers to same state. <br> Lodash is an JavaScript library to work with arrays, numbers, objects, strings, etc.           |
-| <br>[webpack](https://www.npmjs.com/package/webpack)<br>[webpack-cli](https://www.npmjs.com/package/webpack-cli)<br>[webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)                                                                                     | -D   | _Common Webpack functionality_<br>For bundling & automation.<br>For command line functionality<br>Dev server that auto-injects JS into chrome at runtime. |
-| <br>[postcss-loader](https://www.npmjs.com/package/postcss-loader)<br>[css-loader](https://www.npmjs.com/package/css-loader)<br>[style-loader](https://www.npmjs.com/package/style-loader)                                                                                     | -D   | _Webpack loaders (CSS)_<br>For loading postCSS modules.<br>For importing css to js files.<br>Get browser to read CSS from JS files.                       |
-| <br>[postcss-import](https://www.npmjs.com/package/postcss-import)<br>[postcss-simple-vars](https://www.npmjs.com/package/postcss-simple-vars)<br>[postcss-nested](https://www.npmjs.com/package/postcss-nested)<br>[autoprefixer](https://www.npmjs.com/package/autoprefixer) | -D   | _PostCSS modules:_<br>For importing code to CSS & NPM-modules files <br> For variables in CSS <br> For nesting in CSS<br>For adding autoprefixes          |
-| xxx                                                                                                                                                                                                                                                                            |      |                                                                                                                                                           |
-| yyy                                                                                                                                                                                                                                                                            |      |                                                                                                                                                           |
- 
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| flag | Usage|
+|:--|:--|:--|
+|[normalize.css](http://nicolasgallagher.com/about-normalize-css/)<br>[loadash](https://lodash.com/) | | CSS package for resetting all browsers to same state. <br> Lodash is an JavaScript library to work with arrays, numbers, objects, strings, etc.
+|<br>[webpack](https://www.npmjs.com/package/webpack)<br>[webpack-cli](https://www.npmjs.com/package/webpack-cli)<br>[webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)| -D | _Common Webpack functionality_<br>For bundling & automation.<br>For command line functionality<br>Dev server that auto-injects JS into chrome at runtime.
+|<br>[postcss-loader](https://www.npmjs.com/package/postcss-loader)<br>[css-loader](https://www.npmjs.com/package/css-loader)<br>[style-loader](https://www.npmjs.com/package/style-loader)| -D | _Webpack loaders (CSS)_<br>For loading postCSS modules.<br>For importing css to js files.<br>Get browser to read CSS from JS files.
+|<br>[postcss-import](https://www.npmjs.com/package/postcss-import)<br>[postcss-simple-vars](https://www.npmjs.com/package/postcss-simple-vars)<br>[postcss-nested](https://www.npmjs.com/package/postcss-nested)<br>[autoprefixer](https://www.npmjs.com/package/autoprefixer) | -D | _PostCSS modules:_<br>For importing code to CSS & NPM-modules files <br> For variables in CSS <br> For nesting in CSS<br>For adding autoprefixes
 
-### [Package.json file](#)
+<br>
+
+#### [Package.json file](#)
 
 This is an important file in the root of the repo. It is auto-generated when we initiate npm. This is an important project file. The 'scripts' property is a dictionary containing script commands that can be run from command line. Dependencies are the packages that are used in within the project.
 
@@ -602,7 +809,7 @@ __Webpack devServer__ (webpack-dev-server) is a webpack npm package that is star
 - Create [webpack.config.js](#webpackconfigjs-file) file in the root of your repo:<br>
 `mkdir webpack.config.js`
 
-```
+```javascript
 const postCSSPlugins = [
     `list here all downloaded postCSS plugins you use `
 ]
@@ -630,7 +837,7 @@ DevServer: {
 ```
 
 - In our main entry point js file `App.js` add this in order to get css into js and hot auto injection of .js file to browser to work.
-```
+```javascript
 import '../styles/styles.css'
 
 if (module.hot)
@@ -642,7 +849,7 @@ if (module.hot)
 
 
 - In VSCode file `settings.json` (open from settings) add following line in order to avoid error in editor in CSS files when using scss syntax.
-```
+```javascript
 "files.associations": {"*.css": "scss"}
 ```
 
@@ -651,7 +858,7 @@ if (module.hot)
 This is an important file in the repo root that you must create and add manually in order to give instruction to webpack how to run. Webpack when run, the first thing it does is to looks in running folder for this file.
 
 _Example of an webpack.config.js file:_
-```
+```javascript
 var path = require('path');
 
 /* */
@@ -702,8 +909,7 @@ module.exports = {
 
 <br><br>[- BACK TO TOP -](#table-of-contents)
 
----
----
+
 <br>
 <br>
 
@@ -808,12 +1014,17 @@ __`MARKDOWN TEXTS`__
 `~~striken text~~` |  ~~striken text~~  
 `$f(x)=x/5*2y$`    |  $f(x)=x/5*2y$
 
-# \#H1
-## \#\# H2 text
-### \#\#\# H3 text
-#### \#\#\#\# H4 text
-##### \#\#\#\#\# H5 text
+```
+#H1
 
+##H2
+
+###H3
+
+####H4
+
+#####H5
+```
 <br>
 
 __`MARKDOWN LINKS`__
