@@ -20,12 +20,10 @@ _Prerequisites: Some HTML & CSS skills._
   - Node.js & Npm
     - [What is Node.js and Npm used for?](#nodejs-&-npm)
   	- [Node.js](#install-node.js-and-execute-programs) ◦ [Node.js modules](#useful-node.js-modules)
-	- [Npm](#install-npm-packages) ◦ [Npm packages](#useful-npm-packages)
-	- [_"package.json"_ file](#packagejson-file)
-  - Webpack
-    - [What is Webpack and what is it used for?](#webpack)
-	- [Bundling with PostCSS](#bundling-with-postcss) ◦ [Webpack Dev Server](#webpack-dev-server)
-	- [_"webpack.config.js"_ file](#webpackconfigjs-file) 
+    - [Npm](#install-npm-packages) ◦ [Npm packages](#useful-npm-packages)
+    - [_"package.json"_ file](#packagejson-file)
+  - [__Webpack__](#what-is-webpack)  
+   [PostCSS](#bundling-with-postcss) ◦ [Webpack Dev Server](#webpack-dev-server-m) ◦ [webpack.config.js](#webpackconfigjs-file) 
   - Markdown
     - [Why markdown?](#markdown) 
 	- [Markdown syntax](#markdown-syntax) 
@@ -116,68 +114,92 @@ Our default settings for our development. To copy just past in at the end of you
 
 __setting.json file__
 ```javascript
+...
+
 //
-// Liveserver extension
-//
-"liveServer.settings.useBrowserPreview": true, // open live server in VScode instead of browser (default false)
-"liveServer.settings.donotShowInfoMsg": true, // disable info pop ups (dafault false)
-//
-// Browser preview extension
-//
-"browser-preview.startUrl": "http://localhost:8080", // set default url to load in browser preview opened in VScode
-//
-// VSCode Editor
-//
-"[html]": {
-  "editor.defaultFormatter": "vscode.html-language-features" //dafaukt formatter for HTML files
-},
-"editor.tabSize": 2, // nbr of spaces for a tab indent in general (default 4)
-"editor.formatOnPaste": true, // auto-format on paste (default false)
-"editor.formatOnSave": true, // auto-format on save (default false)
-//
-// VSCode Editor: html
-//
-"html-css-class-completion.enableEmmetSupport": true, // enables emmet (dafault false)
-"html.format.wrapAttributes": "preserve-aligned", // prefered html attribute wrapping method (default auto)
-"html.format.wrapLineLength": 160, // prefered length of line for wrapping (default 120)
-"html.format.preserveNewLines": true, // when formatting, and a line added after element, do not remove it (dafault true)
-"html.format.maxPreserveNewLines": 1, // when formatting do not not remove this nbt of empty lines. (default null or 0)
-"html.format.extraLiners": "", // adds empty efter those html tags. (default "head, body, /html")
-//
-// vetur extension (for Vue files)
-//
-"vetur.format.options.tabSize": 2, // nbr of spaces for a tab indent in vue files (default 4) 
-"vetur.format.defaultFormatter.html": "js-beautify-html", // prefered html attribute wrapping method (default prettier that wraps all)
-"vetur.format.defaultFormatterOptions": {
-  "js-beautify-html": {
-    "wrap_attributes": "preserve-aligned", // prefered vue attribute wrapper ("auto" is no wrapping at all) 
-    "preserve_newlines": true, // when formatting, and a line added after element, do not remove it
-    "max_preserve_newlines": 1 // when formatting do not not remove this nbt of empty lines.
+  // Live-server extension
+  //
+  "liveServer.settings.useBrowserPreview": true, // open live server in VScode instead of browser (default false)
+  "liveServer.settings.donotShowInfoMsg": true, // disable info pop ups (default false)
+  //
+  // Browser preview extension
+  //
+  "browser-preview.startUrl": "http://localhost:8080", // set default url to load in browser preview opened in VScode
+  //
+  // VSCode Editor
+  //
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features" //default formatter for HTML files
   },
-  "prettier": { // Prettier is used internally as formatter and setting can be set here
-    "semi": true, // if false - no semi-collon at end of js-statements
-    "singleQuote": true, // if false - use double quotes
-    "jsxSingleQuote": true, // if false -> use double quotes
-    "bracketSpacing": true // if true -> { foo: bar }
+  "editor.tabSize": 2, // nbr of spaces for a tab indent in general (default 4)
+  "editor.formatOnPaste": true, // auto-format on paste (default false)
+  "editor.formatOnSave": true, // auto-format on save (default false)
+  //
+  //Prettier - extension formatter
+  //
+  "prettier.disableLanguages": ["markdown"], // disable for markdown as it destrys tables
+  //
+  // PostCSS
+  //
+  "emmet.includeLanguages": {
+    "postcss": "css"
   },
-},
-//
-// Markdown & Markdown Shortcuts extensions
-//
-"markdown.extension.preview.autoShowPreviewToSide": true, // When opening -md file, auto open previow on the side
-"markdown.extension.tableFormatter.enabled": false, // false - do not format tables
-"markdown.extension.tableFormatter.normalizeIndentation": false, //  false - do not normalize tables structure
-"markdown.extension.italic.indicator": "_", // use _ instead of *
-"markdownShortcuts.bold.marker": "__", // use _ instead of **
-"markdownShortcuts.bullets.marker": "-", // use - instead of *
-"markdown.extension.toc.updateOnSave": false, // do not update table on save (default true)
-"markdownShortcuts.icons.image": true, // show icon in upper/right corenr of window
-"markdownShortcuts.icons.link": true, // show icon in upper/right corenr of window
-"markdownShortcuts.icons.citations": false // show icon in upper/right corenr of window
-// Disable any markdown formatter if set
-// "[markdown]": {
-//   "editor.defaultFormatter": "esbenp.prettier-vscode"
-// }
+  // VSCode Editor: html
+  //
+  "html-css-class-completion.enableEmmetSupport": true, // enables emmet (default false)
+  "html.format.wrapAttributes": "preserve-aligned", // preferred html attribute wrapping method ("auto" -> no wrapping) (fav: preserve-aligned)
+  "html.format.wrapLineLength": 160, // preferred length of line for wrapping (default 120)
+  "html.format.preserveNewLines": true, // when formatting, and a line added after element, do not remove it (default true)
+  "html.format.maxPreserveNewLines": 1, // when formatting do not not remove this nbt of empty lines. (default null or 0)
+  "html.format.extraLiners": "", // adds empty after those html tags. (default "head, body, /html")
+  //
+  // Vetur extension (for Vue files)
+  //
+  "vetur.format.options.tabSize": 2, // nbr of spaces for a tab indent in vue files (default 4)
+  "vetur.format.defaultFormatter.html": "js-beautify-html", // preferred html attribute wrapping method (default prettier that wraps all)
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "preserve-aligned", // preferred vue attribute wrapper ("auto" -> no wrapping. fav: preserve-aligned)
+      "preserve_newlines": true, // when formatting, and a line added after element, do not remove it
+      "max_preserve_newlines": 1 // when formatting do not not remove this nbt of empty lines.
+    },
+    "prettier": {
+      // Prettier is used internally as formatter and setting can be set here
+      "semi": false, // if true - semicolon or semi-colon (;) at end of all js-statements in vue files
+      "singleQuote": true, // if false - use double quotes
+      "jsxSingleQuote": true, // if false -> use double quotes
+      "bracketSpacing": true, // if true -> { foo: bar }
+      "proseWrap": "preserve" //
+    }
+  },
+  //
+  // Bracket Pair Colorizer
+  //
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    ["black", "Orchid", "LightSkyBlue"],
+    "Red"
+  ],
+  //
+  // Markdown & Markdown Shortcuts extensions
+  //
+  "markdown.extension.preview.autoShowPreviewToSide": true, // When opening -md file, auto open preview on the side
+  "markdown.extension.tableFormatter.enabled": false, // false - do not format tables
+  "markdown.extension.tableFormatter.normalizeIndentation": false, //  false - do not normalize tables structure
+  "markdown.extension.italic.indicator": "_", // use _ instead of *
+  "markdownShortcuts.bold.marker": "__", // use _ instead of **
+  "markdownShortcuts.bullets.marker": "-", // use - instead of *
+  "markdown.extension.toc.updateOnSave": false, // do not update table on save (default true)
+  "markdownShortcuts.icons.image": true, // show icon in upper/right corner of window
+  "markdownShortcuts.icons.link": true, // show icon in upper/right corner of window
+  "markdownShortcuts.icons.citations": false,
+  "workbench.startupEditor": "newUntitledFile",
+  //
+  // Code Spell checker
+  //
+  "cSpell.userWords": ["Czerwinski", "iface", "ifaces", "ifname", "mixins"]
 ```
 
 __Formatter types__
@@ -267,7 +289,8 @@ Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/e
 |`Ctrl+Enter`__\*__ | __Toggle Explorer Window & Focus__ <br> Toggles visibly of sidebar explorer window. Second press focuses it. When in focus use `⇔` to navigate into folders. __`Enter`__ to open selected file. __`Ctrl+W`__ to close focused file. <br> _\*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility`_ and `Explorer: Focus On Folders View` with when set to `explorerViewletVisible && inputFocus` 
 |`Ctrl+P` <br> `Ctrl+Tab`| __Search & Toggle Files__ <br> `Ctrl-P` opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. `Ctrl-Tab` is too handy to toggle 2 lately used files.
 |`Ctrl+Shift+P` | __Command Palette__ <br> Opens Command Palette where commands can be easily searched. Recently used shown on top. Use `ESC` to exit.
-|`Ctrl+F` | __Search & Replace in file__ <br> Find all focused/selected words in file. Replace from new window. Use `ESC` to exit.
+|`Ctrl+F` | __Search__ <br> Rename all highlighted words in file
+|`F2` | __Rename all in file__ <br> Find all focused/selected words in file. Replace from new window. Use `ESC` to exit.
 |`Ctrl+Shift+F` | __Search & Replace in proj__ <br> Find all focused/selected words in project. Replace from new window. Use `ESC` to exit.
 
 <br>
@@ -298,7 +321,6 @@ Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/e
 
 __Keybindings.json__  
 Our keybinding we use
-
 ```
 // Place your key bindings in this file to override the defaultsauto[]
 [
@@ -545,9 +567,12 @@ You can search online for [VSCode Marketplace](https://marketplace.visualstudio.
 |Web Dev | `Auto Rename Tag`  | Renames matching tags. Works for all file types .html as well as .vue files. VSCode offers this feature by default (enabled in Setting by `renameOnType`) but then works only for html files (not vue). |
 |Web Dev | `Auto Close Tag` | Automatically an close tag after entering <tag>. It is built-in in VSCode for HTML files but this extension enables this for other languages like Vue, XML, PHP, JavaScript. |
 |Web Dev | `Auto import` | Automatically finds, parses and adds to IntelliSense code actions proposals with code completion with available import actions. |
+|Web Dev | `Path Autocomplete` | Add to intellisense proposal path when starting writing `./` - `/` - `C:` - `~`. Works for all types of files out-of-the-box. 
 |Web dev | `MatchIt`| Automatically navigates between focused, matching  brackets or tags.  By default shortcut `Ctrl Alt §` is added. |
 |Web Dev | `IntelliSense for CSS class names` | Provides CSS class name completion for the HTML `class` attribute based on the definitions found in your workspace, or external stylesheets referenced through the `link` elements in HTML files elements. Supports a variety of files including vue (require Vetur) and django. |
 |Web Dev | `HTML Tag Wrapper` | Wraps selected elements in HTML into a new tag. Default shortcut: `Ctrl+I`. |
+|Web Dev - CSS/PostCSS | `Prettier` | Formatter that is used for mainly for auto-formatting CSS/SCSS/PostCSS as it seems not to be included by default in VSCode. Language "markdown" shall be disabled in extension settings. |
+|Web Dev - PostCSS | `PostCSS Language Support` | Syntax check and highlighting of PostCSS type of files. |
 | Web Dev - Vue | `Vetur` | For vue.js development with syntax-highlighting, formatting, EMMET, IntelliSense etc. Included auto-formatting might interfere with "Prettier" formatter. Suggested to install Prettier first, customize it for HTML and JS later install Vetur. Vetur uses Prettier internally as main formatter (no extension is needed)  for HTML and JS features within vue files. Disable html attribute wrapping by adding in Setting for `Default Formatter Options` following `"js-beautify-html": {"wrap_attributes": "auto"}` and use `js-beautify-html` formatter as `Vetur: Default Formatter: HTML`. Read more [here](#recommended-customization-of-vscode). Documentation [here](https://vuejs.github.io/vetur/). |
 |Web Dev - Vue | `Vue VSCode Snippets`| Snippets to supercharge you workflow. Snippets like `vmethod` and `vdata` expands to data and method js-script code. |
 |Web Dev - JS | `Quokka` | For Javascript. At runtime, as you type various calculated values are updated and displayed in editor next to your code. Documentation found [here](https://quokkajs.com/docs/index.html). |
@@ -614,14 +639,18 @@ Node.js can execute programs written in JavaScript. Originally JavaScript is a s
 - Following command check if node is __installed__ on your machine.If not just google and install it. <br>
 `node -v` 
 
-- To __execute__ a java script file with node use following cmd command: <br>
+- To __execute__ a javascript file with node.js use following cmd command: <br>
 `node anyFileToRun.js` 
 
->	JavaScript programs that is run by node.js usually include (require) packages that are either downloaded though npm (and stored in root folder `node_modules`) or built-in in node.js. In order to use those packages those must be "required" in top of the .js file. For example:
-`var http = require('http');`.
+JavaScript programs that is run by node.js usually include (require) packages that are either downloaded though npm (and stored in root folder `node_modules`) or built-in in node.js. In order to use those packages those must be "required" in top of the .js file. import  can also be used but import do not search the npm_modules folder for installed package.  
 
+For example:
+```
+var http = require('http');
+import('vue');
+```
 
-#### [Useful Node.js modules](#)
+#### [Useful node.js modules](#)
 
 Following are some common packages and functions that are useful and good to memorize.
 
@@ -647,6 +676,19 @@ get(url,
 
 NPM stands for Node Package Manager and comes by default with node.js installation. NPM is a tool used to search for, download and store packages that can later be run by Node.js. NPM packages are JavaScript programs written by others performing various tasks that usually automate various things us lots of  precious time. Packages that are downloaded through npm can automate development, but also contain code that project use when auto-creating code that we later send to browser. For example [lodash](https://lodash.com/) or [normalize](http://nicolasgallagher.com/about-normalize-css/) are such a packages. 
 
+__Look for outdated packages.__  
+There should be no output.
+```
+npm outdated 
+npm outdated -g --depth=0
+```
+
+__Update__ all the packages listed to the latest version.  
+This will also install missing packages and dependencies.
+```
+npm update 
+npm update -g
+```
 __Install Npm packages__
 
 -	First always __initiate npm in the root__ of your local repo.<br>
@@ -725,187 +767,325 @@ _Example of an package.json file:_
 }
 ```
 
-<br><br>[- BACK TO TOP -](#table-of-contents)
 
 ---
 ---
-<br><br>
-
-
-## [Webpack](#)
-
-__This section is about:__<br>
- _Bundling and auto-building your source files._
-
-_Some good tutorial [HERE](https://www.youtube.com/watch?v=lziuNMk_8eQ)_
-
 <br>
-Webpack is a bundler and dependencies manager and our "building" tool. Simply described:
 
-
-  `Webpack consumes many files that are not written in a way that browser understands (but we understand very well), and generates few minimal files (i.e. .HTML, .css and .js) that the browser can understand (but we have hard to read).`
-
-Webpack can for example (when instructed in webpack.config.js file) build one single .js file from several files  (i.e JS ES6, CSS and JS). Thanks to its many  packages it can perform a variety of tasks. Webpack is popular to use in big web projects as it streamlines ans simplifies the development. Without it would be very hard to import and add all script dependencies manually.
-
-During development you run webpack in development mode as then it bundles faster faster than in production mode. The files are usually minified for performance only in production mode. In development mode we do things a bit differently to speed up development. For example we load CSS though a javascript file (for simple auto-injection and hot-refresh of browser).
-
--	Initiate Webpack in the root of your working directory:<br>
-	`npm i -D webpack webpack-cli  webpack-dev-server`<br>
-	`npm i -D postcss-loader css-loader style-loader`<br>
-	`npm i -D postcss-import postcss-simple-vars postcss-nested autoprefixer`
 
 <br>
 
-### [Bundling with PostCSS](#)
+<p align=right><a id="what-is-webpack" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-PostCSS is an npm package widely used with webpack. It is like an empty shell that on its own do not do anything. It uses "loaders" (other npm packages), that can load and execute various PostCSS packages (other npm packages). Webpack, when bundling, uses PostCSS packages to execute and understand different file formats we that we chose to use for our development. For example non standard stuff like CSS variable, nesting in CSS can be used by developer and though Webpack bundler be transformed to valid CSS that browser understands thanks to PostCSS packages. 
-
-In order for webpack to understand and know what PostCSS loaders and what PostCSS packages to use for various files it must be instructed in webpack.config.js file
-
-You can check our our example of webpack.config.ja file but follwing comes description on some settings in more details way if you want to know what-is-what.
-
-<br>
-
-_Instructing webpack that all files with ending .css shall be handled by following PostCSS loaders:_ 
-
-```
-module: {
-		rules: [
-			{
-				test: /\.css$/i, /* Only if file ends in .css */
-				use: ['style-loader','css-loader']
-			}
-		]
-	},
-```
+## [__Webpack__](#)
 
 
-/* Telling webpack that that all files ending with .css shall be handled by following loaders*/ 
+Webpack is a bundler, dependencies manager and general automation tool that is used widely in web development. Good YouTube tutorial can be found [here](https://www.youtube.com/watch?v=lziuNMk_8eQ)
 
-module: {
-		rules: [
-			{
-				test: /\.css$/i, /* Only if file ends in .css */
-				use: ['style-loader','css-loader']
-			}
-		]
-	},
+> Webpack consumes files that are written in a way easy for humans to understand but that are not understandable by the browser, and generates new minimal files html/css/js files that browser can understand. It can also convert pictures, combine and transform files and execute scripts at the moment we press a save button. 
+
+Webpack can be instructed in its _webpack.config.js_ to start with a entry file consisting of syntax of your choice and build one single js-file compliant with ECMAScript 5 (ES5) syntax that most browses understand. Thanks to its many packages it can perform a variety of task and you can add packages for the prefered syntax you want to write you code in. Webpack will transform it to files browser understand and in the end in fles you can deploy to server when your project is redo.
 
 
-
-### [Webpack Dev Server](#)
-
-__Webpack devServer__ (webpack-dev-server) is a webpack npm package that is started from command line, usually by running a NPM-script. When running it can automatically inject code to running browser(s) instantly when tracked project files (i.e HTML, CSS and JS) are saved. The injection is done is such a way that browser do not perform 'hard refresh' and keeps its state. This is VERY convenient when developing and CSS styling.The server can also be reached from several browsers on the same wi-fy network. It is very popular dev server to use when building and styling your web app. In order to get it work some configurations need to be done and some npm packaged downloaded. Following is described what need to be done to gest started with webpack DevServer
-
-- Make sure webpack is installed
-
-- Install npm packages:<br>
-`npm install -D webpack-dev-server css-loader style-loader postcss-loader`
-
-
-- In projects [package.json](#packagejson-file) add new script to run from command line. Add in script section: <br>
-`"devServer": "webpack-dev-server",`
-
-- Create [webpack.config.js](#webpackconfigjs-file) file in the root of your repo:<br>
-`mkdir webpack.config.js`
-
+__Simples possible setup of webpack:__  
+When running webpack with the simple setup below (run `> npm run dev` in terminal) the file our _App.js_ is processed by webpack and a __new__ js file _app.js_ __created__ in new folder named `dist` 
 ```javascript
-const postCSSPlugins = [
-    `list here all downloaded postCSS plugins you use `
-]
+./assets/scripts/App.js
 
-
-/* Telling webpack that that all files ending with .css shall be handled by following loaders*/ 
-
-module: {
-		rules: [
-			{
-				test: /\.css$/i, /* Only if file ends in .css */
-				use: ['style-loader','css-loader']
-			}
-		]
-	},
-
-
-/* Telling webpack to watch for changes in a directory and inject those to the running browser(s) at localhost:3000 */
-
-DevServer: {
-		contentBase: path.join(__dirname, 'app'),	/* Base folder where our index.HTML file lives */
-		hot: true, /* Auto inject at save. The main entry point .js file must contain following: if (module.hot) module.hot.accept(); */
-		port: 3000
-	},
-```
-
-- In our main entry point js file `App.js` add this in order to get css into js and hot auto injection of .js file to browser to work.
+alert("Hello world");
+```  
 ```javascript
-import '../styles/styles.css'
+Terminal
 
-if (module.hot)
-{
-	module.hot.accept();
+// Add Webpack package to your project
+
+> npm i -D webpack webpack-cli
+// or
+> npm install webpack webpack-cli --save-dev
+```  
+```javascript
+webpack.config.js
+
+//  Create configuration in root
+
+module.exports = {
+  // entry point for webpack to start with it bundleing
+  entry: path.join(__dirname, './assets/scripts/App.js')
 }
-
-```
-
-
-- In VSCode file `settings.json` (open from settings) add following line in order to avoid error in editor in CSS files when using scss syntax.
+```  
 ```javascript
-"files.associations": {"*.css": "scss"}
+
+//  Add script to run webpack 
+
+...
+"scripts": {
+  "dev": "webpack"
+},
+...
+```  
+> To make sense you need to download more webpack related packages and add instruction in webpack.config.js and package.json files telling webpack what to do. But the main procedure is same: webpack starts in entry point of our choice, processes it as we have told it to do with use of other packages and spits out result in new file where we instruct it to do.
+
+
+<p align=right><a id="bundling-with-postcss" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+### [__PostCSS__](#)
+
+PostCSS is an npm package widely used with webpack when styling your code with CSS. PostCSS by itself is an empty shell on its own doing anything but it uses "loaders" (other npm packages), that can load and execute various PostCSS packages for non standard CSS variable, nesting etc. Non browser-standard CSS can be used by developers and though Webpack bundler  transformed to valid CSS whn a edited file is saved. 
+
+In order for webpack to understand to use PostCSS loaders with additional PostCSS packages it must instructed in _webpack.config.js_ file in the root of the project.
+
+Add __PostCSS__ functionality to your project:
 ```
-
-### [Webpack.config.js file](#)
-
-This is an important file in the repo root that you must create and add manually in order to give instruction to webpack how to run. Webpack when run, the first thing it does is to looks in running folder for this file.
-
-_Example of an webpack.config.js file:_
+> npm i -D postcss-loader style-loader css-loader
+> npm i -D postcss-import postcss-simple-vars postcss-nested autoprefixer
+```
+_Instructing webpack that all files with ending .css shall be handled by installed PostCSS loaders:_ 
 ```javascript
-var path = require('path');
+webpack.config.js
+-----------------
 
-/* */
-const modeType = "development";
-/* */
-const entry_JSToBundle = "./app/assets/scripts/App.js";
-
-/* Settings related to where the build bundled file shall be served on hard drive. */
-/* Note! WebServer serves this file from RAM, do not write to hard drive! */
-const output_BundledDir = path.join(__dirname, '/app'); 
-const output_BundledFilename = "bundeld.js";
-
-/* Setting related to webpack-dev-server */
-const devServer_ContentBase = path.join(__dirname, '/app'); /* Root of our index.HTML that devServer runs */
-const devServer_HtmlFilesLocation = './app'; /* Location where HTML that shall be tracked when saved changes */
-const devServer_Port = '3000'; /* The port to serve the page on -> localhost:3000 */
-
-/* PostCSS plugins that are served to "postCSS-loader" */
-const postCSS_Plugins = [	
-	require('postcss-import'), /* Must be first. Replaces the @import with code. */
+const postCSSPlugins = [
+	require('postcss-import'), /* Set first. To work. Replaces @import with code. */
 	require('postcss-simple-vars'),
 	require('postcss-nested'),
 	require('autoprefixer')
+]
+
+...
+module: {
+  rules: [
+    {
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader?url=false', 
+            { loader: 'postcss-loader', 
+              options: { plugins: postCSSPlugins } 
+            }]
+    }
+  ]
+},
+...
+```
+
+<p align=right><a id="webpack-dev-server-m" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+### [__Webpack Dev Server__](#)
+
+Webpack Dev Server is a npm package (named _webpack-dev-server_) that powers up a local server and serves compiled files from your project to it. It can automatically when a file withing a project is saved inject code to running browsers. This injection is done is such a way that browser do not need to perform any 'hard refresh' and keeps its state which is very convenient when CSS styling as we keep the state of the UI. Content can also be reached from several browsers on the same wify network at the same time. See a change on big computer screens at same time as on several mobile devices. In order to get it work some lines need to be adde in _package.json_ and _webpack.config.js_ files and some npm packages need to be installed. 
+
+Add __Webpack-dev-server__ to project:  
+
+```javascript
+> npm install -D webpack-dev-server
+// or
+> npm install webpack-dev-server --save-dev
+
+```
+
+In projects __package.json__  add new script to run it:  
+```
+"dev": "webpack-dev-server"
+"build": "webpack"
+```
+Configuration for web __webpack.config.js__:
+```javascript
+...
+DevServer: {
+    before: (app, server) => { server._watch('./**/*.html') },
+    contentBase: path.join(__dirname, 'app'),	
+    hot: true, 
+    stats: 'errors-only',
+    noInfo: false, 
+    port: 3000,
+    host: '0.0.0.0'
+},
+...
+```
+
+### [__Webpack.config.js file__](#)
+
+Here comes a full version of the webpack configuration file together with corresponding project.json plugins that runs well and is used by us in projects. you can use it as basic configuration for new projects:
+
+_webpack.config.js_
+```javascript
+const path = require("path");
+
+/****************************************/
+/*** Project specific configuration *****/
+/****************************************/
+
+// Main entry point for webpack.
+// Js file for start of the bundling process.
+// ...........................................
+const JSToBundle = "./app/assets/scripts/App.js";
+
+// Root of our main index.html file
+// "" if main index.html is in project root
+//.........................................
+const indexRoot = "./app/";
+
+// Mode: development or production.
+//................................
+const modeType = "development";
+
+// Filename/Folder autogenerated bundled file
+// Note, running webpack-dev-server do not written to outputDir.
+// Webpack-dev-server injects this file to browser from RAM.
+// ............................................................
+const outputFilename = "bundled.js";
+const outputDir = "./dist/";
+
+// Port to listen when running webpack-dev-server
+// ...............................................
+const devServerPort = "8080";
+
+// Installed PostCSS plugins.
+// Served by postcss-loader for all .css files
+// ...........................................
+const postCSSPlugins = [
+  require("postcss-import") /* Must be set first. To work. Replaces @import with code. */,
+  require("postcss-mixins"),
+  require("postcss-simple-vars"),
+  require("postcss-nested"),
+  require("autoprefixer"),
 ];
 
+/****************************************/
+/******* Webpack configuration **********/
+/****************************************/
+
 module.exports = {
-	mode: modeType,
-	entry: entry_JSToBundle,	
-	output: { path: output_BundledDir, filename: output_BundledFilename },
-	devServer: { 
-		contentBase: devServer_ContentBase, /* Location of index.HTML file */
-		before: (app, server) => { server._watch(devServer_HtmlFilesLocation + '/**/*.HTML') }, /* For auto-reloading when a HTML file is saved */
-		hot: true, /* For auto-inject of bundled file at save. Note! The .js that is entry point file must contain: if (module.hot) module.hot.accept() */
-		port: 3000, /* The port to run the site on -> localhost:3000 */
-		host: '0.0.0.0' /* Reach devServer from other devices on same wi-fi. Address: [IPv4 Address 192.168.X.X]:3000 (look up XXX  cmd>ipconfig)*/
-	},
-	module: {
-		rules: [
-			{
-				test: /\.css$/i, /* This rule only for files ending with .css due to this*/
-				use: ['style-loader','css-loader', {loader: 'postcss-loader', options: {plugins: postCSS_Plugins}}]
-			}
-		]
-	}
+  mode: modeType,
+  stats: "normal",
+  /* Logs in console. Def: 'errors-warnings' (none/normal/minimal/errors-only) */
+  entry: path.join(__dirname, JSToBundle),
+  /* starting point js */
+  output: {
+    filename: outputFilename,
+    path: path.join(__dirname, outputDir),
+  },
+  module: {
+    rules: [
+      {
+        /* Rule for .css to use necessary loaders to handle postCSS syntax
+         * By default css-loader will handle images we reference in our CSS (e.g.background images, etc).
+         * To disable this add 'css-loader?url=false' instead of 'css-loader' in rules. */
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          "css-loader?url=false",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: postCSSPlugins,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  devServer: {
+    contentBase: path.join(__dirname, indexRoot),
+    /* Where to track changes */
+    before: (app, server) => {
+      server._watch("./**/*.html");
+    },
+    /* Auto-reloading when any html file is saved */
+    after: PrintLogs(),
+    hot: true,
+    /* Auto-inject bundled file at save. Note! Entry point js-file must contain: if (module.hot) module.hot.accept() */
+    stats: "errors-only",
+    /* def: 'errors-only' (none/normal/minimal/) */
+    noInfo: false,
+    /* true -> no prints at all in console. */
+    port: devServerPort,
+    host:
+      "0.0.0.0" /* Reach devServer from other devices on same wi-fi. Use local IP address*/,
+  },
+};
+
+/*****************************************/
+/********** helper functions *************/
+/*****************************************/
+
+// Function printing useful console logs when staring up
+function PrintLogs() {
+  console.group("  Webpack started:");
+  console.log("______________________________________________");
+  console.log("> Running in mode:      " + modeType);
+  console.log("> Project root:         " + __dirname);
+  console.log("> Server ContendBase:   " + path.join(__dirname, indexRoot));
+  console.log("> Entry → js file      " + path.join(" .", JSToBundle));
+  console.log(
+    "> Output → bundled file" + path.join(" .", outputDir) + outputFilename
+  );
+  {
+    ("use strict");
+    var os = require("os");
+    var fs = require("fs");
+    var ifaces = os.networkInterfaces();
+    var externalAddress = "";
+
+    Object.keys(ifaces).forEach(function (ifname) {
+      var alias = 0;
+
+      ifaces[ifname].forEach(function (iface) {
+        if ("IPv4" !== iface.family || iface.internal !== false) {
+          // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
+          return;
+        }
+
+        if (alias >= 1) {
+          // this single interface has multiple ipv4 addresses
+          externalAddress = ifname + ":" + alias + " " + iface.address;
+        } else {
+          // this interface has only one ipv4 address
+          externalAddress =
+            "http://" + iface.address.trim() + ":" + devServerPort;
+        }
+        ++alias;
+      });
+    });
+  }
+  console.log(
+    "> Runs locally:         " +
+      "\u001b[34m" +
+      "http://localhost:" +
+      devServerPort +
+      "\u001b[0m"
+  );
+  console.log(
+    "> index.html   →        " +
+      "\u001b[34m" +
+      "http://localhost:" +
+      devServerPort +
+      "/" +
+      outputFilename +
+      "\u001b[0m"
+  );
+  console.log(
+    "> Runs externally:      " + "\u001b[34m" + externalAddress + "\u001b[0m"
+  );
+  console.log("______________________________________________");
+  console.assert(
+    fs.existsSync(JSToBundle),
+    "\u001b[31m" + JSToBundle + " not found!" + "\u001b[0m"
+  );
+  console.log(
+    "Running webpack-dev-server... \r\n" +
+      "\u001b[33m" +
+      "(press CTRL-C to exit)" +
+      "\u001b[0m"
+  );
+  console.log(" ");
+  console.groupEnd();
+  console.log();
 }
 ```
 
+_package.json_
+```
+TODO
+```
 
 <br><br>[- BACK TO TOP -](#table-of-contents)
 
