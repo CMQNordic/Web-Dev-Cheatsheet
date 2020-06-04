@@ -16,7 +16,7 @@ _Prerequisites: Some HTML & CSS skills._
 
  ► __Technologies & Tools__
   - [__Visual Studio Code__](#visual-studio-code)  
-   _[Built-in stuff](#what-is-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
+   _[Built-in stuff](#what-is-vscode)◦ [Cloud settings](#cloud-settings) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
   - Node.js & Npm
     - [What is Node.js and Npm used for?](#nodejs-&-npm)
   	- [Node.js](#install-node.js-and-execute-programs) ◦ [Node.js modules](#useful-node.js-modules)
@@ -86,6 +86,15 @@ Some build-in features in VSCode:
 - __Debugging, Code navigation__: Possible to debug your code easily.
 
 
+<p align=right><a id="cloud-settings" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+### __[Cloud settings]()__
+
+__Our default settings on GistGitHub cloud__  
+Our default VSCode settings are stored on github gist [HERE](https://gist.github.com/CMQNordic/afe5c2b9b7cb26e55c51d8625d21a44a). 
+
+Use extension Settings Sync to get it updated locally!
+
 <p align=right><a id="recommended-customization-of-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 ### __[Customization of VSCode]()__
@@ -109,10 +118,11 @@ For vue development you shall use VSCode extension Vetur. Vetur's default HTML f
 At writing moment (May 2020) Vetur by default prettier set default internal HTML formatter (you can see this in extension settings) and unfortunately does heavy attribute formatting in HTML templates. We do not like it. To simply disable it set `none` in settings for `Vetur › Format › Default Formatter: HTML`. But if you want to change formatting behavior, at writing moment only possible way we found is by setting `js-beautify-html` as default HTML formatter i Vetur and add following customization (search for `vetur.format.defaultFormatter.html`) to _setting.json_ file.
 <br>
 
-__Our preferred settings__  
-Our default settings for our development. To copy just past in at the end of your file setting.json file (Ctrl+Shift+P -> "settings.json")  
+Use Setting sync plugin to update and download the setting to/from VSCode. 
 
-__setting.json file__
+Bellow are settings that we used to use:
+
+_setting.json_
 ```javascript
 ...
 
@@ -135,23 +145,35 @@ __setting.json file__
   "editor.formatOnPaste": true, // auto-format on paste (default false)
   "editor.formatOnSave": true, // auto-format on save (default false)
   //
-  //Prettier - extension formatter
+  // Prettier - extension formatter
   //
-  "prettier.disableLanguages": ["markdown"], // disable for markdown as it destrys tables
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.disableLanguages": [
+    /* use only for CSS and PostCSS*/
+    "markdown",
+    "javascript",
+    "html"
+  ],
   //
   // PostCSS
   //
   "emmet.includeLanguages": {
     "postcss": "css"
   },
-  // VSCode Editor: html
+  // html
   //
-  "html-css-class-completion.enableEmmetSupport": true, // enables emmet (default false)
+  "html-css-class-completion.enableEmmetSupport": true /* enables emmet (default false) */,
   "html.format.wrapAttributes": "preserve-aligned", // preferred html attribute wrapping method ("auto" -> no wrapping) (fav: preserve-aligned)
   "html.format.wrapLineLength": 160, // preferred length of line for wrapping (default 120)
   "html.format.preserveNewLines": true, // when formatting, and a line added after element, do not remove it (default true)
   "html.format.maxPreserveNewLines": 1, // when formatting do not not remove this nbt of empty lines. (default null or 0)
   "html.format.extraLiners": "", // adds empty after those html tags. (default "head, body, /html")
+  //
+  // Javascript / Typesscript
+  //
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
   //
   // Vetur extension (for Vue files)
   //
@@ -166,8 +188,8 @@ __setting.json file__
     "prettier": {
       // Prettier is used internally as formatter and setting can be set here
       "semi": false, // if true - semicolon or semi-colon (;) at end of all js-statements in vue files
-      "singleQuote": true, // if false - use double quotes
-      "jsxSingleQuote": true, // if false -> use double quotes
+      "singleQuote": true, // false -> double quotes
+      "jsxSingleQuote": true, // false -> double quotes
       "bracketSpacing": true, // if true -> { foo: bar }
       "proseWrap": "preserve" //
     }
@@ -197,9 +219,22 @@ __setting.json file__
   "markdownShortcuts.icons.citations": false,
   "workbench.startupEditor": "newUntitledFile",
   //
+  // Settings Sync
+  //
+  "sync.gist": "afe5c2b9b7cb26e55c51d8625d21a44a",
+  //
   // Code Spell checker
   //
-  "cSpell.userWords": ["Czerwinski", "iface", "ifaces", "ifname", "mixins"]
+  "cSpell.allowCompoundWords": true,
+  "cSpell.userWords": [
+    "Czerwinski",
+    "iface",
+    "ifaces",
+    "ifname",
+    "mixins",
+    "nuxt",
+    "nuxtjs"
+  ]
 ```
 
 __Formatter types__
@@ -321,7 +356,7 @@ Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/e
 
 __Keybindings.json__  
 Our keybinding we use
-```
+```json
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
@@ -560,6 +595,7 @@ You can search online for [VSCode Marketplace](https://marketplace.visualstudio.
 
 |Extension&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
 |:--|:--|:--|
+|Common | `Settings Sync` | Uploads/downloads settings to you Git Gisp account for cloud backup. |
 |Common | `Code Spell Checker` | Auto-corrects spelling mistakes and proposes corrections. |
 |Common | `VSCode-icons` | A set of small icons shown in explorer bar that makes navigating and finding of certain file types easier. |
 |Common | `Bracket Pair Colorizer` | Provides different colors for brackets so those ar easier to distinguish. |
