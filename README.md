@@ -4,50 +4,42 @@ By&nbsp;Martin&nbsp;Czerwinski [CMQ&nbsp;Nordic&nbsp;AB](www.cmq.se "www.cmq.se 
 
 ---
 
-This is a __reference guide__,an __compact tutorial__ or a __cheat-sheet__ that explains basics of web development. Starting from tools to some of the solutions to most basic problems.
-
-Bookmark this page, share it and feel free to [__reach out to us__](www.cmq.se "Contact us!") with questions, comments or requests for assignments!
-
-_Prerequisites: Some HTML & CSS skills._
+This is a __reference guide__,an __compact tutorial__ or a __cheat-sheet__ that explains basics of web development. Starting from tools to some of the solutions to most basic problems. Bookmark this page, share it and feel free to [__reach out to us__](www.cmq.se "Contact us!") with questions, comments or requests for assignments!
 
 ---
 
 #### __TABLE OF CONTENT__
 
- ► __Technologies & Tools__
-  - [__Visual Studio Code__](#visual-studio-code)  
-   _[Built-in stuff](#what-is-vscode)◦ [Cloud settings](#cloud-settings) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
-  - Node.js & Npm
-    - [What is Node.js and Npm used for?](#nodejs-&-npm)
-  	- [Node.js](#install-node.js-and-execute-programs) ◦ [Node.js modules](#useful-node.js-modules)
-    - [Npm](#install-npm-packages) ◦ [Npm packages](#useful-npm-packages)
-    - [_"package.json"_ file](#packagejson-file)
-  - [__Webpack__](#what-is-webpack)  
-   [PostCSS](#bundling-with-postcss) ◦ [Webpack Dev Server](#webpack-dev-server-m) ◦ [webpack.config.js](#webpackconfigjs-file) 
-  - Markdown
-    - [Why markdown?](#markdown) 
-	- [Markdown syntax](#markdown-syntax) 
+ ► __Technologies & Tools__  
+ - [__Visual Studio Code__](#visual-studio-code)  
+   _[Whats's built-in?](#what-is-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [C](#C)  
+   [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Cloud settings](#default-vscode-cloud-settings)_
+- [__Node.js & Npm & Npx__](#node-and-npm)  
+  _[What's node, npm and npx?](#nodejs-&-npm) ◦ [Node.js](#install-node.js-and-execute-programs) ◦ [Node.js modules](#useful-node.js-modules) ◦ [Npm](#install-npm-packages) ◦ [Npm packages](#useful-npm-packages)_  
+  [package.json file](#packagejson-file)
+- [__Webpack__](#what-is-webpack)  
+   [PostCSS](#bundling-with-postcss) ◦ [Webpack Dev Server](#webpack-dev-server-m)  
+   [webpack.config.js](#webpackconfigjs-file) 
+- [__Other frameworks & technologies__](#other-frameworks)  
+  [Markdown](#markdown-syntax) ◦ [EMMET](#emmet-snippets)  
   
 ► __HTML, CSS and JS__
-- [__CSS__](#css)
-    - [Structure](#structure)
-    - [BEM](#bem)
-    - [Commonly performed tasks](#commonly-performed-tasks)
-    - [Floating](#floating)
-    - [Flexbox](#flexbox)
-    - [CSS Grid](#css-grid)
-    - [Bootstrap](#bootstrap)
-- [__HTML__](#html)
-    - [Basics](#basics)
-    - [Page structure](#page-structure)
-    - [Page Components](#page-components)
-    - [User Input with Forms](#user-input-with-forms)
-- [__Screens and Content__](#screens-and-content)
-    - [Screen Resolution](#screen-resolution)
-    - [Aspect ratio](#aspect-ratio)
-- [__SEO__](#seo)
-    - [todo](#aspect-ratio)
+- [__CSS__](#css)  
+    [How to structure CSS files](#structure) ◦ [BEM](#bem)  
+    [Flexbox](#flexbox) ◦ [CSS Grid](#css-grid) ◦ [Floating](#floating)  
+    [Bootstrap](#bootstrap) ◦  
+    [Common tasks](#commonly-performed-tasks) -> [navigation](A) | [center stuff](B) | [C](C)
+- [__HTML__](#html)  
+    [Basics](#basics) ◦ [Page structure](#page-structure) ◦ [X](C)  
+    [Components](#page-components) -> [form/input](#user-input-with-forms) | [B](B) | [C](C)  
+- [__JS__](#javascript)  
+    [B](B) ◦ [C](C)
+  
+► __Screens, resolution and content__
+  - [Aspect ratios](#aspect-ratio) ◦ [Images](C)  
 
+► __SEO__
+- [__How it works__](#seo) ◦ [B](#b)
 
 <br>
 
@@ -55,24 +47,23 @@ _Prerequisites: Some HTML & CSS skills._
 
 <p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-## [__Visual Studio Code__]()
-  __Content:__<br>
-_[Build-in stuff](#what-is-vscode) ◦ [Customization](#recommended-customization-of-vscode) ◦ [Terminal](#terminal-in-vscode) ◦ [Shortcuts](#useful-shortcuts-in-vscode) ◦ [Extensions](#useful-extensions-in-vscode) ◦ [EMMET](#emmet-snippets-in-vscode)_
 
-[VSCode](https://code.visualstudio.com/) is a vary popular, lightweight and free code editor from Microsoft that comes with a variety of handy built-in features. Install VSCode from from [here](https://code.visualstudio.com/download). In this chapter we summarize customization options, extensions and shortcuts. List of EMMET snippets for commonly used elements can be found here.
+## [__Visual Studio Code__]() 
 
-Recommended tutorials: Some YouTube videos to watch [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code). 
+VSCode ([Visual Studio Code](https://code.visualstudio.com/)) is a popular, lightweight and free code editor from Microsoft that comes with a variety of handy built-in features. Install VSCode from from [here](https://code.visualstudio.com/download). Some YouTube tutorials to watch [here](https://www.youtube.com/results?search_query=Building+WebApps+using+Visual+Studio+Code). 
 
-<p align=right><a id="what-is-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
-
-### __[What's built-in in VSCode?]()__
-
-
- Open VSCode in the directory you are currently in by writing following in terminal window:
-
+ Launch VSCode from terminal window in the directory you are currently in by writing:
 ```
  code .
 ```
+VsCode can also be launched by right-clicking in folder you want open and choose _Open with Code_.
+
+
+<p align=right><a id="what-is-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+
+### __[What's built-in in?]()__
+
 Some build-in features in VSCode:
 
  - __Node.js & Npm__: Build in runtime environment for JavaScript with corresponding package manager.
@@ -86,217 +77,10 @@ Some build-in features in VSCode:
 - __Debugging, Code navigation__: Possible to debug your code easily.
 
 
-<p align=right><a id="cloud-settings" align=right href="#table-of-content">↩ Back To Top</a></p>
-
-### __[Cloud settings]()__
-
-__Our default settings on GistGitHub cloud__  
-Our default VSCode settings are stored on github gist [HERE](https://gist.github.com/CMQNordic/afe5c2b9b7cb26e55c51d8625d21a44a). 
-
-Use extension Settings Sync to get it updated locally!
-
-<p align=right><a id="recommended-customization-of-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
-
-### __[Customization of VSCode]()__
-
-VSCode have one setting file (`settings.json`) where user defined settings are set. This file can be modified directly but normally it is modified when you change something in the UI opened from `Preferences->Settings`. The default setting for each feature can be found in file `defaultSettings.json`. Both files can be opened from Command Palette (`Ctrl+Alt+P`) and searching for word "_setting_s".
-
-The same apply to Keyboard Shortcuts. There is a file named `keybindings.json` that we can edit and is usually modified though UI from `Preferences->Keyboard Shortcuts`. The default shortcut definitions for each combination can be found in file `DefaultKeybindings`. Both files can be opened from Command Palette (`Ctrl+Alt+P`) and searching for word "_keyboard shortcuts_".
-
-__Formatting__  
-Formatting of code in order to always to look same, readable and standardized is important. For HTML, CSS and JavaScript there are default settings preset in VSCode defining how to format.There exist external extensions like Prettier or Vetur (for vue) that can overwrite native formatting customization and add formatting functionality on their own. Usually it is a bit of trouble to set up development environment that works well with all the extensions of your choice. Here you can read about configuration of our development environment, check what extensions we use and copy our` settings.json` and `keybindings.json` files defining our tested and recommended customization.
-
-__How to wrap HTML attributes?__  
-In _Settings_ search for `Format: Wrap Attributes` and `Wrap Line Length` (search words "html wrap"). `Auto` is normally set and can be changed if you prefer different formatter type for HTML attributes. See below how different choices of formatter types generate results. Our favorite is "preserve-aligned".
-
-__Prettier extension__  
-We do not use extension Prettier for formatting because because we use auto-format on save and at writing moment it is impossible to disable this for some type of files. We do not want Prettier to format our markdown files but it seems to impossible to disable. Therefor for the moment we do not use Prettier.
-
-__Vetur (for vue development)__  
-For vue development you shall use VSCode extension Vetur. Vetur's default HTML formatter is "prettier" but can be set to "prettyhtml" for HTML parts, as we prefer. Those formatters that Vetur uses internally are are build in and do not require installation of the extensions separately! To set rules for formatter of your choice  `vetur.format.defaultFormatterOptions` shall be added in settings.json with configurations. See example of our _setting.json_ file how it can be configured. unfortunately Vetur at writing moment supports formatting of whole documents only. Format of a selected part of a .vue doc is not possible. Therefore the default key shortcut for formatting selection (`Ctrl+K Ctrl+F`) will not have any effect in .vue files (but shortcut `Ctrl+Alt+F` will format whole doc works as expected).
- 
-At writing moment (May 2020) Vetur by default prettier set default internal HTML formatter (you can see this in extension settings) and unfortunately does heavy attribute formatting in HTML templates. We do not like it. To simply disable it set `none` in settings for `Vetur › Format › Default Formatter: HTML`. But if you want to change formatting behavior, at writing moment only possible way we found is by setting `js-beautify-html` as default HTML formatter i Vetur and add following customization (search for `vetur.format.defaultFormatter.html`) to _setting.json_ file.
-<br>
-
-Use Setting sync plugin to update and download the setting to/from VSCode. 
-
-Bellow are settings that we used to use:
-
-_setting.json_
-```javascript
-...
-
-//
-  // Live-server extension
-  //
-  "liveServer.settings.useBrowserPreview": true, // open live server in VScode instead of browser (default false)
-  "liveServer.settings.donotShowInfoMsg": true, // disable info pop ups (default false)
-  //
-  // Browser preview extension
-  //
-  "browser-preview.startUrl": "http://localhost:8080", // set default url to load in browser preview opened in VScode
-  //
-  // VSCode Editor
-  //
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features" //default formatter for HTML files
-  },
-  "editor.tabSize": 2, // nbr of spaces for a tab indent in general (default 4)
-  "editor.formatOnPaste": true, // auto-format on paste (default false)
-  "editor.formatOnSave": true, // auto-format on save (default false)
-  //
-  // Prettier - extension formatter
-  //
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
-  "prettier.disableLanguages": [
-    /* use only for CSS and PostCSS*/
-    "markdown",
-    "javascript",
-    "html"
-  ],
-  //
-  // PostCSS
-  //
-  "emmet.includeLanguages": {
-    "postcss": "css"
-  },
-  // html
-  //
-  "html-css-class-completion.enableEmmetSupport": true /* enables emmet (default false) */,
-  "html.format.wrapAttributes": "preserve-aligned", // preferred html attribute wrapping method ("auto" -> no wrapping) (fav: preserve-aligned)
-  "html.format.wrapLineLength": 160, // preferred length of line for wrapping (default 120)
-  "html.format.preserveNewLines": true, // when formatting, and a line added after element, do not remove it (default true)
-  "html.format.maxPreserveNewLines": 1, // when formatting do not not remove this nbt of empty lines. (default null or 0)
-  "html.format.extraLiners": "", // adds empty after those html tags. (default "head, body, /html")
-  //
-  // Javascript / Typesscript
-  //
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  //
-  // Vetur extension (for Vue files)
-  //
-  "vetur.format.options.tabSize": 2, // nbr of spaces for a tab indent in vue files (default 4)
-  "vetur.format.defaultFormatter.html": "js-beautify-html", // preferred html attribute wrapping method (default prettier that wraps all)
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "preserve-aligned", // preferred vue attribute wrapper ("auto" -> no wrapping. fav: preserve-aligned)
-      "preserve_newlines": true, // when formatting, and a line added after element, do not remove it
-      "max_preserve_newlines": 1 // when formatting do not not remove this nbt of empty lines.
-    },
-    "prettier": {
-      // Prettier is used internally as formatter and setting can be set here
-      "semi": false, // if true - semicolon or semi-colon (;) at end of all js-statements in vue files
-      "singleQuote": true, // false -> double quotes
-      "jsxSingleQuote": true, // false -> double quotes
-      "bracketSpacing": true, // if true -> { foo: bar }
-      "proseWrap": "preserve" //
-    }
-  },
-  //
-  // Bracket Pair Colorizer
-  //
-  "bracketPairColorizer.consecutivePairColors": [
-    "()",
-    "[]",
-    "{}",
-    ["black", "Orchid", "LightSkyBlue"],
-    "Red"
-  ],
-  //
-  // Markdown & Markdown Shortcuts extensions
-  //
-  "markdown.extension.preview.autoShowPreviewToSide": true, // When opening -md file, auto open preview on the side
-  "markdown.extension.tableFormatter.enabled": false, // false - do not format tables
-  "markdown.extension.tableFormatter.normalizeIndentation": false, //  false - do not normalize tables structure
-  "markdown.extension.italic.indicator": "_", // use _ instead of *
-  "markdownShortcuts.bold.marker": "__", // use _ instead of **
-  "markdownShortcuts.bullets.marker": "-", // use - instead of *
-  "markdown.extension.toc.updateOnSave": false, // do not update table on save (default true)
-  "markdownShortcuts.icons.image": true, // show icon in upper/right corner of window
-  "markdownShortcuts.icons.link": true, // show icon in upper/right corner of window
-  "markdownShortcuts.icons.citations": false,
-  "workbench.startupEditor": "newUntitledFile",
-  //
-  // Settings Sync
-  //
-  "sync.gist": "afe5c2b9b7cb26e55c51d8625d21a44a",
-  //
-  // Code Spell checker
-  //
-  "cSpell.allowCompoundWords": true,
-  "cSpell.userWords": [
-    "Czerwinski",
-    "iface",
-    "ifaces",
-    "ifname",
-    "mixins",
-    "nuxt",
-    "nuxtjs"
-  ]
-```
-
-__Formatter types__
-Set in Settings for `Default Formatter: HTML`.
-
-```html
-<!-- "none" - attribute wrapping disabled. -->
-<!-- Set "Wrap Line Length" to to disable -->
-<div id="app" class="container" style="width:200px; height: 300px; background-color: saddlebrown; color: black;">
-  <img src="http://www.cdn/Loggo-200x35-e1477061960632.png" alt="Company Logo" width="65" height="20" style="display: inline-block;">
-  <p class="welcome large-text" style="text-align: center; display: inline-block;">Welcome to formatting</p>
-</div>
-
-<!-- "auto" with "Wrap Line Length" = 120 (default setting) -->
-<!-- Wraps automatically to set line length, do not align. -->
-<div id="app" class="container"
-  style="width:200px; height: 300px; background-color: saddlebrown; color: black;">
-  <img src="http://www.cdn/Loggo-200x35-e1477061960632.png" alt="Company Logo" width="65"
-    height="20" style="display: inline-block;">
-  <p class="welcome large-text" style="text-align: center; display: inline-block;">Welcome to
-    formatting</p>
-</div>
-
-<!-- "force-aligned" -->
-<!-- Wraps all attributes, except first, and align attributes -->
-<div id="app"
-     class="container"
-     style="width:200px; height: 300px; background-color: saddlebrown; color: black;">
-  <img src="http://www.cdn/Loggo-200x35-e1477061960632.png"
-       alt="Company Logo"
-       width="65"
-       height="20"
-       style="display: inline-block;">
-  <p class="welcome large-text"
-     style="text-align: center; display: inline-block;">Welcome to
-    formatting</p>
-</div>
-
-<!-- "aligned-multiple" -->
-<!-- tries to wrap to line length only if needed and align attributes -->
-<div id="app" class="container"
-     style="width:200px; height: 300px; background-color: saddlebrown; color: black;">
-  <img alt="Company Logo" src="http://www.cdn/Loggo-200x35-e1477061960632.png" alt="Company Logo"
-       width="65" height="20" style="display: inline-block;">
-  <p class="welcome large-text" style="text-align: center; display: inline-block;">Welcome to
-    formatting</p>
-</div>
-
-<!-- "preserve-aligned" -->
-<!-- Preserve own wraps but if too long text parts wraps to new line and then align attributes. Aligns everything wrapped -->
-<!-- Works also for vue templates with js-beautify-html in Vetur -->
-<div id="app" class="container" style="width:200px; height: 300px; background-color: saddlebroblack;">
-	<img src="http://www.cdn/Loggo-200x35-e1477061960632.png" alt="Company Logo" width="65" height="20"
-		 style="display: inline-block;">
-	<p class="welcome large-text" style="text-align: center; display: inline-block;">Welcome to formatting</p>
-</div>
-```
-
-
 <p align=right><a id="terminal-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-### __[Terminal in VSCode]()__
+
+### __[Terminal]()__
 
 VSCode comes with an _integrated terminal window_ which is a very handy and time-saving. Terminal window opens pointing directly to your working directory. It is also possible to switch between _shells_ that power the terminal from a drop down in the right-' upper corner.
 
@@ -304,34 +88,44 @@ Changing to _default shell_ of your choice can be done by opening _Command Palet
 
 <p align=right><a id="useful-shortcuts-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-### __[Useful Shortcuts in VSCode]()__
+### __[Shortcuts]()__
 
-Shortcut settings can be viewed and edited from _`Settings` -> `Keyboard Shortcuts`_. Global user defined `settings.json` or `defaultSetting.json` can easily be opened from` Command Palette` (`Ctrl-Shift-P`) - search for _settings_. Below we list our most frequently used VSCode shortcuts that make our development a lot faster.    
-Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2019). 
+Shortcuts can be viewed and changed from `File > Preferences > Keyboard Shortcuts`. Behind the scenes there are two files:  
+- Default setting as shipped with VSCode installation. In _command palette_ (`CTRL+Shift+P`) write "Keyboard Shortcuts (JSON)" which opens _keybinding.json_ file.
+- User specific setting added for each modification the user do. In _command palette_ (`CTRL+Shift+P`) write "Default Keyboard Shortcuts (JSON)" which opens _default keybindings_ file.
+  
+> Our __customized keyboard shortcuts__ - _keybinding.json_ - can be downloaded to VSCode from our git cloud - see [here](#default-vscode-cloud-settings).  
 
-<br>
+List of default, out-of-the-box, popular shortcuts can be found at [@microsoft.com](https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2019).  
 
-| NAVIGATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||
+Below we list __our__ most frequently used shortcuts that make our life as developers easier and help perform most task without leaving fingers from the keyboard:
+
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |NAVIGATION|
 |:--|:--|
+|`Ctrl+Shift+P` | __Open Command Palette__ <br> Opens Command Palette where commands can be easily searched. Recently used shown on top. Use `ESC` to exit.
+|`Ctrl+F` | __Search Current Doc__ <br> Rename all highlighted words in file
+|`Ctrl+Tab` or<br> `Ctrl+P` | __Toggle Files__ <br> `Ctrl-P` opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. `Ctrl-Tab` is too handy to toggle 2 lately used files.
 |`Ctrl+◄►`|__Jump: Whole words__ <br> Moves focused cursor whole words/expressions left/right.
-|`Ctrl+Alt+◄►`__\*__ | __Jump: Start/End of line__ <br> Moves focused cursor to start/end of line.<br> _\*Must be set in Keyboard Shortcuts for `Cursor Line Start` & `Cursor Line End`_.
-|`Ctrl+Å`__\*__ | __Jump: Matching Brackets/Tags__ <br> Moves cursor selecting a Bracket/Tag to corresponding matching Bracket/Tag<br> _\*Install extension `Matchit` for both Tags & Brackets to work on same shortcut. In Keyboard Shortcuts set shortcut (`Ctrl+Shift+Å`) for ` MatchIt: Jump Items` (something else might set by default by the extension). Optionally, without extension) same shortcut can be set for `Emmet: Go To Matching Pair` (for Tag) and `Go To Bracket` (for Brackets) but it failed to work in VSCode for vue files. Extension solves this and works for both tags & brackets with same shortcut in html,js and vue files for {},(),[], <>)_
-|`Ctrl+▲`__\*__ | __Select: Word__ <br> First press selects the focused word. Subsequent presses add multi-cursor on same words. Can be used for selecting matching HTML tag. Use `ESC` to abort. <br> _\*Must be set in Keyboard Shortcuts for `Add Selection To Next Find Match`_
-|`Ctrl+▼`__\*__ | __Select: Line & Down__ <br> Selects whole focused row. First press selects row, next presses continues selection downwards. Use `ESC` to abort. <br> _\*Must be set in Keyboard Shortcuts for `Expand Line Selection`_.
-|`Ctrl+Shift+▼▲◄►`__\*__ | __Select/Unselect Block__ <br> Selects/Unselects blocks starting from the focused cursor. <br> _\*Must be set in Keyboard Shortcuts - `Ctrl+Shift+▲` for `Cursor Up Select`_.
+|`Ctrl+▲▼`*|__Jump: Matching Brackets/Tags__ <br> Moves cursor selecting a Bracket/Tag to corresponding matching Bracket/Tag<br> _\*Install extension `Matchit` for both tags & brackets to work for same shortcut. In Keyboard Shortcuts set the shortcut for ` MatchIt: Jump Items` (duplicate the keybinding and use same for both up & down arrow)_
+|`Ctrl+Alt+◄►`__\*__ | __Jump: Start/End of Line__ <br> Moves focused cursor to start/end of line.<br> _\*Must be set in Keyboard Shortcuts for `Cursor Line Start` & `Cursor Line End`_.
+|`Ctrl+Alt+▲▼`__\*__ | __Jump: Start/End of Document__ <br> Moves focused cursor to start/end of document.<br> _\*Must be set in Keyboard Shortcuts for `cursorTpo` & `cursorBottom`_.
 |`Alt+▲▼` | __Move Whole Line(s)__ <br> Moves whole focused line (or several selected lines) up or down.
-|`Shift+Tab` <br> `Shift+Back`__\*__ | __Indent Row Left/Right__ <br> `Shift+Tab` indents whole line left. <br> `Shift+BACK` indents whole line right. <br>  _\*Must be set in Keyboard Shortcuts for `Indent Line` as `Shift+Backspace`_.
-|`Ctrl+Enter`__\*__ | __Toggle Explorer Window & Focus__ <br> Toggles visibly of sidebar explorer window. Second press focuses it. When in focus use `⇔` to navigate into folders. __`Enter`__ to open selected file. __`Ctrl+W`__ to close focused file. <br> _\*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility`_ and `Explorer: Focus On Folders View` with when set to `explorerViewletVisible && inputFocus` 
-|`Ctrl+P` <br> `Ctrl+Tab`| __Search & Toggle Files__ <br> `Ctrl-P` opens _File Search_ window with recently used files on top. Subsequent presses scroll the list. Note, `P` pressed twice in row always toggles between 2 latest used files - very handy. Use `ESC` to exit. `Ctrl-Tab` is too handy to toggle 2 lately used files.
-|`Ctrl+Shift+P` | __Command Palette__ <br> Opens Command Palette where commands can be easily searched. Recently used shown on top. Use `ESC` to exit.
-|`Ctrl+F` | __Search__ <br> Rename all highlighted words in file
-|`F2` | __Rename all in file__ <br> Find all focused/selected words in file. Replace from new window. Use `ESC` to exit.
+|`Ctrl+Backspace` | __Delete Word__ <br> Deletes whole word.
+|`Ctrl+Alt+Backspace`__\*__ | __Delete Line__ <br> Deletes whole line. <br> _\ *Must be set in Keyboard Shortcuts `Delete Line`_.
+|`Ctrl+Shift+▼▲◄►`__\*__ | __Select block__ <br> Selects/Unselects blocks starting from the focused cursor. <br> _\*Must be set in Keyboard Shortcuts - `Ctrl+Shift+▲` for `Cursor Up Select`_.
+|`Ctrl+Enter`__\*__ | __Select: word(s)__ <br> First press selects the focused word. Subsequent presses add multi-cursor on same words. Can be used for selecting matching HTML tag. Use `ESC` to abort. <br> _\*Can be set in Keyboard Shortcuts for `Add Selection To Next Find Match`_
+|`Ctrl+Å`__\*__ | __Toggle Explorer Window & Focus__ <br> Toggles visibly of sidebar explorer window. Second press focuses it. When in focus use `⇔` to navigate into folders. __`Enter`__ to open selected file. __`Ctrl+W`__ to close focused file. <br> _\*Must  be set in Keyboard Shortcuts for `View: Toggle side Bar Visibility`_ and `Explorer: Focus On Folders View` with when set to `explorerViewletVisible && inputFocus` 
+|`Ctrl-F2`| __Rename All: In file__ <br> First: multi-select focused word/selection. Edit text.  Use `ESC` to exit.
 |`Ctrl+Shift+F` | __Search & Replace in proj__ <br> Find all focused/selected words in project. Replace from new window. Use `ESC` to exit.
+|`Tab` <br> `Shift+Tab`__\*__ | __Indent Row Left/Right__ <br> `Shift+Tab` indents whole line left. <br> `Shift+BACK` indents whole line right. <br>  _\*Must be set in Keyboard Shortcuts for `Indent Line` as `Shift+Backspace`_.
+
+
 
 <br>
 
-| CODING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |CODING|
 |:--|:--|
+|`F12`| __Go to definition__
 | `Ctrl+S`__\*__ | __Format on save__<br> When saving the file then automatically format it <br> _\*Must be enabled in Settings for `Editor: Format On Save`_
 | __\*__ | __Format on paste__<br> When pasting in new code then automatically format it <br> _\*Must be enabled in settings for `Editor: Format On Paste`_
 |`Ctrl+Alt+-` | __Toggle comment__ <br> Toggle the comment for whole focused line ores.
@@ -344,262 +138,30 @@ Online list of VSCode shortcuts can be found [here](https://docs.microsoft.com/e
 
 <br>
 
-| TERMINAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |TERMINAL|
 |:--|:--|
-|`Ctrl+Ö`__\*__ | __Open/Focus/Hide__ <br> Opens new terminal, focuses it and on subsequent presses  hides if open <br> _\*Must be set in Keyboard Shortcuts for` Terminal: Scroll To Bottom` & `Toggle Integrated Terminal` & ` Focus Terminal` & `View: Toggle Panel`._
+|`Ctrl+Ö`__\*__ | __New/Toggle & Focus__ <br> Opens a new terminal & focuses it. If opened -focus it. Subsequent presses toggles terminal visibility. <br> _\*Must be set in Keyboard Shortcuts for `Focus Terminal (When: !terminalFocus)` & `View: Toggle Panel (When: terminalFocus)`._
 |`Ctrl+L` | __Clear window__ <br> Clear focused terminal window 
 |`Ctrl+K`__\*__ | __Kill terminal__ <br> Kills current terminal and if last hides the window. <br> _\*Must be set in Keyboard Shortcuts for `Kill Active Instance`_.
-|`Ctrl+▲▼`__\*__ | __Scroll Up or Down__ <br> Scroll up od down in focused terminal window. <br> _\*Must be set in Keyboard Shortcuts for `Terminal: Scroll Up (Line)` & `Terminal: Scroll Down (Line)`._
-|`Ctrl+◄►`__\*__ | __Enlarge or Shrink__ <br> Enlarge or shrinks focused terminal window. <br> _\*Must be set in Keyboard Shortcuts for `Terminal: Resize Pane Left` & `Terminal: Resize Pane Right`._
+|`Ctrl+▲▼`__\*__ | __Enlarge/Shrink__ <br> Enlarges & shrinks focused terminal window. <br> _\*Must be set in Keyboard Shortcuts for `Terminal: Resize Pane Up` & `Terminal: Resize Pane Down`._
 
-<br>
-
-__Keybindings.json__  
-Our keybinding we use
-```json
-// Place your key bindings in this file to override the defaultsauto[]
-[
-  {
-    "key": "ctrl+alt+oem_minus",
-    "command": "editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+oem_2",
-    "command": "-editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+oem_3",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "ctrl+oem_3",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "ctrl+oem_3",
-    "command": "-workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "ctrl+oem_3",
-    "command": "workbench.action.terminal.scrollToBottom",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+end",
-    "command": "-workbench.action.terminal.scrollToBottom",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "workbench.action.terminal.scrollUp",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+alt+pageup",
-    "command": "-workbench.action.terminal.scrollUp",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.terminal.kill"
-  },
-  {
-    "key": "ctrl+down",
-    "command": "workbench.action.terminal.scrollDown",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+alt+pagedown",
-    "command": "-workbench.action.terminal.scrollDown",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+left",
-    "command": "workbench.action.terminal.resizePaneLeft",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+right",
-    "command": "workbench.action.terminal.resizePaneRight",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-md-shortcut.toggleBold",
-    "when": "editorTextFocus && markdownShortcuts:enabled"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-markdown.extension.editing.toggleBold",
-    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
-  },
-  {
-    "key": "ctrl+enter",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+oem_3",
-    "command": "workbench.action.togglePanel"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "-workbench.action.togglePanel"
-  },
-  {
-    "key": "ctrl+oem_7",
-    "command": "workbench.files.action.compareWithSaved"
-  },
-  {
-    "key": "ctrl+k d",
-    "command": "-workbench.files.action.compareWithSaved"
-  },
-  {
-    "key": "ctrl+alt+right",
-    "command": "cursorLineEnd"
-  },
-  {
-    "key": "ctrl+alt+left",
-    "command": "cursorLineStart"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "-editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+enter",
-    "command": "workbench.explorer.fileView.focus",
-    "when": "explorerViewletVisible && inputFocus"
-  },
-  {
-    "key": "shift+delete",
-    "command": "deleteFile",
-    "when": "explorerViewletVisible  && !inputFocus"
-  },
-  {
-    "key": "shift+delete",
-    "command": "-deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "ctrl+shift+up",
-    "command": "cursorUpSelect",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+shift+up",
-    "command": "-cursorUpSelect",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+down",
-    "command": "expandLineSelection",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-expandLineSelection",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "shift+up",
-    "command": "-cursorUpSelect",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+oem_6",
-    "command": "extension.matchitJumpItems",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+oem_5",
-    "command": "-extension.matchitJumpItems",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+oem_3",
-    "command": "-workbench.action.terminal.new"
-  },
-  {
-    "key": "ctrl+o",
-    "command": "bracket-pair-colorizer.expandBracketSelection"
-  },
-  {
-    "key": "shift+alt+right",
-    "command": "-editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+o",
-    "command": "editor.emmet.action.balanceOut",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+down",
-    "command": "cursorDownSelect",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+shift+down",
-    "command": "-cursorDownSelect",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+k ctrl+f",
-    "command": "editor.action.formatSelection",
-    "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+k ctrl+f",
-    "command": "-editor.action.formatSelection",
-    "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+backspace",
-    "command": "editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+oem_6",
-    "command": "-editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+oem_7",
-    "command": "deleteAllLeft"
-  }
-]
-```
-
-<br>
 
 <p align=right><a id="useful-extensions-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 
-### __[Useful Extensions in VSCode]()__
+### __[Extensions]()__
 
-More and more is getting integrated into VSCode for each release but here are some good extensions that we use at the writing moment (May 2020) and recommend..
+More and more is getting integrated into VSCode with each release but here are some extensions that we (at the writing moment, May 2020) use for WEB development. We recommend those together with our default settings. You can also search for extensions directly at [VSCode Marketplace](https://marketplace.visualstudio.com/).
 
-You can search online for [VSCode Marketplace](https://marketplace.visualstudio.com/) for extensions or directly from VSCode.
+> Our __extension__ configuration can be downloaded into VSCode from our __git cloud__ - see [here](#default-vscode-cloud-settings). 
 
-|Extension&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+| Type&nbsp;&nbsp;&nbsp;&nbsp;|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Details|
 |:--|:--|:--|
 |Common | `Settings Sync` | Uploads/downloads settings to you Git Gisp account for cloud backup. |
 |Common | `Code Spell Checker` | Auto-corrects spelling mistakes and proposes corrections. |
 |Common | `VSCode-icons` | A set of small icons shown in explorer bar that makes navigating and finding of certain file types easier. |
 |Common | `Bracket Pair Colorizer` | Provides different colors for brackets so those ar easier to distinguish. |
-|Web Dev | `ESLint` | Analyzes your code,finds and fix problems in your JavaScript, TypeScript files and more. Rules [here](https://eslint.org/docs/rules/). |
+|Web Dev | `ESLint` | Analyzes your code, finds and fix problems in your project files. Needed for error highlighting etc together with installation of  needed development dependencies. How to configure for vue [here](https://medium.com/@gogl.alex/how-to-properly-set-up-eslint-with-prettier-for-vue-or-nuxt-in-vscode-e42532099a9c). Rules [here](https://eslint.org/docs/rules/). |
 |Web Dev | `Auto Rename Tag`  | Renames matching tags. Works for all file types .html as well as .vue files. VSCode offers this feature by default (enabled in Setting by `renameOnType`) but then works only for html files (not vue). |
 |Web Dev | `Auto Close Tag` | Automatically an close tag after entering <tag>. It is built-in in VSCode for HTML files but this extension enables this for other languages like Vue, XML, PHP, JavaScript. |
 |Web Dev | `Auto import` | Automatically finds, parses and adds to IntelliSense code actions proposals with code completion with available import actions. |
@@ -607,7 +169,7 @@ You can search online for [VSCode Marketplace](https://marketplace.visualstudio.
 |Web dev | `MatchIt`| Automatically navigates between focused, matching  brackets or tags.  By default shortcut `Ctrl Alt §` is added. |
 |Web Dev | `IntelliSense for CSS class names` | Provides CSS class name completion for the HTML `class` attribute based on the definitions found in your workspace, or external stylesheets referenced through the `link` elements in HTML files elements. Supports a variety of files including vue (require Vetur) and django. |
 |Web Dev | `HTML Tag Wrapper` | Wraps selected elements in HTML into a new tag. Default shortcut: `Ctrl+I`. |
-|Web Dev - CSS/PostCSS | `Prettier` | Formatter that is used for mainly for auto-formatting CSS/SCSS/PostCSS as it seems not to be included by default in VSCode. Language "markdown" shall be disabled in extension settings. |
+|Web Dev - PostCSS/CSS | `Prettier` | Formatter that is used for mainly for auto-formatting CSS/SCSS/PostCSS as it seems not to be included by default in VSCode. Language "markdown" shall be disabled in extension settings. |
 |Web Dev - PostCSS | `PostCSS Language Support` | Syntax check and highlighting of PostCSS type of files. |
 | Web Dev - Vue | `Vetur` | For vue.js development with syntax-highlighting, formatting, EMMET, IntelliSense etc. Included auto-formatting might interfere with "Prettier" formatter. Suggested to install Prettier first, customize it for HTML and JS later install Vetur. Vetur uses Prettier internally as main formatter (no extension is needed)  for HTML and JS features within vue files. Disable html attribute wrapping by adding in Setting for `Default Formatter Options` following `"js-beautify-html": {"wrap_attributes": "auto"}` and use `js-beautify-html` formatter as `Vetur: Default Formatter: HTML`. Read more [here](#recommended-customization-of-vscode). Documentation [here](https://vuejs.github.io/vetur/). |
 |Web Dev - Vue | `Vue VSCode Snippets`| Snippets to supercharge you workflow. Snippets like `vmethod` and `vdata` expands to data and method js-script code. |
@@ -622,46 +184,125 @@ You can search online for [VSCode Marketplace](https://marketplace.visualstudio.
 |C#| `C#`| C# extension for Visual Studio Code. |
 
 
-<br>
+<p align=right><a id="recommended-customization-of-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-<p align=right><a id="emmet-snippets-in-vscode" align=right href="#table-of-content">↩ Back To Top</a></p>
+### __[Customization of VSCode]()__
 
-### __[EMMET Snippets in VSCode]()__
+VSCode is delivered with great bunch of features for Web development and can be used as it is. But for more heavy projects and personal preferences of coding style often some customization is needed. Customizing and getting all extensions, setting, formatters, linters to work together can be a time consuming task. Here we describe the most common task you need to perform and we also  provide out own customization that we prefer to use, for downloads into your VSCode version ([here](#default-vscode-cloud-settings))
+
+__Setting files__  
+Settings can from user UI be viewed and changed from `File > Preferences > Settings`. Behind the scene there are two files:  
+- default settings as shipped with VSCode installation. In _command palette_ (`CTRL+Shift+P`) write "Settings (JSON)" which opens _settings.json_ file (possible to edit).
+- user specific settings added for each modification the user do. In _command palette_ (`CTRL+Shift+P`) write "Default Settings (JSON)" which opens _defaultSettings.json_ file (read-only).
+
+The same apply to Keyboard Shortcuts. There is a file named `keybindings.json` that we can edit and is usually modified though UI from `Preferences->Keyboard Shortcuts`. The default shortcut definitions for each combination can be found in file `DefaultKeybindings`. Both files can be opened from Command Palette (`Ctrl+Alt+P`) and searching for word "_keyboard shortcuts_".
+
+__Formatting__  
+Formatting of code can be done in order to always to make code always to look the same, be readable and and follow a predefined standard. For HTML and JavaScript there are default formatters preset in VSCode but at writing moment CSS do not have any preset formatter. A extension must be installed for that. One reason for that might be that often developers use CSS with "a twist" like postCSS or SCSS and then it is up to them to choose the formatter for the prefered CSS syntax of their choice. There are popular extensions like Prettier or Vetur (for vue) that can overwrite native VScode formatting shipped by default and add formatting (and syntax highlighting) functionality on their own. Here we describe shortly some configuration areas with the vocabulary used so you can further search for it on google. Default shortcut `Ctrl+K Ctrl+F` formats only the selection and `Ctrl+Alt+F` formats whole document.  
+
+Our pre-configurated development environment can be downloaded to VSCode - see [here](#default-vscode-cloud-settings).
+
+- How to __wrap HTML__ attributes?    
+In _Settings_ search for `HTML> Format: Wrap Attributes` and `HTML> Format: Wrap Line Length` (use words "html wrap"). `Auto` is normally set and can be changed if you prefer different styles of how HTML attributes shall be wrapped. Our favorite is "preserve-aligned". This is how diffrent choices might look like:
+  ```html
+  none
+  Do not format at all. 
+
+  <div id="app" class="container" style="width:200px;">
+      <p>hello</p>
+  </div>
+
+  auto (default)
+  Wraps automatically to defined "Wrap Line Length", do not align.
+  <div  id="app" class="container" 
+      style="width:200px;">
+      <p>hello</p>
+  </div>
+
+  force-aligned
+  Wraps all attributes, except first, and align attributes.
+  <div id="app" 
+      class="container" 
+      style="width:200px; background-color: white;">
+      <p>hello</p>
+  </div>
+
+  aligned-multiple
+  Wrap to set line length if needed, and align attributes.
+  <div id="app" class="container" 
+      style="width:200px;">
+      <p>hello</p>
+  </div>
+
+  preserve-aligned
+  Preserves user wraps but if too long text to line length. Aligns everything.
+  <div id="app" 
+      class="container" style="width:200px;">
+      <p>hello</p>
+  </div>
+  ```
+  At writing moment (May 2020) Vetur by default use prettier set default internal HTML formatter and unfortunately prettier does heavy attribute formatting in HTML templates. We do not like it. To simply disable it set `none` in settings for `Vetur › Format › Default Formatter: HTML`. But if you want to change formatting behavior, at writing moment only possible way we found is by setting `js-beautify-html` as default HTML formatter i Vetur. Do it by  adding `"vetur.format.defaultFormatter.html": "js-beautify-html"` in _setting.json_ file on choosing "js-beautify-html" in extensions settings.
+
+- __Prettier__ formatter and syntax highlighter  
+Popular extension used for formatting diffrent languages. For example if you want all your  double-quotes `""` be changed to single-quotes `''` and do not want prettier to format your markdown, javascript not html files (only css) - then eather search for those phrases in _UI Settings_ or add directly to _settings.json_ file.
+  ```javascript
+  ...
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.disableLanguages": ["markdown", "javascript", "html"],
+  ...
+  ```
+- __Vetur__ (for Vue) formatter and syntax highlighter  
+For Vue development you shall use the extension Vetur. Vetur's internally by default uses HTML formatter "prettier" but you can change this in extension settings to i.e. "prettyhtml" for HTML parts (as we prefer. This because by default prettier do hard-core wrapping on HTML attributes and we did not find any way to disable it. The formatters that Vetur uses internally are are build into Vetur extension and do not require seperate installations! Unfortunately Vetur at writing moment supports formatting of whole documents only. Formatting of a selected part of a .vue doc is not possible. Therefore the default key shortcut for formatting selection `Ctrl+K Ctrl+F` will not have any effect in .vue files, but shortcut `Ctrl+Alt+F` for formatting whole document works as expected. To set rules differing from those of the internal formatters default behavior set `vetur.format.defaultFormatterOptions`. Example:
+  ```javascript
+  ...
+    "vetur.format.defaultFormatterOptions": {
+      "js-beautify-html": {
+        "wrap_attributes": "preserve-aligned", // preferred vue attribute wrapper method
+        "preserve_newlines": true, // do not remove empty line added by user
+        "max_preserve_newlines": 1  // let 1 line only be preserved when formatting (0 diable it)
+      },
+      "prettier": {
+        "semi": true, // if true - add semicolon (;) at end of all js-statements
+        "singleQuote": true, // false -> double quotes otherwise single
+        "jsxSingleQuote": true, // false -> double quotes otherwise single
+        "bracketSpacing": true, // if true -> { foo: bar }
+        "proseWrap": "preserve" // do not wrap properties if used want then on new line
+      }
+      ...
+    },
+  ```
+ 
+
+<p align=right><a id="default-vscode-cloud-settings" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 
-EMMET snippets auto-generate full code blocks code from short text snippets.  [Here](https://docs.emmet.io/cheat-sheet/) is a handy cheat-sheet with all EMMET commands. Read more about EMMET [here](https://docs.emmet.io/).
+### __[Cloud settings]()__
 
-| HTML&nbsp;CODE | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-|:--|:--|
-| __New doc__<br>__`!`__ | _`New HTML doc structure`_
-| __Comment__<br>__`c`__ | `<!-- -->`
-| __CSS from file__<br>__`link:css`__ | `<link rel="stylesheet" href="./style.css">`
-| __JS from file__<br>__`script:src`__ | `<script src="./app.js"></script>`
-| __Dummy texts__<br>__`lorem4`__ | _`Four random lorem words`_ 
-| __Paragraph__<br>__`p.hero__title--orange{Hi}`__| `<p class="hero__title--orange">Hi</p>`
-| __Div__<br>__`.nav__item#nav_item-1{Hi}`__ | `<div class="nav__item" id="nav_item-1">Hi</div>`
-| __Menu__<br>__`ul.nav>(li.nav_row>a#nav_item-\${I\$})*2`__ | `<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-1">I1</a></li>`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-2">I2</a></li>`<br>`</ul>`
-| __Form__<br>__`div>p+form:post>input:text+input:email+input:submit`__ | `<div>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<p></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<form action="" method="post">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="text" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="email" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="submit" value="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</form>`<br>`</div>`
-| __Article__<br>__`section.sect>(article.wrap>h1.s_t+p.s_d+button.s_b)*1`__ | `<section class="sect">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<article class="wrap">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<h1 class="s_t"></h1>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<p class="s_d"></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<button class="s_b"></button>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</article>`<br>`</section>`
-| <br>__CSS&nbsp;CODE__<br><br>||
-| __`w100p`__ | `width: 100%;`
-| __`h100e`__ | `height: 100em;`
-| __`m10p20px10e20p`__ | `margin: 10% 20px 10em 20%;`
-| __`p10-20-10-20`__ | `padding: 10px 20px 10px 20px;`
-| __`pos`__ | `position: relative;`
-| __`bg`__ | `background: #000;`
-| __`bc`__ | `background-color: #fff;`
-| __`bd`__ | `border: 1px solid #000;`
-| __`bdrs8`__ | `border-radius: 8px;`
-| __`ff+fw400+fs20`__ | `font-family: serif;`<br>`font-weight: 400;`<br>`font-style: 20px;`
+__Our default settings on GistGitHub cloud__  
+Our default VSCode settings are stored on github gist [HERE](https://gist.github.com/CMQNordic/afe5c2b9b7cb26e55c51d8625d21a44a). 
 
-<br>
 
-## [__Node.js & Npm__](#)
+Use `Setting Sync` extension to update cloud and/or download the setting into VSCode. 
+
+Bellow are settings that we used to use:  
+
+```javascript
+setting.json
+```
+
+```json
+Keybindings.json
+```
+
+<p align=right><a id="node-and-npm" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+
+## [__Node.js & Npm & Npx__](#) 
 
 ### [__What is Node.js and npm used for?__](#)
 
-### Node.js is a lightweight runtime environment for JavaScript. Npm is a tool included in node.js that makes is possible to download and store packages that Node.ja later can run and use. Npm and Node.ja can automate lots of our work and speed up our development time significantly. Extensive node.js tutorial can be found [HERE](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm). Typescript tutorial can be found [HERE](https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d). List of modules/packages build-in in node.js can be listed [HERE](https://www.w3schools.com/nodejs/ref_modules.asp).
+Node.js is a lightweight runtime environment for JavaScript. Npm is a tool included in node.js that makes is possible to download and store packages that Node.ja later can run and use. Npm and Node.ja can automate lots of our work and speed up our development time significantly. Extensive node.js tutorial can be found [here](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm). Typescript tutorial can be found [here](https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d). List of modules/packages build-in in node.js can be listed [here](https://www.w3schools.com/nodejs/ref_modules.asp).
 
 ### [__Node.js__](#)
 
@@ -718,6 +359,29 @@ There should be no output.
 npm outdated 
 npm outdated -g --depth=0
 ```
+
+__Global packages.__  
+A package should be installed globally when it provides an executable command that you run from the shell (CLI), and it’s reused across projects. Examples of popular global packages:
+```
+npm
+create-react-app
+vue-cli
+grunt-cli
+```
+You probably have some packages installed globally already on your system. You can see them by running:
+```
+npm list -g --depth 0
+
+```
+
+To uninstall an unscoped global package, on the command line, use the uninstall command with the -g flag. Include the scope if the package is scoped:
+
+```
+npm uninstall -g <package_name>
+npm uninstall -g <@scope/package_name>
+
+```
+
 
 __Update__ all the packages listed to the latest version.  
 This will also install missing packages and dependencies.
@@ -1122,14 +786,14 @@ _package.json_
 ```
 TODO
 ```
+<p align=right><a id="other-frameworks" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-<br><br>[- BACK TO TOP -](#table-of-contents)
 
+## [__Other framewors & technologies__]() 
 
-<br>
-<br>
+<p align=right><a id="markdown-syntax" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-## [__Markdown__](#)
+### [__Markdown__](#)
 
 Markdown is a lightweight markup language to style text on the web. The syntax is much simpler than HTML and originally was created for non-programmers to write easy-to-read format that could be converted directly into HTML. Markdown files are saved with extension .md and only special readers can view them i.e. GitHub readme-file-viewer or Chrome with a special plug-in. Using markdown for styling text makes it possible to view text in a nicer than simple text. VSCode have Markdown with preview build in. GitHub uses Markup to style th README.md files.
 
@@ -1263,8 +927,6 @@ __`MARKDOWN TEXT BLOCKS`__
 
 This text highlighted as surrounded by ' and not formatted:<br>  `` `Unformatted highlighted <br> text <p>tHello!</p><br>` ``
 
-
-
 ```
 .``` 
 - Unformatted lines <br> of text ending with [Enter]
@@ -1307,6 +969,38 @@ Result->
 | Man                 | Dallas                | Martin <br> Linn <br> [link](http://www.di.se)             |
 | <br> Woman <br> Man | <br> Lund <br> London | ___Anna__ \<b>test\</b> <br> `Carming <br>`_ <br> 59 years |
 | Man                 | York                  | Adam                                                       |
+
+
+<p align=right><a id="emmet-snippets" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+### __[EMMET Snippets in VSCode]()__
+
+
+EMMET snippets auto-generate full code blocks code from short text snippets.  [Here](https://docs.emmet.io/cheat-sheet/) is a handy cheat-sheet with all EMMET commands. Read more about EMMET [here](https://docs.emmet.io/).
+
+| HTML&nbsp;CODE | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|:--|:--|
+| __New doc__<br>__`!`__ | _`New HTML doc structure`_
+| __Comment__<br>__`c`__ | `<!-- -->`
+| __CSS from file__<br>__`link:css`__ | `<link rel="stylesheet" href="./style.css">`
+| __JS from file__<br>__`script:src`__ | `<script src="./app.js"></script>`
+| __Dummy texts__<br>__`lorem4`__ | _`Four random lorem words`_ 
+| __Paragraph__<br>__`p.hero__title--orange{Hi}`__| `<p class="hero__title--orange">Hi</p>`
+| __Div__<br>__`.nav__item#nav_item-1{Hi}`__ | `<div class="nav__item" id="nav_item-1">Hi</div>`
+| __Menu__<br>__`ul.nav>(li.nav_row>a#nav_item-\${I\$})*2`__ | `<ul class="nav">`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-1">I1</a></li>`<br>&nbsp;&nbsp;&nbsp;`<li class="nav__row"><a href="" id="nav_item-2">I2</a></li>`<br>`</ul>`
+| __Form__<br>__`div>p+form:post>input:text+input:email+input:submit`__ | `<div>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<p></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<form action="" method="post">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="text" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="email" id="" id="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<input type="submit" value="">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</form>`<br>`</div>`
+| __Article__<br>__`section.sect>(article.wrap>h1.s_t+p.s_d+button.s_b)*1`__ | `<section class="sect">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<article class="wrap">`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<h1 class="s_t"></h1>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<p class="s_d"></p>`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<button class="s_b"></button>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`</article>`<br>`</section>`
+| <br>__CSS&nbsp;CODE__<br><br>||
+| __`w100p`__ | `width: 100%;`
+| __`h100e`__ | `height: 100em;`
+| __`m10p20px10e20p`__ | `margin: 10% 20px 10em 20%;`
+| __`p10-20-10-20`__ | `padding: 10px 20px 10px 20px;`
+| __`pos`__ | `position: relative;`
+| __`bg`__ | `background: #000;`
+| __`bc`__ | `background-color: #fff;`
+| __`bd`__ | `border: 1px solid #000;`
+| __`bdrs8`__ | `border-radius: 8px;`
+| __`ff+fw400+fs20`__ | `font-family: serif;`<br>`font-weight: 400;`<br>`font-style: 20px;`
 
 
 <br>
