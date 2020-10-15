@@ -1,0 +1,642 @@
+/* START I18N compatible buttons */
+/* For links, give the slideButton class to the a element and wrap the link text in a span */
+/* For inputs, wrap the input in a label with the slideButton class and repeat the text of the input in a span following the input */
+.slideButton,
+.slideButton span,
+.slideButton:hover {
+    background: transparent url(../images/button500.png) no-repeat scroll right -158px;
+    color: #fefefe;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 38px;
+    line-height: 38px;
+    margin: 0;
+    padding: 0 0 0 12px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 2px #333;
+}
+* > .slideButton,
+* > .slideButton:hover,
+* > .slideButton.orangeSlide,
+* > .slideButton.blueSlide {
+    display: inline-block;
+    float: none;
+    margin: 0 0 0 6px;
+    padding: 0;
+}
+.slideButton span {
+    background-position: left -158px;
+    margin: 0 20px 0 -6px;
+    padding: 0 0 0 30px;
+}
+.slideButton > span {
+    padding: 0 0 0 20px;
+}
+.slideButton:hover span {
+    color: #fff;
+    text-shadow: 0 1px 2px #000;
+}
+.slideButton.orangeSlide {
+    background-position: right -2px;
+}
+.slideButton.orangeSlide:hover {
+    background-position: right -81px;
+}
+.slideButton.orangeSlide span {
+    background-position: left -2px;
+}
+.slideButton.orangeSlide:hover span {
+    background-position: left -81px;
+}
+.slideButton.blueSlide {
+    background-position: right -40px;
+}
+.slideButton.blueSlide:hover {
+    background-position: right -119px;
+}
+.slideButton.blueSlide span {
+    background-position: left -40px;
+}
+.slideButton.blueSlide:hover span {
+    background-position: left -119px;
+}
+.slideButton.lblueSlide,
+.slideButton.lblueSlide:hover,
+.slideButton.lblueSlide span {
+    color: #225b99;
+    font-size: 13px;
+    font-weight: normal;
+    height: 26px;
+    line-height: 26px;
+    text-shadow: 0 0 0 #000;
+}
+.slideButton.lblueSlide:hover span,
+.slideButton.lblueSlide:active span {
+    color: #478ed8;
+    text-shadow: 0 0 0 #000;
+}
+.slideButton.lblueSlide {
+    background-position: right -194px;
+}
+.slideButton.lblueSlide:hover {
+    background-position: right -221px;
+}
+.slideButton.lblueSlide:active {
+    background-position: right -248px;
+}
+.slideButton.lblueSlide span {
+    background-position: left -194px;
+}
+.slideButton.lblueSlide:hover span {
+    background-position: left -221px;
+}
+.slideButton.lblueSlide:active span {
+    background-position: left -248px;
+}
+label.slideButton {
+    cursor: pointer;
+    position: relative;
+}
+label.slideButton input {
+    background: transparent;
+    filter: alpha(opacity = 0);
+    float: left;
+    font-size: 0px;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+}
+label.slideButton input:active {
+    border: none;
+}
+.goButton span:after {
+    content: "\25B6";
+    font-size: 7px;
+    padding-left: 6px;
+    vertical-align: middle;
+}
+/* END I18N compatible buttons */
+
+/* BEGIN weblibrary style message banner */
+.message-banner {
+    -moz-border-radius: 5px 5px 5px 5px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    clear: both;
+    margin-bottom: 15px;
+    padding: 1px;
+}
+.banner-content {
+    -moz-border-radius: 5px 5px 5px 5px;
+    color: #333333;
+    font-size: 14px;
+    min-height: 36px;
+    padding-top: 17px;
+}
+.banner-content ul {
+    margin: -7px 0 0;
+    padding: 0 17px 12px 70px;
+}
+.banner-content ul li {
+    list-style: disc outside none;
+    padding-left: 5px;
+}
+.banner-content p {
+    margin: 0;
+    padding: 0 17px 12px 57px;
+}
+.banner-content a {
+    color: #0066CC;
+    text-decoration: none;
+}
+.information-banner {
+    border: 1px solid #84B9F8;
+}
+.information-banner .banner-content {
+    background: url("../images/icon-info.png") no-repeat scroll 14px 11px #DBEEFB;
+}
+.warning-banner {
+    border: 1px solid #FFC346;
+}
+.warning-banner .banner-content {
+    background: url("../images/icon-warning.png") no-repeat scroll 14px 11px #FFFD9C;
+}
+/* END weblibrary style message banner */
+.message-banner strong {
+    font-weight: bold;
+}
+
+a {
+    color: #06c;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    color: #478ED8;
+    text-decoration: underline;
+}
+input[type="hidden"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+#header {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#header .navLinks {
+    margin: 31px 8px 0 0;
+}
+#header .navLinks li {
+    margin: 8px 0 0 0;
+}
+#logo, .footerLogo {
+    background: transparent url(../images/col_logos.png) no-repeat 0 -2px;
+}
+#logo {
+    background-position: 0 -249px;
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 30px 0 0 25px;
+    text-indent: -99999px;
+    width: 180px;
+}
+h1 {
+    border-bottom: none;
+    font-size: 24px;
+}
+h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+h5 {
+    font-size: 13px;
+    font-weight: normal;
+}
+.innerBorder {
+    border: 1px solid #fff;
+    padding: 10px 10px 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+/* can't use .content as we need to override styles from main.css */
+div.container div.noSidebar {
+    margin: 8px 0 0;
+    overflow: hidden;
+    padding: 57px;
+}
+.innerContent {
+    background-color: #eee;
+    background: -webkit-gradient(linear, 0% 0%, 0% 75%, from(#fcfcfc), to(#eeeeee));
+    background: -moz-linear-gradient(top, #fcfcfc, #eeeeee 75%);
+    border: 1px solid #cdcdcd;
+    float: left;
+    padding: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.innerContent > .innerBorder {
+    padding: 40px 30px 35px;
+    width: 425px;
+}
+.mobile .innerContent {
+    background: none;
+    border: none;
+    float: none;
+    overflow: hidden;
+    padding: 0 0 5px;
+}
+.mobile .innerContent > .innerBorder {
+   padding: 0;
+   width: auto;
+}
+.mobile h1 {
+	background-image: none;
+	font-size: 28px;
+	padding-left: 0;
+}
+.mobile p {
+	font-size: 14px;
+}
+#helpBar {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 320px;
+}
+.helpGroup {
+    margin-bottom: 20px;
+}
+.collapseGroup {
+    font-size: 12px;
+}
+.collapseGroup h4 {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 18px 0 4px;
+}
+#launcherContent {
+    margin: auto;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#launcherContent .downloadLink {
+    white-space: nowrap;
+}
+#clickOnce p {
+    padding: 0;
+}
+#acceptPrompt {
+    background: transparent url("../images/icon-warning-16.png") no-repeat 4px 0;
+    background-size: 16px 16px;
+    color: #333;
+    font-size: 12px;
+    padding: 2px 0 10px 24px;
+}
+#acceptPrompt b {
+    color: #e82;
+}
+.manualDownloadBox {
+    color: #666;
+    font-size: 12px;
+    padding-top: 22px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.manualDownloadBox h3,
+.manualDownloadBox p {
+    color: #333;
+    font-size: 12px;
+}
+p.downloadButton, #manualDownloadJs {
+    margin-top: 14px;
+    background-color: transparent;
+}
+object {
+    margin: 4px 0 8px;
+}
+#copyright {
+    color: #B7B7B7;
+    font-size: 10px;
+    margin-left: 0;
+}
+
+#launcherContent ul {
+    text-align: left;
+}
+.appstoreChoice {
+    background-color: #EEE;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FCFCFC), color-stop(100%,#EEE));
+    background: -moz-linear-gradient(top, #FCFCFC 0%, #EEE 100%);
+    border: 1px solid #CDCDCD;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	-moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+    float: left;
+    margin: 10px 0 0;
+    overflow: hidden;
+    text-align: left;
+    width: 379px;
+}
+.appstoreChoice.blue {
+    background-color: #F2F8FD;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F2F8FD), color-stop(100%,#DCEDFA));
+    background: -moz-linear-gradient(top, #F2F8FD 0%, #DCEDFA 100%);
+    border: 1px solid #A2C8ED;
+}
+.appstoreChoice + .appstoreChoice {
+    float: right;
+}
+.appstoreChoice h3 {
+    font-size: 16px;
+    margin: 7px 0 5px 0;
+}
+.appstoreChoice .innerBorder {
+    background: transparent url(../images/appstore/download-arrow.png) no-repeat 10px 16px;
+    min-height: 185px;
+    padding-left: 80px;
+	position: relative;
+}
+.appstoreChoice.appLink .innerBorder {
+    background-image: url(../images/appstore/g2m.png);
+}
+.appstoreChoice .innerBorder div {
+    border-top: 1px solid #FFF;
+	bottom: 0;
+    -moz-box-shadow: 0 -1px 0 #CDCDCD;
+    -webkit-box-shadow: 0 -1px 0 #CDCDCD;
+    box-shadow: 0 -1px 0 #CDCDCD;
+    margin: 10px 10px 10px -140px;
+	height: 40px;
+    padding: 16px 0 5px;
+	position: absolute;
+    text-align: center;
+    width: 130%;
+}
+.blue .innerBorder div {
+    -moz-box-shadow: 0 -1px 0 0 #A2C8ED;
+    -webkit-box-shadow: 0 -1px 0 0 #A2C8ED;
+    box-shadow: 0 -1px 0 0 #A2C8ED;
+}
+.appstoreChoice p {
+    color: #333;
+    font-size: 13px;
+	padding-bottom: 15px;
+}
+.appstoreChoice h3, .appstoreChoice p {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.appstoreChoice .goButton {
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: -12px;
+}
+.applet .appstoreChoice {
+    margin: 20px auto;
+}
+.content li {
+    color: #f93;
+    font-size: 12px;
+    list-style: disc outside;
+    padding: 4px 0 2px 0;
+    margin-left: 15px;
+}
+
+.content li > span {
+    color: #666;
+}
+.downloadBoxWhite {
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    padding: 10px;
+    margin: 4px 0 8px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#footer h6 {
+    color: #666666;
+    display: inline;
+    float: left;
+    font-size: 11px;
+    margin-top: 22px;
+}
+#footer .smallBullet li {
+    background: url(../images/sprites.gif) no-repeat 0 -110px;
+    font-size: 11px;
+    float: left;
+    margin: 22px 0 0 8px;
+    padding: 0 0 0 10px;
+}
+#footer .smallBullet li:first-child {
+    background: none;
+    margin-left: 0;
+}
+#invalid h1 {
+    font-size: 27px;
+}
+#invalid h2 {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 12px 0 40px;
+}
+#invalid h3 {
+    font-size: 16px;
+    font-weight: normal;
+}
+#invalid .content ul {
+    margin: 10px 5px 20px;
+}
+#invalid .content li {
+    color: #f93;
+    font-size: 14px;
+    list-style-position: inside;
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+}
+#invalid #footer .navLinks {
+    margin: 20px 8px 20px 20px;
+}
+#noJavaInstrBox h4 {
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+}
+#noJavaInstrBox h5 {
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+#noJavaInstrBox p {
+    font-size: 12px;
+    padding-top: 20px;
+}
+#noJavaInstrBox h5,
+noscript h5 {
+    margin: 8px 0;
+}
+.noJs .googleChrome .innerContent > h1,
+.noJs .googleChrome .innerBorder > h1,
+.noJs .googleChrome.download-applet #launcherContent > p,
+.noJs .googleChrome.download-applet #launcherContent > div,
+.noJs .jsOnly,
+.noJavaOnly {
+    display: none;
+}
+.javaDisabledHelper {
+    border: none;
+    color: transparent;
+    margin: 0;
+    padding: 0;
+    height: 2px;
+}
+.viral {
+    border-top: 1px solid #CDCDCD;
+    left: -31px;
+    margin: 50px 0 0;
+    padding: 30px 30px 0;
+    position: relative;
+    text-shadow: 1px 1px 1px #fff;
+    width: 427px;
+}
+.viral a:after {
+    content: "\BB";
+    padding: 0 4px;
+    position: relative;
+    top: -1px;
+}
+
+.numbered-items li {
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    margin:  0;
+    min-height: 80px;
+    overflow: hidden;
+    padding-left: 100px;
+}
+.numbered-items .number-1 {
+    background-image: url(../images/numbers/1.png)
+}
+.numbered-items .number-2 {
+    background-image: url(../images/numbers/2.png)
+}
+.numbered-items .number-3 {
+    background-image: url(../images/numbers/3.png)
+}
+
+.MacOS.download-applet .appstoreChoice + .appstoreChoice {
+    float: left;
+}
+.MacOS.applet-failed .appstoreChoice + .appstoreChoice {
+    float: right;
+}
+.noApplet {
+    overflow: hidden;
+}
+.MacOS.applet-failed.mac-manual-download .noApplet {
+    width: 790px;
+}
+.MacOS.applet-failed.mac-manual-download #helpBar {
+    margin: -20px 0 0 40px;
+}
+.MacOS.applet-failed.mac-manual-download .innerContent {
+    border: none;
+    background: #fff;
+}
+.MacOS.applet-failed.mac-manual-download .innerContent > .innerBorder {
+    overflow: hidden;
+    padding-top: 0;
+    width: 784px;
+}
+.download-mac-dmg-extended .innerContent > .innerBorder {
+    padding-top: 0;
+    width: 784px;
+}
+.download-mac-dmg-extended h1 {
+    background: none repeat scroll 0 0 transparent;
+    margin: 8px 0;
+    padding: 12px 0;
+}
+.download-mac-dmg-extended p {
+    font-size: 14px;
+}
+.download-mac-dmg-extended #launcherContent > p:first-child {
+    margin-top: 20px;
+}
+.download-mac-dmg-extended #helpBar {
+    margin-top: 20px;
+}
+
+.download-mac-dmg-extended div.appLink {
+    margin-top: 20px;
+    text-align: center;
+}
+.download-mac-dmg-extended .numbered-items p {
+    float: left;
+    padding: 10px 0;
+    width: 350px;
+}
+.download-mac-dmg-extended .numbered-items img {
+    display: block;
+    float: left;
+    margin: 0 0 0 20px;
+}
+.download-mac-dmg-extended .automaticDownload {
+    display: none;
+}
+
+.download-mac-dmg-extended .number-1 {
+    background-position: 0 55px;
+    padding-top: 60px;
+}
+.download-mac-dmg-extended .number-2 {
+    background-position: 0 145px;
+    padding-top: 150px;
+}
+.download-mac-dmg-extended .number-2 img {
+    margin-top: -60px;
+}
+.download-mac-dmg-extended .number-3 {
+    background-position: 0 55px;
+    padding-top: 60px;
+}
+.download-applet .appLink .innerBorder {
+    background-image: url(../images/g2m-dmg-daisy.png);
+}
+
+.helpGroup.skipJavaGroup {
+    border: 1px solid #84B9F8;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.helpGroup.skipJavaGroup .helpGroupContent {
+    background: #DBEEFB url(../images/icon-info.png) no-repeat 10px 10px;
+    margin:  1px;
+    padding:  8px 4px 0 50px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.manualDownloadJs {
+    display: none;
+}
+.MacOS.googleChrome noscript ul + p {
+    margin: 10px 0;
+    padding:  0;
+}
+

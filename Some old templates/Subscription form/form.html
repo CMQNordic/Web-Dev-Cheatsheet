@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+<style>
+#sf-form-container { max-width:100%; border:1px solid gray; border-radius: 2px }
+    #sf-form { /* width:80%; margin:0 auto; */ padding: 5px; background: #f8f8f8; }
+
+/* Containers */
+#sf-top-lable-container { margin:1px 0 0 0; background:red;}
+#sf-top-description-container { margin:0 0 2px 0;  background:green; }
+#sf-checkbox-container { margin:1px 0 0 0;  background:yellow; }
+#sf-input-field-container { padding:1px 0 0 0; background:orange; }
+#sf-submit-button-container { padding:5px 0 0 0; background:#0072ff; }
+
+#sf-form { background: #0fcde2; }
+#sf-top-lable-container { background:red; }
+#sf-top-description-container {  background:green; }
+#sf-checkbox-container {background:yellow; }
+#sf-input-field-container { background:orange; }
+#sf-submit-button-container { background:#0072ff; }
+
+.sf-text { font-size: 1.1em;} /* General text */
+
+/* Top texts */
+#sf-top-lable-container span { font-size:1.5em; font-weight:bold; }
+#sf-top-description-container span { font-size:0.9em; font-style:italic; color:#808080; }
+
+/* Checkboxes */
+.sf-chechbox-elem { display:flex; display:-webkit-flex; display:-ms-flex; padding:5px 0px; }
+.sf-chechbox-elem input { width:20px; height:20px; } /* Checkbox */
+.sf-checkbox-elem .sf-text { flex:1; -webkit-flex:1; -ms-flex:1; margin-left:3px; } /* Checkbox text */
+
+/* Input fields */
+.sf-input-field-elem { padding: 2px 0px;}
+.sf-input-field-elem input { line-height:25px; padding:4px 2px; width:100%;} /* inbut box */
+    
+/* Submit button  */
+#sf-submit-button-container input {margin:5px 0; padding:5px 0px; height:33px;  width:100% }
+
+</style>
+
+ <!--
+<style>
+/* Restyle Newsletter form for small screen*/
+    
+/* General text */
+.sf-text { font-size: 0.7em;} 
+
+/* Top text*/
+#sf-top-lable-container span { font-size:1em; font-weight:bold; } 
+
+#sf-top-description-container { display: none; }
+
+.sf-chechbox-elem {width:50%; float:left;}
+.sf-input-field-elem {width:50%; float:left;}
+
+</style>
+-->
+
+<div id="sf-form-container">
+    <div id="sf-form">
+        <div id="sf-top-lable-container"><span>Subscribe to our newsletters!</span></div>
+
+        <div id="sf-top-description-container"><span>Get notified what's going on at Devoote. You can always unsubscribe.</span></div>
+
+        <div id="sf-checkbox-container">
+            <div class="sf-chechbox-elem">
+                <input name="_mc4wp_lists[]" type="checkbox" value="9e334e75f3" checked>
+                <div class="sf-text">News, articles and happenings</div>
+            </div>
+            <div class="sf-chechbox-elem">
+                <input name="_mc4wp_lists[]" type="checkbox" value="5599eacf88" checked>
+                <div class="sf-text" >Get notified when new assignment or position is published</div>
+            </div>
+        </div>
+
+        <div id="sf-input-field-container">
+            <div class="sf-input-field-elem">
+                <input class="sf-text" type="email" name="EMAIL" placeholder="Email*" required>
+            </div>
+            <div class="sf-input-field-elem">
+                <input class="sf-text" type="text" name="NAME" placeholder="Name">
+            </div>
+        </div>
+
+        <div id="sf-submit-button-container">
+            <input class="sf-text" type="submit" value="SUBSCRIBE NOW">
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -14,7 +14,7 @@ var g = import('http');
 function aFunction()
 {
 	var a = "hello in test function";
-	console.log(a);
+	console.log(
 }
 
 console.log(a);

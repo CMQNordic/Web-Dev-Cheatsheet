@@ -1,0 +1,1 @@
+This are some template files for creating new projects 

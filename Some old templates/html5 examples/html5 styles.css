@@ -1,0 +1,5 @@
+
+header, nav, footer, article {display:block; background:#3FF}
+nav {float:left; width:20%; background:#03F}
+article {float:right; width:80%;}
+footer {clear:both;}

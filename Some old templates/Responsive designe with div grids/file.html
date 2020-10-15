@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<style>
+		/*  SECTIONS SETUP */
+		.mcz-section {
+			clear: both;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		/*  COLUMN SETUP  */
+		.mcz-col {
+			display: block;
+			float: left;
+			margin: 1% 0 1% 1.6%;
+		}
+
+		.mcz-col:first-child {
+			margin-left: 0;
+		}
+
+		/*  GROUPING SETUP */
+		.mcz-group:before,
+		.mcz-group:after {
+			content: "";
+			display: table;
+		}
+
+		.mcz-group:after {
+			clear: both;
+		}
+
+		.mcz-group {
+			zoom: 1;
+			/* For IE 6/7 */
+		}
+
+
+		/*  GRID OF TWO  */
+		.span_2_of_2 {
+			width: 100%;
+		}
+
+		.span_1_of_2 {
+			width: 49.2%;
+		}
+
+		/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+		@media only screen and (max-width: 480px) {
+			.mcz-col {
+				margin: 1% 0 1% 0%;
+			}
+		}
+
+		@media only screen and (max-width: 480px) {
+			.mcz-col {
+				width: 100%;
+			}
+		}
+	</style>
+</head <body>
+
+
+<div style="padding: 0px 25px 0px; color: black; background-color: lightgrey;"><br />
+	<div style="background-color: black; color: white;">before</div>
+
+	<!-- start: section -->
+	<div class="mcz-section mcz-group" style="background-color: blue;">
+		<div class="mcz-col" style="background-color: yellow;">Column 1</div>
+		<div class="mcz-col" style="background-color: orange;">Column 2</div>
+	</div>
+	<!-- end: section -->
+
+	<div style="background-color: black; color: white;">after</div>
+	<br />
+	<div style="background-color: black; color: white;">before</div>
+
+	<!-- start: section -->
+	<div class="mcz-section mcz-group" style="background-color: blue;">
+		<div class="mcz-col" style="background-color: yellow;">Column 1</div>
+		<div class="mcz-col" style="background-color: orange;">Column 2</div>
+	</div>
+	<!-- end: section -->
+
+	<div style="background-color: black; color: white;">after</div>
+	<br />
+	<div style="background-color: black; color: white;">before</div>
+</div>
+
+</body>
+
+</html>
