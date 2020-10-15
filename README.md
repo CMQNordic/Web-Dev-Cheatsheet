@@ -1,10 +1,12 @@
-## ___Web&nbsp;Development -&nbsp;Ultimate&nbsp;Reference&nbsp;Guide&nbsp;-___
+## ___WEB DEVELOPMENT___
 ---
-By&nbsp;Martin&nbsp;Czerwinski [CMQ&nbsp;Nordic&nbsp;AB](www.cmq.se "www.cmq.se (Martin Czerwinski @ CMQ Nordic AB)")®&nbsp;March&nbsp;2020&nbsp;
+
+By&nbsp;Martin&nbsp;Czerwinski [CMQ&nbsp;Nordic.](www.cmq.se)
+&nbsp;March&nbsp;2020.
 
 ---
 
-This is a __reference guide__,an __compact tutorial__ or a __cheat-sheet__ that explains basics of web development. Starting from tools to some of the solutions to most basic problems. Bookmark this page, share it and feel free to [__reach out to us__](www.cmq.se "Contact us!") with questions, comments or requests for assignments!
+This is a _reference guide_, an _compact tutorial_ or a _cheat-sheet_ that explains basics of web development. Starting from tools to some of the solutions to most basic problems. Bookmark this page, share it and feel free to [__reach out to us__](www.cmq.se "Contact us!") with questions, comments or requests for assignments!
 
 ---
 
@@ -25,7 +27,7 @@ This is a __reference guide__,an __compact tutorial__ or a __cheat-sheet__ that 
   
 ► __HTML, CSS and JS__
 - [__CSS__](#css)  
-    [How to structure CSS files](#structure) ◦ [BEM](#bem)  
+    [How to structure CSS files](#css-structure) ◦ [CSS Specificity](#css-specificity) ◦ [BEM](#bem-in-css)  
     [Flexbox](#flexbox) ◦ [CSS Grid](#css-grid) ◦ [Floating](#floating)  
     [Bootstrap](#bootstrap) ◦  
     [Common tasks](#commonly-performed-tasks) -> [navigation](A) | [center stuff](B) | [C](C)
@@ -1007,21 +1009,137 @@ EMMET snippets auto-generate full code blocks code from short text snippets.  [H
 
 # [__CSS__](#)
 
-<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+<p align=right><a id="css-structure" align=right href="#table-of-content">↩ Back To Top</a></p>
 
-_Some good tutorial [HERE](xxx)_
+#### [How to structure css files](#)
 
-#### [Structure](#)
+In programming languages the word __container__ is generally used for structures that can contain more than one objects. Bootstrap used container class in the root to center all content of the page for example. A __wrapper__ instead is something that wraps around a single object to provide more functionalities and interfaces to it. __
 
----
-<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
+```javascript
+<div class="app-container">
+  // Surrounds all objects in the whole app
+  // Used for example to center everything
+  ...
 
-In programming languages the word __container__ is generally used for structures that can contain more than one element. A __wrapper__ instead is something that wraps around a single object to provide more functionalities and interfaces to it. DIV tag is a very common to use for this purpose with class name container/wrapper.
+  <div class="main-hero-wrapper">
+  // Surrounds main-hero object
+  // Used for example to apply css rules for main-here object only
+  ...
+  </div>
+
+</div>
+```
+
+<p align=right><a id="css-specificity" align=right href="#table-of-content">↩ Back To Top</a></p>
+
+#### [CSS Specificity](#)
+CSS specificity is a set of rules used by browsers in determining which of the developer-defined styles will be applied to a specific element.
+
+Types of elements and selector
+```html
+<!-- Element selector -->
+<p>This is an element selector</p>
+<!-- p { color: red } -->
+
+<!-- Id selector -->
+<p id="main-title">This is an element selector</p>
+<!-- #main-title { color: black } -->
+
+<!-- Class selector -->
+<h3 class="hello-header">Hello World!</h3>
+<!-- .hello-header { color: blue } -->
+ 
+<!-- Attribute selector -->
+<a href="https://webdesign.tutsplus.com">Web Design Tutorial</a>
+<!-- a[href="http://webdesign.tutsplus.com"] { color: green } -->
+ 
+<!-- Pseudo-class selector. -->
+<!--Aapplied as a result of user interaction with the document: :hover, :active, :visited  -->
+<button>Delete</button>
+<!-- button:hover { background-color: blue } -->
+
+<!-- Recommended order of pseudo selectors to awoid specificity problems. LVHA-order:  -->
+:link —> :visited —> :hover —> :active.
+ 
+<!-- Pseudo-element selector. Match virtual elements. -->
+<!-- Way to refer to content that may not by default exist in the source document e.g. :after, :first-letter -->
+<p>This is a paragraph</p>
+<!-- p:first-letter { color: green } -->
+
+
+```
+Followin table list the importance of the rules in decreasing order:
+| Prio | Rule | Example | Internal Prio value |
+|:--|:--|:--|:--|
+#1 | Important | `a { color: cyan !important; }` | Overwrites all others
+#2 | Inline style | `<a style="color: yellow">text</a>` | 1000
+#3 | Id | `#green { color: green; }` | 0100
+#4 | Class Class | `.wrapper .red { color: red; }` | 0020
+#5 | Element:Accessor | `a:link { color: aqua; }}` | 0011 (last wins)
+#6 | Element:Accessor | `a:hover { color: yellow; }}` | 0011 (last wins)
+#7 | Element Class | ` div .blue { color: blue; } }` | 0011 (last wins)
+#8 | Class | `.orange { color: orange; }` | 0010
+#9 | Element Element | `div a { color: aqua; }` | 0002
+#10 | Element | `a { color: black; }` | 0001
+
+Consider following example. It might not be vey obvious which color will be applied to the h1 text.
+```java
+<div class="wrapper">
+  <a id="green" class="red blue orange" style="color: yellow" href="#">text</a>
+</div>
+
+<style>
+
+  /* Important -> 1111 */
+  a {
+    color: aqua !important;
+  }
+
+  /* Inline selector -> 1000 */
+  <a style="color: yellow" />
+
+  /* Id -> 0100 */
+  #green {
+    color: green;
+  }
+
+  /* Class Class -> 0020 */
+  .wrapper .red {
+    color: red;
+  }
+
+  /* Element Accessor -> 0011 (order, last same highest) */
+  a:link { color: aqua; }
+
+  /* Element Accessor -> 0011 (order, last same highest) */
+  a:hover {
+    color: yellow;
+  }
+
+  /* Element Class -> 0011 (order, last same highest)*/
+  div .blue { color: blue; }
+
+  /* Class -> 0010 */
+  .orange {
+    color: orange;
+  }
+
+  /* Element Element -> 0002 */
+  div a {
+    color: aqua;
+  }
+
+  /* Element -> 0001 */
+  a {
+    color: black;
+  }
+```
+
+<br>
+<p align=right><a id="bem-in-css" align=right href="#table-of-content">↩ Back To Top</a></p>
 
 #### [BEM](#)
 
----
-<p align=right><a id="visual-studio-code" align=right href="#table-of-content">↩ Back To Top</a></p>
 Structured your CSS and UI in an organized way. Benefits are: 
 - __modularity__ -  ability to transfer blocks from your finished projects to new ones as blocs are independent standalone objects.
 - __Reusability__ - With a set of style guidelines in place, you can build a library of blocks, making your CSS super effective and reusable.
